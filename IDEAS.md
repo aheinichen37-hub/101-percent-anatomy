@@ -9,6 +9,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Save v2.3 and v2.4 to the claude.ai project** once there's room (the project hit its size limit; remove v1.6, v2.0, v2.1 first). *(2026-11-05)*
 - **Match decks to guided notes**: Units 2, 7–9 and 12–28 are written from the OpenStax textbook; adjust each unit to Andrew's guided notes when he has them. *(2026-11-05)*
 - **Fix figure mismatches**: Andrew flags any card whose figure looks wrong in `101-anatomy-v2.4-figure-list.csv`. *(2026-11-05)*
+- **Pictures for Types of Body Movements** (`ch9-mov`): show the unlabeled movement drawing before answering (no highlight needed). Left out of v2.5. *(2026-11-05)*
 
 ## Done
 - Decks for all 28 units (v2.3, 2026-11-05)
