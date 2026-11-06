@@ -7,6 +7,8 @@ from .labels import leader_segments, leader_path, _trace_gray, _whiteness
 
 WHITE = 235  # a pixel with every channel >= this is page background
 MIN_PANEL = 0.04  # a drawing smaller than this share of the figure is a scrap, not a panel
+STUB_AREA, STUB_SPAN = 600, 60  # leftover leader stubs are smaller than this (px area, px longest side)
+LINE_ART_COLOR = 0.15  # a figure with fewer colored non-white pixels than this is line art
 
 
 def leader_pixels(img: Image.Image, labels: list) -> np.ndarray:
@@ -34,6 +36,14 @@ def _text_mask(img: Image.Image, labels: list, pad: int = 4) -> np.ndarray:
         for _, (x0, y0, x1, y1) in L.lines:
             mask[max(0, y0 - pad):y1 + pad, max(0, x0 - pad):x1 + pad] = 255
     return mask
+
+
+def is_line_art(img: Image.Image) -> bool:
+    """True for figures drawn in black outlines (bones, cells), where almost no non-white pixel is colored."""
+    a = np.asarray(img.convert("RGB")).astype(int)
+    drawn = a.min(axis=2) < WHITE
+    sat = a.max(axis=2) - a.min(axis=2)
+    return drawn.any() and (sat[drawn] >= 40).mean() < LINE_ART_COLOR
 
 
 def _ink(img: Image.Image) -> np.ndarray:
@@ -80,6 +90,21 @@ def erase_labels(img: Image.Image, labels: list, lines: np.ndarray) -> Image.Ima
     # any thin ink left in the white space around drawings is leftover line art: erase it too
     keep = cv2.dilate(drawing_mask(img, labels, lines), np.ones((7, 7), np.uint8))
     stray = cv2.bitwise_and(_ink(img), cv2.bitwise_not(keep))
+    # In colored art every drawing pixel is inside `keep`, so white-space ink joined to a label (through traced
+    # lines too) is leader. In line art the outlines themselves sit in the white space and touch the leaders, so
+    # only tiny fragments go. Tiny fragments are stubs in either style.
+    leader_ink = np.zeros(stray.shape, bool)
+    if not is_line_art(img):
+        text = _text_mask(img, labels, pad=12)
+        joined = cv2.bitwise_or(cv2.bitwise_or(stray, lines), text)
+        n, lab = cv2.connectedComponents(joined, connectivity=8)
+        to_label = np.zeros(n, bool)
+        to_label[np.unique(lab[text > 0])] = True
+        to_label[0] = False
+        leader_ink = to_label[lab] & (stray > 0)
+    n2, lab2, st2, _ = cv2.connectedComponentsWithStats(stray, 8)
+    tiny = np.isin(lab2, [k for k in range(1, n2) if st2[k][4] < STUB_AREA and max(st2[k][2], st2[k][3]) < STUB_SPAN])
+    stray = (leader_ink | tiny).astype(np.uint8) * 255
     mask = cv2.bitwise_or(mask, cv2.dilate(stray, np.ones((5, 5), np.uint8)))
     out = cv2.inpaint(a, mask, 3, cv2.INPAINT_TELEA)
     # inpainting next to a drawing smears its outline into the margin: erased pixels in white space become white

@@ -135,6 +135,18 @@ def test_erase_does_not_punch_white_holes(heart):
     assert new_white.sum() < 200
 
 
+def test_erase_keeps_line_art():
+    # 8.5 draws the humerus as thin black outlines; erasing labels must not erase the bone itself
+    from tools.idimg.panel import _text_mask
+    img = render_figure("8.5")
+    labels = find_labels(img)
+    lines = leader_pixels(img, labels)
+    keep = (_text_mask(img, labels) == 0) & (np.asarray(__import__("cv2").dilate(lines, np.ones((9, 9), np.uint8))) == 0)
+    before = (np.asarray(img.convert("L")) < 110) & keep
+    after = (np.asarray(erase_labels(img, labels, lines).convert("L")) < 110) & keep
+    assert after.sum() >= 0.9 * before.sum()
+
+
 # true leader tips read off Figure 19.9 at render scale 3.0 (1104x776)
 HEART_TIPS = {
     "Moderator band": (545, 545),
