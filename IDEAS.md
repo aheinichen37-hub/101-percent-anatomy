@@ -17,6 +17,8 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Accounts / cloud login (future, for public use)**: sign-in plus cloud save (Firebase or Supabase). Build the save layer with a swappable storage adapter so local storage can become cloud storage later. *(2026-11-06)*
 - **Deck stars**: 3 perfect runs = 3 stars. Typo ("did you mean") answers get full credit. Up to 5 second tries per run, each worth half a point. *(2026-11-06)*
 - **Unit mastery check**: 50 randomly selected questions from the unit. Gold at 95% or higher (lose no more than 2.5 points), mastery at 100%. Unlocks once every deck in the unit has 2 stars. Best score is saved. *(2026-11-06)*
+- **Unit header tiers in the lobby**: the unit's header changes with achievement. Gold = 95%+ on the mastery check, Diamond = 100% mastery, Ruby = 100% mastery plus 3 stars on every deck (full completion). *(2026-11-06)*
+- **Build order decided**: 1) safe save + installable app (next release), 2) deck stars and unit mastery checks, then the rest. *(2026-11-06)*
 - **Daily Review**: re-drills the cards you've missed. *(2026-11-06)*
 - **Speed Round**: timed random testing. Code later. *(2026-11-06)*
 - **Boss Fights**: the mastery check as a boss, possibly themed on each unit's pathologies (osteoporosis for bones, brain cancer for the nervous system, etc.). *(2026-11-06)*
