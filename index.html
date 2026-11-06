@@ -150,6 +150,11 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 .modal ol b{color:var(--fg)}
 .modal .msg{margin:0;font-size:14px}
 .modal .sub{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--muted);margin:4px 0 -4px}
+/* v2.7: identification cards — the marked picture before answering, the tip after a miss */
+.qimg{position:relative;padding:0;overflow:hidden}
+.qimg img{display:block;width:100%;height:auto}
+.qimg .hl{position:absolute;left:0;top:0;width:100%;height:100%;opacity:.20;pointer-events:none}
+.tip{margin:10px 0 0;padding:11px 13px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:10px;color:var(--fg);font-size:15px;line-height:1.45}
 .figure .phin svg{width:30px;height:24px;max-height:none}
 .figbtn{display:block;width:100%;padding:6px;background:#fff;border:1px solid var(--line);border-radius:14px;cursor:zoom-in}
 .figbtn img{display:block;width:100%;height:auto;max-height:60vh;object-fit:contain;border-radius:8px}
@@ -3055,11 +3060,11 @@ function unitPage(uid){
   const u=UNITS.find(x=>x.id===uid);
   app.innerHTML=`<div class="top"><div><div class="crumb">101% Anatomy</div><div class="brand">${esc(u.name)}</div></div></div>${statLine(statsFor(r=>r.unit===uid))}
   <h2 class="sect">Decks</h2><div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div><span class="play">Play</span></button>`}).join("")}</div>`;
-  app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>(DECKS[b.dataset.deck].fn||DECKS[b.dataset.deck].imgOpt)?chooseMode(b.dataset.deck):startRound(b.dataset.deck));
+  app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>(DECKS[b.dataset.deck].fn||DECKS[b.dataset.deck].ident)?chooseMode(b.dataset.deck):startRound(b.dataset.deck));
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function chooseMode(deckId){
-  $("#modalSlot").innerHTML=`<div class="scrim"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mh"><h3 id="mh">${esc(DECKS[deckId].name)}</h3>${DECKS[deckId].fn?`<p>Read what each structure does and name it.</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>Description plus the picture</small></button><button class="btn" id="img-off">Images off<small>Description only</small></button>`:`<p>Show the textbook figure after each answer?</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>See the figure once you answer</small></button><button class="btn" id="img-off">Images off<small>Clues only, faster rounds</small></button>`}<button class="btn" id="mode-x" style="text-align:center">Cancel</button></div></div></div>`;
+  $("#modalSlot").innerHTML=`<div class="scrim"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mh"><h3 id="mh">${esc(DECKS[deckId].name)}</h3>${DECKS[deckId].fn?`<p>Read what each structure does and name it.</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>Description plus the picture</small></button><button class="btn" id="img-off">Images off<small>Description only</small></button>`:DECKS[deckId].ident?`<p>Name the structure from the picture, the way a lab practical asks it.</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>See the structure before you answer</small></button><button class="btn" id="img-off">Images off<small>Clue only</small></button>`:`<p>Show the textbook figure after each answer?</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>See the figure once you answer</small></button><button class="btn" id="img-off">Images off<small>Clues only, faster rounds</small></button>`}<button class="btn" id="mode-x" style="text-align:center">Cancel</button></div></div></div>`;
   const close=()=>{$("#modalSlot").innerHTML="";};
   $("#img-on").onclick=()=>{close();startRound(deckId,true);};
   $("#img-off").onclick=()=>{close();startRound(deckId,false);};
@@ -3067,7 +3072,7 @@ function chooseMode(deckId){
 }
 function startRound(deckId,images=true){
   const qs=shuffle(itemsFor(deckId).slice()).map(st=>({st,view:st.views?st.views[Math.floor(Math.random()*st.views.length)]:null}));
-  round={deck:deckId,images,qs,i:0,tries:0,credit:0,first:0,second:0,missed:0,state:"ask",fb:""};
+  round={deck:deckId,images,qs,i:0,tries:0,credit:0,first:0,second:0,missed:0,state:"ask",fb:"",lastMissed:false};
   view={page:"play"};render();scrollTo(0,0);
 }
 function playPage(){
@@ -3079,9 +3084,20 @@ function playPage(){
     const f=q.st.fig&&q.st.fig!=="-"?q.st.fig:null;
     prompt=esc(q.st.q||dk.q); desc=`<p class="desc">${esc(q.st.clue)}</p>`; hint="";
     const ph=`<div class="figure ph" role="img" aria-label="Image coming soon"><div class="phin"><svg width="30" height="24" viewBox="0 0 30 24" aria-hidden="true"><path d="M3 6h5l2-3h10l2 3h5v15H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="15" cy="13" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>Image coming soon</b>${f?`<span>OpenStax Figure ${esc(f)}</span>`:""}</div></div>`;
-    /* labeled textbook figures would give the answer away, so they show once the card is answered */
-    art=round.state!=="done"||!round.images?"":f&&FIGS.has(f)?`<button type="button" class="figbtn" id="figzoom" aria-label="Enlarge OpenStax Figure ${esc(f)}"><img src="figs/${esc(f)}.jpg" alt="OpenStax Figure ${esc(f)}"></button><p class="figcap">OpenStax Figure ${esc(f)} · tap to enlarge</p>`:ph;
-    tag=!round.images?"Images off":f?"Fig. "+esc(f):"No figure";
+    /* An identification card shows the structure marked but unnamed before you answer,
+       then the same picture with its name on it. Labeled textbook figures would give the
+       answer away, so they only ever appear once the card is answered. */
+    const ident=!!dk.ident, idf=ident?idFiles(q.st):null;
+    const after=f&&FIGS.has(f)?`<button type="button" class="figbtn" id="figzoom" data-zoom="figs/${esc(f)}.jpg" aria-label="Enlarge OpenStax Figure ${esc(f)}"><img src="figs/${esc(f)}.jpg" alt="OpenStax Figure ${esc(f)}"></button><p class="figcap">OpenStax Figure ${esc(f)} · tap to enlarge</p>`:ph;
+    if(round.state!=="done"){
+      art=(ident&&round.images&&idf)?`<div class="figure qimg" id="qimg"><img src="${esc(idf.q)}" alt="Unlabeled figure with one structure marked"><img class="hl" src="${esc(idf.m)}" alt=""></div>`:"";
+    }else if(ident&&idf){
+      art=`<button type="button" class="figbtn" id="aimg" data-zoom="${f&&FIGS.has(f)?`figs/${esc(f)}.jpg`:esc(idf.a)}" aria-label="Enlarge the textbook figure"><img src="${esc(idf.a)}" alt="The structure named"></button><p class="figcap">Tap for the full textbook figure</p>`;
+    }else{
+      art=after;   /* the figure follows the answer in both modes now */
+    }
+    if(round.state==="done"&&ident&&round.lastMissed&&q.st.tip) art+=`<p class="tip" id="tip">${esc(q.st.tip)}</p>`;
+    tag=ident&&!round.images?"Clue only":!round.images&&!ident?"Images off":f?"Fig. "+esc(f):"No figure";
   }else{
   prompt=fnDeck?"Which structure does this?":v.prompt?v.prompt:q.st.prompt&&!v.close?q.st.prompt:v.ring?(v.close?"Name the circled structure.":"What is the circled structure?"):"Name this structure.";
   art=showImg?`<div class="figure">${figureSVG(v)}</div>`:"";
@@ -3103,7 +3119,7 @@ function playPage(){
   else bar=`<div class="answer"><form id="af" autocomplete="off"><button type="button" id="idk" class="idk" aria-label="I don't know" ${locked?"disabled":""}>I don't<br>know</button><input id="ans" type="text" placeholder="${locked?"":"Type your answer"}" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send" ${locked?"disabled":""} aria-label="Your answer"><button type="submit" id="go" aria-label="Submit answer" ${locked?"disabled":""}><svg width="26" height="22" viewBox="0 0 26 22"><path d="M22 2v9a3 3 0 0 1-3 3H5m0 0 5-5m-5 5 5 5" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></div>`;
   if(round.fb) bar=bar.replace('<div class="answer">','<div class="answer"><div class="barfb" role="status">'+round.fb+'</div>');
   $("#answerSlot").innerHTML=bar;
-  const fz=$("#figzoom"); if(fz){fz.onclick=()=>{const s=fz.querySelector("img").getAttribute("src");$("#modalSlot").innerHTML=`<div class="zoom" role="dialog" aria-modal="true" aria-label="Figure"><img src="${s}" alt=""></div><button class="zoomx" id="zoomx" aria-label="Close">✕</button>`;$("#zoomx").onclick=()=>{$("#modalSlot").innerHTML="";};$("#zoomx").focus();};}
+  const fz=$("#figzoom")||$("#aimg"); if(fz){fz.onclick=()=>{const s=fz.getAttribute("data-zoom")||fz.querySelector("img").getAttribute("src");$("#modalSlot").innerHTML=`<div class="zoom" role="dialog" aria-modal="true" aria-label="Figure"><img src="${s}" alt=""></div><button class="zoomx" id="zoomx" aria-label="Close">✕</button>`;$("#zoomx").onclick=()=>{$("#modalSlot").innerHTML="";};$("#zoomx").focus();};}
   const af=$("#af"); if(af){af.onsubmit=e=>{e.preventDefault();submit($("#ans").value);};$("#idk").onclick=giveUp;}
 
   const nx=$("#next"); if(nx){nx.onclick=()=>{try{next();}catch(e){console.error(e);if(round.i>=round.qs.length-1)finish();}};nx.focus();}
@@ -3124,19 +3140,20 @@ function grade(v){
   const q=round.qs[round.i];
   if(v&&(v.id===q.st.id||(q.st.also||[]).includes(v.id)||q.st.accept.some(a=>norm(a)===v.n))){
     if(round.tries===0){round.credit+=1;round.first++;}else{round.credit+=0.5;round.second++;}
+    round.lastMissed=false;
     return setFb(`<div class="fb ok"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="var(--green)"/><path d="m7 13.5 4 4 8-9" stroke="#111" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Correct${round.tries?" <small>On the retry: half credit.</small>":""}</div></div>`,"done");
   }
   round.tries++;
   if(round.tries<2) return setFb(`<div class="fb bad">✕ Not quite<small>One more try.</small></div>`,"ask");
-  round.missed++;
+  round.missed++;round.lastMissed=true;
   setFb(`<div class="fb bad">✕ The answer is ${esc(q.st.name)}</div>`,"done");
 }
 function giveUp(){
-  const q=round.qs[round.i];round.missed++;round.keep="";
+  const q=round.qs[round.i];round.missed++;round.keep="";round.lastMissed=true;
   setFb(`<div class="fb bad">The answer is ${esc(q.st.name)}<small>Counted as missed.</small></div>`,"done");
 }
 function next(){
-  round.i++;round.tries=0;round.fb="";round.state="ask";
+  round.i++;round.tries=0;round.fb="";round.state="ask";round.lastMissed=false;
   if(round.i>=round.qs.length) return finish();
   playPage();scrollTo(0,0);
 }
@@ -3287,6 +3304,24 @@ function backupSheet(msg){
   $(".modal").scrollTop=0;
 }
 
+/* A left swipe on an answered card is the same as tapping Next — quicker on a phone
+   when you are flicking through cards you already know. */
+function bindSwipe(){
+  const el=$("#app");
+  if(!el||el.dataset.swipe) return;
+  el.dataset.swipe="1";
+  let sx=0,sy=0;
+  el.addEventListener("touchstart",e=>{const t=e.changedTouches[0];sx=t.clientX;sy=t.clientY;},{passive:true});
+  el.addEventListener("touchend",e=>{
+    if(!round||round.state!=="done") return;                 // nothing to skip past yet
+    if($("#modalSlot").innerHTML.trim()) return;             // a zoom or dialog is open
+    const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;
+    if(dx<=-60&&Math.abs(dx)>1.5*Math.abs(dy)){              // sideways, not a scroll
+      try{next();}catch(err){console.error(err);}
+    }
+  },{passive:true});
+}
+
 /* menu + leave guard */
 const mb=$("#menubtn"),menu=$("#menu");
 function closeMenu(){menu.hidden=true;mb.setAttribute("aria-expanded","false");}
@@ -3311,7 +3346,7 @@ function confirmLeave(yes){
 }
 window.addEventListener("beforeunload",e=>{if(view.page==="play"){e.preventDefault();e.returnValue="";}});
 
-render(); saveBanner(); setTimeout(initRemote,0);
+render(); saveBanner(); bindSwipe(); setTimeout(initRemote,0);
 keepStorage();
 /* Ask again after a real tap: some browsers only grant persistence on a user gesture. */
 window.addEventListener("pointerdown",function once(){window.removeEventListener("pointerdown",once);keepStorage();},{once:true});
