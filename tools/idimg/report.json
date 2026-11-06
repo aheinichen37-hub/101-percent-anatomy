@@ -1,0 +1,6575 @@
+{
+ "ch1-abd-0": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-1": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-10": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-11": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-12": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-2": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-3": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-4": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-5": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-6": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-7": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-8": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-abd-9": {
+  "deck": "ch1-abd",
+  "fig": "1.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-cav-0": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-cav-1": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-cav-10": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch1-cav-11": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch1-cav-2": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-cav-3": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-cav-4": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch1-cav-5": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-cav-6": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch1-cav-7": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch1-cav-8": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-cav-9": {
+  "deck": "ch1-cav",
+  "fig": "1.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch1-pl-0": {
+  "deck": "ch1-pl",
+  "fig": "1.14",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch1-pl-1": {
+  "deck": "ch1-pl",
+  "fig": "1.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-pl-2": {
+  "deck": "ch1-pl",
+  "fig": "1.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-pl-3": {
+  "deck": "ch1-pl",
+  "fig": "1.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch1-pl-4": {
+  "deck": "ch1-pl",
+  "fig": "1.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch1-pl-5": {
+  "deck": "ch1-pl",
+  "fig": "1.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch1-reg-0": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-1": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-10": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-11": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 51x42",
+  "status": "fail"
+ },
+ "ch1-reg-12": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 89x43",
+  "status": "fail"
+ },
+ "ch1-reg-13": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-14": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-15": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-16": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-17": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-18": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 54x38",
+  "status": "fail"
+ },
+ "ch1-reg-19": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-2": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-20": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-21": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 59x35",
+  "status": "fail"
+ },
+ "ch1-reg-22": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-23": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-24": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 35x31",
+  "status": "fail"
+ },
+ "ch1-reg-25": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-26": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 75x76",
+  "status": "fail"
+ },
+ "ch1-reg-27": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-28": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 40x72",
+  "status": "fail"
+ },
+ "ch1-reg-29": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-3": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 28x33",
+  "status": "fail"
+ },
+ "ch1-reg-30": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-31": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-32": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-33": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-34": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-35": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-36": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-37": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-38": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-39": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-4": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-40": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-41": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-42": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-43": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-44": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-45": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-46": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-5": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-reg-6": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "crop is only 79x44",
+  "status": "fail"
+ },
+ "ch1-reg-7": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-8": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-reg-9": {
+  "deck": "ch1-reg",
+  "fig": "1.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch1-ser-0": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-ser-1": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-ser-2": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-ser-3": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-ser-4": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-ser-5": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-ser-6": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-ser-7": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch1-ser-8": {
+  "deck": "ch1-ser",
+  "fig": "1.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch10-str-0": {
+  "deck": "ch10-str",
+  "fig": "10.3",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch10-str-1": {
+  "deck": "ch10-str",
+  "fig": "10.3",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch10-str-10": {
+  "deck": "ch10-str",
+  "fig": "10.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch10-str-11": {
+  "deck": "ch10-str",
+  "fig": "10.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch10-str-12": {
+  "deck": "ch10-str",
+  "fig": "10.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch10-str-13": {
+  "deck": "ch10-str",
+  "fig": "10.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch10-str-14": {
+  "deck": "ch10-str",
+  "fig": "10.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch10-str-15": {
+  "deck": "ch10-str",
+  "fig": "10.5",
+  "kind": null,
+  "reason": "crop is only 197x171",
+  "status": "fail"
+ },
+ "ch10-str-16": {
+  "deck": "ch10-str",
+  "fig": "10.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch10-str-17": {
+  "deck": "ch10-str",
+  "fig": "10.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch10-str-18": {
+  "deck": "ch10-str",
+  "fig": "10.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch10-str-19": {
+  "deck": "ch10-str",
+  "fig": "10.6",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch10-str-2": {
+  "deck": "ch10-str",
+  "fig": "10.3",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch10-str-20": {
+  "deck": "ch10-str",
+  "fig": "10.6",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch10-str-21": {
+  "deck": "ch10-str",
+  "fig": "10.7",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch10-str-22": {
+  "deck": "ch10-str",
+  "fig": "10.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch10-str-3": {
+  "deck": "ch10-str",
+  "fig": "10.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch10-str-4": {
+  "deck": "ch10-str",
+  "fig": "10.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch10-str-5": {
+  "deck": "ch10-str",
+  "fig": "10.4",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch10-str-6": {
+  "deck": "ch10-str",
+  "fig": "10.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch10-str-7": {
+  "deck": "ch10-str",
+  "fig": "10.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch10-str-8": {
+  "deck": "ch10-str",
+  "fig": "10.4",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch10-str-9": {
+  "deck": "ch10-str",
+  "fig": "10.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-abd-0": {
+  "deck": "ch11-abd",
+  "fig": "11.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-abd-1": {
+  "deck": "ch11-abd",
+  "fig": "11.16",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch11-abd-2": {
+  "deck": "ch11-abd",
+  "fig": "11.16",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch11-abd-3": {
+  "deck": "ch11-abd",
+  "fig": "11.16",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch11-abd-4": {
+  "deck": "ch11-abd",
+  "fig": "11.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-arm-0": {
+  "deck": "ch11-arm",
+  "fig": "11.25",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch11-arm-1": {
+  "deck": "ch11-arm",
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-arm-2": {
+  "deck": "ch11-arm",
+  "fig": "11.25",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-arm-3": {
+  "deck": "ch11-arm",
+  "fig": "11.25",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch11-arm-4": {
+  "deck": "ch11-arm",
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-arm-5": {
+  "deck": "ch11-arm",
+  "fig": "11.26",
+  "kind": null,
+  "reason": "crop is only 89x52",
+  "status": "fail"
+ },
+ "ch11-arm-6": {
+  "deck": "ch11-arm",
+  "fig": "11.26",
+  "kind": null,
+  "reason": "crop is only 105x97",
+  "status": "fail"
+ },
+ "ch11-arm-7": {
+  "deck": "ch11-arm",
+  "fig": "11.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-back-0": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-back-1": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-back-2": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-back-3": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-back-4": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-back-5": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-back-6": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-back-7": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-back-8": {
+  "deck": "ch11-back",
+  "fig": "11.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hand-0": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 31x80",
+  "status": "fail"
+ },
+ "ch11-hand-1": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 31x50",
+  "status": "fail"
+ },
+ "ch11-hand-10": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 36x44",
+  "status": "fail"
+ },
+ "ch11-hand-11": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 36x36",
+  "status": "fail"
+ },
+ "ch11-hand-2": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 305x81",
+  "status": "fail"
+ },
+ "ch11-hand-3": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hand-4": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hand-5": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 125x39",
+  "status": "fail"
+ },
+ "ch11-hand-6": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 125x135",
+  "status": "fail"
+ },
+ "ch11-hand-7": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 125x243",
+  "status": "fail"
+ },
+ "ch11-hand-8": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 358x123",
+  "status": "fail"
+ },
+ "ch11-hand-9": {
+  "deck": "ch11-hand",
+  "fig": "11.27",
+  "kind": null,
+  "reason": "crop is only 36x38",
+  "status": "fail"
+ },
+ "ch11-head-0": {
+  "deck": "ch11-head",
+  "fig": "11.3",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch11-head-1": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-10": {
+  "deck": "ch11-head",
+  "fig": "11.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-head-11": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-12": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-13": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-14": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-15": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-16": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-17": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-18": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-19": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-2": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-20": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-21": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-3": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-4": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-5": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-6": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-7": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-8": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-head-9": {
+  "deck": "ch11-head",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-hip-0": {
+  "deck": "ch11-hip",
+  "fig": "11.29",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch11-hip-1": {
+  "deck": "ch11-hip",
+  "fig": "11.29",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hip-2": {
+  "deck": "ch11-hip",
+  "fig": "11.29",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hip-3": {
+  "deck": "ch11-hip",
+  "fig": "11.29",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hip-4": {
+  "deck": "ch11-hip",
+  "fig": "11.30",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hip-5": {
+  "deck": "ch11-hip",
+  "fig": "11.30",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hip-6": {
+  "deck": "ch11-hip",
+  "fig": "11.30",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-hip-7": {
+  "deck": "ch11-hip",
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-leg-0": {
+  "deck": "ch11-leg",
+  "fig": "11.32",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch11-leg-1": {
+  "deck": "ch11-leg",
+  "fig": "11.33",
+  "kind": null,
+  "reason": "crop is only 34x50",
+  "status": "fail"
+ },
+ "ch11-leg-2": {
+  "deck": "ch11-leg",
+  "fig": "11.33",
+  "kind": null,
+  "reason": "crop is only 87x56",
+  "status": "fail"
+ },
+ "ch11-leg-3": {
+  "deck": "ch11-leg",
+  "fig": "11.33",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-leg-4": {
+  "deck": "ch11-leg",
+  "fig": "11.32",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-leg-5": {
+  "deck": "ch11-leg",
+  "fig": "11.32",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch11-leg-6": {
+  "deck": "ch11-leg",
+  "fig": "11.32",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-resp-0": {
+  "deck": "ch11-resp",
+  "fig": "11.17",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-resp-1": {
+  "deck": "ch11-resp",
+  "fig": "11.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-resp-2": {
+  "deck": "ch11-resp",
+  "fig": "11.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-resp-3": {
+  "deck": "ch11-resp",
+  "fig": "11.22",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-resp-4": {
+  "deck": "ch11-resp",
+  "fig": "11.22",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-resp-5": {
+  "deck": "ch11-resp",
+  "fig": "11.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-resp-6": {
+  "deck": "ch11-resp",
+  "fig": "11.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-resp-7": {
+  "deck": "ch11-resp",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-resp-8": {
+  "deck": "ch11-resp",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-resp-9": {
+  "deck": "ch11-resp",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch11-sh-0": {
+  "deck": "ch11-sh",
+  "fig": "11.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-sh-1": {
+  "deck": "ch11-sh",
+  "fig": "11.23",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch11-sh-10": {
+  "deck": "ch11-sh",
+  "fig": "11.22",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-sh-11": {
+  "deck": "ch11-sh",
+  "fig": "11.22",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-sh-12": {
+  "deck": "ch11-sh",
+  "fig": "11.22",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-sh-13": {
+  "deck": "ch11-sh",
+  "fig": "11.22",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-sh-2": {
+  "deck": "ch11-sh",
+  "fig": "11.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch11-sh-3": {
+  "deck": "ch11-sh",
+  "fig": "11.24",
+  "kind": null,
+  "reason": "crop is only 132x99",
+  "status": "fail"
+ },
+ "ch11-sh-4": {
+  "deck": "ch11-sh",
+  "fig": "11.24",
+  "kind": null,
+  "reason": "crop is only 142x56",
+  "status": "fail"
+ },
+ "ch11-sh-5": {
+  "deck": "ch11-sh",
+  "fig": "11.24",
+  "kind": null,
+  "reason": "crop is only 37x72",
+  "status": "fail"
+ },
+ "ch11-sh-6": {
+  "deck": "ch11-sh",
+  "fig": "11.24",
+  "kind": null,
+  "reason": "crop is only 141x243",
+  "status": "fail"
+ },
+ "ch11-sh-7": {
+  "deck": "ch11-sh",
+  "fig": "11.24",
+  "kind": null,
+  "reason": "crop is only 132x55",
+  "status": "fail"
+ },
+ "ch11-sh-8": {
+  "deck": "ch11-sh",
+  "fig": "11.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-sh-9": {
+  "deck": "ch11-sh",
+  "fig": "11.24",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-thigh-0": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "crop is only 90x108",
+  "status": "fail"
+ },
+ "ch11-thigh-1": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "crop is only 145x120",
+  "status": "fail"
+ },
+ "ch11-thigh-10": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-thigh-11": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "crop is only 37x33",
+  "status": "fail"
+ },
+ "ch11-thigh-12": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "crop is only 555x43",
+  "status": "fail"
+ },
+ "ch11-thigh-13": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch11-thigh-14": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-thigh-2": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "crop is only 99x55",
+  "status": "fail"
+ },
+ "ch11-thigh-3": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "crop is only 150x55",
+  "status": "fail"
+ },
+ "ch11-thigh-4": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "crop is only 122x108",
+  "status": "fail"
+ },
+ "ch11-thigh-5": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-thigh-6": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-thigh-7": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-thigh-8": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch11-thigh-9": {
+  "deck": "ch11-thigh",
+  "fig": "11.31",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-0": {
+  "deck": "ch12-cell",
+  "fig": "12.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-1": {
+  "deck": "ch12-cell",
+  "fig": "12.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-10": {
+  "deck": "ch12-cell",
+  "fig": "12.9",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch12-cell-11": {
+  "deck": "ch12-cell",
+  "fig": "12.9",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch12-cell-12": {
+  "deck": "ch12-cell",
+  "fig": "12.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-13": {
+  "deck": "ch12-cell",
+  "fig": "12.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-14": {
+  "deck": "ch12-cell",
+  "fig": "12.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-15": {
+  "deck": "ch12-cell",
+  "fig": "12.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-16": {
+  "deck": "ch12-cell",
+  "fig": "12.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch12-cell-17": {
+  "deck": "ch12-cell",
+  "fig": "12.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch12-cell-18": {
+  "deck": "ch12-cell",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch12-cell-2": {
+  "deck": "ch12-cell",
+  "fig": "12.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-3": {
+  "deck": "ch12-cell",
+  "fig": "12.13",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch12-cell-4": {
+  "deck": "ch12-cell",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch12-cell-5": {
+  "deck": "ch12-cell",
+  "fig": "12.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-6": {
+  "deck": "ch12-cell",
+  "fig": "12.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-7": {
+  "deck": "ch12-cell",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch12-cell-8": {
+  "deck": "ch12-cell",
+  "fig": "12.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch12-cell-9": {
+  "deck": "ch12-cell",
+  "fig": "12.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-cn-0": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-1": {
+  "deck": "ch13-cn",
+  "fig": "13.20",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-cn-10": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-11": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-12": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-2": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-3": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-4": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-5": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-6": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-7": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-8": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cn-9": {
+  "deck": "ch13-cn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-0": {
+  "deck": "ch13-cns",
+  "fig": "13.6",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch13-cns-1": {
+  "deck": "ch13-cns",
+  "fig": "13.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-cns-10": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-11": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-12": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-13": {
+  "deck": "ch13-cns",
+  "fig": "13.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-cns-14": {
+  "deck": "ch13-cns",
+  "fig": "13.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-cns-15": {
+  "deck": "ch13-cns",
+  "fig": "13.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-cns-16": {
+  "deck": "ch13-cns",
+  "fig": "13.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-cns-17": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-18": {
+  "deck": "ch13-cns",
+  "fig": "13.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-cns-19": {
+  "deck": "ch13-cns",
+  "fig": "13.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-cns-2": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-20": {
+  "deck": "ch13-cns",
+  "fig": "13.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-cns-21": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-22": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-3": {
+  "deck": "ch13-cns",
+  "fig": "13.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-cns-4": {
+  "deck": "ch13-cns",
+  "fig": "13.17",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-cns-5": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-6": {
+  "deck": "ch13-cns",
+  "fig": "13.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-cns-7": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-8": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-cns-9": {
+  "deck": "ch13-cns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-csf-0": {
+  "deck": "ch13-csf",
+  "fig": "13.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-csf-1": {
+  "deck": "ch13-csf",
+  "fig": "13.17",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-csf-10": {
+  "deck": "ch13-csf",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-csf-11": {
+  "deck": "ch13-csf",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-csf-12": {
+  "deck": "ch13-csf",
+  "fig": "13.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-csf-13": {
+  "deck": "ch13-csf",
+  "fig": "13.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-csf-14": {
+  "deck": "ch13-csf",
+  "fig": "13.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-csf-15": {
+  "deck": "ch13-csf",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-csf-2": {
+  "deck": "ch13-csf",
+  "fig": "13.18",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-csf-3": {
+  "deck": "ch13-csf",
+  "fig": "13.17",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-csf-4": {
+  "deck": "ch13-csf",
+  "fig": "13.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-csf-5": {
+  "deck": "ch13-csf",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-csf-6": {
+  "deck": "ch13-csf",
+  "fig": "13.18",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-csf-7": {
+  "deck": "ch13-csf",
+  "fig": "13.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-csf-8": {
+  "deck": "ch13-csf",
+  "fig": "13.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-csf-9": {
+  "deck": "ch13-csf",
+  "fig": "13.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-pns-0": {
+  "deck": "ch13-pns",
+  "fig": "13.24",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-pns-1": {
+  "deck": "ch13-pns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-pns-10": {
+  "deck": "ch13-pns",
+  "fig": "13.24",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-pns-11": {
+  "deck": "ch13-pns",
+  "fig": "13.24",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch13-pns-12": {
+  "deck": "ch13-pns",
+  "fig": "13.24",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-pns-13": {
+  "deck": "ch13-pns",
+  "fig": "13.24",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-pns-14": {
+  "deck": "ch13-pns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-pns-15": {
+  "deck": "ch13-pns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-pns-2": {
+  "deck": "ch13-pns",
+  "fig": "13.19",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-pns-3": {
+  "deck": "ch13-pns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch13-pns-4": {
+  "deck": "ch13-pns",
+  "fig": "13.19",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-pns-5": {
+  "deck": "ch13-pns",
+  "fig": "13.22",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-pns-6": {
+  "deck": "ch13-pns",
+  "fig": "13.22",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-pns-7": {
+  "deck": "ch13-pns",
+  "fig": "13.22",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch13-pns-8": {
+  "deck": "ch13-pns",
+  "fig": "13.24",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch13-pns-9": {
+  "deck": "ch13-pns",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch14-spec-0": {
+  "deck": "ch14-spec",
+  "fig": "14.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch14-spec-1": {
+  "deck": "ch14-spec",
+  "fig": "14.3",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch14-spec-10": {
+  "deck": "ch14-spec",
+  "fig": "14.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch14-spec-11": {
+  "deck": "ch14-spec",
+  "fig": "14.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch14-spec-12": {
+  "deck": "ch14-spec",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch14-spec-13": {
+  "deck": "ch14-spec",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch14-spec-14": {
+  "deck": "ch14-spec",
+  "fig": "14.24",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch14-spec-15": {
+  "deck": "ch14-spec",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch14-spec-16": {
+  "deck": "ch14-spec",
+  "fig": "14.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch14-spec-17": {
+  "deck": "ch14-spec",
+  "fig": "14.15",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch14-spec-18": {
+  "deck": "ch14-spec",
+  "fig": "14.15",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch14-spec-19": {
+  "deck": "ch14-spec",
+  "fig": "14.15",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch14-spec-2": {
+  "deck": "ch14-spec",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch14-spec-3": {
+  "deck": "ch14-spec",
+  "fig": "14.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch14-spec-4": {
+  "deck": "ch14-spec",
+  "fig": "14.4",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch14-spec-5": {
+  "deck": "ch14-spec",
+  "fig": "14.6",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch14-spec-6": {
+  "deck": "ch14-spec",
+  "fig": "14.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch14-spec-7": {
+  "deck": "ch14-spec",
+  "fig": "14.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch14-spec-8": {
+  "deck": "ch14-spec",
+  "fig": "14.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch14-spec-9": {
+  "deck": "ch14-spec",
+  "fig": "14.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch18-wbc-0": {
+  "deck": "ch18-wbc",
+  "fig": "18.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch18-wbc-1": {
+  "deck": "ch18-wbc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch18-wbc-10": {
+  "deck": "ch18-wbc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch18-wbc-11": {
+  "deck": "ch18-wbc",
+  "fig": "18.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch18-wbc-12": {
+  "deck": "ch18-wbc",
+  "fig": "18.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch18-wbc-13": {
+  "deck": "ch18-wbc",
+  "fig": "18.12",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch18-wbc-14": {
+  "deck": "ch18-wbc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch18-wbc-2": {
+  "deck": "ch18-wbc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch18-wbc-3": {
+  "deck": "ch18-wbc",
+  "fig": "18.10",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch18-wbc-4": {
+  "deck": "ch18-wbc",
+  "fig": "18.10",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch18-wbc-5": {
+  "deck": "ch18-wbc",
+  "fig": "18.11",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch18-wbc-6": {
+  "deck": "ch18-wbc",
+  "fig": "18.4",
+  "kind": null,
+  "reason": "crop is only 40x41",
+  "status": "fail"
+ },
+ "ch18-wbc-7": {
+  "deck": "ch18-wbc",
+  "fig": "18.10",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch18-wbc-8": {
+  "deck": "ch18-wbc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch18-wbc-9": {
+  "deck": "ch18-wbc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch19-anat-0": {
+  "deck": "ch19-anat",
+  "fig": "19.2",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-1": {
+  "deck": "ch19-anat",
+  "fig": "19.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-10": {
+  "deck": "ch19-anat",
+  "fig": "19.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-11": {
+  "deck": "ch19-anat",
+  "fig": "19.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-12": {
+  "deck": "ch19-anat",
+  "fig": "19.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-13": {
+  "deck": "ch19-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch19-anat-14": {
+  "deck": "ch19-anat",
+  "fig": "19.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-15": {
+  "deck": "ch19-anat",
+  "fig": "19.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-16": {
+  "deck": "ch19-anat",
+  "fig": "19.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-17": {
+  "deck": "ch19-anat",
+  "fig": "19.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-18": {
+  "deck": "ch19-anat",
+  "fig": "19.9",
+  "kind": null,
+  "reason": "crop is only 136x76",
+  "status": "fail"
+ },
+ "ch19-anat-19": {
+  "deck": "ch19-anat",
+  "fig": "19.9",
+  "kind": null,
+  "reason": "crop is only 131x76",
+  "status": "fail"
+ },
+ "ch19-anat-2": {
+  "deck": "ch19-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch19-anat-20": {
+  "deck": "ch19-anat",
+  "fig": "19.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-21": {
+  "deck": "ch19-anat",
+  "fig": "19.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-22": {
+  "deck": "ch19-anat",
+  "fig": "19.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-23": {
+  "deck": "ch19-anat",
+  "fig": "19.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-24": {
+  "deck": "ch19-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch19-anat-3": {
+  "deck": "ch19-anat",
+  "fig": "19.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-4": {
+  "deck": "ch19-anat",
+  "fig": "19.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-5": {
+  "deck": "ch19-anat",
+  "fig": "19.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-6": {
+  "deck": "ch19-anat",
+  "fig": "19.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-7": {
+  "deck": "ch19-anat",
+  "fig": "19.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch19-anat-8": {
+  "deck": "ch19-anat",
+  "fig": "19.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-anat-9": {
+  "deck": "ch19-anat",
+  "fig": "19.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-cond-0": {
+  "deck": "ch19-cond",
+  "fig": "19.20",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-cond-1": {
+  "deck": "ch19-cond",
+  "fig": "19.18",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch19-cond-10": {
+  "deck": "ch19-cond",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch19-cond-11": {
+  "deck": "ch19-cond",
+  "fig": "19.25",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch19-cond-12": {
+  "deck": "ch19-cond",
+  "fig": "19.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-cond-13": {
+  "deck": "ch19-cond",
+  "fig": "19.20",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch19-cond-2": {
+  "deck": "ch19-cond",
+  "fig": "19.19",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-cond-3": {
+  "deck": "ch19-cond",
+  "fig": "19.18",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-cond-4": {
+  "deck": "ch19-cond",
+  "fig": "19.18",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch19-cond-5": {
+  "deck": "ch19-cond",
+  "fig": "19.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-cond-6": {
+  "deck": "ch19-cond",
+  "fig": "19.23",
+  "kind": null,
+  "reason": "crop is only 231x245",
+  "status": "fail"
+ },
+ "ch19-cond-7": {
+  "deck": "ch19-cond",
+  "fig": "19.25",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch19-cond-8": {
+  "deck": "ch19-cond",
+  "fig": "19.23",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch19-cond-9": {
+  "deck": "ch19-cond",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-art-0": {
+  "deck": "ch20-art",
+  "fig": "20.25",
+  "kind": null,
+  "reason": "crop is only 48x156",
+  "status": "fail"
+ },
+ "ch20-art-1": {
+  "deck": "ch20-art",
+  "fig": "20.25",
+  "kind": null,
+  "reason": "crop is only 47x138",
+  "status": "fail"
+ },
+ "ch20-art-10": {
+  "deck": "ch20-art",
+  "fig": "20.11",
+  "kind": null,
+  "reason": "crop is only 75x69",
+  "status": "fail"
+ },
+ "ch20-art-11": {
+  "deck": "ch20-art",
+  "fig": "20.31",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-art-12": {
+  "deck": "ch20-art",
+  "fig": "20.28",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-art-13": {
+  "deck": "ch20-art",
+  "fig": "20.28",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-art-14": {
+  "deck": "ch20-art",
+  "fig": "20.28",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-art-15": {
+  "deck": "ch20-art",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-art-16": {
+  "deck": "ch20-art",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-art-17": {
+  "deck": "ch20-art",
+  "fig": "20.19",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-18": {
+  "deck": "ch20-art",
+  "fig": "20.30",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-19": {
+  "deck": "ch20-art",
+  "fig": "20.33",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-art-2": {
+  "deck": "ch20-art",
+  "fig": "20.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-20": {
+  "deck": "ch20-art",
+  "fig": "20.41",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-art-21": {
+  "deck": "ch20-art",
+  "fig": "20.34",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-3": {
+  "deck": "ch20-art",
+  "fig": "20.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-4": {
+  "deck": "ch20-art",
+  "fig": "20.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-5": {
+  "deck": "ch20-art",
+  "fig": "20.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-6": {
+  "deck": "ch20-art",
+  "fig": "20.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-7": {
+  "deck": "ch20-art",
+  "fig": "20.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-8": {
+  "deck": "ch20-art",
+  "fig": "20.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-art-9": {
+  "deck": "ch20-art",
+  "fig": "20.31",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-str-0": {
+  "deck": "ch20-str",
+  "fig": "20.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-str-1": {
+  "deck": "ch20-str",
+  "fig": "20.4",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-str-10": {
+  "deck": "ch20-str",
+  "fig": "20.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-str-11": {
+  "deck": "ch20-str",
+  "fig": "20.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-str-12": {
+  "deck": "ch20-str",
+  "fig": "20.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-str-13": {
+  "deck": "ch20-str",
+  "fig": "20.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-str-14": {
+  "deck": "ch20-str",
+  "fig": "20.6",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch20-str-15": {
+  "deck": "ch20-str",
+  "fig": "20.7",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch20-str-16": {
+  "deck": "ch20-str",
+  "fig": "20.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-str-17": {
+  "deck": "ch20-str",
+  "fig": "20.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-str-18": {
+  "deck": "ch20-str",
+  "fig": "20.3",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-str-2": {
+  "deck": "ch20-str",
+  "fig": "20.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-str-3": {
+  "deck": "ch20-str",
+  "fig": "20.7",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-str-4": {
+  "deck": "ch20-str",
+  "fig": "20.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-str-5": {
+  "deck": "ch20-str",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-str-6": {
+  "deck": "ch20-str",
+  "fig": "20.3",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-str-7": {
+  "deck": "ch20-str",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-str-8": {
+  "deck": "ch20-str",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-str-9": {
+  "deck": "ch20-str",
+  "fig": "20.4",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-vein-0": {
+  "deck": "ch20-vein",
+  "fig": "20.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-vein-1": {
+  "deck": "ch20-vein",
+  "fig": "20.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-vein-10": {
+  "deck": "ch20-vein",
+  "fig": "20.43",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-vein-11": {
+  "deck": "ch20-vein",
+  "fig": "20.43",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-vein-12": {
+  "deck": "ch20-vein",
+  "fig": "20.40",
+  "kind": null,
+  "reason": "crop is only 26x59",
+  "status": "fail"
+ },
+ "ch20-vein-13": {
+  "deck": "ch20-vein",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-vein-14": {
+  "deck": "ch20-vein",
+  "fig": "20.33",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch20-vein-15": {
+  "deck": "ch20-vein",
+  "fig": "20.44",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-vein-16": {
+  "deck": "ch20-vein",
+  "fig": "20.44",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-vein-17": {
+  "deck": "ch20-vein",
+  "fig": "20.44",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-vein-18": {
+  "deck": "ch20-vein",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-vein-2": {
+  "deck": "ch20-vein",
+  "fig": "20.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-vein-3": {
+  "deck": "ch20-vein",
+  "fig": "20.37",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-vein-4": {
+  "deck": "ch20-vein",
+  "fig": "20.37",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch20-vein-5": {
+  "deck": "ch20-vein",
+  "fig": "20.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch20-vein-6": {
+  "deck": "ch20-vein",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-vein-7": {
+  "deck": "ch20-vein",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-vein-8": {
+  "deck": "ch20-vein",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch20-vein-9": {
+  "deck": "ch20-vein",
+  "fig": "20.36",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch21-lym-0": {
+  "deck": "ch21-lym",
+  "fig": "21.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch21-lym-1": {
+  "deck": "ch21-lym",
+  "fig": "21.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch21-lym-10": {
+  "deck": "ch21-lym",
+  "fig": "21.9",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch21-lym-11": {
+  "deck": "ch21-lym",
+  "fig": "21.9",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch21-lym-12": {
+  "deck": "ch21-lym",
+  "fig": "21.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch21-lym-13": {
+  "deck": "ch21-lym",
+  "fig": "21.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch21-lym-14": {
+  "deck": "ch21-lym",
+  "fig": "21.27",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch21-lym-15": {
+  "deck": "ch21-lym",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch21-lym-16": {
+  "deck": "ch21-lym",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch21-lym-2": {
+  "deck": "ch21-lym",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch21-lym-3": {
+  "deck": "ch21-lym",
+  "fig": "21.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch21-lym-4": {
+  "deck": "ch21-lym",
+  "fig": "21.4",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch21-lym-5": {
+  "deck": "ch21-lym",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch21-lym-6": {
+  "deck": "ch21-lym",
+  "fig": "21.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch21-lym-7": {
+  "deck": "ch21-lym",
+  "fig": "21.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch21-lym-8": {
+  "deck": "ch21-lym",
+  "fig": "21.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch21-lym-9": {
+  "deck": "ch21-lym",
+  "fig": "21.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch22-anat-0": {
+  "deck": "ch22-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch22-anat-1": {
+  "deck": "ch22-anat",
+  "fig": "22.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch22-anat-10": {
+  "deck": "ch22-anat",
+  "fig": "22.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch22-anat-11": {
+  "deck": "ch22-anat",
+  "fig": "22.8",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch22-anat-12": {
+  "deck": "ch22-anat",
+  "fig": "22.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch22-anat-13": {
+  "deck": "ch22-anat",
+  "fig": "22.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch22-anat-14": {
+  "deck": "ch22-anat",
+  "fig": "22.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch22-anat-15": {
+  "deck": "ch22-anat",
+  "fig": "22.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch22-anat-16": {
+  "deck": "ch22-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch22-anat-17": {
+  "deck": "ch22-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch22-anat-18": {
+  "deck": "ch22-anat",
+  "fig": "22.22",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch22-anat-19": {
+  "deck": "ch22-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch22-anat-2": {
+  "deck": "ch22-anat",
+  "fig": "22.2",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch22-anat-20": {
+  "deck": "ch22-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch22-anat-21": {
+  "deck": "ch22-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch22-anat-22": {
+  "deck": "ch22-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch22-anat-23": {
+  "deck": "ch22-anat",
+  "fig": "22.22",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch22-anat-24": {
+  "deck": "ch22-anat",
+  "fig": "22.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch22-anat-25": {
+  "deck": "ch22-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch22-anat-3": {
+  "deck": "ch22-anat",
+  "fig": "22.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch22-anat-4": {
+  "deck": "ch22-anat",
+  "fig": "22.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch22-anat-5": {
+  "deck": "ch22-anat",
+  "fig": "22.6",
+  "kind": null,
+  "reason": "crop is only 91x58",
+  "status": "fail"
+ },
+ "ch22-anat-6": {
+  "deck": "ch22-anat",
+  "fig": "22.6",
+  "kind": null,
+  "reason": "crop is only 111x204",
+  "status": "fail"
+ },
+ "ch22-anat-7": {
+  "deck": "ch22-anat",
+  "fig": "22.6",
+  "kind": null,
+  "reason": "crop is only 111x204",
+  "status": "fail"
+ },
+ "ch22-anat-8": {
+  "deck": "ch22-anat",
+  "fig": "22.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch22-anat-9": {
+  "deck": "ch22-anat",
+  "fig": "22.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-acc-0": {
+  "deck": "ch23-acc",
+  "fig": "23.25",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-acc-1": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-10": {
+  "deck": "ch23-acc",
+  "fig": "23.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-acc-11": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-12": {
+  "deck": "ch23-acc",
+  "fig": "23.26",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch23-acc-13": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-14": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-15": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-16": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-2": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-3": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-4": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-5": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-6": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-7": {
+  "deck": "ch23-acc",
+  "fig": "23.27",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch23-acc-8": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-acc-9": {
+  "deck": "ch23-acc",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-0": {
+  "deck": "ch23-int",
+  "fig": "23.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-int-1": {
+  "deck": "ch23-int",
+  "fig": "23.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-int-10": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-11": {
+  "deck": "ch23-int",
+  "fig": "23.21",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-int-12": {
+  "deck": "ch23-int",
+  "fig": "23.21",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-int-13": {
+  "deck": "ch23-int",
+  "fig": "23.21",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-int-14": {
+  "deck": "ch23-int",
+  "fig": "23.21",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch23-int-15": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-16": {
+  "deck": "ch23-int",
+  "fig": "23.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-int-17": {
+  "deck": "ch23-int",
+  "fig": "23.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-int-18": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-19": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-2": {
+  "deck": "ch23-int",
+  "fig": "23.32",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-int-3": {
+  "deck": "ch23-int",
+  "fig": "23.19",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-int-4": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-5": {
+  "deck": "ch23-int",
+  "fig": "23.19",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch23-int-6": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-7": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-8": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-int-9": {
+  "deck": "ch23-int",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-0": {
+  "deck": "ch23-mouth",
+  "fig": "23.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-mouth-1": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-10": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-11": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-12": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-13": {
+  "deck": "ch23-mouth",
+  "fig": "23.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-mouth-14": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-15": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-16": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-17": {
+  "deck": "ch23-mouth",
+  "fig": "23.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-mouth-18": {
+  "deck": "ch23-mouth",
+  "fig": "23.13",
+  "kind": null,
+  "reason": "crop is only 44x130",
+  "status": "fail"
+ },
+ "ch23-mouth-19": {
+  "deck": "ch23-mouth",
+  "fig": "23.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-mouth-2": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-20": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-3": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-4": {
+  "deck": "ch23-mouth",
+  "fig": "23.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-mouth-5": {
+  "deck": "ch23-mouth",
+  "fig": "23.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-mouth-6": {
+  "deck": "ch23-mouth",
+  "fig": "23.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-mouth-7": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-mouth-8": {
+  "deck": "ch23-mouth",
+  "fig": "23.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-mouth-9": {
+  "deck": "ch23-mouth",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-0": {
+  "deck": "ch23-stom",
+  "fig": "23.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-stom-1": {
+  "deck": "ch23-stom",
+  "fig": "23.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-stom-10": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-11": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-12": {
+  "deck": "ch23-stom",
+  "fig": "23.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-stom-13": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-14": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-15": {
+  "deck": "ch23-stom",
+  "fig": "23.20",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch23-stom-16": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-17": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-18": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-19": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-2": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-3": {
+  "deck": "ch23-stom",
+  "fig": "23.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-stom-4": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-5": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-6": {
+  "deck": "ch23-stom",
+  "fig": "23.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch23-stom-7": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-8": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch23-stom-9": {
+  "deck": "ch23-stom",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-0": {
+  "deck": "ch25-anat",
+  "fig": "25.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch25-anat-1": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-10": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-11": {
+  "deck": "ch25-anat",
+  "fig": "25.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-anat-12": {
+  "deck": "ch25-anat",
+  "fig": "25.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-anat-13": {
+  "deck": "ch25-anat",
+  "fig": "25.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch25-anat-14": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-15": {
+  "deck": "ch25-anat",
+  "fig": "25.3",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch25-anat-16": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-17": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-18": {
+  "deck": "ch25-anat",
+  "fig": "25.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-anat-19": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-2": {
+  "deck": "ch25-anat",
+  "fig": "25.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch25-anat-20": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-21": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-3": {
+  "deck": "ch25-anat",
+  "fig": "25.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch25-anat-4": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-5": {
+  "deck": "ch25-anat",
+  "fig": "25.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch25-anat-6": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-7": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-8": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-anat-9": {
+  "deck": "ch25-anat",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-neph-0": {
+  "deck": "ch25-neph",
+  "fig": "25.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-1": {
+  "deck": "ch25-neph",
+  "fig": "25.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-10": {
+  "deck": "ch25-neph",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-neph-11": {
+  "deck": "ch25-neph",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-neph-12": {
+  "deck": "ch25-neph",
+  "fig": "25.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-13": {
+  "deck": "ch25-neph",
+  "fig": "25.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-14": {
+  "deck": "ch25-neph",
+  "fig": "25.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-15": {
+  "deck": "ch25-neph",
+  "fig": "25.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-16": {
+  "deck": "ch25-neph",
+  "fig": "25.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-17": {
+  "deck": "ch25-neph",
+  "fig": "25.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-18": {
+  "deck": "ch25-neph",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-neph-19": {
+  "deck": "ch25-neph",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-neph-2": {
+  "deck": "ch25-neph",
+  "fig": "25.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-3": {
+  "deck": "ch25-neph",
+  "fig": "25.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-4": {
+  "deck": "ch25-neph",
+  "fig": "25.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-5": {
+  "deck": "ch25-neph",
+  "fig": "25.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-6": {
+  "deck": "ch25-neph",
+  "fig": "25.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-7": {
+  "deck": "ch25-neph",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch25-neph-8": {
+  "deck": "ch25-neph",
+  "fig": "25.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch25-neph-9": {
+  "deck": "ch25-neph",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-fem-0": {
+  "deck": "ch27-fem",
+  "fig": "27.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-fem-1": {
+  "deck": "ch27-fem",
+  "fig": "27.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-fem-10": {
+  "deck": "ch27-fem",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-fem-11": {
+  "deck": "ch27-fem",
+  "fig": "27.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch27-fem-12": {
+  "deck": "ch27-fem",
+  "fig": "27.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-fem-13": {
+  "deck": "ch27-fem",
+  "fig": "27.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch27-fem-14": {
+  "deck": "ch27-fem",
+  "fig": "27.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch27-fem-15": {
+  "deck": "ch27-fem",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-fem-16": {
+  "deck": "ch27-fem",
+  "fig": "27.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-fem-17": {
+  "deck": "ch27-fem",
+  "fig": "27.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-fem-18": {
+  "deck": "ch27-fem",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-fem-2": {
+  "deck": "ch27-fem",
+  "fig": "27.14",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch27-fem-3": {
+  "deck": "ch27-fem",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-fem-4": {
+  "deck": "ch27-fem",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-fem-5": {
+  "deck": "ch27-fem",
+  "fig": "27.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-fem-6": {
+  "deck": "ch27-fem",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-fem-7": {
+  "deck": "ch27-fem",
+  "fig": "27.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch27-fem-8": {
+  "deck": "ch27-fem",
+  "fig": "27.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-fem-9": {
+  "deck": "ch27-fem",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-male-0": {
+  "deck": "ch27-male",
+  "fig": "27.18",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-1": {
+  "deck": "ch27-male",
+  "fig": "27.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-10": {
+  "deck": "ch27-male",
+  "fig": "27.2",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch27-male-11": {
+  "deck": "ch27-male",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-male-12": {
+  "deck": "ch27-male",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-male-13": {
+  "deck": "ch27-male",
+  "fig": "27.2",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-14": {
+  "deck": "ch27-male",
+  "fig": "27.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-15": {
+  "deck": "ch27-male",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-male-16": {
+  "deck": "ch27-male",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch27-male-17": {
+  "deck": "ch27-male",
+  "fig": "27.2",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-2": {
+  "deck": "ch27-male",
+  "fig": "27.3",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch27-male-3": {
+  "deck": "ch27-male",
+  "fig": "27.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-4": {
+  "deck": "ch27-male",
+  "fig": "27.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch27-male-5": {
+  "deck": "ch27-male",
+  "fig": "27.8",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch27-male-6": {
+  "deck": "ch27-male",
+  "fig": "27.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-7": {
+  "deck": "ch27-male",
+  "fig": "27.2",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-8": {
+  "deck": "ch27-male",
+  "fig": "27.2",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch27-male-9": {
+  "deck": "ch27-male",
+  "fig": "27.2",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-ct-0": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-1": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-10": {
+  "deck": "ch4-ct",
+  "fig": "4.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-11": {
+  "deck": "ch4-ct",
+  "fig": "4.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-12": {
+  "deck": "ch4-ct",
+  "fig": "4.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-13": {
+  "deck": "ch4-ct",
+  "fig": "4.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-14": {
+  "deck": "ch4-ct",
+  "fig": "4.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-ct-15": {
+  "deck": "ch4-ct",
+  "fig": "4.16",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch4-ct-16": {
+  "deck": "ch4-ct",
+  "fig": "4.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-ct-17": {
+  "deck": "ch4-ct",
+  "fig": "4.16",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch4-ct-18": {
+  "deck": "ch4-ct",
+  "fig": "4.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-19": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-2": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-ct-20": {
+  "deck": "ch4-ct",
+  "fig": "4.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-21": {
+  "deck": "ch4-ct",
+  "fig": "4.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-22": {
+  "deck": "ch4-ct",
+  "fig": "4.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-23": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-3": {
+  "deck": "ch4-ct",
+  "fig": "4.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-ct-4": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch4-ct-5": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-ct-6": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-ct-7": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-ct-8": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-ct-9": {
+  "deck": "ch4-ct",
+  "fig": "4.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-0": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-1": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-10": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-11": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-12": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-13": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-14": {
+  "deck": "ch4-epi",
+  "fig": "4.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-15": {
+  "deck": "ch4-epi",
+  "fig": "4.6",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch4-epi-16": {
+  "deck": "ch4-epi",
+  "fig": "4.6",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch4-epi-17": {
+  "deck": "ch4-epi",
+  "fig": "4.6",
+  "kind": null,
+  "reason": "crop is only 50x35",
+  "status": "fail"
+ },
+ "ch4-epi-18": {
+  "deck": "ch4-epi",
+  "fig": "4.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-19": {
+  "deck": "ch4-epi",
+  "fig": "4.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-2": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-20": {
+  "deck": "ch4-epi",
+  "fig": "4.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-21": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-22": {
+  "deck": "ch4-epi",
+  "fig": "4.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-23": {
+  "deck": "ch4-epi",
+  "fig": "4.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch4-epi-24": {
+  "deck": "ch4-epi",
+  "fig": "4.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch4-epi-25": {
+  "deck": "ch4-epi",
+  "fig": "4.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-3": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-4": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-5": {
+  "deck": "ch4-epi",
+  "fig": "4.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-6": {
+  "deck": "ch4-epi",
+  "fig": "4.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch4-epi-7": {
+  "deck": "ch4-epi",
+  "fig": "4.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch4-epi-8": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch4-epi-9": {
+  "deck": "ch4-epi",
+  "fig": "4.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-acc-0": {
+  "deck": "ch5-acc",
+  "fig": "5.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-acc-1": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-acc-10": {
+  "deck": "ch5-acc",
+  "fig": "5.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-acc-11": {
+  "deck": "ch5-acc",
+  "fig": "5.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-acc-12": {
+  "deck": "ch5-acc",
+  "fig": "5.13",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch5-acc-13": {
+  "deck": "ch5-acc",
+  "fig": "5.13",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch5-acc-14": {
+  "deck": "ch5-acc",
+  "fig": "5.14",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch5-acc-15": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-acc-16": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-acc-17": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-acc-2": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-acc-3": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-acc-4": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-acc-5": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-acc-6": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-acc-7": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-acc-8": {
+  "deck": "ch5-acc",
+  "fig": "5.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-acc-9": {
+  "deck": "ch5-acc",
+  "fig": "5.13",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch5-lay-0": {
+  "deck": "ch5-lay",
+  "fig": "5.2",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-lay-1": {
+  "deck": "ch5-lay",
+  "fig": "5.2",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-lay-2": {
+  "deck": "ch5-lay",
+  "fig": "5.2",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-lay-3": {
+  "deck": "ch5-lay",
+  "fig": "5.2",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-lay-4": {
+  "deck": "ch5-lay",
+  "fig": "5.2",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-lay-5": {
+  "deck": "ch5-lay",
+  "fig": "5.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-lay-6": {
+  "deck": "ch5-lay",
+  "fig": "5.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-lay-7": {
+  "deck": "ch5-lay",
+  "fig": "5.2",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-lay-8": {
+  "deck": "ch5-lay",
+  "fig": "5.2",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-str-0": {
+  "deck": "ch5-str",
+  "fig": "5.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-str-1": {
+  "deck": "ch5-str",
+  "fig": "5.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-str-2": {
+  "deck": "ch5-str",
+  "fig": "5.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-str-3": {
+  "deck": "ch5-str",
+  "fig": "5.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-str-4": {
+  "deck": "ch5-str",
+  "fig": "5.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-str-5": {
+  "deck": "ch5-str",
+  "fig": "5.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch5-str-6": {
+  "deck": "ch5-str",
+  "fig": "5.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-str-7": {
+  "deck": "ch5-str",
+  "fig": "5.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-str-8": {
+  "deck": "ch5-str",
+  "fig": "5.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch5-str-9": {
+  "deck": "ch5-str",
+  "fig": "5.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-cell-0": {
+  "deck": "ch6-cell",
+  "fig": "6.11",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-cell-1": {
+  "deck": "ch6-cell",
+  "fig": "6.11",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-cell-10": {
+  "deck": "ch6-cell",
+  "fig": "6.13",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-cell-11": {
+  "deck": "ch6-cell",
+  "fig": "6.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-cell-12": {
+  "deck": "ch6-cell",
+  "fig": "6.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-cell-13": {
+  "deck": "ch6-cell",
+  "fig": "6.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-cell-2": {
+  "deck": "ch6-cell",
+  "fig": "6.11",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-cell-3": {
+  "deck": "ch6-cell",
+  "fig": "6.11",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-cell-4": {
+  "deck": "ch6-cell",
+  "fig": "6.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-cell-5": {
+  "deck": "ch6-cell",
+  "fig": "6.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-cell-6": {
+  "deck": "ch6-cell",
+  "fig": "6.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-cell-7": {
+  "deck": "ch6-cell",
+  "fig": "6.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-cell-8": {
+  "deck": "ch6-cell",
+  "fig": "6.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-cell-9": {
+  "deck": "ch6-cell",
+  "fig": "6.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-str-0": {
+  "deck": "ch6-str",
+  "fig": "6.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-str-1": {
+  "deck": "ch6-str",
+  "fig": "6.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-str-10": {
+  "deck": "ch6-str",
+  "fig": "6.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-str-11": {
+  "deck": "ch6-str",
+  "fig": "6.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-str-12": {
+  "deck": "ch6-str",
+  "fig": "6.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-str-13": {
+  "deck": "ch6-str",
+  "fig": "6.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-str-14": {
+  "deck": "ch6-str",
+  "fig": "6.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-str-15": {
+  "deck": "ch6-str",
+  "fig": "6.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-str-16": {
+  "deck": "ch6-str",
+  "fig": "6.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-str-17": {
+  "deck": "ch6-str",
+  "fig": "6.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-str-18": {
+  "deck": "ch6-str",
+  "fig": "6.10",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch6-str-2": {
+  "deck": "ch6-str",
+  "fig": "6.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-str-3": {
+  "deck": "ch6-str",
+  "fig": "6.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-str-4": {
+  "deck": "ch6-str",
+  "fig": "6.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch6-str-5": {
+  "deck": "ch6-str",
+  "fig": "6.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-str-6": {
+  "deck": "ch6-str",
+  "fig": "6.8",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-str-7": {
+  "deck": "ch6-str",
+  "fig": "6.8",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch6-str-8": {
+  "deck": "ch6-str",
+  "fig": "6.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch6-str-9": {
+  "deck": "ch6-str",
+  "fig": "6.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-0": {
+  "deck": "ch7-skull",
+  "fig": "7.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-1": {
+  "deck": "ch7-skull",
+  "fig": "7.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-10": {
+  "deck": "ch7-skull",
+  "fig": "7.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-11": {
+  "deck": "ch7-skull",
+  "fig": "7.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-12": {
+  "deck": "ch7-skull",
+  "fig": "7.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-13": {
+  "deck": "ch7-skull",
+  "fig": "7.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-14": {
+  "deck": "ch7-skull",
+  "fig": "7.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-15": {
+  "deck": "ch7-skull",
+  "fig": "7.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-16": {
+  "deck": "ch7-skull",
+  "fig": "7.19",
+  "kind": null,
+  "reason": "crop is only 75x41",
+  "status": "fail"
+ },
+ "ch7-skull-17": {
+  "deck": "ch7-skull",
+  "fig": "7.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-18": {
+  "deck": "ch7-skull",
+  "fig": "7.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-19": {
+  "deck": "ch7-skull",
+  "fig": "7.5",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch7-skull-2": {
+  "deck": "ch7-skull",
+  "fig": "7.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-20": {
+  "deck": "ch7-skull",
+  "fig": "7.7",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-skull-21": {
+  "deck": "ch7-skull",
+  "fig": "7.7",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-skull-22": {
+  "deck": "ch7-skull",
+  "fig": "7.5",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch7-skull-23": {
+  "deck": "ch7-skull",
+  "fig": "7.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-24": {
+  "deck": "ch7-skull",
+  "fig": "7.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-25": {
+  "deck": "ch7-skull",
+  "fig": "7.12",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-26": {
+  "deck": "ch7-skull",
+  "fig": "7.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-27": {
+  "deck": "ch7-skull",
+  "fig": "7.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-28": {
+  "deck": "ch7-skull",
+  "fig": "7.9",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch7-skull-29": {
+  "deck": "ch7-skull",
+  "fig": "7.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-3": {
+  "deck": "ch7-skull",
+  "fig": "7.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-30": {
+  "deck": "ch7-skull",
+  "fig": "7.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-31": {
+  "deck": "ch7-skull",
+  "fig": "7.17",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-32": {
+  "deck": "ch7-skull",
+  "fig": "7.18",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-33": {
+  "deck": "ch7-skull",
+  "fig": "7.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-34": {
+  "deck": "ch7-skull",
+  "fig": "7.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-skull-4": {
+  "deck": "ch7-skull",
+  "fig": "7.7",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-5": {
+  "deck": "ch7-skull",
+  "fig": "7.9",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch7-skull-6": {
+  "deck": "ch7-skull",
+  "fig": "7.10",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-7": {
+  "deck": "ch7-skull",
+  "fig": "7.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-8": {
+  "deck": "ch7-skull",
+  "fig": "7.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-skull-9": {
+  "deck": "ch7-skull",
+  "fig": "7.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-thor-0": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-thor-1": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-thor-10": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "crop is only 40x33",
+  "status": "fail"
+ },
+ "ch7-thor-11": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-thor-2": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-thor-3": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-thor-4": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-thor-5": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-thor-6": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-thor-7": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-thor-8": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-thor-9": {
+  "deck": "ch7-thor",
+  "fig": "7.32",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-0": {
+  "deck": "ch7-vert",
+  "fig": "7.20",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-1": {
+  "deck": "ch7-vert",
+  "fig": "7.25",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-vert-10": {
+  "deck": "ch7-vert",
+  "fig": "7.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-vert-11": {
+  "deck": "ch7-vert",
+  "fig": "7.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-vert-12": {
+  "deck": "ch7-vert",
+  "fig": "7.23",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch7-vert-13": {
+  "deck": "ch7-vert",
+  "fig": "7.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-vert-14": {
+  "deck": "ch7-vert",
+  "fig": "7.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-vert-15": {
+  "deck": "ch7-vert",
+  "fig": "7.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-vert-16": {
+  "deck": "ch7-vert",
+  "fig": "7.23",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-17": {
+  "deck": "ch7-vert",
+  "fig": "7.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-vert-18": {
+  "deck": "ch7-vert",
+  "fig": "7.24",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-19": {
+  "deck": "ch7-vert",
+  "fig": "7.24",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-vert-2": {
+  "deck": "ch7-vert",
+  "fig": "7.26",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-20": {
+  "deck": "ch7-vert",
+  "fig": "7.24",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch7-vert-21": {
+  "deck": "ch7-vert",
+  "fig": "7.20",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-22": {
+  "deck": "ch7-vert",
+  "fig": "7.20",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-23": {
+  "deck": "ch7-vert",
+  "fig": "7.21",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-vert-24": {
+  "deck": "ch7-vert",
+  "fig": "7.21",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-vert-25": {
+  "deck": "ch7-vert",
+  "fig": "7.21",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-vert-3": {
+  "deck": "ch7-vert",
+  "fig": "7.28",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-4": {
+  "deck": "ch7-vert",
+  "fig": "7.29",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-5": {
+  "deck": "ch7-vert",
+  "fig": "7.29",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch7-vert-6": {
+  "deck": "ch7-vert",
+  "fig": "7.25",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-vert-7": {
+  "deck": "ch7-vert",
+  "fig": "7.25",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-vert-8": {
+  "deck": "ch7-vert",
+  "fig": "7.25",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch7-vert-9": {
+  "deck": "ch7-vert",
+  "fig": "7.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-arm-0": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-arm-1": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-arm-10": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-arm-11": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-arm-12": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-arm-13": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-arm-14": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-arm-15": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-arm-16": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-arm-17": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-arm-18": {
+  "deck": "ch8-arm",
+  "fig": "8.6",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-arm-19": {
+  "deck": "ch8-arm",
+  "fig": "8.7",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-arm-2": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "crop is only 245x143",
+  "status": "fail"
+ },
+ "ch8-arm-20": {
+  "deck": "ch8-arm",
+  "fig": "8.7",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-arm-21": {
+  "deck": "ch8-arm",
+  "fig": "8.7",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-arm-22": {
+  "deck": "ch8-arm",
+  "fig": "8.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-arm-23": {
+  "deck": "ch8-arm",
+  "fig": "8.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-arm-24": {
+  "deck": "ch8-arm",
+  "fig": "8.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-arm-3": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "crop is only 168x265",
+  "status": "fail"
+ },
+ "ch8-arm-4": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "crop is only 59x107",
+  "status": "fail"
+ },
+ "ch8-arm-5": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "crop is only 167x196",
+  "status": "fail"
+ },
+ "ch8-arm-6": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "crop is only 126x211",
+  "status": "fail"
+ },
+ "ch8-arm-7": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-arm-8": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-arm-9": {
+  "deck": "ch8-arm",
+  "fig": "8.5",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-leg-0": {
+  "deck": "ch8-leg",
+  "fig": "8.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-1": {
+  "deck": "ch8-leg",
+  "fig": "8.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-leg-10": {
+  "deck": "ch8-leg",
+  "fig": "8.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-11": {
+  "deck": "ch8-leg",
+  "fig": "8.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-12": {
+  "deck": "ch8-leg",
+  "fig": "8.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-13": {
+  "deck": "ch8-leg",
+  "fig": "8.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-14": {
+  "deck": "ch8-leg",
+  "fig": "8.19",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-15": {
+  "deck": "ch8-leg",
+  "fig": "8.19",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-leg-16": {
+  "deck": "ch8-leg",
+  "fig": "8.19",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-leg-17": {
+  "deck": "ch8-leg",
+  "fig": "8.19",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-leg-18": {
+  "deck": "ch8-leg",
+  "fig": "8.19",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-leg-19": {
+  "deck": "ch8-leg",
+  "fig": "8.19",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-leg-2": {
+  "deck": "ch8-leg",
+  "fig": "8.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-leg-20": {
+  "deck": "ch8-leg",
+  "fig": "8.19",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-leg-21": {
+  "deck": "ch8-leg",
+  "fig": "8.19",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-3": {
+  "deck": "ch8-leg",
+  "fig": "8.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-4": {
+  "deck": "ch8-leg",
+  "fig": "8.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-5": {
+  "deck": "ch8-leg",
+  "fig": "8.16",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-leg-6": {
+  "deck": "ch8-leg",
+  "fig": "8.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-leg-7": {
+  "deck": "ch8-leg",
+  "fig": "8.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-8": {
+  "deck": "ch8-leg",
+  "fig": "8.17",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-leg-9": {
+  "deck": "ch8-leg",
+  "fig": "8.18",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-pect-0": {
+  "deck": "ch8-pect",
+  "fig": "8.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pect-1": {
+  "deck": "ch8-pect",
+  "fig": "8.3",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-pect-10": {
+  "deck": "ch8-pect",
+  "fig": "8.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pect-11": {
+  "deck": "ch8-pect",
+  "fig": "8.3",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pect-2": {
+  "deck": "ch8-pect",
+  "fig": "8.4",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-pect-3": {
+  "deck": "ch8-pect",
+  "fig": "8.4",
+  "kind": null,
+  "reason": "crop is only 52x45",
+  "status": "fail"
+ },
+ "ch8-pect-4": {
+  "deck": "ch8-pect",
+  "fig": "8.4",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-pect-5": {
+  "deck": "ch8-pect",
+  "fig": "8.4",
+  "kind": null,
+  "reason": "crop is only 145x181",
+  "status": "fail"
+ },
+ "ch8-pect-6": {
+  "deck": "ch8-pect",
+  "fig": "8.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pect-7": {
+  "deck": "ch8-pect",
+  "fig": "8.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pect-8": {
+  "deck": "ch8-pect",
+  "fig": "8.4",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-pect-9": {
+  "deck": "ch8-pect",
+  "fig": "8.4",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pelv-0": {
+  "deck": "ch8-pelv",
+  "fig": "8.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pelv-1": {
+  "deck": "ch8-pelv",
+  "fig": "8.12",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pelv-10": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pelv-11": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-pelv-12": {
+  "deck": "ch8-pelv",
+  "fig": "8.12",
+  "kind": null,
+  "reason": "crop is only 160x42",
+  "status": "fail"
+ },
+ "ch8-pelv-13": {
+  "deck": "ch8-pelv",
+  "fig": "8.12",
+  "kind": null,
+  "reason": "crop is only 149x283",
+  "status": "fail"
+ },
+ "ch8-pelv-14": {
+  "deck": "ch8-pelv",
+  "fig": "8.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pelv-2": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pelv-3": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch8-pelv-4": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-pelv-5": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch8-pelv-6": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-pelv-7": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch8-pelv-8": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": null,
+  "reason": "structure sits on the edge of the crop",
+  "status": "fail"
+ },
+ "ch8-pelv-9": {
+  "deck": "ch8-pelv",
+  "fig": "8.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch9-sel-0": {
+  "deck": "ch9-sel",
+  "fig": "9.14",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-1": {
+  "deck": "ch9-sel",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch9-sel-10": {
+  "deck": "ch9-sel",
+  "fig": "9.19",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch9-sel-11": {
+  "deck": "ch9-sel",
+  "fig": "9.19",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-12": {
+  "deck": "ch9-sel",
+  "fig": "9.19",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-13": {
+  "deck": "ch9-sel",
+  "fig": "9.20",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-14": {
+  "deck": "ch9-sel",
+  "fig": "9.21",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-2": {
+  "deck": "ch9-sel",
+  "fig": "9.15",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-3": {
+  "deck": "ch9-sel",
+  "fig": "9.16",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-4": {
+  "deck": "ch9-sel",
+  "fig": "9.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch9-sel-5": {
+  "deck": "ch9-sel",
+  "fig": "9.17",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-6": {
+  "deck": "ch9-sel",
+  "fig": "9.18",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-7": {
+  "deck": "ch9-sel",
+  "fig": "9.19",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-sel-8": {
+  "deck": "ch9-sel",
+  "fig": "9.19",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch9-sel-9": {
+  "deck": "ch9-sel",
+  "fig": "9.19",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch9-syn-0": {
+  "deck": "ch9-syn",
+  "fig": "9.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch9-syn-1": {
+  "deck": "ch9-syn",
+  "fig": "9.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch9-syn-10": {
+  "deck": "ch9-syn",
+  "fig": "9.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch9-syn-11": {
+  "deck": "ch9-syn",
+  "fig": "9.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch9-syn-12": {
+  "deck": "ch9-syn",
+  "fig": "9.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch9-syn-13": {
+  "deck": "ch9-syn",
+  "fig": "9.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch9-syn-14": {
+  "deck": "ch9-syn",
+  "fig": "9.11",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-syn-15": {
+  "deck": "ch9-syn",
+  "fig": "-",
+  "kind": null,
+  "reason": "card has no textbook figure",
+  "status": "skip"
+ },
+ "ch9-syn-2": {
+  "deck": "ch9-syn",
+  "fig": "9.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-syn-3": {
+  "deck": "ch9-syn",
+  "fig": "9.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-syn-4": {
+  "deck": "ch9-syn",
+  "fig": "9.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
+ },
+ "ch9-syn-5": {
+  "deck": "ch9-syn",
+  "fig": "9.8",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-syn-6": {
+  "deck": "ch9-syn",
+  "fig": "9.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-syn-7": {
+  "deck": "ch9-syn",
+  "fig": "9.9",
+  "kind": null,
+  "reason": "no label matched the answer",
+  "status": "fail"
+ },
+ "ch9-syn-8": {
+  "deck": "ch9-syn",
+  "fig": "9.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ },
+ "ch9-syn-9": {
+  "deck": "ch9-syn",
+  "fig": "9.10",
+  "kind": null,
+  "reason": "leader line not found",
+  "status": "fail"
+ }
+}

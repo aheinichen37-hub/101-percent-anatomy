@@ -13,9 +13,10 @@ needs_pdf = pytest.mark.skipif(not figures.pdf_available(),
                                reason="source PDF not staged in this session")
 
 
-@pytest.fixture(scope="module")
-def a_card():
-    cards = build.read_cards(["ch11-abd"])
+@pytest.fixture
+def a_card(page):
+    """Reuse the suite's browser: a second sync Playwright cannot start inside it."""
+    cards = build.read_cards(["ch11-abd"], page=page)
     assert cards, "no cards in ch11-abd"
     return cards[0]
 

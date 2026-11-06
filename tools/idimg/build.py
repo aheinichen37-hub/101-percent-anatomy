@@ -51,11 +51,12 @@ def load_overrides():
         return {}
 
 
-def read_cards(deck_ids=None):
+def read_cards(deck_ids=None, page=None):
     """Card data straight from the app, so the build and the app always agree.
 
     Parsing index.html with a regex would be a second, drifting copy of the card format;
-    the page already has a parser, so this runs it.
+    the page already has a parser, so this runs it. Pass `page` to reuse a browser that
+    is already open — a second sync Playwright cannot start inside the first.
     """
     from playwright.sync_api import sync_playwright
     script = """() => {
@@ -70,13 +71,16 @@ def read_cards(deck_ids=None):
         }
         return out;
     }"""
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page()
-        page.goto("file://" + INDEX)
-        page.wait_for_timeout(200)
+    if page is not None:
         cards = page.evaluate(script)
-        browser.close()
+    else:
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            pg = browser.new_page()
+            pg.goto("file://" + INDEX)
+            pg.wait_for_timeout(200)
+            cards = pg.evaluate(script)
+            browser.close()
     if deck_ids:
         wanted = set(deck_ids)
         cards = [c for c in cards if c["deck"] in wanted]

@@ -14,7 +14,13 @@ def test_id_flags_and_tips(page):
     assert items[0]["fig"] == "1.12"
     assert "tip" not in items[1] or items[1]["tip"] is None
 
-    assert page.evaluate("idFiles(DECKS['ch11-abd'].items[0])") is None
+    # a card only has pictures once the build registers it
+    assert page.evaluate("idFiles({id: 'not-a-built-card'})") is None
+    built = page.evaluate("[...IDIMG][0] || null")
+    if built:
+        files = page.evaluate("id => idFiles({id})", built)
+        assert files["q"] == f"figs/id/{built}-q.jpg"
+        assert files["m"].endswith("-m.png") and files["a"].endswith("-a.jpg")
 
 
 def test_every_id_deck_exists(page):
