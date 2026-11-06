@@ -11,6 +11,12 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Fix figure mismatches**: Andrew flags any card whose figure looks wrong in `101-anatomy-v2.4-figure-list.csv`. *(2026-11-05)*
 - **Pictures for Types of Body Movements** (`ch9-mov`): show the unlabeled movement drawing before answering (no highlight needed). Left out of v2.5. *(2026-11-05)*
 
+### Identification images — known gaps (v2.7)
+- **About half of cards get a picture.** The rest have no matching label in the figure, or no leader line that can be traced. They fall back to the clue, which is the specified behaviour. Worth revisiting with per-card overrides in `tools/id-overrides.json`. *(2026-11-06)*
+- **The highlight is a patch, not the structure's shape.** Flood-filling the actual structure took the rectus sheath instead of the muscle, so it was dropped in favour of something that cannot be wrong in that way. A shaped highlight is still the nicer end state. *(2026-11-06)*
+- **Tips exist for the Heart Anatomy deck only** (25 cards). The mechanism handles the other 53 decks whenever tips are written. *(2026-11-06)*
+- **Multi-panel figures** still sometimes include a neighbouring inset in the crop. *(2026-11-06)*
+
 ### Game-ification (brainstorm 2026-11-06; the save is built, the rest is not)
 - **Accounts / cloud login (future, for public use)**: sign-in plus cloud save (Firebase or Supabase). Build the save layer with a swappable storage adapter so local storage can become cloud storage later. *(2026-11-06)*
 - **Deck stars**: 3 perfect runs = 3 stars. Typo ("did you mean") answers get full credit. Up to 5 second tries per run, each worth half a point. *(2026-11-06)*
@@ -29,5 +35,6 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - Textbook figures on 1,545 cards + Images on/off choice (v2.4, 2026-11-05)
 - Safe save: versioned save with migrations, rolling backup copy, persistent-storage request, a red bar when the browser refuses to save, and a Save & backup sheet with export/restore (v2.6, 2026-11-06)
 - Installable app: manifest, icons, offline app shell, Add to Home Screen (v2.6, 2026-11-06)
+- Identification decks: 54 decks show the textbook drawing cropped to the structure, label text covered, the structure marked in blue at 20%; the named picture after answering, tapping through to the full figure; tips on a miss; swipe to advance (v2.7, 2026-11-06)
 
 ## Dropped

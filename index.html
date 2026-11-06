@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 2.6 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 2.7 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -150,6 +150,11 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 .modal ol b{color:var(--fg)}
 .modal .msg{margin:0;font-size:14px}
 .modal .sub{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--muted);margin:4px 0 -4px}
+/* v2.7: identification cards — the marked picture before answering, the tip after a miss */
+.qimg{position:relative;padding:0;overflow:hidden}
+.qimg img{display:block;width:100%;height:auto}
+.qimg .hl{position:absolute;left:0;top:0;width:100%;height:100%;opacity:.20;pointer-events:none}
+.tip{margin:10px 0 0;padding:11px 13px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:10px;color:var(--fg);font-size:15px;line-height:1.45}
 .figure .phin svg{width:30px;height:24px;max-height:none}
 .figbtn{display:block;width:100%;padding:6px;background:#fff;border:1px solid var(--line);border-radius:14px;cursor:zoom-in}
 .figbtn img{display:block;width:100%;height:auto;max-height:60vh;object-fit:contain;border-radius:8px}
@@ -183,7 +188,7 @@ const NEWDECKS=[];
 function D(id,unit,name,q,fig,text){
   const items=text.trim().split("\n").map((ln,i)=>{const p=ln.split("|").map(s=>s.trim());
     const alts=p[1]?p[1].split(";").map(s=>s.trim()).filter(Boolean):[];
-    return {id:id+"-"+i,name:p[0],accept:[p[0].toLowerCase()].concat(alts),clue:p[2],fig:p[3]||fig};});
+    return {id:id+"-"+i,name:p[0],accept:[p[0].toLowerCase()].concat(alts),clue:p[2],fig:p[3]||fig,tip:(p[4]||"").trim()||undefined};});
   return {id,unit,name,q,fig,items};
 }
 /* ===== v2.0 deck content, part 1: Units 1, 3, 4 =====
@@ -1926,31 +1931,31 @@ Transfusion reaction | hemolytic transfusion reaction | Immune attack on donated
 
 /* ---------------- Unit 19 - Heart ---------------- */
 D("ch19-anat","ch19","Heart Anatomy","Name the structure.","-",`
-Mediastinum |  | Central chest region where the heart sits. | 19.2
-Pericardium | pericardial sac | Sac that surrounds the heart. | 19.6
-Fibrous pericardium | | Tough outer layer of the pericardial sac.
-Epicardium | visceral pericardium | Outer layer of the heart wall. | 19.5
-Myocardium |  | Thick muscle layer of the heart wall. | 19.8
-Endocardium |  | Inner lining of the heart chambers. | 19.5
-Right atrium |  | Chamber that receives blood from the body. | 19.4
-Right ventricle |  | Chamber that pumps blood to the lungs. | 19.4
-Left atrium |  | Chamber that receives blood from the lungs. | 19.13
-Left ventricle |  | Chamber with the thickest wall; pumps blood to the body. | 19.13
-Interventricular septum |  | Wall between the two ventricles. | 19.10
-Tricuspid valve | right atrioventricular valve; right av valve | Valve between the right atrium and right ventricle. | 19.11
-Mitral valve | bicuspid valve; left atrioventricular valve; left av valve | Valve between the left atrium and left ventricle. | 19.13
-Pulmonary valve | pulmonary semilunar valve | Valve between the right ventricle and the pulmonary trunk.
-Aortic valve | aortic semilunar valve | Valve between the left ventricle and the aorta. | 19.13
-Chordae tendineae |  | "Heart strings" that keep the AV valves from flipping inside out. | 19.11
-Papillary muscles | papillary muscle | Muscles that pull on the chordae tendineae. | 19.11
-Pulmonary trunk |  | Vessel carrying deoxygenated blood from the right ventricle toward the lungs. | 19.9
-Aorta |  | Largest artery, carrying blood from the left ventricle to the body. | 19.9
-Superior vena cava | svc | Large vein returning blood from the upper body. | 19.9
-Inferior vena cava | ivc | Large vein returning blood from the lower body. | 19.9
-Coronary arteries | coronary artery | Vessels that supply the heart muscle with blood. | 19.16
-Coronary sinus |  | Vein that drains blood from the heart wall into the right atrium. | 19.15
-Foramen ovale |  | Fetal opening between the atria. | 19.10
-Fossa ovalis | | Depression in the adult heart where the fetal opening between the atria closed.
+Mediastinum |  | Central chest region where the heart sits. | 19.2 | Think of it as the middle room of the chest, with the lungs as the walls on either side.
+Pericardium | pericardial sac | Sac that surrounds the heart. | 19.6 | Peri- means around and cardio means heart, so the name tells you exactly where it sits.
+Fibrous pericardium |  | Tough outer layer of the pericardial sac. | - | The tough outer bag. It is strong enough to stop the heart overfilling, which is why it does not stretch much.
+Epicardium | visceral pericardium | Outer layer of the heart wall. | 19.5 | Epi- means upon, so this is the layer sitting directly on the muscle. It is the same sheet as the visceral pericardium.
+Myocardium |  | Thick muscle layer of the heart wall. | 19.8 | Myo- means muscle, so this is the thick middle layer that does the actual pumping.
+Endocardium |  | Inner lining of the heart chambers. | 19.5 | Endo- means within. It lines the chambers and is continuous with the lining of the blood vessels leaving the heart.
+Right atrium |  | Chamber that receives blood from the body. | 19.4 | Blood coming back from the body arrives here first. Atria are the thin-walled receiving rooms, not the pumps.
+Right ventricle |  | Chamber that pumps blood to the lungs. | 19.4 | It only has to push blood as far as the lungs, so its wall is noticeably thinner than its partner on the left.
+Left atrium |  | Chamber that receives blood from the lungs. | 19.13 | The only chamber that receives blood already carrying oxygen, arriving from the lungs.
+Left ventricle |  | Chamber with the thickest wall; pumps blood to the body. | 19.13 | The thickest wall of the four chambers, because it has to push blood all the way around the body.
+Interventricular septum |  | Wall between the two ventricles. | 19.10 | Septum means a dividing wall, and inter-ventricular tells you which two rooms it divides.
+Tricuspid valve | right atrioventricular valve; right av valve | Valve between the right atrium and right ventricle. | 19.11 | Three cusps, and it sits on the right. A common way to keep it straight: tri before bi, right before left.
+Mitral valve | bicuspid valve; left atrioventricular valve; left av valve | Valve between the left atrium and left ventricle. | 19.13 | Two cusps, on the left. It is named for a bishop's mitre, which has the same two-flap shape.
+Pulmonary valve | pulmonary semilunar valve | Valve between the right ventricle and the pulmonary trunk. | - | Guards the way out to the lungs. Semilunar means half-moon, which is the shape of each of its three pockets.
+Aortic valve | aortic semilunar valve | Valve between the left ventricle and the aorta. | 19.13 | The last gate blood passes through on its way to the body. Its cusps fill like pockets to snap it shut.
+Chordae tendineae |  | "Heart strings" that keep the AV valves from flipping inside out. | 19.11 | Often called heart strings. They stop the valve flaps blowing inside out when the ventricle squeezes.
+Papillary muscles | papillary muscle | Muscles that pull on the chordae tendineae. | 19.11 | The little mounds that anchor the heart strings. They tighten just before the ventricle does, taking up the slack.
+Pulmonary trunk |  | Vessel carrying deoxygenated blood from the right ventricle toward the lungs. | 19.9 | The one artery that carries blood low in oxygen. It leaves the right side and splits to both lungs.
+Aorta |  | Largest artery, carrying blood from the left ventricle to the body. | 19.9 | The body's largest artery, arching over the heart like a walking stick before heading down the trunk.
+Superior vena cava | svc | Large vein returning blood from the upper body. | 19.9 | Superior means above, so this is the one draining the head, neck and arms.
+Inferior vena cava | ivc | Large vein returning blood from the lower body. | 19.9 | Inferior means below, so this one drains everything south of the diaphragm. It is the larger of the pair.
+Coronary arteries | coronary artery | Vessels that supply the heart muscle with blood. | 19.16 | They branch off the aorta almost immediately, so the heart feeds itself first before anything else gets blood.
+Coronary sinus |  | Vein that drains blood from the heart wall into the right atrium. | 19.15 | The drain, not the supply. It collects used blood from the heart wall and empties into the right atrium.
+Foramen ovale |  | Fetal opening between the atria. | 19.10 | A hole in the wall between the atria, open only before birth so blood can skip the lungs.
+Fossa ovalis |  | Depression in the adult heart where the fetal opening between the atria closed. | - | The dimple left behind after that fetal opening seals up. Fossa means a shallow pit.
 `),
 D("ch19-cond","ch19","Cardiac Muscle & Electrical Activity","Name the term.","-",`
 Sinoatrial node | sa node | Natural pacemaker of the heart, in the right atrium. | 19.20
@@ -2837,8 +2842,21 @@ const UNITS=[
 /* the three original test decks keep their ids (and saved stats) and now live in Unit 3 */
 const DECKS={"u1-org":{id:"u1-org",unit:"ch3",name:"Organelles and Structures"},"u1-fn":{id:"u1-fn",unit:"ch3",name:"Organelle Functions",fn:true},"u1-mit":{id:"u1-mit",unit:"ch3",name:"Mitosis",mit:true}};
 NEWDECKS.forEach(d=>{DECKS[d.id]=d;});
-/* v2.4: term decks where most cards have a figure ask "images on / off" before a round */
-NEWDECKS.forEach(d=>{const n=d.items.filter(i=>i.fig&&i.fig!=="-"&&FIGS.has(i.fig)).length;d.imgOpt=n/d.items.length>=0.6;});
+
+/* v2.7: identification decks — you name a structure from a picture, so they show an
+   unlabeled, cropped figure with the target highlighted before you answer.
+   Every other term deck is a concept deck and starts straight away. This replaces the
+   v2.4 rule that offered the images choice on any deck where 60% of cards had a figure. */
+const IDDECKS=new Set(["ch1-reg","ch1-pl","ch1-cav","ch1-abd","ch1-ser","ch4-epi","ch4-ct","ch5-lay","ch5-str","ch5-acc","ch6-str","ch6-cell","ch7-skull","ch7-vert","ch7-thor","ch8-pect","ch8-arm","ch8-pelv","ch8-leg","ch9-syn","ch9-sel","ch10-str","ch11-head","ch11-resp","ch11-back","ch11-abd","ch11-sh","ch11-arm","ch11-hand","ch11-hip","ch11-thigh","ch11-leg","ch12-cell","ch13-cns","ch13-csf","ch13-pns","ch13-cn","ch14-spec","ch18-wbc","ch19-anat","ch19-cond","ch20-str","ch20-art","ch20-vein","ch21-lym","ch22-anat","ch23-mouth","ch23-stom","ch23-int","ch23-acc","ch25-anat","ch25-neph","ch27-male","ch27-fem"]);
+/* Card IDs the image build produced all three files for. Rewritten by tools/idimg/build.py. */
+const IDIMG=new Set(["ch1-cav-10","ch1-cav-11","ch1-cav-6","ch1-cav-7","ch1-cav-9","ch1-pl-3","ch1-pl-4","ch1-pl-5","ch10-str-1","ch10-str-19","ch10-str-2","ch10-str-20","ch10-str-22","ch10-str-6","ch10-str-9","ch11-abd-0","ch11-abd-4","ch11-arm-1","ch11-arm-4","ch11-back-5","ch11-back-6","ch11-back-7","ch11-head-10","ch11-hip-7","ch11-leg-4","ch11-leg-6","ch11-resp-0","ch11-resp-1","ch11-resp-2","ch11-resp-3","ch11-resp-4","ch11-resp-6","ch11-sh-0","ch11-sh-10","ch11-sh-11","ch11-sh-12","ch11-sh-2","ch12-cell-16","ch12-cell-17","ch13-cns-14","ch13-cns-15","ch13-cns-16","ch13-cns-18","ch13-cns-19","ch13-cns-4","ch13-cns-6","ch13-csf-1","ch13-csf-12","ch13-csf-3","ch13-csf-4","ch13-csf-7","ch13-csf-8","ch13-pns-10","ch13-pns-12","ch13-pns-13","ch13-pns-6","ch13-pns-8","ch14-spec-1","ch14-spec-11","ch14-spec-5","ch14-spec-7","ch14-spec-9","ch19-anat-0","ch19-anat-12","ch19-anat-14","ch19-anat-15","ch19-anat-16","ch19-anat-17","ch19-anat-20","ch19-anat-5","ch19-anat-6","ch19-anat-7","ch20-art-11","ch20-art-12","ch20-art-13","ch20-art-14","ch20-art-9","ch20-str-18","ch20-vein-10","ch20-vein-15","ch20-vein-16","ch20-vein-17","ch20-vein-3","ch20-vein-4","ch20-vein-9","ch21-lym-3","ch21-lym-7","ch22-anat-10","ch22-anat-12","ch22-anat-18","ch22-anat-2","ch22-anat-24","ch22-anat-3","ch22-anat-9","ch23-int-0","ch23-int-1","ch23-int-11","ch23-int-12","ch23-int-13","ch23-int-3","ch23-mouth-17","ch23-mouth-19","ch23-stom-0","ch23-stom-1","ch23-stom-3","ch23-stom-6","ch25-anat-0","ch25-anat-13","ch25-anat-2","ch25-anat-3","ch25-anat-5","ch27-fem-11","ch27-fem-13","ch27-fem-14","ch27-fem-7","ch27-male-10","ch27-male-4","ch27-male-9","ch4-ct-14","ch4-ct-16","ch4-ct-2","ch4-ct-3","ch4-ct-6","ch4-ct-7","ch4-ct-8","ch4-epi-6","ch4-epi-9","ch5-acc-1","ch5-acc-16","ch5-acc-3","ch5-acc-4","ch5-acc-6","ch5-acc-7","ch5-acc-8","ch5-lay-2","ch5-lay-3","ch5-lay-4","ch5-str-0","ch5-str-1","ch5-str-2","ch5-str-3","ch5-str-4","ch5-str-5","ch6-cell-6","ch6-cell-7","ch6-cell-8","ch6-str-0","ch6-str-1","ch6-str-15","ch6-str-3","ch6-str-5","ch6-str-8","ch6-str-9","ch7-skull-10","ch7-skull-11","ch7-skull-12","ch7-skull-13","ch7-skull-15","ch7-skull-17","ch7-skull-18","ch7-skull-2","ch7-skull-24","ch7-skull-25","ch7-skull-26","ch7-skull-27","ch7-skull-29","ch7-skull-3","ch7-skull-31","ch7-skull-34","ch7-thor-2","ch7-thor-4","ch7-thor-6","ch7-vert-10","ch7-vert-11","ch7-vert-13","ch7-vert-14","ch7-vert-15","ch7-vert-17","ch7-vert-19","ch7-vert-20","ch7-vert-9","ch8-arm-10","ch8-arm-18","ch8-arm-22","ch8-leg-0","ch8-leg-10","ch8-leg-11","ch8-leg-12","ch8-leg-13","ch8-leg-14","ch8-leg-21","ch8-leg-3","ch8-leg-4","ch8-leg-7","ch8-leg-8","ch8-leg-9","ch8-pect-1","ch8-pect-8","ch8-pelv-11","ch8-pelv-4","ch8-pelv-6","ch8-pelv-7","ch8-pelv-9","ch9-sel-4","ch9-sel-9","ch9-syn-0","ch9-syn-1","ch9-syn-12","ch9-syn-13","ch9-syn-4"]);
+NEWDECKS.forEach(d=>{d.ident=IDDECKS.has(d.id);});
+/* A card only has pictures if the build made them; otherwise it shows the clue alone. */
+function idFiles(item){
+  if(!item||!IDIMG.has(item.id)) return null;
+  const b="figs/id/"+item.id;
+  return {q:b+"-q.jpg",m:b+"-m.png",a:b+"-a.jpg"};
+}
 
 
 // Images adapted (labels removed) from OpenStax Anatomy & Physiology, CC BY 4.0.
@@ -3035,18 +3053,18 @@ function render(){
 const soonTile=(name,ico)=>`<div class="tile soon" aria-disabled="true">${ico}<h3>${esc(name)}</h3><div class="meta"><span class="badge">Coming soon</span></div></div>`;
 function lobby(){
   app.innerHTML=`<div class="top"><div class="brand">101<b>%</b> Anatomy</div></div>${statLine(statsFor(()=>true))}
-  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 2.6</p>`;
+  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 2.7</p>`;
   app.querySelectorAll("[data-unit]").forEach(b=>b.onclick=()=>{view={page:"unit",unit:b.dataset.unit};render();scrollTo(0,0);});
 }
 function unitPage(uid){
   const u=UNITS.find(x=>x.id===uid);
   app.innerHTML=`<div class="top"><div><div class="crumb">101% Anatomy</div><div class="brand">${esc(u.name)}</div></div></div>${statLine(statsFor(r=>r.unit===uid))}
   <h2 class="sect">Decks</h2><div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div><span class="play">Play</span></button>`}).join("")}</div>`;
-  app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>(DECKS[b.dataset.deck].fn||DECKS[b.dataset.deck].imgOpt)?chooseMode(b.dataset.deck):startRound(b.dataset.deck));
+  app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>(DECKS[b.dataset.deck].fn||DECKS[b.dataset.deck].ident)?chooseMode(b.dataset.deck):startRound(b.dataset.deck));
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function chooseMode(deckId){
-  $("#modalSlot").innerHTML=`<div class="scrim"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mh"><h3 id="mh">${esc(DECKS[deckId].name)}</h3>${DECKS[deckId].fn?`<p>Read what each structure does and name it.</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>Description plus the picture</small></button><button class="btn" id="img-off">Images off<small>Description only</small></button>`:`<p>Show the textbook figure after each answer?</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>See the figure once you answer</small></button><button class="btn" id="img-off">Images off<small>Clues only, faster rounds</small></button>`}<button class="btn" id="mode-x" style="text-align:center">Cancel</button></div></div></div>`;
+  $("#modalSlot").innerHTML=`<div class="scrim"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mh"><h3 id="mh">${esc(DECKS[deckId].name)}</h3>${DECKS[deckId].fn?`<p>Read what each structure does and name it.</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>Description plus the picture</small></button><button class="btn" id="img-off">Images off<small>Description only</small></button>`:DECKS[deckId].ident?`<p>Name the structure from the picture, the way a lab practical asks it.</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>See the structure before you answer</small></button><button class="btn" id="img-off">Images off<small>Clue only</small></button>`:`<p>Show the textbook figure after each answer?</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>See the figure once you answer</small></button><button class="btn" id="img-off">Images off<small>Clues only, faster rounds</small></button>`}<button class="btn" id="mode-x" style="text-align:center">Cancel</button></div></div></div>`;
   const close=()=>{$("#modalSlot").innerHTML="";};
   $("#img-on").onclick=()=>{close();startRound(deckId,true);};
   $("#img-off").onclick=()=>{close();startRound(deckId,false);};
@@ -3054,7 +3072,7 @@ function chooseMode(deckId){
 }
 function startRound(deckId,images=true){
   const qs=shuffle(itemsFor(deckId).slice()).map(st=>({st,view:st.views?st.views[Math.floor(Math.random()*st.views.length)]:null}));
-  round={deck:deckId,images,qs,i:0,tries:0,credit:0,first:0,second:0,missed:0,state:"ask",fb:""};
+  round={deck:deckId,images,qs,i:0,tries:0,credit:0,first:0,second:0,missed:0,state:"ask",fb:"",lastMissed:false};
   view={page:"play"};render();scrollTo(0,0);
 }
 function playPage(){
@@ -3066,9 +3084,20 @@ function playPage(){
     const f=q.st.fig&&q.st.fig!=="-"?q.st.fig:null;
     prompt=esc(q.st.q||dk.q); desc=`<p class="desc">${esc(q.st.clue)}</p>`; hint="";
     const ph=`<div class="figure ph" role="img" aria-label="Image coming soon"><div class="phin"><svg width="30" height="24" viewBox="0 0 30 24" aria-hidden="true"><path d="M3 6h5l2-3h10l2 3h5v15H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="15" cy="13" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>Image coming soon</b>${f?`<span>OpenStax Figure ${esc(f)}</span>`:""}</div></div>`;
-    /* labeled textbook figures would give the answer away, so they show once the card is answered */
-    art=round.state!=="done"||!round.images?"":f&&FIGS.has(f)?`<button type="button" class="figbtn" id="figzoom" aria-label="Enlarge OpenStax Figure ${esc(f)}"><img src="figs/${esc(f)}.jpg" alt="OpenStax Figure ${esc(f)}"></button><p class="figcap">OpenStax Figure ${esc(f)} · tap to enlarge</p>`:ph;
-    tag=!round.images?"Images off":f?"Fig. "+esc(f):"No figure";
+    /* An identification card shows the structure marked but unnamed before you answer,
+       then the same picture with its name on it. Labeled textbook figures would give the
+       answer away, so they only ever appear once the card is answered. */
+    const ident=!!dk.ident, idf=ident?idFiles(q.st):null;
+    const after=f&&FIGS.has(f)?`<button type="button" class="figbtn" id="figzoom" data-zoom="figs/${esc(f)}.jpg" aria-label="Enlarge OpenStax Figure ${esc(f)}"><img src="figs/${esc(f)}.jpg" alt="OpenStax Figure ${esc(f)}"></button><p class="figcap">OpenStax Figure ${esc(f)} · tap to enlarge</p>`:ph;
+    if(round.state!=="done"){
+      art=(ident&&round.images&&idf)?`<div class="figure qimg" id="qimg"><img src="${esc(idf.q)}" alt="Unlabeled figure with one structure marked"><img class="hl" src="${esc(idf.m)}" alt=""></div>`:"";
+    }else if(ident&&idf){
+      art=`<button type="button" class="figbtn" id="aimg" data-zoom="${f&&FIGS.has(f)?`figs/${esc(f)}.jpg`:esc(idf.a)}" aria-label="Enlarge the textbook figure"><img src="${esc(idf.a)}" alt="The structure named"></button><p class="figcap">Tap for the full textbook figure</p>`;
+    }else{
+      art=after;   /* the figure follows the answer in both modes now */
+    }
+    if(round.state==="done"&&ident&&round.lastMissed&&q.st.tip) art+=`<p class="tip" id="tip">${esc(q.st.tip)}</p>`;
+    tag=ident&&!round.images?"Clue only":!round.images&&!ident?"Images off":f?"Fig. "+esc(f):"No figure";
   }else{
   prompt=fnDeck?"Which structure does this?":v.prompt?v.prompt:q.st.prompt&&!v.close?q.st.prompt:v.ring?(v.close?"Name the circled structure.":"What is the circled structure?"):"Name this structure.";
   art=showImg?`<div class="figure">${figureSVG(v)}</div>`:"";
@@ -3090,7 +3119,7 @@ function playPage(){
   else bar=`<div class="answer"><form id="af" autocomplete="off"><button type="button" id="idk" class="idk" aria-label="I don't know" ${locked?"disabled":""}>I don't<br>know</button><input id="ans" type="text" placeholder="${locked?"":"Type your answer"}" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send" ${locked?"disabled":""} aria-label="Your answer"><button type="submit" id="go" aria-label="Submit answer" ${locked?"disabled":""}><svg width="26" height="22" viewBox="0 0 26 22"><path d="M22 2v9a3 3 0 0 1-3 3H5m0 0 5-5m-5 5 5 5" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></div>`;
   if(round.fb) bar=bar.replace('<div class="answer">','<div class="answer"><div class="barfb" role="status">'+round.fb+'</div>');
   $("#answerSlot").innerHTML=bar;
-  const fz=$("#figzoom"); if(fz){fz.onclick=()=>{const s=fz.querySelector("img").getAttribute("src");$("#modalSlot").innerHTML=`<div class="zoom" role="dialog" aria-modal="true" aria-label="Figure"><img src="${s}" alt=""></div><button class="zoomx" id="zoomx" aria-label="Close">✕</button>`;$("#zoomx").onclick=()=>{$("#modalSlot").innerHTML="";};$("#zoomx").focus();};}
+  const fz=$("#figzoom")||$("#aimg"); if(fz){fz.onclick=()=>{const s=fz.getAttribute("data-zoom")||fz.querySelector("img").getAttribute("src");$("#modalSlot").innerHTML=`<div class="zoom" role="dialog" aria-modal="true" aria-label="Figure"><img src="${s}" alt=""></div><button class="zoomx" id="zoomx" aria-label="Close">✕</button>`;$("#zoomx").onclick=()=>{$("#modalSlot").innerHTML="";};$("#zoomx").focus();};}
   const af=$("#af"); if(af){af.onsubmit=e=>{e.preventDefault();submit($("#ans").value);};$("#idk").onclick=giveUp;}
 
   const nx=$("#next"); if(nx){nx.onclick=()=>{try{next();}catch(e){console.error(e);if(round.i>=round.qs.length-1)finish();}};nx.focus();}
@@ -3111,19 +3140,20 @@ function grade(v){
   const q=round.qs[round.i];
   if(v&&(v.id===q.st.id||(q.st.also||[]).includes(v.id)||q.st.accept.some(a=>norm(a)===v.n))){
     if(round.tries===0){round.credit+=1;round.first++;}else{round.credit+=0.5;round.second++;}
+    round.lastMissed=false;
     return setFb(`<div class="fb ok"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="var(--green)"/><path d="m7 13.5 4 4 8-9" stroke="#111" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Correct${round.tries?" <small>On the retry: half credit.</small>":""}</div></div>`,"done");
   }
   round.tries++;
   if(round.tries<2) return setFb(`<div class="fb bad">✕ Not quite<small>One more try.</small></div>`,"ask");
-  round.missed++;
+  round.missed++;round.lastMissed=true;
   setFb(`<div class="fb bad">✕ The answer is ${esc(q.st.name)}</div>`,"done");
 }
 function giveUp(){
-  const q=round.qs[round.i];round.missed++;round.keep="";
+  const q=round.qs[round.i];round.missed++;round.keep="";round.lastMissed=true;
   setFb(`<div class="fb bad">The answer is ${esc(q.st.name)}<small>Counted as missed.</small></div>`,"done");
 }
 function next(){
-  round.i++;round.tries=0;round.fb="";round.state="ask";
+  round.i++;round.tries=0;round.fb="";round.state="ask";round.lastMissed=false;
   if(round.i>=round.qs.length) return finish();
   playPage();scrollTo(0,0);
 }
@@ -3274,6 +3304,24 @@ function backupSheet(msg){
   $(".modal").scrollTop=0;
 }
 
+/* A left swipe on an answered card is the same as tapping Next — quicker on a phone
+   when you are flicking through cards you already know. */
+function bindSwipe(){
+  const el=$("#app");
+  if(!el||el.dataset.swipe) return;
+  el.dataset.swipe="1";
+  let sx=0,sy=0;
+  el.addEventListener("touchstart",e=>{const t=e.changedTouches[0];sx=t.clientX;sy=t.clientY;},{passive:true});
+  el.addEventListener("touchend",e=>{
+    if(!round||round.state!=="done") return;                 // nothing to skip past yet
+    if($("#modalSlot").innerHTML.trim()) return;             // a zoom or dialog is open
+    const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;
+    if(dx<=-60&&Math.abs(dx)>1.5*Math.abs(dy)){              // sideways, not a scroll
+      try{next();}catch(err){console.error(err);}
+    }
+  },{passive:true});
+}
+
 /* menu + leave guard */
 const mb=$("#menubtn"),menu=$("#menu");
 function closeMenu(){menu.hidden=true;mb.setAttribute("aria-expanded","false");}
@@ -3298,7 +3346,7 @@ function confirmLeave(yes){
 }
 window.addEventListener("beforeunload",e=>{if(view.page==="play"){e.preventDefault();e.returnValue="";}});
 
-render(); saveBanner(); setTimeout(initRemote,0);
+render(); saveBanner(); bindSwipe(); setTimeout(initRemote,0);
 keepStorage();
 /* Ask again after a real tap: some browsers only grant persistence on a user gesture. */
 window.addEventListener("pointerdown",function once(){window.removeEventListener("pointerdown",once);keepStorage();},{once:true});
