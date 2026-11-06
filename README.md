@@ -4,7 +4,17 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 2.6
+Current version: 2.7
+
+## Identification decks
+
+Fifty-four decks ask you to name a structure from a picture, the way a lab practical
+does. With images on, the card shows the drawing cropped to the right region, with the
+label text covered and the structure marked in blue; answer, and the same picture comes
+back with its name on it, tapping through to the full textbook figure. Miss a card and a
+short tip appears. Swipe left on an answered card to move on.
+
+Cards whose structure could not be located in the textbook figure show the clue alone.
 
 ## Your progress
 

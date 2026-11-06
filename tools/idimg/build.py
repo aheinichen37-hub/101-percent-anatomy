@@ -30,6 +30,18 @@ REPORT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "report.json")
 MAX_WIDTH = 1000
 JPEG_QUALITY = 78
 
+# Quality gates. A card that fails one keeps no picture and falls back to the clue,
+# which is better than a card showing a scrap of a drawing or a patch hanging off its
+# edge. Reviewing hundreds of pictures by eye is not realistic, so the build throws out
+# what it cannot vouch for.
+# A long bone is a legitimately narrow strip, so the test is on the drawing's longest
+# side and its area, not on its narrowest side.
+MIN_LONG_SIDE = 280
+MIN_SHORT_SIDE = 90
+MIN_AREA = 60000
+EDGE_MARGIN = 30         # the marked spot must sit inside the crop, not on its rim
+MIN_INK_FRACTION = 0.06  # a crop that is nearly all paper is not a drawing
+
 
 def load_overrides():
     try:
@@ -88,7 +100,13 @@ def build_card(card, override=None):
         row.update(status="skip", reason="card has no textbook figure")
         return row
 
-    img = figures.render_figure(card["fig"], scale=3.0)
+    try:
+        img = figures.render_figure(card["fig"], scale=3.0)
+    except (KeyError, ValueError):
+        # 24 figures have no caption the text layer exposes, and a few never match
+        # confidently. The crop the app already ships is the same framing at lower
+        # resolution, which is still worth trying rather than dropping the card.
+        img = figures.stored_figure(card["fig"])
     found = labels_mod.find_labels(img)
 
     point = override.get("point")
@@ -113,6 +131,23 @@ def build_card(card, override=None):
     if not (0 <= local[0] < pan.width and 0 <= local[1] < pan.height):
         row.update(status="fail", reason="structure fell outside the crop")
         return row
+
+    if not override.get("crop"):          # a hand-set crop is trusted as given
+        if (max(pan.width, pan.height) < MIN_LONG_SIDE
+                or min(pan.width, pan.height) < MIN_SHORT_SIDE
+                or pan.width * pan.height < MIN_AREA):
+            row.update(status="fail", reason=f"crop is only {pan.width}x{pan.height}")
+            return row
+        if (local[0] < EDGE_MARGIN or local[1] < EDGE_MARGIN
+                or pan.width - local[0] < EDGE_MARGIN
+                or pan.height - local[1] < EDGE_MARGIN):
+            row.update(status="fail", reason="structure sits on the edge of the crop")
+            return row
+        import numpy as _np
+        ink = (_np.array(pan.convert("L")) < 245).mean()
+        if ink < MIN_INK_FRACTION:
+            row.update(status="fail", reason=f"crop is mostly blank ({ink:.0%} drawing)")
+            return row
 
     mask, kind = highlight.make_mask(pan, local, force=override.get("kind"))
     answer = highlight.answer_image(pan, mask, kind, card["name"], local)

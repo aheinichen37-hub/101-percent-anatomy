@@ -75,8 +75,8 @@ async def main():
   async with async_playwright() as p:
     b=await p.chromium.launch(); errs=[]
     pg0=await b.new_page(); perr=[]; pg0.on("pageerror",lambda e:perr.append(str(e))); await pg0.goto(URL)
-    # two-mode decks must match the app's own test in unitPage(): d.fn || d.imgOpt
-    try: decks=await pg0.evaluate("Object.values(DECKS).map(d=>[d.id,!!(d.fn||d.imgOpt||d.ident)])")
+    # two-mode decks must match the app's own test in unitPage(): d.fn || d.ident
+    try: decks=await pg0.evaluate("Object.values(DECKS).map(d=>[d.id,!!(d.fn||d.ident)])")
     except Exception: check(False,f"page script failed to load: {perr}"); print("RESULT: 1 FAILURE(S)"); sys.exit(1)
     store={}
     for sess in range(2):   # session 1: empty db; session 2: saved stats come back frozen

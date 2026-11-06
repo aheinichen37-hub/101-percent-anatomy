@@ -2849,7 +2849,7 @@ NEWDECKS.forEach(d=>{DECKS[d.id]=d;});
    v2.4 rule that offered the images choice on any deck where 60% of cards had a figure. */
 const IDDECKS=new Set(["ch1-reg","ch1-pl","ch1-cav","ch1-abd","ch1-ser","ch4-epi","ch4-ct","ch5-lay","ch5-str","ch5-acc","ch6-str","ch6-cell","ch7-skull","ch7-vert","ch7-thor","ch8-pect","ch8-arm","ch8-pelv","ch8-leg","ch9-syn","ch9-sel","ch10-str","ch11-head","ch11-resp","ch11-back","ch11-abd","ch11-sh","ch11-arm","ch11-hand","ch11-hip","ch11-thigh","ch11-leg","ch12-cell","ch13-cns","ch13-csf","ch13-pns","ch13-cn","ch14-spec","ch18-wbc","ch19-anat","ch19-cond","ch20-str","ch20-art","ch20-vein","ch21-lym","ch22-anat","ch23-mouth","ch23-stom","ch23-int","ch23-acc","ch25-anat","ch25-neph","ch27-male","ch27-fem"]);
 /* Card IDs the image build produced all three files for. Rewritten by tools/idimg/build.py. */
-const IDIMG=new Set([]);
+const IDIMG=new Set(["ch11-abd-0","ch11-abd-4","ch19-anat-0","ch19-anat-12","ch19-anat-14","ch19-anat-15","ch19-anat-16","ch19-anat-17","ch19-anat-20","ch19-anat-5","ch19-anat-6","ch19-anat-7","ch8-arm-10","ch8-arm-18","ch8-arm-22"]);
 NEWDECKS.forEach(d=>{d.ident=IDDECKS.has(d.id);});
 /* A card only has pictures if the build made them; otherwise it shows the clue alone. */
 function idFiles(item){
