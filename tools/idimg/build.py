@@ -91,6 +91,18 @@ def _usable_figure(fig):
     return bool(fig) and fig != "-" and os.path.exists(figures.fig_path(fig))
 
 
+def window_box(size, point, frac=0.55):
+    """A square window around a hand-placed spot, for when the drawing's own outline is
+    too small to crop to (thin muscles, labels on the rim). Only used for hand-set spots,
+    because there the spot is known to be on the structure."""
+    w, h = size
+    half = int(min(w, h) * frac / 2)
+    x, y = point
+    x0 = max(0, min(w - 2 * half, x - half))
+    y0 = max(0, min(h - 2 * half, y - half))
+    return (x0, y0, min(w, x0 + 2 * half), min(h, y0 + 2 * half))
+
+
 def build_card(card, override=None):
     """Make one card's three files. Returns a report row."""
     override = override or {}
@@ -100,6 +112,9 @@ def build_card(card, override=None):
     if override.get("skip"):
         row.update(status="skip", reason="skipped by override")
         return row
+    if override.get("fig"):                 # a card can borrow a better drawing
+        card = dict(card, fig=override["fig"])
+        row["fig"] = card["fig"]
     if not _usable_figure(card.get("fig")):
         row.update(status="skip", reason="card has no textbook figure")
         return row
@@ -128,7 +143,12 @@ def build_card(card, override=None):
             return row
     point = (int(point[0]), int(point[1]))
 
+    hand = bool(override.get("point") or override.get("crop"))   # placed by eye: trusted
     box = tuple(override["crop"]) if override.get("crop") else panel.panel_box(img, point, found)
+    if hand and not override.get("crop"):
+        bw, bh = box[2] - box[0], box[3] - box[1]
+        if max(bw, bh) < MIN_LONG_SIDE or min(bw, bh) < MIN_SHORT_SIDE:
+            box = window_box(img.size, point)
     covered = labels_mod.cover_labels(img, found)
     pan = panel.crop(covered, box)
     local = (point[0] - box[0], point[1] - box[1])
@@ -136,7 +156,7 @@ def build_card(card, override=None):
         row.update(status="fail", reason="structure fell outside the crop")
         return row
 
-    if not override.get("crop"):          # a hand-set crop is trusted as given
+    if not hand:                          # a hand-set spot or crop is trusted as given
         if (max(pan.width, pan.height) < MIN_LONG_SIDE
                 or min(pan.width, pan.height) < MIN_SHORT_SIDE
                 or pan.width * pan.height < MIN_AREA):
@@ -196,6 +216,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decks", help="comma-separated deck ids")
     ap.add_argument("--all", action="store_true")
+    ap.add_argument("--cards", help="comma-separated card ids, or 'overrides' for every card with a hand fix")
     ap.add_argument("--limit", type=int, help="stop after this many cards (for a trial run)")
     ap.add_argument("--no-register", action="store_true",
                     help="write the pictures but leave index.html alone")
@@ -206,6 +227,9 @@ def main(argv=None):
     deck_ids = args.decks.split(",") if args.decks else None
     overrides = load_overrides()
     cards = read_cards(deck_ids)
+    if args.cards:
+        want = set(overrides) if args.cards == "overrides" else set(args.cards.split(","))
+        cards = [c for c in cards if c["card"] in want]
     if args.limit:
         cards = cards[:args.limit]
     print(f"{len(cards)} cards", flush=True)

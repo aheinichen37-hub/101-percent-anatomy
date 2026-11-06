@@ -151,7 +151,7 @@ def find_labels(img):
     return labels
 
 
-def match_labels(labels, terms):
+def match_labels(labels, terms, partial_ok=True):
     """Every label matching one of `terms`, in a stable order."""
     wanted = [_norm(t) for t in terms if _norm(t)]
     if not wanted:
@@ -187,7 +187,7 @@ def match_labels(labels, terms):
     # read. Only consulted when nothing matched outright, and only for a leading run of
     # at least five characters, so "Ulna" cannot swallow "Ulnar notch".
     partial = []
-    if not exact and not near:
+    if partial_ok and not exact and not near:
         for lab in labels:
             got = _norm(lab.text)
             if len(got) < 5:
@@ -202,9 +202,9 @@ def match_labels(labels, terms):
     return sorted(hits, key=lambda l: (l.box[1], l.box[0]))
 
 
-def match_label(labels, terms):
+def match_label(labels, terms, partial_ok=True):
     """The first matching label, chosen the same way on every run."""
-    hits = match_labels(labels, terms)
+    hits = match_labels(labels, terms, partial_ok)
     return hits[0] if hits else None
 
 

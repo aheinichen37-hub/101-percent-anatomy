@@ -62,3 +62,21 @@ def test_check_detects_missing_and_empty_mask(tmp_path):
                check_id_images.check(["c-0"], id_dir=str(tmp_path)))
     assert any("missing" in p for p in
                check_id_images.check(["gone-1"], id_dir=str(tmp_path)))
+
+
+# ---- hand fixes: a card can borrow another figure and be pointed at by eye ----
+
+def test_window_box_stays_inside_the_figure_and_around_the_spot():
+    box = build.window_box((1000, 800), (30, 790))
+    assert 0 <= box[0] < box[2] <= 1000 and 0 <= box[1] < box[3] <= 800
+    assert box[0] <= 30 < box[2] and box[1] <= 790 < box[3]
+
+
+def test_hand_overrides_name_real_cards_and_spots_inside_the_figure(page):
+    overrides = build.load_overrides()
+    ids = {c["card"] for c in build.read_cards(page=page)}
+    for card, o in overrides.items():
+        assert card in ids, f"override for unknown card {card}"
+        if "point" in o:
+            assert len(o["point"]) == 2 and all(v >= 0 for v in o["point"]), card
+            assert o.get("fig"), f"{card}: a hand spot is only meaningful with its figure"

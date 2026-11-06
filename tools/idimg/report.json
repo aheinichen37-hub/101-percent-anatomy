@@ -779,23 +779,23 @@
  "ch11-abd-1": {
   "deck": "ch11-abd",
   "fig": "11.16",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-abd-2": {
   "deck": "ch11-abd",
   "fig": "11.16",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-abd-3": {
   "deck": "ch11-abd",
   "fig": "11.16",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-abd-4": {
   "deck": "ch11-abd",
@@ -807,9 +807,9 @@
  "ch11-arm-0": {
   "deck": "ch11-arm",
   "fig": "11.25",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-arm-1": {
   "deck": "ch11-arm",
@@ -821,16 +821,16 @@
  "ch11-arm-2": {
   "deck": "ch11-arm",
   "fig": "11.25",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-arm-3": {
   "deck": "ch11-arm",
   "fig": "11.25",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-arm-4": {
   "deck": "ch11-arm",
@@ -841,24 +841,24 @@
  },
  "ch11-arm-5": {
   "deck": "ch11-arm",
-  "fig": "11.26",
-  "kind": null,
-  "reason": "crop is only 89x52",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-arm-6": {
   "deck": "ch11-arm",
-  "fig": "11.26",
-  "kind": null,
-  "reason": "crop is only 105x97",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-arm-7": {
   "deck": "ch11-arm",
-  "fig": "11.26",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-back-0": {
   "deck": "ch11-back",
@@ -877,9 +877,9 @@
  "ch11-back-2": {
   "deck": "ch11-back",
   "fig": "11.15",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-back-3": {
   "deck": "ch11-back",
@@ -890,10 +890,10 @@
  },
  "ch11-back-4": {
   "deck": "ch11-back",
-  "fig": "11.15",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-back-5": {
   "deck": "ch11-back",
@@ -925,94 +925,94 @@
  },
  "ch11-hand-0": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 31x80",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-1": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 31x50",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-10": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 36x44",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-11": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 36x36",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-2": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 305x81",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-3": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 277x81",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-4": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-5": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 125x39",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-6": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 125x135",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-7": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 125x243",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-8": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 358x123",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hand-9": {
   "deck": "ch11-hand",
-  "fig": "11.27",
-  "kind": null,
-  "reason": "crop is only 36x38",
-  "status": "fail"
+  "fig": "11.25",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-0": {
   "deck": "ch11-head",
   "fig": "11.3",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-1": {
   "deck": "ch11-head",
@@ -1030,17 +1030,17 @@
  },
  "ch11-head-11": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-12": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-13": {
   "deck": "ch11-head",
@@ -1051,17 +1051,17 @@
  },
  "ch11-head-14": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-15": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.13",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-16": {
   "deck": "ch11-head",
@@ -1156,17 +1156,17 @@
  },
  "ch11-head-9": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hip-0": {
   "deck": "ch11-hip",
-  "fig": "11.29",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "fig": "11.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hip-1": {
   "deck": "ch11-hip",
@@ -1177,10 +1177,10 @@
  },
  "ch11-hip-2": {
   "deck": "ch11-hip",
-  "fig": "11.29",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hip-3": {
   "deck": "ch11-hip",
@@ -1191,24 +1191,24 @@
  },
  "ch11-hip-4": {
   "deck": "ch11-hip",
-  "fig": "11.30",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hip-5": {
   "deck": "ch11-hip",
-  "fig": "11.30",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hip-6": {
   "deck": "ch11-hip",
-  "fig": "11.30",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-hip-7": {
   "deck": "ch11-hip",
@@ -1220,30 +1220,30 @@
  "ch11-leg-0": {
   "deck": "ch11-leg",
   "fig": "11.32",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-leg-1": {
   "deck": "ch11-leg",
-  "fig": "11.33",
-  "kind": null,
-  "reason": "crop is only 34x50",
-  "status": "fail"
+  "fig": "11.32",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-leg-2": {
   "deck": "ch11-leg",
-  "fig": "11.33",
-  "kind": null,
-  "reason": "crop is only 87x56",
-  "status": "fail"
+  "fig": "11.32",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-leg-3": {
   "deck": "ch11-leg",
-  "fig": "11.33",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.32",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-leg-4": {
   "deck": "ch11-leg",
@@ -1255,9 +1255,9 @@
  "ch11-leg-5": {
   "deck": "ch11-leg",
   "fig": "11.32",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-leg-6": {
   "deck": "ch11-leg",
@@ -1303,10 +1303,10 @@
  },
  "ch11-resp-5": {
   "deck": "ch11-resp",
-  "fig": "11.13",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.14",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-resp-6": {
   "deck": "ch11-resp",
@@ -1346,9 +1346,9 @@
  "ch11-sh-1": {
   "deck": "ch11-sh",
   "fig": "11.23",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-sh-10": {
   "deck": "ch11-sh",
@@ -1373,10 +1373,10 @@
  },
  "ch11-sh-13": {
   "deck": "ch11-sh",
-  "fig": "11.22",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-sh-2": {
   "deck": "ch11-sh",
@@ -1387,38 +1387,38 @@
  },
  "ch11-sh-3": {
   "deck": "ch11-sh",
-  "fig": "11.24",
-  "kind": null,
-  "reason": "crop is only 132x99",
-  "status": "fail"
+  "fig": "11.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-sh-4": {
   "deck": "ch11-sh",
-  "fig": "11.24",
-  "kind": null,
-  "reason": "crop is only 142x56",
-  "status": "fail"
+  "fig": "11.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-sh-5": {
   "deck": "ch11-sh",
-  "fig": "11.24",
-  "kind": null,
-  "reason": "crop is only 37x72",
-  "status": "fail"
+  "fig": "11.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-sh-6": {
   "deck": "ch11-sh",
-  "fig": "11.24",
-  "kind": null,
-  "reason": "crop is only 141x243",
-  "status": "fail"
+  "fig": "11.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-sh-7": {
   "deck": "ch11-sh",
-  "fig": "11.24",
-  "kind": null,
-  "reason": "crop is only 132x55",
-  "status": "fail"
+  "fig": "11.23",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-sh-8": {
   "deck": "ch11-sh",
@@ -1436,45 +1436,45 @@
  },
  "ch11-thigh-0": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "crop is only 90x108",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-1": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "crop is only 145x120",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-10": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-11": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "crop is only 37x33",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-12": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "crop is only 555x43",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-13": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-14": {
   "deck": "ch11-thigh",
@@ -1485,17 +1485,17 @@
  },
  "ch11-thigh-2": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "crop is only 99x55",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-3": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "crop is only 150x55",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-4": {
   "deck": "ch11-thigh",
@@ -1513,31 +1513,31 @@
  },
  "ch11-thigh-6": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-7": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-8": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-thigh-9": {
   "deck": "ch11-thigh",
-  "fig": "11.31",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "11.29",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch12-cell-0": {
   "deck": "ch12-cell",

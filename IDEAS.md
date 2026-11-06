@@ -31,8 +31,19 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Mastery fades** if you don't revisit a unit (optional). *(2026-11-06)*
 - **Cell-to-human avatar (back burner)**: one fluid layered silhouette. Each unit fills a slot in the order earned, so textbook order doesn't matter. Decks in a unit unlock sub-parts (e.g. heart chambers, valves, myocardium); overall growth stage from a cell to a human is driven by total stars. *(2026-11-06)*
 
+### Diagrams still needed (Unit 11, head and neck down) — Andrew to find; then add as figures and I mark the spots *(2026-11-06)*
+- **Head & Neck (`ch11-head`)**: a face-muscles drawing labelled with Orbicularis oculi, Occipitofrontalis, Buccinator, Zygomaticus major, Levator labii superioris, Depressor anguli oris, Mentalis, Platysma; a tongue/floor-of-mouth drawing with Genioglossus; the six extrinsic eye muscles (Superior/Inferior/Lateral/Medial rectus, Superior/Inferior oblique).
+- **Respiratory (`ch11-resp`)**: Serratus posterior superior and inferior (posterior trunk), Transversus thoracis (inside of the anterior chest wall).
+- **Back (`ch11-back`)**: a drawing that shows Erector spinae as the group (iliocostalis, longissimus, spinalis side by side).
+- **Shoulder (`ch11-sh`)**: Coracobrachialis; a rotator cuff drawing showing all four muscles together.
+- **Hip (`ch11-hip`)**: Psoas minor; Iliopsoas as the joined muscle.
+- **Thigh (`ch11-thigh`)**: Vastus intermedius (the deep one between lateralis and medialis); the quadriceps and hamstring groups outlined as groups.
+- **Lower leg (`ch11-leg`)**: nothing missing; Gastrocnemius, Soleus, Calcaneal tendon and the front four have pictures.
+- **Fix later, once the app is settled**: the forearm-extensor spots (Extensor digitorum, Digiti minimi, Carpi ulnaris, pollicis longus/brevis) sit a few pixels apart, so check each one; Orbicularis oris is a tiny muscle under a large blob; Semitendinosus and Semimembranosus leaders end close together.
+- **Bony landmarks (Units 7–8)**: about 92 cards still have no picture; most have their label but the automatic leader tracing follows the wrong end of the line. Same hand-marking treatment (`fig` + `point` in `tools/id-overrides.json`) will fix them. Not started. *(2026-11-06)*
+
 ## Done
-- Decks for all 28 units (v2.3, 2026-11-05)
+- Hand-fixed pictures for 59 Unit 11 muscle cards from Head & Neck down; the `fig` override lets a card borrow a better drawing and a hand-placed `point` skips the automatic quality checks (v2.9, 2026-11-06)- Decks for all 28 units (v2.3, 2026-11-05)
 - Textbook figures on 1,545 cards + Images on/off choice (v2.4, 2026-11-05)
 - Safe save: versioned save with migrations, rolling backup copy, persistent-storage request, a red bar when the browser refuses to save, and a Save & backup sheet with export/restore (v2.6, 2026-11-06)
 - Installable app: manifest, icons, offline app shell, Add to Home Screen (v2.6, 2026-11-06)
