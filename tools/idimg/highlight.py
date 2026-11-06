@@ -117,6 +117,22 @@ def make_mask(panel_img: Image.Image, point, force: str = None):
     return Image.fromarray(_ring((H, W), (x, y))), "circle"
 
 
+LEADER_W = 11      # px width of the glow drawn over a leader line
+TIP_R = 22         # px radius of the ring at the leader's tip
+
+
+def leader_mask(size, path) -> Image.Image:
+    """Mask lighting a leader line along `path` (panel coordinates) and ringing its tip."""
+    W, H = size
+    m = np.zeros((H, W), np.uint8)
+    pts = [tuple(int(v) for v in p) for p in path]
+    for p, q in zip(pts, pts[1:]):
+        cv2.line(m, p, q, 255, LEADER_W)
+    if pts:
+        cv2.circle(m, pts[-1], TIP_R, 255, RING_W)
+    return Image.fromarray(m)
+
+
 def mask_png(mask: Image.Image) -> Image.Image:
     a = np.asarray(mask.convert("L"))
     out = np.zeros(a.shape + (4,), np.uint8)
@@ -134,11 +150,16 @@ def _font(size):
     return ImageFont.load_default()
 
 
-def answer_image(panel_img: Image.Image, mask: Image.Image, kind: str, name: str) -> Image.Image:
-    """The panel with the highlight at 45% and the structure's name in a box joined to it by a line."""
+def answer_image(panel_img: Image.Image, mask: Image.Image, kind: str, name: str, at=None,
+                 anchor: str = "left") -> Image.Image:
+    """The panel with the highlight at 65% (still blue over red muscle) and the structure's name in a box joined to it by a line.
+
+    `at` (x0, y0, x1, y1): put the name there instead, with no joining line (line art keeps the textbook's own leader),
+    in about the textbook label's own type size. `anchor` is the label side its leader leaves from: the box ends there.
+    """
     base = panel_img.convert("RGB")
     arr = np.asarray(base).astype(np.float32)
-    m = np.asarray(mask.convert("L")).astype(np.float32)[..., None] / 255 * 0.45
+    m = np.asarray(mask.convert("L")).astype(np.float32)[..., None] / 255 * 0.65
     arr = arr * (1 - m) + np.array(HL, np.float32) * m
     out = Image.fromarray(arr.astype(np.uint8))
     W, H = out.size
@@ -148,21 +169,42 @@ def answer_image(panel_img: Image.Image, mask: Image.Image, kind: str, name: str
     else:
         cx, cy = W // 2, H // 2
     d = ImageDraw.Draw(out)
-    font = _font(28)
-    tw, th = d.textbbox((0, 0), name, font=font)[2:]
-    bw, bh = tw + 24, th + 16
+    size = 28 if at is None else int(min(28, max(14, at[3] - at[1])))
+    pad_x, pad_y = (12, 8) if at is None else (6, 4)
+    while True:  # shrink until the box fits the picture's width
+        font = _font(size)
+        tw, th = d.textbbox((0, 0), name, font=font)[2:]
+        bw, bh = tw + 2 * pad_x, th + 2 * pad_y
+        if bw <= W - 8 or size <= 10:
+            break
+        size -= 1
     white = ~_drawing(np.asarray(base))
-    # candidate spots: above, below, left, right of the structure; pick the one sitting on the most white
-    spots = [(cx - bw // 2, cy - bh - 70), (cx - bw // 2, cy + 70), (cx - bw - 90, cy - bh // 2), (cx + 90, cy - bh // 2)]
-    best, bx, by = -1, None, None
-    for sx, sy in spots:
-        sx = min(max(sx, 4), max(4, W - bw - 4))
-        sy = min(max(sy, 4), max(4, H - bh - 4))
-        score = white[sy:sy + bh, sx:sx + bw].mean() if bh > 0 and bw > 0 else 0
+    # candidate spots around the structure at two distances; pick the one on the most white space that never
+    # covers the highlight itself (spots near an edge get pushed back inside, which can land them on it)
+    lit = cv2.dilate((np.asarray(mask.convert("L")) > 60).astype(np.uint8), np.ones((17, 17), np.uint8)) > 0
+    spots = []
+    for r in (70, 130):
+        spots += [(cx - bw // 2, cy - bh - r), (cx - bw // 2, cy + r), (cx - bw - r - 20, cy - bh // 2),
+                  (cx + r + 20, cy - bh // 2), (cx - bw - r, cy - bh - r), (cx + r, cy - bh - r),
+                  (cx - bw - r, cy + r), (cx + r, cy + r)]
+    best, bx, by = -1e9, None, None
+    for i, (sx, sy) in enumerate(spots):
+        sx = int(min(max(sx, 4), max(4, W - bw - 4)))
+        sy = int(min(max(sy, 4), max(4, H - bh - 4)))
+        if bh <= 0 or bw <= 0:
+            continue
+        score = white[sy:sy + bh, sx:sx + bw].mean() - 5 * lit[sy:sy + bh, sx:sx + bw].mean() - 0.01 * (i >= 8)
         if score > best:
             best, bx, by = score, sx, sy
-    near = (min(max(cx, bx), bx + bw), min(max(cy, by), by + bh))
-    d.line([near, (cx, cy)], fill=(20, 20, 20), width=2)
-    d.rounded_rectangle([bx, by, bx + bw, by + bh], radius=10, fill=(255, 255, 255), outline=(20, 20, 20), width=2)
-    d.text((bx + 12, by + 8), name, font=font, fill=(0, 0, 0))
+    if at is not None:
+        ax0, ay0, ax1, ay1 = at
+        want = ax1 + 6 - bw if anchor == "right" else ax0 - 6
+        bx = int(min(max(want, 4), max(4, W - bw - 4)))
+        by = int(min(max((ay0 + ay1) / 2 - bh / 2, 4), max(4, H - bh - 4)))
+    else:
+        near = (min(max(cx, bx), bx + bw), min(max(cy, by), by + bh))
+        d.line([near, (cx, cy)], fill=(20, 20, 20), width=2)
+    d.rounded_rectangle([bx, by, bx + bw, by + bh], radius=min(10, bh // 3), fill=(255, 255, 255),
+                        outline=(20, 20, 20), width=2)
+    d.text((bx + pad_x, by + pad_y), name, font=font, fill=(0, 0, 0))
     return out

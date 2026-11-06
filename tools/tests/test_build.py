@@ -120,6 +120,50 @@ def test_card_without_figure_gets_one(site):
     assert (site / "figs" / f"{rep['ch19-anat-24']['fig']}.jpg").exists()  # tap-to-enlarge target exists
 
 
+@pytest.fixture(scope="module")
+def ulna(tmp_path_factory):
+    """Ulna (ch8-arm-10) comes from Figure 8.6, outline-drawn forearm bones in two views side by side."""
+    from tools.idimg.build import build
+    site = tmp_path_factory.mktemp("ulna")
+    shutil.copy(ROOT / "index.html", site / "index.html")
+    (site / "figs" / "id").mkdir(parents=True)
+    (site / "overrides.json").write_text("{}")
+    rep = build(decks=["ch8-arm"], only=["ch8-arm-10"], html=site / "index.html", outdir=site / "figs" / "id",
+                overrides=site / "overrides.json", report=site / "report.json", fullfigs=site / "figs")
+    return site, rep["ch8-arm-10"]
+
+
+def test_line_art_glows_the_leader(ulna):
+    site, r = ulna
+    assert r["status"] == "ok" and r["kind"] == "leader"
+
+
+def test_line_art_crop_is_one_whole_view(ulna):
+    from tools.idimg.labels import render_figure
+    site, r = ulna
+    W, H = render_figure(r["fig"]).size
+    x0, y0, x1, y1 = r["crop"]
+    assert x1 - x0 < 0.6 * W          # one view, not both
+    assert y1 - y0 > 0.6 * H          # the whole bone, not a strip
+    px, py = r["point"]
+    assert x0 <= px <= x1 and y0 <= py <= y1
+
+
+def test_line_art_outlines_intact(ulna):
+    # only label words are erased: the bones' outlines and the leader lines all survive
+    from tools.idimg.build import _figure
+    from tools.idimg.panel import _text_mask
+    site, r = ulna
+    img, labels, _ = _figure(r["fig"])
+    x0, y0, x1, y1 = r["crop"]
+    orig = np.asarray(img.convert("L"))[y0:y1, x0:x1]
+    notext = _text_mask(img, labels, pad=8)[y0:y1, x0:x1] == 0
+    q = np.asarray(Image.open(site / "figs" / "id" / "ch8-arm-10-q.jpg").convert("L").resize((x1 - x0, y1 - y0)))
+    before = (orig < 110) & notext
+    after = (q < 140) & before
+    assert after.sum() >= 0.9 * before.sum()
+
+
 def test_different_structures_never_share_a_highlight(site):
     # 11.16 colors the obliques and transversus identically: a fill would light all three the same
     only = ["ch11-abd-1", "ch11-abd-2", "ch11-abd-3"]
@@ -135,3 +179,37 @@ def test_different_structures_never_share_a_highlight(site):
         for b in only[i + 1:]:
             iou = (full[a] & full[b]).sum() / max((full[a] | full[b]).sum(), 1)
             assert iou < 0.5, (a, b, rep[a]["kind"], rep[b]["kind"])
+
+
+def test_line_art_crop_is_one_view_with_its_label(tmp_path):
+    # 8.5 draws the humerus twice (anterior, posterior) plus a skeleton key: Greater tubercle gets one humerus
+    from tools.idimg.build import build
+    from tools.idimg.labels import render_figure
+    shutil.copy(ROOT / "index.html", tmp_path / "index.html")
+    (tmp_path / "figs" / "id").mkdir(parents=True)
+    (tmp_path / "overrides.json").write_text("{}")
+    rep = build(decks=["ch8-arm"], only=["ch8-arm-2", "ch8-arm-13"], html=tmp_path / "index.html",
+                outdir=tmp_path / "figs" / "id", overrides=tmp_path / "overrides.json", report=tmp_path / "report.json",
+                fullfigs=tmp_path / "figs")
+    W, H = render_figure("8.5").size
+    x0, y0, x1, y1 = rep["ch8-arm-2"]["crop"]
+    assert x1 - x0 < 0.6 * W and y0 > 150          # one humerus, without the skeleton key above it
+    # Coronoid process's label sits right of the forearm: the crop keeps the whole label slot for the name
+    x0, y0, x1, y1 = rep["ch8-arm-13"]["crop"]
+    assert x1 >= 450
+
+
+def test_line_art_point_override_keeps_the_leader_glow(tmp_path):
+    # the tracer overshoots Interosseous membrane's leader; a corrected tip still glows the leader, now ending there
+    from tools.idimg.build import build
+    shutil.copy(ROOT / "index.html", tmp_path / "index.html")
+    (tmp_path / "figs" / "id").mkdir(parents=True)
+    (tmp_path / "overrides.json").write_text(json.dumps({"ch8-arm-18": {"point": [224, 566], "fig": "8.6"}}))
+    rep = build(decks=["ch8-arm"], only=["ch8-arm-18"], html=tmp_path / "index.html", outdir=tmp_path / "figs" / "id",
+                overrides=tmp_path / "overrides.json", report=tmp_path / "report.json", fullfigs=tmp_path / "figs")
+    r = rep["ch8-arm-18"]
+    assert r["status"] == "ok" and r["kind"] == "leader" and r["point"] == [224, 566]
+    x0, y0, x1, y1 = r["crop"]
+    m = np.asarray(Image.open(tmp_path / "figs" / "id" / "ch8-arm-18-m.png").resize((x1 - x0, y1 - y0)))[..., 3]
+    tx, ty = 224 - x0, 566 - y0
+    assert m[ty - 22:ty + 23, tx - 22:tx + 23].max() > 127      # the ring sits on the corrected tip

@@ -15,9 +15,9 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from tools.idimg.labels import render_figure, find_labels, match_label, trace_leader, Label, _caps  # noqa: E402
-from tools.idimg.panel import panel_box, erase_labels, leader_pixels  # noqa: E402
-from tools.idimg.highlight import make_mask, mask_png, answer_image  # noqa: E402
+from tools.idimg.labels import render_figure, find_labels, match_label, trace_leader, leader_path, Label, _caps  # noqa: E402
+from tools.idimg.panel import panel_box, erase_labels, leader_pixels, is_line_art, words_only_erased, view_box  # noqa: E402
+from tools.idimg.highlight import make_mask, mask_png, answer_image, leader_mask  # noqa: E402
 
 MAX_W = 1000   # px: pictures are scaled down to at most this wide
 JPEG_Q = 78
@@ -109,10 +109,10 @@ def build_card(card: Card, ov: dict, outdir: pathlib.Path, fullfigs: pathlib.Pat
     why = "label not found"
     for fig in figs:
         img, labels, clean = _figure(fig)
+        lab = match_label(labels, terms)
         if "point" in ov:
             pt = tuple(ov["point"])
         else:
-            lab = match_label(labels, terms)
             if lab is None:
                 continue
             pt = trace_leader(img, lab, labels)
@@ -123,10 +123,32 @@ def build_card(card: Card, ov: dict, outdir: pathlib.Path, fullfigs: pathlib.Pat
     else:
         return {**rep, "status": "fail", "reason": why, "tried": figs}
     box = tuple(ov["crop"]) if "crop" in ov else panel_box(img, pt, labels)
-    panel = clean.crop(box)
     local = (pt[0] - box[0], pt[1] - box[1])
-    mask, kind = make_mask(panel, local, force=ov.get("kind"))
-    after = answer_image(panel, mask, kind, card.answer)
+    if is_line_art(img) and lab is not None and ov.get("kind") in (None, "leader"):
+        # outline-drawn figures: keep every leader line (erasing them cuts the outlines), blank only the words,
+        # and light the card's own leader; its name goes back where the textbook label was
+        path = leader_path(img, labels, lab)
+        if "point" in ov:  # a corrected tip: the leader runs straight from the label to it
+            path = [path[0], pt] if path else [pt]
+        lx0, ly0, lx1, ly1 = lab.box
+        if "crop" not in ov:
+            box = view_box(img, pt, labels)  # the one drawn view holding the tip
+        xs = [p[0] for p in path] + [box[0], box[2], lx0, lx1]  # ...plus the leader and the label slot for the name
+        ys = [p[1] for p in path] + [box[1], box[3], ly0, ly1]
+        box = (max(0, min(xs) - 16), max(0, min(ys) - 16), min(img.width, max(xs) + 16), min(img.height, max(ys) + 16))
+        panel = words_only_erased(img, labels).crop(box)
+        local = (pt[0] - box[0], pt[1] - box[1])
+        mask = leader_mask(panel.size, [(x - box[0], y - box[1]) for x, y in path])
+        kind = "leader"
+        lh = max((b[3] - b[1] for _, b in lab.lines), default=ly1 - ly0)  # one text line's height: the type size
+        mid = (ly0 + ly1) / 2 - box[1]
+        at = (lx0 - box[0], mid - lh / 2, lx1 - box[0], mid + lh / 2)
+        anchor = "right" if path and path[0][0] > (lx0 + lx1) / 2 else "left"
+        after = answer_image(panel, mask, kind, card.answer, at=at, anchor=anchor)
+    else:
+        panel = clean.crop(box)
+        mask, kind = make_mask(panel, local, force=ov.get("kind"))
+        after = answer_image(panel, mask, kind, card.answer)
     q, m, a = _fit(panel.convert("RGB")), _fit(mask_png(mask)), _fit(after.convert("RGB"))
     q.save(outdir / f"{card.id}-q.jpg", quality=JPEG_Q, optimize=True, progressive=True)
     m.save(outdir / f"{card.id}-m.png", optimize=True)

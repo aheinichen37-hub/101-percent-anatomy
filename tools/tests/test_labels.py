@@ -173,3 +173,34 @@ def test_leader_tip_matches_figure(heart, term):
     tx, ty = HEART_TIPS[term]
     assert abs(x - tx) <= 25 and abs(y - ty) <= 25, (x, y)
 
+
+
+def test_words_only_erase_leaves_no_white_box_on_the_drawing():
+    # OCR reads a false "Vi" on 8.2's spine: blanking it to white punches a rectangle into the skeleton
+    import numpy as np
+    from tools.idimg.build import _figure
+    from tools.idimg.panel import words_only_erased
+    img, labels, _ = _figure("8.2")
+    out = np.asarray(words_only_erased(img, labels).convert("L"))
+    x0, y0, x1, y1 = 288, 412, 336, 458  # where OCR read "Vi"
+    assert out[y0:y1, x0:x1].mean() < 235
+
+
+def test_words_only_erase_skips_ocr_junk_on_line_art():
+    # OCR reads bone shading on 8.7's wrist as "wa": that is drawing, not a label, and must stay untouched
+    import numpy as np
+    from tools.idimg.build import _figure
+    from tools.idimg.panel import words_only_erased
+    img, labels, _ = _figure("8.7")
+    wa = next(L for L in labels if L.text == "wa")
+    x0, y0, x1, y1 = wa.box
+    before = np.asarray(img.convert("L"))[y0:y1, x0:x1].astype(int)
+    after = np.asarray(words_only_erased(img, labels).convert("L"))[y0:y1, x0:x1].astype(int)
+    assert np.abs(before - after).mean() < 2
+
+
+def test_ocr_junk_on_the_drawing_is_not_a_label():
+    # OCR reads 19.2's great vessels as "UB": every drawn line leaving that "label" got erased as a leader
+    from tools.idimg.labels import render_figure, find_labels
+    texts = [L.text for L in find_labels(render_figure("19.2"))]
+    assert "UB" not in texts and "Mediastinum" in texts and "1st rib" in texts

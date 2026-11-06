@@ -74,6 +74,15 @@ def render_figure(fig: str, scale: float = 3.0) -> Image.Image:
     return bmp.crop((max(0, int(x0 * scale)), max(0, int(y0 * scale)), min(W, int(x1 * scale)), min(H, int(y1 * scale))))
 
 
+def _ring_white(white: np.ndarray, box, gap: int = 3, width: int = 6) -> float:
+    """Share of page-white pixels in a band just outside `box`."""
+    x0, y0, x1, y1 = box
+    x0, y0, x1, y1 = max(0, x0 - gap), max(0, y0 - gap), x1 + gap, y1 + gap
+    ring = np.concatenate([white[max(0, y0 - width):y0, x0:x1].ravel(), white[y1:y1 + width, x0:x1].ravel(),
+                           white[y0:y1, max(0, x0 - width):x0].ravel(), white[y0:y1, x1:x1 + width].ravel()])
+    return float(ring.mean()) if ring.size else 1.0
+
+
 def find_labels(img: Image.Image) -> list:
     """OCR words -> lines -> multi-line labels (left-aligned, close together)."""
     d = pytesseract.image_to_data(img, config="--psm 11", output_type=pytesseract.Output.DICT)
@@ -109,6 +118,11 @@ def find_labels(img: Image.Image) -> list:
             labs.append(dict(t=L["t"], x=L["x"], y=L["y"], x1=L["x1"], y1=L["y1"], lines=[L]))
     # OCR reads stray line art as "\" or "|"; a real label has at least two letters
     labs = [B for B in labs if sum(c.isalpha() for c in B["t"]) >= 2]
+    # ...and reads colored drawing as short gibberish ("UB" on the great vessels). Short labels ("C1") sit in white
+    # space; a short "word" with drawing all around it is junk.
+    white = np.asarray(img.convert("RGB")).min(axis=2) >= 235
+    labs = [B for B in labs if any(len(w) >= 3 for w in re.findall(r"[A-Za-z]+", B["t"]))
+            or _ring_white(white, (B["x"], B["y"], B["x1"], B["y1"])) >= 0.5]
     return [Label(B["t"], (B["x"], B["y"], B["x1"], B["y1"]),
                   [(L["t"], (L["x"], L["y"], L["x1"], L["y1"])) for L in B["lines"]]) for B in labs]
 

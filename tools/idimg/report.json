@@ -25,12 +25,11 @@
    636
   ],
   "fig": "11.16",
-  "kind": "circle",
+  "kind": "fill",
   "point": [
-   1152,
-   254
+   573,
+   268
   ],
-  "reason": "shared highlight with ch11-abd-2",
   "status": "ok"
  },
  "ch11-abd-2": {
@@ -47,7 +46,7 @@
    1091,
    401
   ],
-  "reason": "shared highlight with ch11-abd-1",
+  "reason": "shared highlight with ch11-abd-3",
   "status": "ok"
  },
  "ch11-abd-3": {
@@ -64,7 +63,7 @@
    1002,
    322
   ],
-  "reason": "shared highlight with ch11-abd-1",
+  "reason": "shared highlight with ch11-abd-2",
   "status": "ok"
  },
  "ch11-abd-4": {
@@ -88,27 +87,33 @@
   "answer": "Mediastinum",
   "crop": [
    145,
-   322,
+   296,
    764,
    1021
   ],
   "fig": "19.2",
   "kind": "circle",
   "point": [
-   451,
-   471
+   480,
+   520
   ],
   "status": "ok"
  },
  "ch19-anat-1": {
   "answer": "Pericardium",
-  "fig": "19.6",
-  "reason": "no leader line",
-  "status": "fail",
-  "tried": [
-   "19.6",
-   "19.5"
-  ]
+  "crop": [
+   145,
+   296,
+   764,
+   1021
+  ],
+  "fig": "19.2",
+  "kind": "circle",
+  "point": [
+   520,
+   822
+  ],
+  "status": "ok"
  },
  "ch19-anat-10": {
   "answer": "Interventricular septum",
@@ -119,106 +124,106 @@
    653
   ],
   "fig": "19.9",
-  "kind": "fill",
+  "kind": "circle",
   "point": [
    610,
-   525
+   522
   ],
   "status": "ok"
  },
  "ch19-anat-11": {
   "answer": "Tricuspid valve",
   "crop": [
-   590,
-   14,
-   1035,
-   554
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.4",
+  "fig": "19.9",
   "kind": "circle",
   "point": [
-   690,
-   527
+   420,
+   425
   ],
   "status": "ok"
  },
  "ch19-anat-12": {
   "answer": "Mitral valve",
   "crop": [
-   89,
-   54,
-   746,
-   625
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.13",
+  "fig": "19.9",
   "kind": "circle",
   "point": [
-   546,
-   208
+   650,
+   338
   ],
   "status": "ok"
  },
  "ch19-anat-13": {
   "answer": "Pulmonary valve",
   "crop": [
-   590,
-   14,
-   1035,
-   554
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.4",
+  "fig": "19.9",
   "kind": "circle",
   "point": [
-   985,
-   196
+   530,
+   340
   ],
   "status": "ok"
  },
  "ch19-anat-14": {
   "answer": "Aortic valve",
   "crop": [
-   717,
-   604,
-   1034,
-   1017
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.13",
-  "kind": "fill",
+  "fig": "19.9",
+  "kind": "circle",
   "point": [
-   791,
-   721
+   570,
+   345
   ],
   "status": "ok"
  },
  "ch19-anat-15": {
   "answer": "Chordae tendineae",
   "crop": [
-   13,
-   17,
-   686,
-   643
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.11",
+  "fig": "19.9",
   "kind": "circle",
   "point": [
-   388,
-   264
+   470,
+   480
   ],
   "status": "ok"
  },
  "ch19-anat-16": {
   "answer": "Papillary muscles",
   "crop": [
-   13,
-   17,
-   686,
-   643
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.11",
+  "fig": "19.9",
   "kind": "circle",
   "point": [
-   486,
-   332
+   655,
+   480
   ],
   "status": "ok"
  },
@@ -233,8 +238,8 @@
   "fig": "19.9",
   "kind": "circle",
   "point": [
-   436,
-   213
+   545,
+   212
   ],
   "status": "ok"
  },
@@ -304,12 +309,19 @@
  },
  "ch19-anat-21": {
   "answer": "Coronary arteries",
-  "fig": "19.16",
-  "reason": "label not found",
-  "status": "fail",
-  "tried": [
-   "19.16"
-  ]
+  "crop": [
+   444,
+   15,
+   872,
+   578
+  ],
+  "fig": "19.6",
+  "kind": "fill",
+  "point": [
+   735,
+   330
+  ],
+  "status": "ok"
  },
  "ch19-anat-22": {
   "answer": "Coronary sinus",
@@ -330,15 +342,15 @@
  "ch19-anat-23": {
   "answer": "Foramen ovale",
   "crop": [
-   6,
-   663,
-   1216,
-   1048
+   760,
+   730,
+   1180,
+   990
   ],
   "fig": "19.36",
-  "kind": "fill",
+  "kind": "circle",
   "point": [
-   864,
+   878,
    790
   ],
   "status": "ok"
@@ -352,10 +364,10 @@
    653
   ],
   "fig": "19.9",
-  "kind": "fill",
+  "kind": "circle",
   "point": [
-   415,
-   375
+   442,
+   340
   ],
   "status": "ok"
  },
@@ -384,7 +396,7 @@
    760
   ],
   "fig": "19.5",
-  "kind": "outline",
+  "kind": "fill",
   "point": [
    449,
    463
@@ -400,7 +412,7 @@
    760
   ],
   "fig": "19.5",
-  "kind": "fill",
+  "kind": "circle",
   "point": [
    394,
    404
@@ -410,102 +422,109 @@
  "ch19-anat-6": {
   "answer": "Right atrium",
   "crop": [
-   590,
-   14,
-   1035,
-   554
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.4",
+  "fig": "19.9",
   "kind": "fill",
   "point": [
-   684,
-   320
+   398,
+   328
   ],
   "status": "ok"
  },
  "ch19-anat-7": {
   "answer": "Right ventricle",
   "crop": [
-   590,
-   14,
-   1035,
-   554
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.4",
-  "kind": "fill",
+  "fig": "19.9",
+  "kind": "circle",
   "point": [
-   788,
-   426
+   440,
+   480
   ],
   "status": "ok"
  },
  "ch19-anat-8": {
   "answer": "Left atrium",
   "crop": [
-   590,
-   14,
-   1035,
-   554
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.4",
-  "kind": "circle",
+  "fig": "19.9",
+  "kind": "fill",
   "point": [
-   909,
-   222
+   640,
+   245
   ],
   "status": "ok"
  },
  "ch19-anat-9": {
   "answer": "Left ventricle",
   "crop": [
-   145,
-   322,
-   764,
-   1021
+   263,
+   6,
+   793,
+   653
   ],
-  "fig": "19.2",
+  "fig": "19.9",
   "kind": "fill",
   "point": [
-   545,
-   749
+   670,
+   435
   ],
   "status": "ok"
  },
  "ch8-arm-0": {
   "answer": "Humerus",
   "crop": [
-   95,
-   28,
-   606,
-   1343
+   77,
+   12,
+   751,
+   1358
   ],
   "fig": "8.2",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    503,
-   459
+   460
   ],
   "status": "ok"
  },
  "ch8-arm-1": {
   "answer": "Head of the humerus",
+  "crop": [
+   131,
+   208,
+   446,
+   950
+  ],
   "fig": "8.5",
-  "reason": "label not found",
-  "status": "fail",
-  "tried": [
-   "8.5"
-  ]
+  "kind": "leader",
+  "point": [
+   302,
+   292
+  ],
+  "status": "ok"
  },
  "ch8-arm-10": {
   "answer": "Ulna",
   "crop": [
-   515,
-   178,
-   692,
-   977
+   378,
+   164,
+   741,
+   991
   ],
   "fig": "8.6",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    568,
    669
@@ -515,13 +534,13 @@
  "ch8-arm-11": {
   "answer": "Radius",
   "crop": [
-   154,
-   229,
-   310,
-   942
+   0,
+   161,
+   330,
+   980
   ],
   "fig": "8.6",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    184,
    734
@@ -531,13 +550,13 @@
  "ch8-arm-12": {
   "answer": "Olecranon",
   "crop": [
-   515,
-   178,
-   692,
-   977
+   339,
+   164,
+   741,
+   991
   ],
   "fig": "8.6",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    538,
    213
@@ -547,13 +566,13 @@
  "ch8-arm-13": {
   "answer": "Coronoid process",
   "crop": [
-   154,
-   229,
-   310,
-   942
+   130,
+   161,
+   464,
+   980
   ],
   "fig": "8.6",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    282,
    271
@@ -563,82 +582,96 @@
  "ch8-arm-14": {
   "answer": "Trochlear notch",
   "crop": [
-   154,
-   229,
-   310,
-   942
+   130,
+   161,
+   468,
+   980
   ],
   "fig": "8.6",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
-   235,
-   194
+   262,
+   228
   ],
   "status": "ok"
  },
  "ch8-arm-15": {
   "answer": "Head of the radius",
+  "crop": [
+   494,
+   164,
+   811,
+   991
+  ],
   "fig": "8.6",
-  "reason": "label not found",
-  "status": "fail",
-  "tried": [
-   "8.6"
-  ]
+  "kind": "leader",
+  "point": [
+   618,
+   281
+  ],
+  "status": "ok"
  },
  "ch8-arm-16": {
   "answer": "Radial tuberosity",
   "crop": [
-   154,
-   229,
-   310,
-   942
+   0,
+   161,
+   330,
+   980
   ],
   "fig": "8.6",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
-   230,
-   331
+   208,
+   386
   ],
   "status": "ok"
  },
  "ch8-arm-17": {
   "answer": "Radial styloid process",
+  "crop": [
+   130,
+   161,
+   522,
+   1050
+  ],
   "fig": "8.6",
-  "reason": "label not found",
-  "status": "fail",
-  "tried": [
-   "8.6"
-  ]
+  "kind": "leader",
+  "point": [
+   156,
+   947
+  ],
+  "status": "ok"
  },
  "ch8-arm-18": {
   "answer": "Interosseous membrane",
   "crop": [
-   154,
-   229,
-   310,
-   942
+   130,
+   161,
+   503,
+   980
   ],
   "fig": "8.6",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
-   183,
-   537
+   224,
+   566
   ],
   "status": "ok"
  },
  "ch8-arm-19": {
   "answer": "Carpal bones",
   "crop": [
-   140,
-   227,
-   501,
-   801
+   77,
+   12,
+   744,
+   1358
   ],
-  "fig": "8.7",
-  "kind": "circle",
+  "fig": "8.2",
+  "kind": "leader",
   "point": [
-   73,
-   62
+   534,
+   673
   ],
   "status": "ok"
  },
@@ -646,12 +679,12 @@
   "answer": "Greater tubercle",
   "crop": [
    0,
-   0,
-   811,
-   1013
+   208,
+   344,
+   950
   ],
   "fig": "8.5",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    237,
    257
@@ -661,13 +694,13 @@
  "ch8-arm-20": {
   "answer": "Scaphoid",
   "crop": [
-   140,
-   227,
-   501,
-   801
+   4,
+   177,
+   525,
+   861
   ],
   "fig": "8.7",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    288,
    674
@@ -677,64 +710,64 @@
  "ch8-arm-21": {
   "answer": "Pisiform",
   "crop": [
-   140,
-   227,
-   501,
-   801
+   126,
+   177,
+   592,
+   861
   ],
   "fig": "8.7",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
-   328,
-   640
+   392,
+   670
   ],
   "status": "ok"
  },
  "ch8-arm-22": {
   "answer": "Hamate",
   "crop": [
-   140,
-   227,
-   501,
-   801
+   126,
+   177,
+   598,
+   861
   ],
   "fig": "8.7",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
-   734,
-   640
+   378,
+   638
   ],
   "status": "ok"
  },
  "ch8-arm-23": {
   "answer": "Metacarpals",
   "crop": [
-   95,
-   28,
-   606,
-   1343
+   77,
+   12,
+   768,
+   1358
   ],
   "fig": "8.2",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
-   570,
-   699
+   574,
+   695
   ],
   "status": "ok"
  },
  "ch8-arm-24": {
   "answer": "Phalanges",
   "crop": [
-   140,
-   227,
-   501,
-   801
+   554,
+   174,
+   1104,
+   866
   ],
   "fig": "8.7",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
-   959,
-   383
+   822,
+   300
   ],
   "status": "ok"
  },
@@ -742,12 +775,12 @@
   "answer": "Lesser tubercle",
   "crop": [
    0,
-   0,
-   811,
-   1013
+   208,
+   344,
+   950
   ],
   "fig": "8.5",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    261,
    272
@@ -757,13 +790,13 @@
  "ch8-arm-4": {
   "answer": "Deltoid tuberosity",
   "crop": [
-   0,
-   0,
-   811,
-   1013
+   335,
+   207,
+   716,
+   950
   ],
   "fig": "8.5",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    590,
    513
@@ -773,13 +806,13 @@
  "ch8-arm-5": {
   "answer": "Medial epicondyle",
   "crop": [
-   0,
-   0,
-   811,
-   1013
+   336,
+   207,
+   716,
+   950
   ],
   "fig": "8.5",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    569,
    823
@@ -789,13 +822,13 @@
  "ch8-arm-6": {
   "answer": "Lateral epicondyle",
   "crop": [
-   0,
-   0,
+   462,
+   207,
    811,
-   1013
+   950
   ],
   "fig": "8.5",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    652,
    791
@@ -805,13 +838,13 @@
  "ch8-arm-7": {
   "answer": "Trochlea",
   "crop": [
-   0,
-   0,
-   811,
-   1013
+   131,
+   208,
+   449,
+   950
   ],
   "fig": "8.5",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    236,
    827
@@ -822,12 +855,12 @@
   "answer": "Capitulum",
   "crop": [
    0,
-   0,
-   811,
-   1013
+   208,
+   344,
+   950
   ],
   "fig": "8.5",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    197,
    820
@@ -837,13 +870,13 @@
  "ch8-arm-9": {
   "answer": "Olecranon fossa",
   "crop": [
-   0,
-   0,
-   811,
-   1013
+   336,
+   207,
+   716,
+   950
   ],
   "fig": "8.5",
-  "kind": "circle",
+  "kind": "leader",
   "point": [
    624,
    816

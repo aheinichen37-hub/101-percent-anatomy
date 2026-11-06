@@ -1,4 +1,6 @@
 """Panel cropping and label/leader erasing for OpenStax figures."""
+import re
+
 import cv2
 import numpy as np
 from PIL import Image
@@ -36,6 +38,24 @@ def _text_mask(img: Image.Image, labels: list, pad: int = 4) -> np.ndarray:
         for _, (x0, y0, x1, y1) in L.lines:
             mask[max(0, y0 - pad):y1 + pad, max(0, x0 - pad):x1 + pad] = 255
     return mask
+
+
+def words_only_erased(img: Image.Image, labels: list) -> Image.Image:
+    """The figure with label words blanked to page white and everything else, leader lines included, untouched.
+
+    OCR also "reads" bits of the drawing ("Vi" on a spine, "wa" on wrist shading): those aren't words, so stay.
+    """
+    a = np.asarray(img.convert("RGB")).copy()
+    a[_text_mask(img, [L for L in labels if is_word(L.text)], pad=3) > 0] = 255
+    return Image.fromarray(a)
+
+
+_WORD = re.compile(r"[A-Za-z][A-Za-z0-9 ,.'():;&+-]*")
+
+
+def is_word(text: str) -> bool:
+    """True for real label text: plain letters/punctuation with at least one 3-letter word."""
+    return bool(_WORD.fullmatch(text.strip())) and any(len(w) >= 3 and w.isalpha() for w in re.split(r"[^A-Za-z]+", text))
 
 
 def is_line_art(img: Image.Image) -> bool:
@@ -81,6 +101,52 @@ def panel_box(img: Image.Image, point, labels: list, pad: int = 12):
         k = lab[ys[i], xs[i]]
     bx, by, bw, bh, _ = stats[k]
     return (max(0, bx - pad), max(0, by - pad), min(W, bx + bw + pad), min(H, by + bh + pad))
+
+
+VIEW_OVERLAP, VIEW_GAP, VIEW_SIDE = 0.6, 60, 20  # piece joins a view: share of overlap, px gap above/below, px gap beside
+
+
+def view_box(img: Image.Image, point, labels: list, pad: int = 12):
+    """Line art: bounding box of the one drawn view (e.g. the anterior humerus) holding `point`.
+
+    Outline drawings don't close into solid shapes, so the view is grown from the ink piece at the point: any piece
+    lying mostly within the view's columns and close above or below it belongs to the same view. Side-by-side views
+    and the small key skeleton stay out.
+    """
+    W, H = img.size
+    ink = _ink(img)
+    ink[_text_mask(img, labels, pad=6) > 0] = 0
+    ink[cv2.dilate(leader_pixels(img, labels), np.ones((5, 5), np.uint8)) > 0] = 0
+    ink = cv2.morphologyEx(ink, cv2.MORPH_CLOSE, np.ones((9, 9), np.uint8))
+    n, lab, st, _ = cv2.connectedComponentsWithStats(ink, 8)
+    pieces = [k for k in range(1, n) if max(st[k][2], st[k][3]) >= 25]
+    if not pieces:
+        return (0, 0, W, H)
+    x, y = int(point[0]), int(point[1])
+
+    def dist(k):
+        bx, by, bw, bh, _ = st[k]
+        return max(bx - x, 0, x - bx - bw) ** 2 + max(by - y, 0, y - by - bh) ** 2
+
+    seed = min(pieces, key=dist)
+    box = [st[seed][0], st[seed][1], st[seed][0] + st[seed][2], st[seed][1] + st[seed][3]]
+    rest = set(pieces) - {seed}
+    grown = True
+    while grown:
+        grown = False
+        for k in list(rest):
+            bx, by, bw, bh, _ = st[k]
+            xo = min(box[2], bx + bw) - max(box[0], bx)
+            yo = min(box[3], by + bh) - max(box[1], by)
+            ygap = max(by - box[3], box[1] - (by + bh), 0)
+            xgap = max(bx - box[2], box[0] - (bx + bw), 0)
+            stacked = xo >= VIEW_OVERLAP * min(bw, box[2] - box[0]) and ygap <= VIEW_GAP
+            beside = yo >= VIEW_OVERLAP * min(bh, box[3] - box[1]) and xgap <= VIEW_SIDE
+            if stacked or beside:
+                box = [min(box[0], bx), min(box[1], by), max(box[2], bx + bw), max(box[3], by + bh)]
+                rest.discard(k)
+                grown = True
+    return (max(0, box[0] - pad), max(0, box[1] - pad), min(W, box[2] + pad), min(H, box[3] + pad))
 
 
 def erase_labels(img: Image.Image, labels: list, lines: np.ndarray) -> Image.Image:
