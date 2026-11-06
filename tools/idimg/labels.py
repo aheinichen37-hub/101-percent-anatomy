@@ -11,7 +11,7 @@ from dataclasses import dataclass
 import cv2
 import numpy as np
 import pytesseract
-from PIL import Image
+from PIL import Image, ImageDraw
 
 TESS_CONFIG = "--psm 11"
 MIN_CONF = 55
@@ -304,15 +304,16 @@ def trace_leader(img, label, labels=None, segments=None):
     return far
 
 
-def erase_labels(img, labels, extra_lines=True):
-    """Paint out label text, and the leader lines, from the surrounding background."""
-    arr = cv2.cvtColor(np.array(img.convert("RGB")), cv2.COLOR_RGB2BGR)
-    mask = np.zeros(arr.shape[:2], np.uint8)
+def cover_labels(img, labels):
+    """Hide the label text under plain boxes, leaving everything else alone.
+
+    Inpainting the text and the leader lines was smearing the artwork around them, which
+    looked worse than the lines it removed. A box over the words is enough: the card must
+    not name the structure, and the lines pointing at it do no harm.
+    """
+    out = img.convert("RGB").copy()
+    draw = ImageDraw.Draw(out)
     for lab in labels:
         x0, y0, x1, y1 = lab.box
-        cv2.rectangle(mask, (x0 - 3, y0 - 3), (x1 + 3, y1 + 3), 255, -1)
-    if extra_lines:
-        for x0, y0, x1, y1 in leader_segments(img, labels):
-            cv2.line(mask, (x0, y0), (x1, y1), 255, 5)
-    out = cv2.inpaint(arr, mask, 3, cv2.INPAINT_TELEA)
-    return Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB))
+        draw.rectangle((x0 - 3, y0 - 3, x1 + 3, y1 + 3), fill=(255, 255, 255))
+    return out

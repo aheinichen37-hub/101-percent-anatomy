@@ -104,13 +104,22 @@ def _arrow(shape, point):
     return m.astype(bool)
 
 
-def make_mask(panel_img, point, force=None):
-    """A boolean highlight for the structure at `point`, and which kind it turned out to be.
+def blob_radius(panel_img):
+    """How big the patch should be: enough to read, small enough to point at one thing."""
+    return int(max(26, min(90, min(panel_img.width, panel_img.height) * 0.10)))
 
-    Returns (PIL 'L' image, kind) where kind is fill | outline | circle | arrow.
+
+def make_mask(panel_img, point, force=None):
+    """A soft patch of colour over the structure at `point`.
+
+    Chasing the structure's exact outline was the wrong trade: a flood fill that strays
+    onto the sheath beside a muscle teaches the wrong thing, and it is not worth the
+    effort it costs. A patch centred on the spot the leader line reaches says "this one"
+    without claiming a shape it cannot verify.
+
+    Returns (PIL 'L' image, kind) where kind is blob | circle | arrow.
     """
     shape = (panel_img.height, panel_img.width)
-    area = shape[0] * shape[1]
 
     def finish(region, kind):
         return Image.fromarray((region.astype(np.uint8) * 255), mode="L"), kind
@@ -119,25 +128,7 @@ def make_mask(panel_img, point, force=None):
         return finish(_ring(shape, point), "circle")
     if force == "arrow":
         return finish(_arrow(shape, point), "arrow")
-
-    region = _flood(panel_img, point)
-    frac = region.sum() / area
-
-    if force == "fill":
-        return finish(region, "fill")
-    if force == "outline":
-        return finish(region & _disk(shape, point, OUTLINE_RADIUS), "outline")
-
-    if MIN_FILL_FRACTION <= frac <= MAX_FILL_FRACTION and not _touches_border(region):
-        return finish(region, "fill")
-
-    local = region & _disk(shape, point, OUTLINE_RADIUS)
-    if local.sum() / area >= MIN_FILL_FRACTION and local.sum() < region.sum():
-        return finish(local, "outline")
-
-    if region.sum() == 0 or frac > MAX_FILL_FRACTION:
-        return finish(_ring(shape, point), "circle")
-    return finish(_arrow(shape, point), "arrow")
+    return finish(_disk(shape, point, blob_radius(panel_img)), "blob")
 
 
 def mask_png(mask):

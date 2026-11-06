@@ -71,9 +71,17 @@ def test_panel_excludes_other_panels(fig1116):
         assert not (x0 <= cx <= x1 and y0 <= cy <= y1), "crop swallowed another panel"
 
 
-def test_erase_leaves_no_text(fig199):
+def test_cover_hides_text_and_keeps_the_drawing(fig199):
     img, found = fig199
-    cleaned = labels.erase_labels(img, found)
-    left = [l for l in labels.find_labels(cleaned)
+    covered = labels.cover_labels(img, found)
+    left = [l for l in labels.find_labels(covered)
             if sum(c.isalpha() for c in l.text) >= 3]
-    assert left == [], f"text survived erasing: {[l.text for l in left]}"
+    assert left == [], f"text survived covering: {[l.text for l in left]}"
+    # the artwork itself must be untouched — only the words go
+    import numpy as np
+    a, b = np.array(img.convert("L")), np.array(covered.convert("L"))
+    changed = (a != b)
+    for lab in found:
+        x0, y0, x1, y1 = lab.box
+        changed[max(0, y0 - 4):y1 + 4, max(0, x0 - 4):x1 + 4] = False
+    assert changed.sum() == 0, "covering altered pixels outside the label boxes"

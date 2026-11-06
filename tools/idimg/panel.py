@@ -23,8 +23,10 @@ def _drawing_mask(img, labels):
         cv2.rectangle(mask, (x0 - 3, y0 - 3), (x1 + 3, y1 + 3), 0, -1)
     for x0, y0, x1, y1 in labels_mod.leader_segments(img, labels or []):
         cv2.line(mask, (x0, y0), (x1, y1), 0, 7)
-    # close small gaps so a drawing's parts read as one region
-    k = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (9, 9))
+    # Close hard, so one drawing reads as one region. A heart's chambers are separated
+    # by their own outlines; closing timidly split them and cropped into the heart
+    # instead of keeping the whole organ with one part marked.
+    k = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (25, 25))
     return cv2.morphologyEx(mask, cv2.MORPH_CLOSE, k, iterations=2)
 
 
