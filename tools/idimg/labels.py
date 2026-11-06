@@ -104,6 +104,20 @@ def _rows(words):
     return rows
 
 
+def _is_continuation(text):
+    """A wrapped line carries on a name, so it starts lower case.
+
+    These figures set labels in sentence case — "Deltoid tuberosity" wraps to
+    "tuberosity", "Right pulmonary veins" to "veins" — while the next label down starts
+    with a capital. Leading cannot be trusted for this: a wrapped line sits 3 px below
+    its first line in one figure and 7 px in another, where separate labels sit 12 px
+    apart. Nor can "does this line have a leader line", because in figures where the
+    labels crowd the drawing, the drawing's own ink answers yes.
+    """
+    stripped = (text or "").lstrip("([")
+    return bool(stripped) and stripped[0].islower()
+
+
 def find_labels(img):
     """Every label in the figure, with multi-line labels joined into one."""
     rows = _rows(_words(img))
@@ -125,11 +139,9 @@ def find_labels(img):
                 if used[j]:
                     continue
                 ox0, oy0, ox1, oy1 = other["box"]
-                # Leading inside one wrapped label is tight (about 3 px at scale 3.0);
-                # separate labels stacked in a column sit 12 px or more apart. Measuring
-                # the gap rather than a multiple of line height is what tells them apart.
                 gap = oy0 - y1
-                if abs(ox0 - x0) <= 8 and 0 <= gap <= max(6, 0.35 * height):
+                if (abs(ox0 - x0) <= 8 and 0 <= gap <= 0.9 * height
+                        and _is_continuation(other["text"])):
                     text += " " + other["text"]
                     box = (min(x0, ox0), min(y0, oy0), max(x1, ox1), max(y1, oy1))
                     used[j] = True
