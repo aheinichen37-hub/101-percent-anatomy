@@ -2,7 +2,10 @@
 import functools
 import http.server
 import os
+import sys
 import threading
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # tools/
 
 import pytest
 from playwright.sync_api import sync_playwright
