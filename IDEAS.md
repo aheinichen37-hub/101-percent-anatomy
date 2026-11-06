@@ -11,9 +11,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Fix figure mismatches**: Andrew flags any card whose figure looks wrong in `101-anatomy-v2.4-figure-list.csv`. *(2026-11-05)*
 - **Pictures for Types of Body Movements** (`ch9-mov`): show the unlabeled movement drawing before answering (no highlight needed). Left out of v2.5. *(2026-11-05)*
 
-### Game-ification (brainstorm started 2026-11-06, nothing built yet)
-- **Reliable save on his phone (top priority)**: versioned save with migrations so updates never wipe progress, ask the browser to keep storage permanently, plus a backup option (export/import). Open it from a home-screen icon instead of a Safari link (Safari can clear a site's saved data after about 7 days without use). No phone↔laptop sync for now. *(2026-11-06)*
-- **Open it like an app**: make it installable (Add to Home Screen icon, full screen, no browser bar) so it launches like a phone app. *(2026-11-06)*
+### Game-ification (brainstorm 2026-11-06; the save is built, the rest is not)
 - **Accounts / cloud login (future, for public use)**: sign-in plus cloud save (Firebase or Supabase). Build the save layer with a swappable storage adapter so local storage can become cloud storage later. *(2026-11-06)*
 - **Deck stars**: 3 perfect runs = 3 stars. Typo ("did you mean") answers get full credit. Up to 5 second tries per run, each worth half a point. *(2026-11-06)*
 - **Unit mastery check**: 50 randomly selected questions from the unit. Gold at 95% or higher (lose no more than 2.5 points), mastery at 100%. Unlocks once every deck in the unit has 2 stars. Best score is saved. *(2026-11-06)*
@@ -29,5 +27,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 ## Done
 - Decks for all 28 units (v2.3, 2026-11-05)
 - Textbook figures on 1,545 cards + Images on/off choice (v2.4, 2026-11-05)
+- Safe save: versioned save with migrations, rolling backup copy, persistent-storage request, a red bar when the browser refuses to save, and a Save & backup sheet with export/restore (v2.6, 2026-11-06)
+- Installable app: manifest, icons, offline app shell, Add to Home Screen (v2.6, 2026-11-06)
 
 ## Dropped

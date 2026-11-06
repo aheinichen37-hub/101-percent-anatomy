@@ -1,10 +1,20 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="101% Anatomy">
+<meta name="application-name" content="101% Anatomy">
+<meta name="theme-color" content="#111113">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+</head><body>
 <title>101% Anatomy</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 2.4 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 2.6 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -103,7 +113,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 
 /* modal */
 .scrim{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.65);display:grid;place-items:center;padding:20px}
-.modal{background:var(--panel2);border:1px solid var(--line2);border-radius:16px;padding:22px;max-width:360px;width:100%;display:grid;gap:12px}
+.modal{background:var(--panel2);border:1px solid var(--line2);border-radius:16px;padding:22px;max-width:360px;width:100%;display:grid;gap:12px;
+  /* v2.6: a tall sheet scrolls inside the screen instead of pushing buttons out of reach */
+  max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));overflow:auto;overscroll-behavior:contain}
 .modal h3{margin:0;font-family:var(--display);font-size:26px}
 .modal p{margin:0;color:var(--muted)}
 .modal .btnrow .btn{flex:1}
@@ -122,6 +134,22 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 .phin{display:grid;justify-items:center;gap:4px;color:var(--muted);font-size:14px;text-align:center;padding:10px}
 .phin b{color:var(--fg);font-weight:600;font-size:15px}
 .phin span{font-family:var(--mono);font-size:13px}
+/* v2.6: save warning banner and backup sheet */
+#savebar{position:sticky;top:0;z-index:25;margin:0 -4px 12px;background:#3a1416;border:1px solid var(--red);border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;font-size:14px;
+  padding-right:62px}  /* clear of the fixed menu button */
+#savebar b{display:block;color:var(--red);font-weight:600;font-size:15px}
+#savebar p{margin:2px 0 0;color:var(--fg)}
+#savebar button{flex:0 0 auto;background:var(--red);color:#fff;border:0;border-radius:8px;padding:9px 12px;font-weight:600;align-self:center}
+.modal.wide{max-width:430px}
+.modal .note{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:14px;color:var(--muted);margin:0}
+.modal .note b{color:var(--fg)}
+.modal .ok{color:var(--green);font-weight:600}
+.modal .bad{color:var(--red);font-weight:600}
+.modal textarea{width:100%;box-sizing:border-box;min-height:86px;background:var(--panel);color:var(--fg);border:1px solid var(--line2);border-radius:10px;padding:10px;font-family:var(--mono);font-size:12px;resize:vertical}
+.modal ol{margin:0;padding-left:20px;color:var(--muted);font-size:14px;display:grid;gap:4px}
+.modal ol b{color:var(--fg)}
+.modal .msg{margin:0;font-size:14px}
+.modal .sub{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--muted);margin:4px 0 -4px}
 .figure .phin svg{width:30px;height:24px;max-height:none}
 .figbtn{display:block;width:100%;padding:6px;background:#fff;border:1px solid var(--line);border-radius:14px;cursor:zoom-in}
 .figbtn img{display:block;width:100%;height:auto;max-height:60vh;object-fit:contain;border-radius:8px}
@@ -133,6 +161,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 @media (max-width:430px){.prompt{font-size:24px}.stat .v{font-size:26px}.brand{font-size:22px}}
 </style>
 
+<div id="savebar" hidden></div>
 <div class="app" id="app"></div>
 <div class="menuwrap">
   <button class="menubtn" id="menubtn" aria-label="Menu" aria-expanded="false" aria-haspopup="true">
@@ -141,6 +170,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
   <div class="menu" id="menu" hidden>
     <button id="m-back"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M10 2 4 8l6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</button>
     <button id="m-home"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8 8 2.5 14 8M4 7v6.5h8V7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>Home</button>
+    <button id="m-save"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 2h8l2.5 2.5V14H3z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><path d="M5.5 2v4h5V2M5.5 14v-4h5v4" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>Save &amp; backup</button>
   </div>
 </div>
 <div id="answerSlot"></div>
@@ -2904,11 +2934,66 @@ function classify(raw,deckId){
 }
 
 /* ===================== STORAGE ===================== */
-const LS="anat101.v1";
+/* Saved shape on disk: {v, rounds, best, savedAt}. DATA in memory stays {rounds, best}.
+   When the shape changes: bump SCHEMA and add a step to MIGRATE. Never drop an old save.
+   Every read and write goes through STORE, so a cloud account can replace it later. */
+const LS="anat101.v1", LS_BAK="anat101.v1.backup", SCHEMA=2;
 let DATA={rounds:[],best:{}};
-/* v2.0: Cells moved from Unit 1 to Unit 3, so old rounds are re-filed (never mutates frozen db objects) */
-const migrate=d=>({rounds:d.rounds.map(r=>r&&r.unit==="u1"?Object.assign({},r,{unit:"ch3"}):r),best:Object.assign({},d.best||{})});
-try{const r=JSON.parse(localStorage.getItem(LS));if(r&&Array.isArray(r.rounds))DATA=migrate({rounds:r.rounds,best:r.best||{}});}catch(e){}
+let saveState={ok:true,err:"",recovered:false,savedAt:null};
+
+const STORE={
+  get(k){try{return localStorage.getItem(k);}catch(e){return null;}},
+  set(k,v){localStorage.setItem(k,v);},            // throws on failure, on purpose
+  del(k){try{localStorage.removeItem(k);}catch(e){}}
+};
+
+/* v1 -> v2: Cells moved from Unit 1 to Unit 3, so old rounds are re-filed (never mutates frozen db objects) */
+const refileU1=d=>({rounds:(d.rounds||[]).map(r=>r&&r.unit==="u1"?Object.assign({},r,{unit:"ch3"}):r),best:Object.assign({},d.best||{})});
+const MIGRATE={1:refileU1};
+const migrate=d=>refileU1(d);                      // the db path still re-files old rounds
+function upgrade(raw){
+  let v=Number(raw&&raw.v)||1, d={rounds:raw.rounds||[],best:raw.best||{}};
+  while(v<SCHEMA){ if(MIGRATE[v]) d=MIGRATE[v](d); v++; }
+  return d;
+}
+const isSave=o=>!!o&&typeof o==="object"&&Array.isArray(o.rounds);
+const parseSave=s=>{try{const o=JSON.parse(s);return isSave(o)?o:null;}catch(e){return null;}};
+
+/* Load the save; fall back to the rolling backup if the main one is gone or unreadable. */
+function loadLocal(){
+  let raw=parseSave(STORE.get(LS)), from="save";
+  if(!raw){raw=parseSave(STORE.get(LS_BAK));from="backup";}
+  if(!raw) return;
+  DATA=upgrade(raw);
+  saveState.savedAt=raw.savedAt||null;
+  if(from==="backup"){saveState.recovered=true;saveLocal();}
+  else if((Number(raw.v)||1)<SCHEMA) saveLocal();  // write the upgraded save back once
+}
+function saveLocal(){
+  const body=JSON.stringify({v:SCHEMA,rounds:DATA.rounds,best:DATA.best,savedAt:Date.now()});
+  try{
+    const prev=STORE.get(LS);
+    STORE.set(LS,body);
+    if(prev&&prev!==body){try{STORE.set(LS_BAK,prev);}catch(e){}}  // keep the last good save
+    saveState.ok=true;saveState.err="";saveState.savedAt=Date.now();
+    saveBanner();
+    return true;
+  }catch(e){
+    saveState.ok=false;saveState.err=(e&&e.name)||"error";
+    saveBanner();
+    return false;
+  }
+}
+/* Safari can clear a site's data after about 7 days unused. A home-screen install plus
+   this request is what keeps progress; the request is silent and may be refused. */
+async function keepStorage(){
+  try{
+    if(!navigator.storage||!navigator.storage.persist) return;
+    if(await navigator.storage.persisted()) return;
+    await navigator.storage.persist();
+  }catch(e){}
+}
+loadLocal();
 let remote=null; // {ref}
 async function initRemote(){
   try{
@@ -2921,8 +3006,7 @@ async function initRemote(){
     else if(DATA.rounds.length){await ref.set(DATA);}
   }catch(e){}
 }
-function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(DATA));}catch(e){}}
-async function save(){saveLocal();if(remote){try{await remote.ref.set(DATA);}catch(e){}}}
+async function save(){saveLocal();keepStorage();if(remote){try{await remote.ref.set(DATA);}catch(e){}}}
 function statsFor(filter){const rs=DATA.rounds.filter(filter);const q=rs.reduce((a,r)=>a+r.total,0),c=rs.reduce((a,r)=>a+r.credit,0);return {rounds:rs.length,pct:q?Math.round(c/q*100):null};}
 const pctClass=p=>p==null?"c-none":p<=33?"c-red":p<=66?"c-yellow":"c-green";
 
@@ -2951,7 +3035,7 @@ function render(){
 const soonTile=(name,ico)=>`<div class="tile soon" aria-disabled="true">${ico}<h3>${esc(name)}</h3><div class="meta"><span class="badge">Coming soon</span></div></div>`;
 function lobby(){
   app.innerHTML=`<div class="top"><div class="brand">101<b>%</b> Anatomy</div></div>${statLine(statsFor(()=>true))}
-  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 2.4</p>`;
+  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 2.6</p>`;
   app.querySelectorAll("[data-unit]").forEach(b=>b.onclick=()=>{view={page:"unit",unit:b.dataset.unit};render();scrollTo(0,0);});
 }
 function unitPage(uid){
@@ -3088,6 +3172,108 @@ function resultsPage(){
   requestAnimationFrame(()=>requestAnimationFrame(()=>{const f=$("#gfill");if(f)f.style.strokeDashoffset=f.getAttribute("stroke-dasharray")*(1-p/100);const nd=$("#needle");if(nd)nd.setAttribute("transform",`rotate(${-135+270*p/100} 120 120)`);}));
 }
 
+/* ===================== SAVE HEALTH, BACKUP, INSTALL ===================== */
+/* No esc() in here: this runs while the save loads, before the UI section's consts exist. */
+function h(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function saveBanner(){
+  const el=document.getElementById("savebar"); if(!el) return;
+  if(saveState.ok&&!saveState.recovered){el.hidden=true;el.innerHTML="";return;}
+  el.innerHTML=saveState.ok
+    ? `<div><b>Restored from backup</b><p>The main save couldn't be read, so your last good save was put back. Check that your scores look right.</p></div><button id="savebar-x">OK</button>`
+    : `<div><b>Progress isn't saving</b><p>This browser refused to store your save (${h(saveState.err)}). Private browsing and a full phone both do that. Back up your progress now so you don't lose it.</p></div><button id="savebar-x">Back up</button>`;
+  el.hidden=false;
+  const b=document.getElementById("savebar-x");
+  if(b)b.onclick=()=>{ if(saveState.ok){saveState.recovered=false;saveBanner();} else backupSheet(); };
+}
+
+const standalone=()=>!!(window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true;
+const isIOS=()=>/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+let installPrompt=null;
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installPrompt=e;});
+
+const exportText=()=>JSON.stringify({app:"101% Anatomy",v:SCHEMA,exported:new Date().toISOString(),rounds:DATA.rounds,best:DATA.best});
+/* Import adds rounds the current save doesn't have; it never deletes any. */
+function mergeSave(raw){
+  const inc=upgrade(raw), rounds=DATA.rounds.slice(), seen=new Set(rounds.map(r=>r&&r.deck+"|"+r.ts));
+  let added=0;
+  inc.rounds.forEach(r=>{if(!r)return;const k=r.deck+"|"+r.ts;if(seen.has(k))return;seen.add(k);rounds.push(r);added++;});
+  rounds.sort((a,b)=>(a.ts||0)-(b.ts||0));
+  const best=Object.assign({},DATA.best);
+  Object.keys(inc.best||{}).forEach(k=>{if(best[k]==null||inc.best[k]>best[k])best[k]=inc.best[k];});
+  DATA={rounds,best};
+  return added;
+}
+const ago=t=>{if(!t)return "never";const m=Math.round((Date.now()-t)/60000);
+  return m<1?"just now":m<60?m+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" days ago";};
+
+function backupSheet(msg){
+  const rounds=DATA.rounds.length, decks=Object.keys(DATA.best).length;
+  const where=standalone()?"the home-screen app":"a browser tab";
+  const install=standalone()
+    ? `<p class="note">You're in the home-screen app, which is where progress is safest.</p>`
+    : `<p class="sub">Open it like an app</p>${isIOS()
+        ? `<ol><li>Tap the <b>Share</b> button in Safari's bottom bar.</li><li>Choose <b>Add to Home Screen</b>.</li><li>Open 101% Anatomy from the new icon from now on.</li></ol><p class="note">The home-screen app keeps its <b>own</b> save, so export here first and import it there once.</p>`
+        : `<p class="note">Install it for a desktop or home-screen icon that keeps your progress.</p><div class="btnrow"><button class="btn" id="bk-install"${installPrompt?"":" disabled"}>${installPrompt?"Install app":"Use your browser's install button"}</button></div>`}`;
+  $("#modalSlot").innerHTML=`<div class="scrim"><div class="modal wide" role="dialog" aria-modal="true" aria-labelledby="bkh">
+    <h3 id="bkh">Save &amp; backup</h3>
+    ${msg?`<p class="msg ${msg.bad?"bad":"ok"}">${h(msg.text)}</p>`:""}
+    <p class="note">Saving: <span class="${saveState.ok?"ok":"bad"}">${saveState.ok?"working":"blocked ("+h(saveState.err)+")"}</span><br>
+      Last saved: <b>${h(ago(saveState.savedAt))}</b><br>
+      Stored: <b>${rounds}</b> round${rounds===1?"":"s"} · high scores on <b>${decks}</b> deck${decks===1?"":"s"}<br>
+      Kept permanently: <b id="bk-persist">checking…</b><br>
+      Running in: <b>${h(where)}</b></p>
+    <p class="sub">Back up</p>
+    <div class="btnrow"><button class="btn primary" id="bk-dl">Download backup</button><button class="btn" id="bk-copy">Copy code</button></div>
+    <textarea id="bk-out" readonly aria-label="Your backup code">${h(exportText())}</textarea>
+    <p class="sub">Restore</p>
+    <p class="note">Adds anything missing to this save. Nothing is deleted.</p>
+    <div class="btnrow"><button class="btn" id="bk-pick">Choose a backup file</button></div>
+    <input type="file" id="bk-file" accept="application/json,.json,text/plain" hidden>
+    <textarea id="bk-in" placeholder="…or paste a backup code here" aria-label="Paste a backup code"></textarea>
+    <div class="btnrow"><button class="btn" id="bk-import">Restore from code</button></div>
+    ${install}
+    <div class="btnrow"><button class="btn" id="bk-x">Close</button></div>
+  </div></div>`;
+  const close=()=>{$("#modalSlot").innerHTML="";};
+  const done=(text,bad)=>{close();backupSheet({text,bad});};
+  try{if(navigator.storage&&navigator.storage.persisted)navigator.storage.persisted().then(p=>{const el=$("#bk-persist");if(el)el.textContent=p?"yes":"not granted";});
+      else{const el=$("#bk-persist");if(el)el.textContent="not supported";}}catch(e){}
+  $("#bk-dl").onclick=()=>{
+    try{
+      const b=new Blob([exportText()],{type:"application/json"}), u=URL.createObjectURL(b), a=document.createElement("a");
+      a.href=u;a.download="101-anatomy-backup-"+new Date().toISOString().slice(0,10)+".json";
+      document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2000);
+    }catch(e){done("Download failed. Copy the code instead.",true);}
+  };
+  $("#bk-copy").onclick=async()=>{
+    const t=$("#bk-out");t.select();
+    try{await navigator.clipboard.writeText(exportText());done("Backup code copied.");}
+    catch(e){try{document.execCommand("copy");done("Backup code copied.");}catch(e2){done("Couldn't copy. Select the code and copy it by hand.",true);}}
+  };
+  $("#bk-pick").onclick=()=>$("#bk-file").click();
+  $("#bk-file").onchange=e=>{
+    const f=e.target.files&&e.target.files[0]; if(!f) return;
+    const fr=new FileReader();
+    fr.onload=()=>{const raw=parseSave(String(fr.result));
+      if(!raw) return done("That file isn't a 101% Anatomy backup.",true);
+      const n=mergeSave(raw); const ok=saveLocal(); if(remote)save();
+      render(); done(n?`Restored ${n} round${n===1?"":"s"}.`+(ok?"":" Saving is still blocked, so keep the file."):"Nothing new in that backup — you already have it all.");};
+    fr.onerror=()=>done("Couldn't read that file.",true);
+    fr.readAsText(f);
+  };
+  $("#bk-import").onclick=()=>{
+    const raw=parseSave($("#bk-in").value.trim());
+    if(!raw) return done("That code isn't a 101% Anatomy backup.",true);
+    const n=mergeSave(raw); const ok=saveLocal(); if(remote)save();
+    render(); done(n?`Restored ${n} round${n===1?"":"s"}.`+(ok?"":" Saving is still blocked, so keep the code."):"Nothing new in that backup — you already have it all.");
+  };
+  const ib=$("#bk-install");
+  if(ib&&installPrompt)ib.onclick=async()=>{try{await installPrompt.prompt();installPrompt=null;close();}catch(e){}};
+  $("#bk-x").onclick=close;
+  $("#bk-x").focus({preventScroll:true});   // keep the sheet opened at the top
+  $(".modal").scrollTop=0;
+}
+
 /* menu + leave guard */
 const mb=$("#menubtn"),menu=$("#menu");
 function closeMenu(){menu.hidden=true;mb.setAttribute("aria-expanded","false");}
@@ -3103,6 +3289,7 @@ function go(dest){
   doIt();
 }
 $("#m-back").onclick=()=>go("back"); $("#m-home").onclick=()=>go("home");
+$("#m-save").onclick=()=>{closeMenu();backupSheet();};
 function confirmLeave(yes){
   $("#modalSlot").innerHTML=`<div class="scrim"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><h3 id="mt">Are you sure?</h3><p>You're in the middle of a round. Your progress won't save unless the round is over.</p><div class="btnrow"><button class="btn" id="no">No, keep playing</button><button class="btn primary" id="yes">Yes, leave</button></div></div></div>`;
   $("#no").onclick=()=>{$("#modalSlot").innerHTML="";};
@@ -3111,7 +3298,15 @@ function confirmLeave(yes){
 }
 window.addEventListener("beforeunload",e=>{if(view.page==="play"){e.preventDefault();e.returnValue="";}});
 
-render(); setTimeout(initRemote,0);
+render(); saveBanner(); setTimeout(initRemote,0);
+keepStorage();
+/* Ask again after a real tap: some browsers only grant persistence on a user gesture. */
+window.addEventListener("pointerdown",function once(){window.removeEventListener("pointerdown",once);keepStorage();},{once:true});
+/* Offline shell, so the home-screen app opens without a connection. Skipped locally
+   (the regression test serves over 127.0.0.1) so a stale worker can't shadow a new build. */
+if("serviceWorker"in navigator&&location.protocol==="https:"&&!/^(localhost|127\.|\[::1\])/.test(location.hostname)){
+  window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{});});
+}
 </script>
 
 </body></html>
