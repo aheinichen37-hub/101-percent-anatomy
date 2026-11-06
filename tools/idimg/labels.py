@@ -182,7 +182,23 @@ def match_labels(labels, terms):
                 break
         if hit:
             near.append(lab)
-    hits = exact or near
+    # Last resort: a figure often labels the short form of what the card asks for —
+    # "Spine" for "Spine of the scapula", "Supraspinous" where the second line was not
+    # read. Only consulted when nothing matched outright, and only for a leading run of
+    # at least five characters, so "Ulna" cannot swallow "Ulnar notch".
+    partial = []
+    if not exact and not near:
+        for lab in labels:
+            got = _norm(lab.text)
+            if len(got) < 5:
+                continue
+            for term in wanted:
+                short, long = sorted((got, term), key=len)
+                if len(short) >= 5 and long.startswith(short):
+                    partial.append(lab)
+                    break
+
+    hits = exact or near or partial
     return sorted(hits, key=lambda l: (l.box[1], l.box[0]))
 
 

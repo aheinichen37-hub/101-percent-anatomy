@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 2.7 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 2.8 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -154,6 +154,19 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 .qimg{position:relative;padding:0;overflow:hidden}
 .qimg img{display:block;width:100%;height:auto}
 .qimg .hl{position:absolute;left:0;top:0;width:100%;height:100%;opacity:.20;pointer-events:none}
+/* v2.8: deck-tile dots — kind of deck, and what pictures it has */
+.tile{position:relative}
+.dots{position:absolute;top:10px;right:10px;display:flex;gap:5px}
+.dots i,.legend i{width:9px;height:9px;border-radius:50%;display:block;flex:0 0 auto}
+.k-id{background:#4fd4ff}
+.k-fn{background:var(--yellow)}
+.k-term{background:var(--line2)}
+.p-yes{background:var(--green)}
+.p-after{box-shadow:inset 0 0 0 2px var(--green)}
+.p-no{box-shadow:inset 0 0 0 2px var(--line2)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:-2px 0 12px;font-size:13px;color:var(--muted)}
+.legend span{display:flex;gap:5px;align-items:center}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .tip{margin:10px 0 0;padding:11px 13px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:10px;color:var(--fg);font-size:15px;line-height:1.45}
 .figure .phin svg{width:30px;height:24px;max-height:none}
 .figbtn{display:block;width:100%;padding:6px;background:#fff;border:1px solid var(--line);border-radius:14px;cursor:zoom-in}
@@ -3053,13 +3066,35 @@ function render(){
 const soonTile=(name,ico)=>`<div class="tile soon" aria-disabled="true">${ico}<h3>${esc(name)}</h3><div class="meta"><span class="badge">Coming soon</span></div></div>`;
 function lobby(){
   app.innerHTML=`<div class="top"><div class="brand">101<b>%</b> Anatomy</div></div>${statLine(statsFor(()=>true))}
-  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 2.7</p>`;
+  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 2.8</p>`;
   app.querySelectorAll("[data-unit]").forEach(b=>b.onclick=()=>{view={page:"unit",unit:b.dataset.unit};render();scrollTo(0,0);});
+}
+/* Two dots in a deck tile's corner: what kind of deck it is, and whether it has
+   pictures to answer from. Which decks actually have pictures varies a lot, so being
+   able to see it from the unit screen saves opening a deck to find out. */
+function deckKind(d){
+  if(d.ident) return {cls:"k-id",label:"Identification deck"};
+  if(d.fn) return {cls:"k-fn",label:"Name it from what it does"};
+  return {cls:"k-term",label:"Term and definition deck"};
+}
+function deckPics(d){
+  const its=itemsFor(d.id)||[];        /* not every deck carries .items directly */
+  const n=its.filter(i=>IDIMG.has(i.id)).length;
+  if(n) return {cls:"p-yes",label:`${n} of ${its.length} cards show a picture before you answer`};
+  const figs=its.filter(i=>i.fig&&i.fig!=="-"&&FIGS.has(i.fig)).length;
+  if(figs) return {cls:"p-after",label:"Figures appear after you answer"};
+  return {cls:"p-no",label:"No pictures"};
+}
+function deckDots(d){
+  const k=deckKind(d),p=deckPics(d);
+  return `<span class="dots" aria-hidden="true"><i class="${k.cls}" title="${esc(k.label)}"></i><i class="${p.cls}" title="${esc(p.label)}"></i></span><span class="sr">${esc(k.label)}. ${esc(p.label)}.</span>`;
 }
 function unitPage(uid){
   const u=UNITS.find(x=>x.id===uid);
   app.innerHTML=`<div class="top"><div><div class="crumb">101% Anatomy</div><div class="brand">${esc(u.name)}</div></div></div>${statLine(statsFor(r=>r.unit===uid))}
-  <h2 class="sect">Decks</h2><div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div><span class="play">Play</span></button>`}).join("")}</div>`;
+  <h2 class="sect">Decks</h2>
+  <div class="legend"><span><i class="k-id"></i>Identification</span><span><i class="k-fn"></i>What it does</span><span><i class="k-term"></i>Term</span><span><i class="p-yes"></i>Picture first</span><span><i class="p-after"></i>Figure after</span><span><i class="p-no"></i>No picture</span></div>
+  <div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckDots(d)}${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div><span class="play">Play</span></button>`}).join("")}</div>`;
   app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>(DECKS[b.dataset.deck].fn||DECKS[b.dataset.deck].ident)?chooseMode(b.dataset.deck):startRound(b.dataset.deck));
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}

@@ -4,7 +4,7 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 2.7
+Current version: 2.8
 
 ## Identification decks
 
@@ -14,7 +14,11 @@ label text covered and the structure marked in blue; answer, and the same pictur
 back with its name on it, tapping through to the full textbook figure. Miss a card and a
 short tip appears. Swipe left on an answered card to move on.
 
-Cards whose structure could not be located in the textbook figure show the clue alone.
+Cards whose structure could not be located in the textbook figure show the clue alone,
+and coverage varies a lot by deck. Each deck tile carries two dots in its corner so you
+can see what you are getting before you open it: the first is the kind of deck
+(identification, what-it-does, or term), the second is what pictures it has (one shown
+before you answer, a figure after you answer, or none).
 
 ## Your progress
 

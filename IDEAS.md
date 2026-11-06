@@ -12,7 +12,8 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Pictures for Types of Body Movements** (`ch9-mov`): show the unlabeled movement drawing before answering (no highlight needed). Left out of v2.5. *(2026-11-05)*
 
 ### Identification images — known gaps (v2.7)
-- **About half of cards get a picture.** The rest have no matching label in the figure, or no leader line that can be traced. They fall back to the clue, which is the specified behaviour. Worth revisiting with per-card overrides in `tools/id-overrides.json`. *(2026-11-06)*
+- **Coverage is thin and uneven.** After the matcher improvement: see the build report. Ten decks had none at all before it. The dominant cause is a card whose answer is a grouping the figure never prints, e.g. "Pectoral girdle" where Figure 8.3 labels only Clavicle and Scapula. Per-card overrides in `tools/id-overrides.json` are the lever. *(2026-11-06)*
+- **Earlier note: about half of cards get a picture.** The rest have no matching label in the figure, or no leader line that can be traced. They fall back to the clue, which is the specified behaviour. Worth revisiting with per-card overrides in `tools/id-overrides.json`. *(2026-11-06)*
 - **The highlight is a patch, not the structure's shape.** Flood-filling the actual structure took the rectus sheath instead of the muscle, so it was dropped in favour of something that cannot be wrong in that way. A shaped highlight is still the nicer end state. *(2026-11-06)*
 - **Tips exist for the Heart Anatomy deck only** (25 cards). The mechanism handles the other 53 decks whenever tips are written. *(2026-11-06)*
 - **Multi-panel figures** still sometimes include a neighbouring inset in the crop. *(2026-11-06)*
@@ -35,6 +36,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - Textbook figures on 1,545 cards + Images on/off choice (v2.4, 2026-11-05)
 - Safe save: versioned save with migrations, rolling backup copy, persistent-storage request, a red bar when the browser refuses to save, and a Save & backup sheet with export/restore (v2.6, 2026-11-06)
 - Installable app: manifest, icons, offline app shell, Add to Home Screen (v2.6, 2026-11-06)
+- Deck tiles show two dots: kind of deck, and what pictures it has, with a legend (v2.8, 2026-11-06)
 - Identification decks: 54 decks show the textbook drawing cropped to the structure, label text covered, the structure marked in blue at 20%; the named picture after answering, tapping through to the full figure; tips on a miss; swipe to advance (v2.7, 2026-11-06)
 
 ## Dropped
