@@ -10,5 +10,5 @@ def test_id_flags_and_tips(page):
     assert items[0]["tip"] == "tip text"
     assert items[0]["fig"] == "1.12"
     assert items[1]["tip"] is None
-    assert page.evaluate("idFiles(DECKS['ch11-abd'].items[0])") is None
+    assert page.evaluate("idFiles(DECKS['ch12-ap'].items[0])") is None  # concept card: never built
     assert page.errors == []
