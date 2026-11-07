@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.2 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.3 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -195,7 +195,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.2</div>
+<div id="ver" aria-hidden="true">v3.3</div>
 
 <script>
 /* ===================== CONTENT ===================== */
@@ -2922,7 +2922,7 @@ const MITO=[
  {id:"g1",name:"G1 phase",accept:["g1","g1 phase","gap 1","gap 1 phase","first gap","gap one"],views:[W(-52,90)]},
  {id:"sph",name:"S phase",accept:["s phase","s","synthesis","synthesis phase","dna synthesis"],views:[W(90,224.5)]},
  {id:"g2",name:"G2 phase",accept:["g2","g2 phase","gap 2","gap 2 phase","second gap","gap two"],views:[W(224.5,290.5)]},
- {id:"mph",name:"M phase (mitotic phase)",accept:["m phase","m","mitotic phase","mitosis","mitotic"],views:[W(290.5,308,false)],hint:"Hint: the shortest part of the cycle."},
+ {id:"mph",name:"M phase (mitotic phase)",accept:["m phase","m phase (mitotic phase)","m","mitotic phase","mitosis","mitotic"],views:[W(290.5,308,false)],hint:"Hint: the shortest part of the cycle."},
  {id:"chromo",name:"Chromosome",accept:["chromosome","chromosomes","replicated chromosome","duplicated chromosome"],views:[{img:"mdraw",vb:DV[2],ring:[926,190,22],tag:"Drawing"}]},
  {id:"sister",name:"Sister chromatids",accept:["sister chromatids","sister chromatid","chromatids","chromatid"],views:[{img:"chrom",overlay:"sis",prompt:"The highlighted X is one copied chromosome. What are its two identical halves called?",tag:"Close-up"}]},
  {id:"centro",name:"Centromere",accept:["centromere","centromeres"],near:{kineto:"Close. That's the protein patch on it. Name the region itself."},views:[{img:"chrom",ring:[160,372,40],close:true}],hint:"Hint: the pinched region where the two halves are joined."},
@@ -3069,7 +3069,7 @@ function render(){
 const soonTile=(name,ico)=>`<div class="tile soon" aria-disabled="true">${ico}<h3>${esc(name)}</h3><div class="meta"><span class="badge">Coming soon</span></div></div>`;
 function lobby(){
   app.innerHTML=`<div class="top"><div class="brand">101<b>%</b> Anatomy</div></div>${statLine(statsFor(()=>true))}
-  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 3.2</p>`;
+  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 3.3</p>`;
   app.querySelectorAll("[data-unit]").forEach(b=>b.onclick=()=>{view={page:"unit",unit:b.dataset.unit};render();scrollTo(0,0);});
 }
 /* Two dots in a deck tile's corner: what kind of deck it is, and whether it has
