@@ -5326,20 +5326,6 @@
   "reason": "",
   "status": "ok"
  },
- "ch7-skull-0": {
-  "deck": "ch7-skull",
-  "fig": "7.3",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
- },
- "ch7-skull-1": {
-  "deck": "ch7-skull",
-  "fig": "7.3",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
- },
  "ch7-skull-10": {
   "deck": "ch7-skull",
   "fig": "7.4",
@@ -5382,13 +5368,6 @@
   "reason": "",
   "status": "ok"
  },
- "ch7-skull-16": {
-  "deck": "ch7-skull",
-  "fig": "7.19",
-  "kind": null,
-  "reason": "crop is only 75x41",
-  "status": "fail"
- },
  "ch7-skull-17": {
   "deck": "ch7-skull",
   "fig": "7.8",
@@ -5405,10 +5384,10 @@
  },
  "ch7-skull-19": {
   "deck": "ch7-skull",
-  "fig": "7.5",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "fig": "7.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-2": {
   "deck": "ch7-skull",
@@ -5420,30 +5399,30 @@
  "ch7-skull-20": {
   "deck": "ch7-skull",
   "fig": "7.7",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-21": {
   "deck": "ch7-skull",
   "fig": "7.7",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-22": {
   "deck": "ch7-skull",
   "fig": "7.5",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-23": {
   "deck": "ch7-skull",
   "fig": "7.10",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-24": {
   "deck": "ch7-skull",
@@ -5476,9 +5455,9 @@
  "ch7-skull-28": {
   "deck": "ch7-skull",
   "fig": "7.9",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-29": {
   "deck": "ch7-skull",
@@ -5497,9 +5476,9 @@
  "ch7-skull-30": {
   "deck": "ch7-skull",
   "fig": "7.8",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-31": {
   "deck": "ch7-skull",
@@ -5518,9 +5497,9 @@
  "ch7-skull-33": {
   "deck": "ch7-skull",
   "fig": "7.16",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-34": {
   "deck": "ch7-skull",
@@ -5529,26 +5508,19 @@
   "reason": "",
   "status": "ok"
  },
- "ch7-skull-4": {
-  "deck": "ch7-skull",
-  "fig": "7.7",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
- },
  "ch7-skull-5": {
   "deck": "ch7-skull",
   "fig": "7.9",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-6": {
   "deck": "ch7-skull",
   "fig": "7.10",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-7": {
   "deck": "ch7-skull",
@@ -5560,16 +5532,16 @@
  "ch7-skull-8": {
   "deck": "ch7-skull",
   "fig": "7.14",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-skull-9": {
   "deck": "ch7-skull",
   "fig": "7.15",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-thor-0": {
   "deck": "ch7-thor",
@@ -5581,16 +5553,16 @@
  "ch7-thor-1": {
   "deck": "ch7-thor",
   "fig": "7.32",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-thor-10": {
   "deck": "ch7-thor",
   "fig": "7.32",
-  "kind": null,
-  "reason": "crop is only 40x33",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-thor-11": {
   "deck": "ch7-thor",
@@ -5609,9 +5581,9 @@
  "ch7-thor-3": {
   "deck": "ch7-thor",
   "fig": "7.32",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-thor-4": {
   "deck": "ch7-thor",
@@ -5623,9 +5595,9 @@
  "ch7-thor-5": {
   "deck": "ch7-thor",
   "fig": "7.32",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-thor-6": {
   "deck": "ch7-thor",
@@ -5658,16 +5630,16 @@
  "ch7-vert-0": {
   "deck": "ch7-vert",
   "fig": "7.20",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-1": {
   "deck": "ch7-vert",
   "fig": "7.25",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-10": {
   "deck": "ch7-vert",
@@ -5686,9 +5658,9 @@
  "ch7-vert-12": {
   "deck": "ch7-vert",
   "fig": "7.23",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-13": {
   "deck": "ch7-vert",
@@ -5714,9 +5686,9 @@
  "ch7-vert-16": {
   "deck": "ch7-vert",
   "fig": "7.23",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-17": {
   "deck": "ch7-vert",
@@ -5728,9 +5700,9 @@
  "ch7-vert-18": {
   "deck": "ch7-vert",
   "fig": "7.24",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-19": {
   "deck": "ch7-vert",
@@ -5742,9 +5714,9 @@
  "ch7-vert-2": {
   "deck": "ch7-vert",
   "fig": "7.26",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-20": {
   "deck": "ch7-vert",
@@ -5770,65 +5742,65 @@
  "ch7-vert-23": {
   "deck": "ch7-vert",
   "fig": "7.21",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-24": {
   "deck": "ch7-vert",
   "fig": "7.21",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-25": {
   "deck": "ch7-vert",
   "fig": "7.21",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-3": {
   "deck": "ch7-vert",
   "fig": "7.28",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-4": {
   "deck": "ch7-vert",
   "fig": "7.29",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-5": {
   "deck": "ch7-vert",
   "fig": "7.29",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-6": {
   "deck": "ch7-vert",
   "fig": "7.25",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-7": {
   "deck": "ch7-vert",
   "fig": "7.25",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-8": {
   "deck": "ch7-vert",
   "fig": "7.25",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch7-vert-9": {
   "deck": "ch7-vert",
@@ -5840,16 +5812,16 @@
  "ch8-arm-0": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-1": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "crop is only 149x366",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-10": {
   "deck": "ch8-arm",
@@ -5861,51 +5833,51 @@
  "ch8-arm-11": {
   "deck": "ch8-arm",
   "fig": "8.6",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-12": {
   "deck": "ch8-arm",
   "fig": "8.6",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-13": {
   "deck": "ch8-arm",
   "fig": "8.6",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-14": {
   "deck": "ch8-arm",
   "fig": "8.6",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-15": {
   "deck": "ch8-arm",
   "fig": "8.6",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-16": {
   "deck": "ch8-arm",
   "fig": "8.6",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-17": {
   "deck": "ch8-arm",
   "fig": "8.6",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-18": {
   "deck": "ch8-arm",
@@ -5917,30 +5889,30 @@
  "ch8-arm-19": {
   "deck": "ch8-arm",
   "fig": "8.7",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-2": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "crop is only 245x143",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-20": {
   "deck": "ch8-arm",
   "fig": "8.7",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-21": {
   "deck": "ch8-arm",
   "fig": "8.7",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-22": {
   "deck": "ch8-arm",
@@ -5951,66 +5923,66 @@
  },
  "ch8-arm-23": {
   "deck": "ch8-arm",
-  "fig": "8.8",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "8.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-24": {
   "deck": "ch8-arm",
-  "fig": "8.8",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "fig": "8.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-3": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "crop is only 168x265",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-4": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "crop is only 59x107",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-5": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "crop is only 167x196",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-6": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "crop is only 126x211",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-7": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-8": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-arm-9": {
   "deck": "ch8-arm",
   "fig": "8.5",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-0": {
   "deck": "ch8-leg",
@@ -6022,9 +5994,9 @@
  "ch8-leg-1": {
   "deck": "ch8-leg",
   "fig": "8.16",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-10": {
   "deck": "ch8-leg",
@@ -6064,51 +6036,51 @@
  "ch8-leg-15": {
   "deck": "ch8-leg",
   "fig": "8.19",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-16": {
   "deck": "ch8-leg",
   "fig": "8.19",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-17": {
   "deck": "ch8-leg",
   "fig": "8.19",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-18": {
   "deck": "ch8-leg",
   "fig": "8.19",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-19": {
   "deck": "ch8-leg",
   "fig": "8.19",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-2": {
   "deck": "ch8-leg",
   "fig": "8.16",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-20": {
   "deck": "ch8-leg",
   "fig": "8.19",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-21": {
   "deck": "ch8-leg",
@@ -6134,16 +6106,16 @@
  "ch8-leg-5": {
   "deck": "ch8-leg",
   "fig": "8.16",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-6": {
   "deck": "ch8-leg",
   "fig": "8.16",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-leg-7": {
   "deck": "ch8-leg",
@@ -6197,37 +6169,30 @@
  "ch8-pect-2": {
   "deck": "ch8-pect",
   "fig": "8.4",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pect-3": {
   "deck": "ch8-pect",
   "fig": "8.4",
-  "kind": null,
-  "reason": "crop is only 52x45",
-  "status": "fail"
- },
- "ch8-pect-4": {
-  "deck": "ch8-pect",
-  "fig": "8.4",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pect-5": {
   "deck": "ch8-pect",
   "fig": "8.4",
-  "kind": null,
-  "reason": "crop is only 145x181",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pect-6": {
   "deck": "ch8-pect",
   "fig": "8.4",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pect-7": {
   "deck": "ch8-pect",
@@ -6246,9 +6211,9 @@
  "ch8-pect-9": {
   "deck": "ch8-pect",
   "fig": "8.4",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pelv-0": {
   "deck": "ch8-pelv",
@@ -6281,16 +6246,16 @@
  "ch8-pelv-12": {
   "deck": "ch8-pelv",
   "fig": "8.12",
-  "kind": null,
-  "reason": "crop is only 160x42",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pelv-13": {
   "deck": "ch8-pelv",
   "fig": "8.12",
-  "kind": null,
-  "reason": "crop is only 149x283",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pelv-14": {
   "deck": "ch8-pelv",
@@ -6302,16 +6267,16 @@
  "ch8-pelv-2": {
   "deck": "ch8-pelv",
   "fig": "8.13",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pelv-3": {
   "deck": "ch8-pelv",
   "fig": "8.13",
-  "kind": null,
-  "reason": "no label matched the answer",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pelv-4": {
   "deck": "ch8-pelv",
@@ -6323,9 +6288,9 @@
  "ch8-pelv-5": {
   "deck": "ch8-pelv",
   "fig": "8.13",
-  "kind": null,
-  "reason": "leader line not found",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pelv-6": {
   "deck": "ch8-pelv",
@@ -6344,9 +6309,9 @@
  "ch8-pelv-8": {
   "deck": "ch8-pelv",
   "fig": "8.13",
-  "kind": null,
-  "reason": "structure sits on the edge of the crop",
-  "status": "fail"
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch8-pelv-9": {
   "deck": "ch8-pelv",

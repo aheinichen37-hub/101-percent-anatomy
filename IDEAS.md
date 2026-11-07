@@ -40,9 +40,10 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Thigh (`ch11-thigh`)**: Vastus intermedius (the deep one between lateralis and medialis); the quadriceps and hamstring groups outlined as groups.
 - **Lower leg (`ch11-leg`)**: nothing missing; Gastrocnemius, Soleus, Calcaneal tendon and the front four have pictures.
 - **Fix later, once the app is settled**: the forearm-extensor spots (Extensor digitorum, Digiti minimi, Carpi ulnaris, pollicis longus/brevis) sit a few pixels apart, so check each one; Orbicularis oris is a tiny muscle under a large blob; Semitendinosus and Semimembranosus leaders end close together.
-- **Bony landmarks (Units 7–8)**: about 92 cards still have no picture; most have their label but the automatic leader tracing follows the wrong end of the line. Same hand-marking treatment (`fig` + `point` in `tools/id-overrides.json`) will fix them. Not started. *(2026-11-06)*
+- **Bony landmarks (Units 7–8)**: 74 now have hand-placed pictures (v3.0). Still without a picture: Cranium, Facial bones, Hyoid bone, Temporal bone, Coracoid process (spots looked wrong; need a drawing that shows them), plus the group cards. Diagrams wanted: ribs and rib classification, thoracic cage, pelvic girdle and female pelvis, primary/secondary spinal curves, paranasal sinuses as a group, sternoclavicular joint. Fix later: Phalanges spot sits on the thumb, Linea aspera and Coracoid need better views.
 
 ## Done
+- Hand-fixed pictures for 74 bone cards (skull, vertebrae, thorax, arm, pectoral, pelvis, leg); Adobe connector tried and not useful here (v3.0, 2026-11-06)
 - Hand-fixed pictures for 59 Unit 11 muscle cards from Head & Neck down; the `fig` override lets a card borrow a better drawing and a hand-placed `point` skips the automatic quality checks (v2.9, 2026-11-06)- Decks for all 28 units (v2.3, 2026-11-05)
 - Textbook figures on 1,545 cards + Images on/off choice (v2.4, 2026-11-05)
 - Safe save: versioned save with migrations, rolling backup copy, persistent-storage request, a red bar when the browser refuses to save, and a Save & backup sheet with export/restore (v2.6, 2026-11-06)
