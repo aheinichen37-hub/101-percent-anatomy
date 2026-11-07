@@ -37,3 +37,12 @@ Each batch ships as its own version (3.2, 3.3, ...) after `--full` regression.
 ## Blocker
 
 The textbook PDF is not in this cloud session (`figures.pdf_available()` is False). It lives in Andrew's `Documents/3rd Year/Claude` folder on his computer. Needed for the 170 `needs-fig` cards and for higher-resolution re-renders where OCR struggles.
+
+## Update: textbook scan (2026-11-07, later)
+
+The textbook PDF is now reachable (it is the full 1,347-page book despite the "1-100" in the file name). Method: OCR every page in the relevant chapters (551 pages, about 7 minutes on 2 cores), search each of the 170 no-figure cards' terms, keep only hits that fall inside a figure image, then review every hit by eye.
+
+- 163 of 170 cards had the term somewhere in the OCR; only 80 were inside a figure image, and about 75 of those are real labels on a drawing (the rest are table cells or look-alike words, for example Geniohyoid for Genioglossus, Thrombin for Thrombopoietin).
+- Candidates are in `tools/idimg/book-candidates.csv`. Several sit in figures the app already has (kidney Fig 25.8, teeth, soft palate); 11 figures are not in the app yet (for example the cranial nerves, Fig 13.23).
+- About 95 cards have no drawing to find: hormones, phases, diseases and other concepts (Gastrin, Polyuria, Heart block). They stay clue-only or move to concept decks.
+- Next: add the missing figures to `figs/` and `caps.json`, point each candidate card at its figure via a `fig` override, rebuild those decks, review contact sheets, run `--quick` regression, release as 3.2.

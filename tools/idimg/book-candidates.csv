@@ -1,0 +1,76 @@
+deck,card,pdf_page (1-based),nearby figure captions (verify: captions can be a page off),note
+ch11-head,ch11-head-16,436,11.8 11.9 11.10,figure not yet in app
+ch11-head,ch11-head-17,436,11.8 11.9 11.10,figure not yet in app
+ch11-head,ch11-head-18,436,11.8 11.9 11.10,figure not yet in app
+ch11-head,ch11-head-19,436,11.8 11.9 11.10,figure not yet in app
+ch11-head,ch11-head-20,436,11.8 11.9 11.10,figure not yet in app
+ch11-head,ch11-head-21,436,11.8 11.9 11.10,figure not yet in app
+ch11-head,ch11-head-3,438,11.10 11.11 11.12,in app
+ch11-head,ch11-head-2,431,11.5 11.6,figure not yet in app
+ch11-resp,ch11-resp-8,431,11.5 11.6,figure not yet in app
+ch12-cell,ch12-cell-4,509,12.25 12.26,in app
+ch12-cell,ch12-cell-7,496,12.12 12.13 12.14,in app
+ch13-cn,ch13-cn-0,555,13.22 13.23,in app
+ch13-cn,ch13-cn-2,555,13.22 13.23,in app
+ch13-cn,ch13-cn-3,555,13.22 13.23,in app
+ch13-cn,ch13-cn-4,555,13.22 13.23,in app
+ch13-cn,ch13-cn-5,555,13.22 13.23,in app
+ch13-cn,ch13-cn-6,555,13.22 13.23,in app
+ch13-cn,ch13-cn-7,555,13.22 13.23,in app
+ch13-cn,ch13-cn-8,555,13.22 13.23,in app
+ch13-cn,ch13-cn-9,555,13.22 13.23,in app
+ch13-cn,ch13-cn-10,555,13.22 13.23,in app
+ch13-cn,ch13-cn-11,555,13.22 13.23,in app
+ch13-cns,ch13-cns-5,532,13.5 13.6 13.7,in app
+ch13-cns,ch13-cns-7,532,13.5 13.6 13.7,in app
+ch13-cns,ch13-cns-8,533,13.6 13.7 13.8,in app
+ch13-cns,ch13-cns-9,533,13.6 13.7 13.8,in app
+ch13-pns,ch13-pns-14,558,13.24,in app
+ch13-pns,ch13-pns-9,558,13.24,in app
+ch14-spec,ch14-spec-12,587,14.14 14.15 14.16,figure not yet in app
+ch14-spec,ch14-spec-13,587,14.14 14.15 14.16,figure not yet in app
+ch19-anat,ch19-anat-13,794,19.4 19.5,in app
+ch19-anat,ch19-anat-2,795,19.4 19.5 19.6,in app
+ch20-str,ch20-str-5,857,20.6 20.7,in app
+ch20-str,ch20-str-7,857,20.6 20.7,in app
+ch20-str,ch20-str-8,851,20.2 20.3,in app
+ch20-vein,ch20-vein-18,920,20.44,in app
+ch20-vein,ch20-vein-6,905,20.35 20.36,figure not yet in app
+ch20-vein,ch20-vein-7,904,20.35 20.36,figure not yet in app
+ch20-vein,ch20-vein-8,904,20.35 20.36,figure not yet in app
+ch22-anat,ch22-anat-19,999,22.10 22.11 22.12,in app
+ch22-anat,ch22-anat-20,999,22.10 22.11 22.12,in app
+ch22-anat,ch22-anat-21,999,22.10 22.11 22.12,in app
+ch23-acc,ch23-acc-8,1076,23.24 23.25,in app
+ch23-int,ch23-int-10,1040,23.1 23.2,figure not yet in app
+ch23-int,ch23-int-15,1072,23.21 23.22,in app
+ch23-int,ch23-int-9,1072,23.21 23.22,in app
+ch23-mouth,ch23-mouth-1,1057,23.11 23.12 23.13,in app
+ch23-mouth,ch23-mouth-2,1057,23.11 23.12 23.13,in app
+ch23-mouth,ch23-mouth-3,1057,23.11 23.12 23.13,in app
+ch23-mouth,ch23-mouth-7,1051,23.7 23.8,in app
+ch23-mouth,ch23-mouth-14,1055,23.10 23.11,figure not yet in app
+ch23-mouth,ch23-mouth-15,1055,23.10 23.11,figure not yet in app
+ch23-mouth,ch23-mouth-16,1055,23.10 23.11,figure not yet in app
+ch23-stom,ch23-stom-5,1061,23.15 23.16,in app
+ch23-stom,ch23-stom-8,1062,23.15 23.16,in app
+ch23-stom,ch23-stom-7,1062,23.15 23.16,in app
+ch23-stom,ch23-stom-9,1062,23.15 23.16,in app
+ch25-anat,ch25-anat-1,1170,25.15 25.16,in app
+ch25-anat,ch25-anat-4,1162,25.6 25.7 25.8 25.9,in app
+ch25-anat,ch25-anat-6,1162,25.6 25.7 25.8 25.9,in app
+ch25-anat,ch25-anat-7,1162,25.6 25.7 25.8 25.9,in app
+ch25-anat,ch25-anat-8,1162,25.6 25.7 25.8 25.9,in app
+ch25-anat,ch25-anat-9,1162,25.6 25.7 25.8 25.9,in app
+ch25-anat,ch25-anat-10,1162,25.6 25.7 25.8 25.9,in app
+ch25-neph,ch25-neph-7,1167,25.12 25.13 25.14,figure not yet in app
+ch27-fem,ch27-fem-3,1252,27.14,in app
+ch27-fem,ch27-fem-4,1252,27.14,in app
+ch27-fem,ch27-fem-10,1252,27.14,in app
+ch27-fem,ch27-fem-15,1244,27.9 27.10,figure not yet in app
+ch27-fem,ch27-fem-9,1252,27.14,in app
+ch27-fem,ch27-fem-6,1252,27.14,in app
+ch27-male,ch27-male-11,1233,27.2 27.3,in app
+ch27-male,ch27-male-15,1239,27.7,in app
+ch27-male,ch27-male-16,1239,27.7,in app
+ch27-male,ch27-male-12,1233,27.2 27.3,in app
