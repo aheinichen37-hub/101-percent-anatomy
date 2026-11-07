@@ -1,0 +1,935 @@
+deck,card,fig,lane,why
+ch1-abd,ch1-abd-0,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-1,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-2,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-3,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-4,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-5,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-6,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-7,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-8,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-9,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-10,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-11,1.16,locate,no label matched the answer
+ch1-abd,ch1-abd-12,1.16,locate,no label matched the answer
+ch1-cav,ch1-cav-0,1.15,locate,crop is only 99x63
+ch1-cav,ch1-cav-1,1.15,done,
+ch1-cav,ch1-cav-2,1.15,done,
+ch1-cav,ch1-cav-3,1.15,locate,crop is only 43x30
+ch1-cav,ch1-cav-4,1.15,locate,structure sits on the edge of the crop
+ch1-cav,ch1-cav-5,1.15,done,
+ch1-cav,ch1-cav-6,1.15,done,
+ch1-cav,ch1-cav-7,1.15,done,
+ch1-cav,ch1-cav-8,1.15,done,
+ch1-cav,ch1-cav-9,1.15,done,
+ch1-cav,ch1-cav-10,1.15,done,
+ch1-cav,ch1-cav-11,1.15,done,
+ch1-pl,ch1-pl-0,1.14,locate,structure sits on the edge of the crop
+ch1-pl,ch1-pl-1,1.14,locate,no label matched the answer
+ch1-pl,ch1-pl-2,1.14,locate,no label matched the answer
+ch1-pl,ch1-pl-3,1.14,done,
+ch1-pl,ch1-pl-4,1.14,done,
+ch1-pl,ch1-pl-5,1.14,done,
+ch1-reg,ch1-reg-0,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-1,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-2,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-3,1.12,locate,crop is only 28x33
+ch1-reg,ch1-reg-4,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-5,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-6,1.12,locate,crop is only 79x44
+ch1-reg,ch1-reg-7,1.12,locate,leader line not found
+ch1-reg,ch1-reg-8,1.12,locate,leader line not found
+ch1-reg,ch1-reg-9,1.12,locate,leader line not found
+ch1-reg,ch1-reg-10,1.12,locate,leader line not found
+ch1-reg,ch1-reg-11,1.12,locate,crop is only 51x42
+ch1-reg,ch1-reg-12,1.12,locate,crop is only 89x43
+ch1-reg,ch1-reg-13,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-14,1.12,locate,leader line not found
+ch1-reg,ch1-reg-15,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-16,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-17,1.12,locate,crop is only 34x30
+ch1-reg,ch1-reg-18,1.12,locate,crop is only 54x38
+ch1-reg,ch1-reg-19,1.12,locate,leader line not found
+ch1-reg,ch1-reg-20,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-21,1.12,locate,crop is only 59x35
+ch1-reg,ch1-reg-22,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-23,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-24,1.12,locate,crop is only 35x31
+ch1-reg,ch1-reg-25,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-26,1.12,locate,crop is only 75x76
+ch1-reg,ch1-reg-27,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-28,1.12,locate,crop is only 40x72
+ch1-reg,ch1-reg-29,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-30,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-31,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-32,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-33,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-34,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-35,1.12,locate,leader line not found
+ch1-reg,ch1-reg-36,1.12,locate,leader line not found
+ch1-reg,ch1-reg-37,1.12,locate,leader line not found
+ch1-reg,ch1-reg-38,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-39,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-40,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-41,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-42,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-43,1.12,locate,leader line not found
+ch1-reg,ch1-reg-44,1.12,locate,no label matched the answer
+ch1-reg,ch1-reg-45,1.12,locate,leader line not found
+ch1-reg,ch1-reg-46,1.12,locate,crop is only 47x42
+ch1-ser,ch1-ser-0,1.17,locate,no label matched the answer
+ch1-ser,ch1-ser-1,1.17,locate,no label matched the answer
+ch1-ser,ch1-ser-2,1.17,locate,no label matched the answer
+ch1-ser,ch1-ser-3,1.17,locate,no label matched the answer
+ch1-ser,ch1-ser-4,1.17,locate,no label matched the answer
+ch1-ser,ch1-ser-5,1.17,locate,no label matched the answer
+ch1-ser,ch1-ser-6,1.17,locate,no label matched the answer
+ch1-ser,ch1-ser-7,1.17,locate,no label matched the answer
+ch1-ser,ch1-ser-8,1.17,locate,no label matched the answer
+ch10-str,ch10-str-0,10.3,locate,leader line not found
+ch10-str,ch10-str-1,10.3,done,
+ch10-str,ch10-str-2,10.3,done,
+ch10-str,ch10-str-3,10.3,locate,no label matched the answer
+ch10-str,ch10-str-4,10.4,locate,no label matched the answer
+ch10-str,ch10-str-5,10.4,locate,structure sits on the edge of the crop
+ch10-str,ch10-str-6,10.4,done,
+ch10-str,ch10-str-7,10.4,locate,leader line not found
+ch10-str,ch10-str-8,10.4,locate,leader line not found
+ch10-str,ch10-str-9,10.4,done,
+ch10-str,ch10-str-10,10.5,locate,leader line not found
+ch10-str,ch10-str-11,10.5,locate,no label matched the answer
+ch10-str,ch10-str-12,10.5,locate,no label matched the answer
+ch10-str,ch10-str-13,10.5,locate,no label matched the answer
+ch10-str,ch10-str-14,10.5,locate,leader line not found
+ch10-str,ch10-str-15,10.5,locate,crop is only 197x171
+ch10-str,ch10-str-16,10.5,locate,leader line not found
+ch10-str,ch10-str-17,10.5,locate,leader line not found
+ch10-str,ch10-str-18,10.6,locate,no label matched the answer
+ch10-str,ch10-str-19,10.6,done,
+ch10-str,ch10-str-20,10.6,done,
+ch10-str,ch10-str-21,10.7,locate,structure sits on the edge of the crop
+ch10-str,ch10-str-22,10.7,done,
+ch11-abd,ch11-abd-0,11.16,done,
+ch11-abd,ch11-abd-1,11.16,done,
+ch11-abd,ch11-abd-2,11.16,done,
+ch11-abd,ch11-abd-3,11.16,done,
+ch11-abd,ch11-abd-4,11.16,done,
+ch11-arm,ch11-arm-0,11.25,done,
+ch11-arm,ch11-arm-1,11.25,done,
+ch11-arm,ch11-arm-2,11.25,done,
+ch11-arm,ch11-arm-3,11.25,done,
+ch11-arm,ch11-arm-4,11.25,done,
+ch11-arm,ch11-arm-5,11.25,done,
+ch11-arm,ch11-arm-6,11.25,done,
+ch11-arm,ch11-arm-7,11.25,done,
+ch11-back,ch11-back-0,11.15,done,
+ch11-back,ch11-back-1,11.15,done,
+ch11-back,ch11-back-2,11.15,done,
+ch11-back,ch11-back-3,11.15,locate,no label matched the answer
+ch11-back,ch11-back-4,11.16,done,
+ch11-back,ch11-back-5,11.15,done,
+ch11-back,ch11-back-6,11.15,done,
+ch11-back,ch11-back-7,11.15,done,
+ch11-back,ch11-back-8,11.15,done,
+ch11-hand,ch11-hand-0,11.25,done,
+ch11-hand,ch11-hand-1,11.25,done,
+ch11-hand,ch11-hand-2,11.25,done,
+ch11-hand,ch11-hand-3,11.25,done,
+ch11-hand,ch11-hand-4,11.25,done,
+ch11-hand,ch11-hand-5,11.25,done,
+ch11-hand,ch11-hand-6,11.25,done,
+ch11-hand,ch11-hand-7,11.25,done,
+ch11-hand,ch11-hand-8,11.25,done,
+ch11-hand,ch11-hand-9,11.25,done,
+ch11-hand,ch11-hand-10,11.25,done,
+ch11-hand,ch11-hand-11,11.25,done,
+ch11-head,ch11-head-0,11.3,done,
+ch11-head,ch11-head-1,-,needs-fig,no figure
+ch11-head,ch11-head-2,-,needs-fig,no figure
+ch11-head,ch11-head-3,-,needs-fig,no figure
+ch11-head,ch11-head-4,-,needs-fig,no figure
+ch11-head,ch11-head-5,-,needs-fig,no figure
+ch11-head,ch11-head-6,-,needs-fig,no figure
+ch11-head,ch11-head-7,-,needs-fig,no figure
+ch11-head,ch11-head-8,-,needs-fig,no figure
+ch11-head,ch11-head-9,11.10,done,
+ch11-head,ch11-head-10,11.10,done,
+ch11-head,ch11-head-11,11.10,done,
+ch11-head,ch11-head-12,11.10,done,
+ch11-head,ch11-head-13,-,needs-fig,no figure
+ch11-head,ch11-head-14,11.13,done,
+ch11-head,ch11-head-15,11.13,done,
+ch11-head,ch11-head-16,-,needs-fig,no figure
+ch11-head,ch11-head-17,-,needs-fig,no figure
+ch11-head,ch11-head-18,-,needs-fig,no figure
+ch11-head,ch11-head-19,-,needs-fig,no figure
+ch11-head,ch11-head-20,-,needs-fig,no figure
+ch11-head,ch11-head-21,-,needs-fig,no figure
+ch11-hip,ch11-hip-0,11.16,done,
+ch11-hip,ch11-hip-1,11.29,locate,no label matched the answer
+ch11-hip,ch11-hip-2,11.16,done,
+ch11-hip,ch11-hip-3,11.29,locate,no label matched the answer
+ch11-hip,ch11-hip-4,11.29,done,
+ch11-hip,ch11-hip-5,11.29,done,
+ch11-hip,ch11-hip-6,11.29,done,
+ch11-hip,ch11-hip-7,11.29,done,
+ch11-leg,ch11-leg-0,11.32,done,
+ch11-leg,ch11-leg-1,11.32,done,
+ch11-leg,ch11-leg-2,11.32,done,
+ch11-leg,ch11-leg-3,11.32,done,
+ch11-leg,ch11-leg-4,11.32,done,
+ch11-leg,ch11-leg-5,11.32,done,
+ch11-leg,ch11-leg-6,11.32,done,
+ch11-resp,ch11-resp-0,11.17,done,
+ch11-resp,ch11-resp-1,11.18,done,
+ch11-resp,ch11-resp-2,11.18,done,
+ch11-resp,ch11-resp-3,11.22,done,
+ch11-resp,ch11-resp-4,11.22,done,
+ch11-resp,ch11-resp-5,11.14,done,
+ch11-resp,ch11-resp-6,11.14,done,
+ch11-resp,ch11-resp-7,-,needs-fig,no figure
+ch11-resp,ch11-resp-8,-,needs-fig,no figure
+ch11-resp,ch11-resp-9,-,needs-fig,no figure
+ch11-sh,ch11-sh-0,11.23,done,
+ch11-sh,ch11-sh-1,11.23,done,
+ch11-sh,ch11-sh-2,11.23,done,
+ch11-sh,ch11-sh-3,11.23,done,
+ch11-sh,ch11-sh-4,11.23,done,
+ch11-sh,ch11-sh-5,11.23,done,
+ch11-sh,ch11-sh-6,11.23,done,
+ch11-sh,ch11-sh-7,11.23,done,
+ch11-sh,ch11-sh-8,11.23,locate,no label matched the answer
+ch11-sh,ch11-sh-9,11.24,locate,no label matched the answer
+ch11-sh,ch11-sh-10,11.22,done,
+ch11-sh,ch11-sh-11,11.22,done,
+ch11-sh,ch11-sh-12,11.22,done,
+ch11-sh,ch11-sh-13,11.15,done,
+ch11-thigh,ch11-thigh-0,11.29,done,
+ch11-thigh,ch11-thigh-1,11.29,done,
+ch11-thigh,ch11-thigh-2,11.29,done,
+ch11-thigh,ch11-thigh-3,11.29,done,
+ch11-thigh,ch11-thigh-4,11.31,locate,crop is only 122x108
+ch11-thigh,ch11-thigh-5,11.31,locate,no label matched the answer
+ch11-thigh,ch11-thigh-6,11.29,done,
+ch11-thigh,ch11-thigh-7,11.29,done,
+ch11-thigh,ch11-thigh-8,11.29,done,
+ch11-thigh,ch11-thigh-9,11.29,done,
+ch11-thigh,ch11-thigh-10,11.29,done,
+ch11-thigh,ch11-thigh-11,11.29,done,
+ch11-thigh,ch11-thigh-12,11.29,done,
+ch11-thigh,ch11-thigh-13,11.29,done,
+ch11-thigh,ch11-thigh-14,11.31,locate,no label matched the answer
+ch12-cell,ch12-cell-0,12.8,locate,no label matched the answer
+ch12-cell,ch12-cell-1,12.10,locate,no label matched the answer
+ch12-cell,ch12-cell-2,12.9,locate,no label matched the answer
+ch12-cell,ch12-cell-3,12.13,locate,leader line not found
+ch12-cell,ch12-cell-4,-,needs-fig,no figure
+ch12-cell,ch12-cell-5,12.14,locate,no label matched the answer
+ch12-cell,ch12-cell-6,12.14,locate,no label matched the answer
+ch12-cell,ch12-cell-7,-,needs-fig,no figure
+ch12-cell,ch12-cell-8,12.12,locate,no label matched the answer
+ch12-cell,ch12-cell-9,12.8,locate,no label matched the answer
+ch12-cell,ch12-cell-10,12.9,locate,leader line not found
+ch12-cell,ch12-cell-11,12.9,locate,leader line not found
+ch12-cell,ch12-cell-12,12.11,locate,no label matched the answer
+ch12-cell,ch12-cell-13,12.11,locate,no label matched the answer
+ch12-cell,ch12-cell-14,12.11,locate,no label matched the answer
+ch12-cell,ch12-cell-15,12.11,locate,no label matched the answer
+ch12-cell,ch12-cell-16,12.12,done,
+ch12-cell,ch12-cell-17,12.12,done,
+ch12-cell,ch12-cell-18,-,needs-fig,no figure
+ch13-cn,ch13-cn-0,-,needs-fig,no figure
+ch13-cn,ch13-cn-1,13.20,locate,no label matched the answer
+ch13-cn,ch13-cn-2,-,needs-fig,no figure
+ch13-cn,ch13-cn-3,-,needs-fig,no figure
+ch13-cn,ch13-cn-4,-,needs-fig,no figure
+ch13-cn,ch13-cn-5,-,needs-fig,no figure
+ch13-cn,ch13-cn-6,-,needs-fig,no figure
+ch13-cn,ch13-cn-7,-,needs-fig,no figure
+ch13-cn,ch13-cn-8,-,needs-fig,no figure
+ch13-cn,ch13-cn-9,-,needs-fig,no figure
+ch13-cn,ch13-cn-10,-,needs-fig,no figure
+ch13-cn,ch13-cn-11,-,needs-fig,no figure
+ch13-cn,ch13-cn-12,-,needs-fig,no figure
+ch13-cns,ch13-cns-0,13.6,locate,leader line not found
+ch13-cns,ch13-cns-1,13.7,locate,no label matched the answer
+ch13-cns,ch13-cns-2,-,needs-fig,no figure
+ch13-cns,ch13-cns-3,13.7,locate,no label matched the answer
+ch13-cns,ch13-cns-4,13.17,done,
+ch13-cns,ch13-cns-5,-,needs-fig,no figure
+ch13-cns,ch13-cns-6,13.7,done,
+ch13-cns,ch13-cns-7,-,needs-fig,no figure
+ch13-cns,ch13-cns-8,-,needs-fig,no figure
+ch13-cns,ch13-cns-9,-,needs-fig,no figure
+ch13-cns,ch13-cns-10,-,needs-fig,no figure
+ch13-cns,ch13-cns-11,-,needs-fig,no figure
+ch13-cns,ch13-cns-12,-,needs-fig,no figure
+ch13-cns,ch13-cns-13,13.9,locate,no label matched the answer
+ch13-cns,ch13-cns-14,13.11,done,
+ch13-cns,ch13-cns-15,13.11,done,
+ch13-cns,ch13-cns-16,13.12,done,
+ch13-cns,ch13-cns-17,-,needs-fig,no figure
+ch13-cns,ch13-cns-18,13.12,done,
+ch13-cns,ch13-cns-19,13.13,done,
+ch13-cns,ch13-cns-20,13.5,locate,no label matched the answer
+ch13-cns,ch13-cns-21,-,needs-fig,no figure
+ch13-cns,ch13-cns-22,-,needs-fig,no figure
+ch13-csf,ch13-csf-0,13.5,locate,no label matched the answer
+ch13-csf,ch13-csf-1,13.17,done,
+ch13-csf,ch13-csf-2,13.18,done,
+ch13-csf,ch13-csf-3,13.17,done,
+ch13-csf,ch13-csf-4,13.18,done,
+ch13-csf,ch13-csf-5,-,needs-fig,no figure
+ch13-csf,ch13-csf-6,13.18,locate,no label matched the answer
+ch13-csf,ch13-csf-7,13.18,done,
+ch13-csf,ch13-csf-8,13.9,done,
+ch13-csf,ch13-csf-9,13.11,locate,no label matched the answer
+ch13-csf,ch13-csf-10,-,needs-fig,no figure
+ch13-csf,ch13-csf-11,-,needs-fig,no figure
+ch13-csf,ch13-csf-12,13.18,done,
+ch13-csf,ch13-csf-13,13.16,locate,no label matched the answer
+ch13-csf,ch13-csf-14,13.15,locate,no label matched the answer
+ch13-csf,ch13-csf-15,-,needs-fig,no figure
+ch13-pns,ch13-pns-0,13.24,locate,no label matched the answer
+ch13-pns,ch13-pns-1,-,needs-fig,no figure
+ch13-pns,ch13-pns-2,13.19,locate,no label matched the answer
+ch13-pns,ch13-pns-3,-,needs-fig,no figure
+ch13-pns,ch13-pns-4,13.19,locate,no label matched the answer
+ch13-pns,ch13-pns-5,13.22,locate,no label matched the answer
+ch13-pns,ch13-pns-6,13.22,done,
+ch13-pns,ch13-pns-7,13.22,locate,no label matched the answer
+ch13-pns,ch13-pns-8,13.24,done,
+ch13-pns,ch13-pns-9,-,needs-fig,no figure
+ch13-pns,ch13-pns-10,13.24,done,
+ch13-pns,ch13-pns-11,13.24,locate,structure sits on the edge of the crop
+ch13-pns,ch13-pns-12,13.24,done,
+ch13-pns,ch13-pns-13,13.24,done,
+ch13-pns,ch13-pns-14,-,needs-fig,no figure
+ch13-pns,ch13-pns-15,-,needs-fig,no figure
+ch14-spec,ch14-spec-0,14.9,locate,no label matched the answer
+ch14-spec,ch14-spec-1,14.3,done,
+ch14-spec,ch14-spec-2,-,needs-fig,no figure
+ch14-spec,ch14-spec-3,14.4,locate,no label matched the answer
+ch14-spec,ch14-spec-4,14.4,locate,leader line not found
+ch14-spec,ch14-spec-5,14.6,done,
+ch14-spec,ch14-spec-6,14.9,locate,no label matched the answer
+ch14-spec,ch14-spec-7,14.5,done,
+ch14-spec,ch14-spec-8,14.5,locate,leader line not found
+ch14-spec,ch14-spec-9,14.5,done,
+ch14-spec,ch14-spec-10,14.12,locate,no label matched the answer
+ch14-spec,ch14-spec-11,14.15,done,
+ch14-spec,ch14-spec-12,-,needs-fig,no figure
+ch14-spec,ch14-spec-13,-,needs-fig,no figure
+ch14-spec,ch14-spec-14,14.24,locate,no label matched the answer
+ch14-spec,ch14-spec-15,-,needs-fig,no figure
+ch14-spec,ch14-spec-16,14.15,locate,no label matched the answer
+ch14-spec,ch14-spec-17,14.15,locate,structure sits on the edge of the crop
+ch14-spec,ch14-spec-18,14.15,locate,structure sits on the edge of the crop
+ch14-spec,ch14-spec-19,14.15,locate,structure sits on the edge of the crop
+ch18-wbc,ch18-wbc-0,18.10,locate,leader line not found
+ch18-wbc,ch18-wbc-1,-,needs-fig,no figure
+ch18-wbc,ch18-wbc-2,-,needs-fig,no figure
+ch18-wbc,ch18-wbc-3,18.10,locate,structure sits on the edge of the crop
+ch18-wbc,ch18-wbc-4,18.10,locate,structure sits on the edge of the crop
+ch18-wbc,ch18-wbc-5,18.11,locate,leader line not found
+ch18-wbc,ch18-wbc-6,18.4,locate,crop is only 40x41
+ch18-wbc,ch18-wbc-7,18.10,locate,structure sits on the edge of the crop
+ch18-wbc,ch18-wbc-8,-,needs-fig,no figure
+ch18-wbc,ch18-wbc-9,-,needs-fig,no figure
+ch18-wbc,ch18-wbc-10,-,needs-fig,no figure
+ch18-wbc,ch18-wbc-11,18.10,locate,no label matched the answer
+ch18-wbc,ch18-wbc-12,18.12,locate,leader line not found
+ch18-wbc,ch18-wbc-13,18.12,locate,leader line not found
+ch18-wbc,ch18-wbc-14,-,needs-fig,no figure
+ch19-anat,ch19-anat-0,19.2,done,
+ch19-anat,ch19-anat-1,19.6,locate,no label matched the answer
+ch19-anat,ch19-anat-2,-,needs-fig,no figure
+ch19-anat,ch19-anat-3,19.5,done,
+ch19-anat,ch19-anat-4,19.8,locate,no label matched the answer
+ch19-anat,ch19-anat-5,19.5,done,
+ch19-anat,ch19-anat-6,19.4,done,
+ch19-anat,ch19-anat-7,19.4,done,
+ch19-anat,ch19-anat-8,19.13,locate,no label matched the answer
+ch19-anat,ch19-anat-9,19.13,locate,no label matched the answer
+ch19-anat,ch19-anat-10,19.10,locate,no label matched the answer
+ch19-anat,ch19-anat-11,19.11,locate,no label matched the answer
+ch19-anat,ch19-anat-12,19.13,done,
+ch19-anat,ch19-anat-13,-,needs-fig,no figure
+ch19-anat,ch19-anat-14,19.13,done,
+ch19-anat,ch19-anat-15,19.11,done,
+ch19-anat,ch19-anat-16,19.11,done,
+ch19-anat,ch19-anat-17,19.9,done,
+ch19-anat,ch19-anat-18,19.9,locate,crop is only 136x76
+ch19-anat,ch19-anat-19,19.9,locate,crop is only 131x76
+ch19-anat,ch19-anat-20,19.9,done,
+ch19-anat,ch19-anat-21,19.16,locate,no label matched the answer
+ch19-anat,ch19-anat-22,19.15,locate,leader line not found
+ch19-anat,ch19-anat-23,19.10,locate,crop is only 249x267
+ch19-anat,ch19-anat-24,-,needs-fig,no figure
+ch19-cond,ch19-cond-0,19.20,locate,no label matched the answer
+ch19-cond,ch19-cond-1,19.18,locate,leader line not found
+ch19-cond,ch19-cond-2,19.19,locate,no label matched the answer
+ch19-cond,ch19-cond-3,19.18,locate,no label matched the answer
+ch19-cond,ch19-cond-4,19.18,locate,structure sits on the edge of the crop
+ch19-cond,ch19-cond-5,19.23,locate,no label matched the answer
+ch19-cond,ch19-cond-6,19.23,locate,crop is only 231x245
+ch19-cond,ch19-cond-7,19.25,done,
+ch19-cond,ch19-cond-8,19.23,locate,leader line not found
+ch19-cond,ch19-cond-9,-,needs-fig,no figure
+ch19-cond,ch19-cond-10,-,needs-fig,no figure
+ch19-cond,ch19-cond-11,19.25,locate,leader line not found
+ch19-cond,ch19-cond-12,19.26,locate,no label matched the answer
+ch19-cond,ch19-cond-13,19.20,locate,leader line not found
+ch20-art,ch20-art-0,20.25,locate,crop is only 48x156
+ch20-art,ch20-art-1,20.25,locate,crop is only 47x138
+ch20-art,ch20-art-2,20.23,locate,no label matched the answer
+ch20-art,ch20-art-3,20.26,locate,no label matched the answer
+ch20-art,ch20-art-4,20.26,locate,no label matched the answer
+ch20-art,ch20-art-5,20.26,locate,no label matched the answer
+ch20-art,ch20-art-6,20.26,locate,no label matched the answer
+ch20-art,ch20-art-7,20.26,locate,no label matched the answer
+ch20-art,ch20-art-8,20.26,locate,no label matched the answer
+ch20-art,ch20-art-9,20.31,done,
+ch20-art,ch20-art-10,20.11,locate,crop is only 75x69
+ch20-art,ch20-art-11,20.31,done,
+ch20-art,ch20-art-12,20.28,done,
+ch20-art,ch20-art-13,20.28,done,
+ch20-art,ch20-art-14,20.28,done,
+ch20-art,ch20-art-15,-,needs-fig,no figure
+ch20-art,ch20-art-16,-,needs-fig,no figure
+ch20-art,ch20-art-17,20.19,locate,no label matched the answer
+ch20-art,ch20-art-18,20.30,locate,no label matched the answer
+ch20-art,ch20-art-19,20.33,locate,leader line not found
+ch20-art,ch20-art-20,20.41,locate,leader line not found
+ch20-art,ch20-art-21,20.34,locate,crop is only 28x31
+ch20-str,ch20-str-0,20.4,locate,no label matched the answer
+ch20-str,ch20-str-1,20.4,locate,leader line not found
+ch20-str,ch20-str-2,20.5,locate,no label matched the answer
+ch20-str,ch20-str-3,20.7,locate,leader line not found
+ch20-str,ch20-str-4,20.7,locate,no label matched the answer
+ch20-str,ch20-str-5,-,needs-fig,no figure
+ch20-str,ch20-str-6,20.3,locate,leader line not found
+ch20-str,ch20-str-7,-,needs-fig,no figure
+ch20-str,ch20-str-8,-,needs-fig,no figure
+ch20-str,ch20-str-9,20.4,locate,leader line not found
+ch20-str,ch20-str-10,20.4,locate,leader line not found
+ch20-str,ch20-str-11,20.5,locate,leader line not found
+ch20-str,ch20-str-12,20.5,locate,leader line not found
+ch20-str,ch20-str-13,20.5,locate,leader line not found
+ch20-str,ch20-str-14,20.6,locate,structure sits on the edge of the crop
+ch20-str,ch20-str-15,20.7,locate,structure sits on the edge of the crop
+ch20-str,ch20-str-16,20.15,locate,no label matched the answer
+ch20-str,ch20-str-17,20.8,locate,no label matched the answer
+ch20-str,ch20-str-18,20.3,done,
+ch20-vein,ch20-vein-0,20.23,locate,no label matched the answer
+ch20-vein,ch20-vein-1,20.13,locate,no label matched the answer
+ch20-vein,ch20-vein-2,20.23,locate,no label matched the answer
+ch20-vein,ch20-vein-3,20.37,done,
+ch20-vein,ch20-vein-4,20.37,done,
+ch20-vein,ch20-vein-5,20.23,locate,no label matched the answer
+ch20-vein,ch20-vein-6,-,needs-fig,no figure
+ch20-vein,ch20-vein-7,-,needs-fig,no figure
+ch20-vein,ch20-vein-8,-,needs-fig,no figure
+ch20-vein,ch20-vein-9,20.36,done,
+ch20-vein,ch20-vein-10,20.43,done,
+ch20-vein,ch20-vein-11,20.43,locate,no label matched the answer
+ch20-vein,ch20-vein-12,20.40,locate,crop is only 26x59
+ch20-vein,ch20-vein-13,-,needs-fig,no figure
+ch20-vein,ch20-vein-14,20.33,locate,leader line not found
+ch20-vein,ch20-vein-15,20.44,done,
+ch20-vein,ch20-vein-16,20.44,done,
+ch20-vein,ch20-vein-17,20.44,done,
+ch20-vein,ch20-vein-18,-,needs-fig,no figure
+ch21-lym,ch21-lym-0,21.8,locate,no label matched the answer
+ch21-lym,ch21-lym-1,21.3,locate,leader line not found
+ch21-lym,ch21-lym-2,-,needs-fig,no figure
+ch21-lym,ch21-lym-3,21.4,done,
+ch21-lym,ch21-lym-4,21.4,locate,leader line not found
+ch21-lym,ch21-lym-5,-,needs-fig,no figure
+ch21-lym,ch21-lym-6,21.8,locate,no label matched the answer
+ch21-lym,ch21-lym-7,21.7,done,
+ch21-lym,ch21-lym-8,21.5,locate,no label matched the answer
+ch21-lym,ch21-lym-9,21.9,locate,no label matched the answer
+ch21-lym,ch21-lym-10,21.9,locate,leader line not found
+ch21-lym,ch21-lym-11,21.9,locate,leader line not found
+ch21-lym,ch21-lym-12,21.10,locate,leader line not found
+ch21-lym,ch21-lym-13,21.11,done,
+ch21-lym,ch21-lym-14,21.27,locate,no label matched the answer
+ch21-lym,ch21-lym-15,-,needs-fig,no figure
+ch21-lym,ch21-lym-16,-,needs-fig,no figure
+ch22-anat,ch22-anat-0,-,needs-fig,no figure
+ch22-anat,ch22-anat-1,22.10,locate,no label matched the answer
+ch22-anat,ch22-anat-2,22.2,done,
+ch22-anat,ch22-anat-3,22.4,done,
+ch22-anat,ch22-anat-4,22.6,locate,no label matched the answer
+ch22-anat,ch22-anat-5,22.6,locate,crop is only 91x58
+ch22-anat,ch22-anat-6,22.6,locate,crop is only 111x204
+ch22-anat,ch22-anat-7,22.6,locate,crop is only 111x204
+ch22-anat,ch22-anat-8,22.7,locate,no label matched the answer
+ch22-anat,ch22-anat-9,22.4,done,
+ch22-anat,ch22-anat-10,22.7,done,
+ch22-anat,ch22-anat-11,22.8,locate,structure sits on the edge of the crop
+ch22-anat,ch22-anat-12,22.9,done,
+ch22-anat,ch22-anat-13,22.9,locate,no label matched the answer
+ch22-anat,ch22-anat-14,22.9,locate,no label matched the answer
+ch22-anat,ch22-anat-15,22.10,locate,no label matched the answer
+ch22-anat,ch22-anat-16,-,needs-fig,no figure
+ch22-anat,ch22-anat-17,-,needs-fig,no figure
+ch22-anat,ch22-anat-18,22.22,done,
+ch22-anat,ch22-anat-19,-,needs-fig,no figure
+ch22-anat,ch22-anat-20,-,needs-fig,no figure
+ch22-anat,ch22-anat-21,-,needs-fig,no figure
+ch22-anat,ch22-anat-22,-,needs-fig,no figure
+ch22-anat,ch22-anat-23,22.22,locate,no label matched the answer
+ch22-anat,ch22-anat-24,22.14,done,
+ch22-anat,ch22-anat-25,-,needs-fig,no figure
+ch23-acc,ch23-acc-0,23.25,locate,no label matched the answer
+ch23-acc,ch23-acc-1,-,needs-fig,no figure
+ch23-acc,ch23-acc-2,-,needs-fig,no figure
+ch23-acc,ch23-acc-3,-,needs-fig,no figure
+ch23-acc,ch23-acc-4,-,needs-fig,no figure
+ch23-acc,ch23-acc-5,-,needs-fig,no figure
+ch23-acc,ch23-acc-6,-,needs-fig,no figure
+ch23-acc,ch23-acc-7,23.27,locate,structure sits on the edge of the crop
+ch23-acc,ch23-acc-8,-,needs-fig,no figure
+ch23-acc,ch23-acc-9,-,needs-fig,no figure
+ch23-acc,ch23-acc-10,23.26,locate,no label matched the answer
+ch23-acc,ch23-acc-11,-,needs-fig,no figure
+ch23-acc,ch23-acc-12,23.26,locate,leader line not found
+ch23-acc,ch23-acc-13,-,needs-fig,no figure
+ch23-acc,ch23-acc-14,-,needs-fig,no figure
+ch23-acc,ch23-acc-15,-,needs-fig,no figure
+ch23-acc,ch23-acc-16,-,needs-fig,no figure
+ch23-int,ch23-int-0,23.18,done,
+ch23-int,ch23-int-1,23.18,done,
+ch23-int,ch23-int-2,23.32,locate,no label matched the answer
+ch23-int,ch23-int-3,23.19,done,
+ch23-int,ch23-int-4,-,needs-fig,no figure
+ch23-int,ch23-int-5,23.19,locate,leader line not found
+ch23-int,ch23-int-6,-,needs-fig,no figure
+ch23-int,ch23-int-7,-,needs-fig,no figure
+ch23-int,ch23-int-8,-,needs-fig,no figure
+ch23-int,ch23-int-9,-,needs-fig,no figure
+ch23-int,ch23-int-10,-,needs-fig,no figure
+ch23-int,ch23-int-11,23.21,done,
+ch23-int,ch23-int-12,23.21,done,
+ch23-int,ch23-int-13,23.21,done,
+ch23-int,ch23-int-14,23.21,locate,structure sits on the edge of the crop
+ch23-int,ch23-int-15,-,needs-fig,no figure
+ch23-int,ch23-int-16,23.23,locate,no label matched the answer
+ch23-int,ch23-int-17,23.23,locate,no label matched the answer
+ch23-int,ch23-int-18,-,needs-fig,no figure
+ch23-int,ch23-int-19,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-0,23.7,locate,no label matched the answer
+ch23-mouth,ch23-mouth-1,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-2,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-3,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-4,23.8,locate,no label matched the answer
+ch23-mouth,ch23-mouth-5,23.9,locate,no label matched the answer
+ch23-mouth,ch23-mouth-6,23.9,locate,leader line not found
+ch23-mouth,ch23-mouth-7,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-8,23.9,done,
+ch23-mouth,ch23-mouth-9,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-10,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-11,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-12,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-13,23.14,locate,no label matched the answer
+ch23-mouth,ch23-mouth-14,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-15,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-16,-,needs-fig,no figure
+ch23-mouth,ch23-mouth-17,23.11,done,
+ch23-mouth,ch23-mouth-18,23.13,locate,crop is only 44x130
+ch23-mouth,ch23-mouth-19,23.13,done,
+ch23-mouth,ch23-mouth-20,-,needs-fig,no figure
+ch23-stom,ch23-stom-0,23.15,done,
+ch23-stom,ch23-stom-1,23.15,done,
+ch23-stom,ch23-stom-2,-,needs-fig,no figure
+ch23-stom,ch23-stom-3,23.15,done,
+ch23-stom,ch23-stom-4,-,needs-fig,no figure
+ch23-stom,ch23-stom-5,-,needs-fig,no figure
+ch23-stom,ch23-stom-6,23.16,done,
+ch23-stom,ch23-stom-7,-,needs-fig,no figure
+ch23-stom,ch23-stom-8,-,needs-fig,no figure
+ch23-stom,ch23-stom-9,-,needs-fig,no figure
+ch23-stom,ch23-stom-10,-,needs-fig,no figure
+ch23-stom,ch23-stom-11,-,needs-fig,no figure
+ch23-stom,ch23-stom-12,23.16,locate,no label matched the answer
+ch23-stom,ch23-stom-13,-,needs-fig,no figure
+ch23-stom,ch23-stom-14,-,needs-fig,no figure
+ch23-stom,ch23-stom-15,23.20,locate,no label matched the answer
+ch23-stom,ch23-stom-16,-,needs-fig,no figure
+ch23-stom,ch23-stom-17,-,needs-fig,no figure
+ch23-stom,ch23-stom-18,-,needs-fig,no figure
+ch23-stom,ch23-stom-19,-,needs-fig,no figure
+ch25-anat,ch25-anat-0,25.7,done,
+ch25-anat,ch25-anat-1,-,needs-fig,no figure
+ch25-anat,ch25-anat-2,25.8,done,
+ch25-anat,ch25-anat-3,25.8,done,
+ch25-anat,ch25-anat-4,-,needs-fig,no figure
+ch25-anat,ch25-anat-5,25.8,done,
+ch25-anat,ch25-anat-6,-,needs-fig,no figure
+ch25-anat,ch25-anat-7,-,needs-fig,no figure
+ch25-anat,ch25-anat-8,-,needs-fig,no figure
+ch25-anat,ch25-anat-9,-,needs-fig,no figure
+ch25-anat,ch25-anat-10,-,needs-fig,no figure
+ch25-anat,ch25-anat-11,25.6,locate,no label matched the answer
+ch25-anat,ch25-anat-12,25.4,locate,no label matched the answer
+ch25-anat,ch25-anat-13,25.4,done,
+ch25-anat,ch25-anat-14,-,needs-fig,no figure
+ch25-anat,ch25-anat-15,25.3,locate,leader line not found
+ch25-anat,ch25-anat-16,-,needs-fig,no figure
+ch25-anat,ch25-anat-17,-,needs-fig,no figure
+ch25-anat,ch25-anat-18,25.5,locate,no label matched the answer
+ch25-anat,ch25-anat-19,-,needs-fig,no figure
+ch25-anat,ch25-anat-20,-,needs-fig,no figure
+ch25-anat,ch25-anat-21,-,needs-fig,no figure
+ch25-neph,ch25-neph-0,25.10,locate,no label matched the answer
+ch25-neph,ch25-neph-1,25.10,locate,no label matched the answer
+ch25-neph,ch25-neph-2,25.13,locate,no label matched the answer
+ch25-neph,ch25-neph-3,25.11,locate,no label matched the answer
+ch25-neph,ch25-neph-4,25.11,locate,no label matched the answer
+ch25-neph,ch25-neph-5,25.14,locate,no label matched the answer
+ch25-neph,ch25-neph-6,25.10,locate,no label matched the answer
+ch25-neph,ch25-neph-7,-,needs-fig,no figure
+ch25-neph,ch25-neph-8,25.17,locate,no label matched the answer
+ch25-neph,ch25-neph-9,-,needs-fig,no figure
+ch25-neph,ch25-neph-10,-,needs-fig,no figure
+ch25-neph,ch25-neph-11,-,needs-fig,no figure
+ch25-neph,ch25-neph-12,25.17,locate,no label matched the answer
+ch25-neph,ch25-neph-13,25.10,locate,no label matched the answer
+ch25-neph,ch25-neph-14,25.10,locate,no label matched the answer
+ch25-neph,ch25-neph-15,25.13,locate,no label matched the answer
+ch25-neph,ch25-neph-16,25.14,locate,leader line not found
+ch25-neph,ch25-neph-17,25.14,locate,leader line not found
+ch25-neph,ch25-neph-18,-,needs-fig,no figure
+ch25-neph,ch25-neph-19,-,needs-fig,no figure
+ch27-fem,ch27-fem-0,27.14,locate,no label matched the answer
+ch27-fem,ch27-fem-1,27.12,locate,no label matched the answer
+ch27-fem,ch27-fem-2,27.14,locate,leader line not found
+ch27-fem,ch27-fem-3,-,needs-fig,no figure
+ch27-fem,ch27-fem-4,-,needs-fig,no figure
+ch27-fem,ch27-fem-5,27.14,locate,no label matched the answer
+ch27-fem,ch27-fem-6,-,needs-fig,no figure
+ch27-fem,ch27-fem-7,27.14,done,
+ch27-fem,ch27-fem-8,27.15,locate,no label matched the answer
+ch27-fem,ch27-fem-9,-,needs-fig,no figure
+ch27-fem,ch27-fem-10,-,needs-fig,no figure
+ch27-fem,ch27-fem-11,27.14,done,
+ch27-fem,ch27-fem-12,27.10,locate,leader line not found
+ch27-fem,ch27-fem-13,27.10,done,
+ch27-fem,ch27-fem-14,27.10,done,
+ch27-fem,ch27-fem-15,-,needs-fig,no figure
+ch27-fem,ch27-fem-16,27.17,locate,no label matched the answer
+ch27-fem,ch27-fem-17,27.17,done,
+ch27-fem,ch27-fem-18,-,needs-fig,no figure
+ch27-male,ch27-male-0,27.18,locate,no label matched the answer
+ch27-male,ch27-male-1,27.3,locate,no label matched the answer
+ch27-male,ch27-male-2,27.3,locate,structure sits on the edge of the crop
+ch27-male,ch27-male-3,27.4,locate,structure sits on the edge of the crop
+ch27-male,ch27-male-4,27.8,done,
+ch27-male,ch27-male-5,27.8,locate,leader line not found
+ch27-male,ch27-male-6,27.4,locate,no label matched the answer
+ch27-male,ch27-male-7,27.2,locate,no label matched the answer
+ch27-male,ch27-male-8,27.2,locate,no label matched the answer
+ch27-male,ch27-male-9,27.2,done,
+ch27-male,ch27-male-10,27.2,done,
+ch27-male,ch27-male-11,-,needs-fig,no figure
+ch27-male,ch27-male-12,-,needs-fig,no figure
+ch27-male,ch27-male-13,27.2,locate,no label matched the answer
+ch27-male,ch27-male-14,27.7,locate,no label matched the answer
+ch27-male,ch27-male-15,-,needs-fig,no figure
+ch27-male,ch27-male-16,-,needs-fig,no figure
+ch27-male,ch27-male-17,27.2,locate,no label matched the answer
+ch4-ct,ch4-ct-0,4.12,locate,no label matched the answer
+ch4-ct,ch4-ct-1,4.12,locate,no label matched the answer
+ch4-ct,ch4-ct-2,4.12,done,
+ch4-ct,ch4-ct-3,4.13,done,
+ch4-ct,ch4-ct-4,4.12,locate,structure sits on the edge of the crop
+ch4-ct,ch4-ct-5,4.12,locate,no label matched the answer
+ch4-ct,ch4-ct-6,4.12,done,
+ch4-ct,ch4-ct-7,4.12,done,
+ch4-ct,ch4-ct-8,4.12,done,
+ch4-ct,ch4-ct-9,4.12,locate,no label matched the answer
+ch4-ct,ch4-ct-10,4.13,locate,no label matched the answer
+ch4-ct,ch4-ct-11,4.14,locate,no label matched the answer
+ch4-ct,ch4-ct-12,4.15,locate,no label matched the answer
+ch4-ct,ch4-ct-13,4.15,locate,no label matched the answer
+ch4-ct,ch4-ct-14,4.16,done,
+ch4-ct,ch4-ct-15,4.16,locate,structure sits on the edge of the crop
+ch4-ct,ch4-ct-16,4.16,done,
+ch4-ct,ch4-ct-17,4.16,locate,structure sits on the edge of the crop
+ch4-ct,ch4-ct-18,4.16,locate,no label matched the answer
+ch4-ct,ch4-ct-19,4.12,locate,no label matched the answer
+ch4-ct,ch4-ct-20,4.17,locate,no label matched the answer
+ch4-ct,ch4-ct-21,4.17,locate,no label matched the answer
+ch4-ct,ch4-ct-22,4.17,locate,no label matched the answer
+ch4-ct,ch4-ct-23,4.12,locate,no label matched the answer
+ch4-epi,ch4-epi-0,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-1,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-2,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-3,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-4,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-5,4.5,locate,no label matched the answer
+ch4-epi,ch4-epi-6,4.5,done,
+ch4-epi,ch4-epi-7,4.5,locate,no label matched the answer
+ch4-epi,ch4-epi-8,4.8,locate,structure sits on the edge of the crop
+ch4-epi,ch4-epi-9,4.8,done,
+ch4-epi,ch4-epi-10,4.8,locate,structure sits on the edge of the crop
+ch4-epi,ch4-epi-11,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-12,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-13,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-14,4.6,locate,crop is only 76x62
+ch4-epi,ch4-epi-15,4.6,locate,structure sits on the edge of the crop
+ch4-epi,ch4-epi-16,4.6,locate,structure sits on the edge of the crop
+ch4-epi,ch4-epi-17,4.6,locate,crop is only 50x35
+ch4-epi,ch4-epi-18,4.6,locate,structure sits on the edge of the crop
+ch4-epi,ch4-epi-19,4.6,locate,no label matched the answer
+ch4-epi,ch4-epi-20,4.7,locate,no label matched the answer
+ch4-epi,ch4-epi-21,4.8,locate,no label matched the answer
+ch4-epi,ch4-epi-22,4.9,locate,no label matched the answer
+ch4-epi,ch4-epi-23,4.10,locate,leader line not found
+ch4-epi,ch4-epi-24,4.10,locate,leader line not found
+ch4-epi,ch4-epi-25,4.11,locate,no label matched the answer
+ch5-acc,ch5-acc-0,5.12,locate,no label matched the answer
+ch5-acc,ch5-acc-1,5.11,done,
+ch5-acc,ch5-acc-2,5.11,locate,no label matched the answer
+ch5-acc,ch5-acc-3,5.11,done,
+ch5-acc,ch5-acc-4,5.11,done,
+ch5-acc,ch5-acc-5,5.11,done,
+ch5-acc,ch5-acc-6,5.11,done,
+ch5-acc,ch5-acc-7,5.11,done,
+ch5-acc,ch5-acc-8,5.11,done,
+ch5-acc,ch5-acc-9,5.13,locate,structure sits on the edge of the crop
+ch5-acc,ch5-acc-10,5.13,locate,no label matched the answer
+ch5-acc,ch5-acc-11,5.13,locate,no label matched the answer
+ch5-acc,ch5-acc-12,5.13,locate,leader line not found
+ch5-acc,ch5-acc-13,5.13,locate,structure sits on the edge of the crop
+ch5-acc,ch5-acc-14,5.14,locate,structure sits on the edge of the crop
+ch5-acc,ch5-acc-15,5.11,locate,no label matched the answer
+ch5-acc,ch5-acc-16,5.11,done,
+ch5-acc,ch5-acc-17,5.11,locate,no label matched the answer
+ch5-lay,ch5-lay-0,5.2,locate,no label matched the answer
+ch5-lay,ch5-lay-1,5.2,locate,no label matched the answer
+ch5-lay,ch5-lay-2,5.2,done,
+ch5-lay,ch5-lay-3,5.2,done,
+ch5-lay,ch5-lay-4,5.2,done,
+ch5-lay,ch5-lay-5,5.3,locate,no label matched the answer
+ch5-lay,ch5-lay-6,5.3,locate,no label matched the answer
+ch5-lay,ch5-lay-7,5.2,locate,no label matched the answer
+ch5-lay,ch5-lay-8,5.2,locate,no label matched the answer
+ch5-str,ch5-str-0,5.5,done,
+ch5-str,ch5-str-1,5.5,done,
+ch5-str,ch5-str-2,5.5,done,
+ch5-str,ch5-str-3,5.5,done,
+ch5-str,ch5-str-4,5.5,done,
+ch5-str,ch5-str-5,5.5,done,
+ch5-str,ch5-str-6,5.6,locate,no label matched the answer
+ch5-str,ch5-str-7,5.6,locate,no label matched the answer
+ch5-str,ch5-str-8,5.6,locate,no label matched the answer
+ch5-str,ch5-str-9,5.5,locate,no label matched the answer
+ch6-cell,ch6-cell-0,6.11,locate,leader line not found
+ch6-cell,ch6-cell-1,6.11,locate,leader line not found
+ch6-cell,ch6-cell-2,6.11,locate,leader line not found
+ch6-cell,ch6-cell-3,6.11,locate,leader line not found
+ch6-cell,ch6-cell-4,6.12,locate,no label matched the answer
+ch6-cell,ch6-cell-5,6.12,locate,no label matched the answer
+ch6-cell,ch6-cell-6,6.12,done,
+ch6-cell,ch6-cell-7,6.12,done,
+ch6-cell,ch6-cell-8,6.12,done,
+ch6-cell,ch6-cell-9,6.12,locate,no label matched the answer
+ch6-cell,ch6-cell-10,6.13,locate,leader line not found
+ch6-cell,ch6-cell-11,6.11,locate,no label matched the answer
+ch6-cell,ch6-cell-12,6.11,locate,no label matched the answer
+ch6-cell,ch6-cell-13,6.11,locate,no label matched the answer
+ch6-str,ch6-str-0,6.7,done,
+ch6-str,ch6-str-1,6.7,done,
+ch6-str,ch6-str-2,6.7,locate,no label matched the answer
+ch6-str,ch6-str-3,6.7,done,
+ch6-str,ch6-str-4,6.7,locate,no label matched the answer
+ch6-str,ch6-str-5,6.7,done,
+ch6-str,ch6-str-6,6.8,locate,leader line not found
+ch6-str,ch6-str-7,6.8,locate,leader line not found
+ch6-str,ch6-str-8,6.7,done,
+ch6-str,ch6-str-9,6.7,done,
+ch6-str,ch6-str-10,6.9,locate,no label matched the answer
+ch6-str,ch6-str-11,6.9,locate,no label matched the answer
+ch6-str,ch6-str-12,6.15,done,
+ch6-str,ch6-str-13,6.10,locate,no label matched the answer
+ch6-str,ch6-str-14,6.10,locate,no label matched the answer
+ch6-str,ch6-str-15,6.10,done,
+ch6-str,ch6-str-16,6.10,locate,leader line not found
+ch6-str,ch6-str-17,6.10,locate,leader line not found
+ch6-str,ch6-str-18,6.10,locate,structure sits on the edge of the crop
+ch7-skull,ch7-skull-2,7.4,done,
+ch7-skull,ch7-skull-3,7.5,done,
+ch7-skull,ch7-skull-5,7.9,done,
+ch7-skull,ch7-skull-6,7.10,done,
+ch7-skull,ch7-skull-7,7.12,done,
+ch7-skull,ch7-skull-8,7.14,done,
+ch7-skull,ch7-skull-9,7.15,done,
+ch7-skull,ch7-skull-10,7.4,done,
+ch7-skull,ch7-skull-11,7.4,done,
+ch7-skull,ch7-skull-12,7.16,done,
+ch7-skull,ch7-skull-13,7.8,done,
+ch7-skull,ch7-skull-14,7.17,done,
+ch7-skull,ch7-skull-15,7.13,done,
+ch7-skull,ch7-skull-17,7.8,done,
+ch7-skull,ch7-skull-18,7.8,done,
+ch7-skull,ch7-skull-19,7.7,done,
+ch7-skull,ch7-skull-20,7.7,done,
+ch7-skull,ch7-skull-21,7.7,done,
+ch7-skull,ch7-skull-22,7.5,done,
+ch7-skull,ch7-skull-23,7.10,done,
+ch7-skull,ch7-skull-24,7.12,done,
+ch7-skull,ch7-skull-25,7.12,done,
+ch7-skull,ch7-skull-26,7.5,done,
+ch7-skull,ch7-skull-27,7.9,done,
+ch7-skull,ch7-skull-28,7.9,done,
+ch7-skull,ch7-skull-29,7.5,done,
+ch7-skull,ch7-skull-30,7.8,done,
+ch7-skull,ch7-skull-31,7.17,done,
+ch7-skull,ch7-skull-32,7.18,locate,structure sits on the edge of the crop
+ch7-skull,ch7-skull-33,7.16,done,
+ch7-skull,ch7-skull-34,7.14,done,
+ch7-thor,ch7-thor-0,7.32,locate,no label matched the answer
+ch7-thor,ch7-thor-1,7.32,done,
+ch7-thor,ch7-thor-2,7.32,done,
+ch7-thor,ch7-thor-3,7.32,done,
+ch7-thor,ch7-thor-4,7.32,done,
+ch7-thor,ch7-thor-5,7.32,done,
+ch7-thor,ch7-thor-6,7.32,done,
+ch7-thor,ch7-thor-7,7.32,locate,no label matched the answer
+ch7-thor,ch7-thor-8,7.32,locate,no label matched the answer
+ch7-thor,ch7-thor-9,7.32,locate,no label matched the answer
+ch7-thor,ch7-thor-10,7.32,done,
+ch7-thor,ch7-thor-11,7.32,locate,no label matched the answer
+ch7-vert,ch7-vert-0,7.20,done,
+ch7-vert,ch7-vert-1,7.25,done,
+ch7-vert,ch7-vert-2,7.26,done,
+ch7-vert,ch7-vert-3,7.28,done,
+ch7-vert,ch7-vert-4,7.29,done,
+ch7-vert,ch7-vert-5,7.29,done,
+ch7-vert,ch7-vert-6,7.25,done,
+ch7-vert,ch7-vert-7,7.25,done,
+ch7-vert,ch7-vert-8,7.25,done,
+ch7-vert,ch7-vert-9,7.23,done,
+ch7-vert,ch7-vert-10,7.23,done,
+ch7-vert,ch7-vert-11,7.23,done,
+ch7-vert,ch7-vert-12,7.23,done,
+ch7-vert,ch7-vert-13,7.23,done,
+ch7-vert,ch7-vert-14,7.23,done,
+ch7-vert,ch7-vert-15,7.23,done,
+ch7-vert,ch7-vert-16,7.23,done,
+ch7-vert,ch7-vert-17,7.25,done,
+ch7-vert,ch7-vert-18,7.24,done,
+ch7-vert,ch7-vert-19,7.24,done,
+ch7-vert,ch7-vert-20,7.24,done,
+ch7-vert,ch7-vert-21,7.20,locate,no label matched the answer
+ch7-vert,ch7-vert-22,7.20,locate,no label matched the answer
+ch7-vert,ch7-vert-23,7.21,done,
+ch7-vert,ch7-vert-24,7.21,done,
+ch7-vert,ch7-vert-25,7.21,done,
+ch8-arm,ch8-arm-0,8.5,done,
+ch8-arm,ch8-arm-1,8.5,done,
+ch8-arm,ch8-arm-2,8.5,done,
+ch8-arm,ch8-arm-3,8.5,done,
+ch8-arm,ch8-arm-4,8.5,done,
+ch8-arm,ch8-arm-5,8.5,done,
+ch8-arm,ch8-arm-6,8.5,done,
+ch8-arm,ch8-arm-7,8.5,done,
+ch8-arm,ch8-arm-8,8.5,done,
+ch8-arm,ch8-arm-9,8.5,done,
+ch8-arm,ch8-arm-10,8.6,done,
+ch8-arm,ch8-arm-11,8.6,done,
+ch8-arm,ch8-arm-12,8.6,done,
+ch8-arm,ch8-arm-13,8.6,done,
+ch8-arm,ch8-arm-14,8.6,done,
+ch8-arm,ch8-arm-15,8.6,done,
+ch8-arm,ch8-arm-16,8.6,done,
+ch8-arm,ch8-arm-17,8.6,done,
+ch8-arm,ch8-arm-18,8.6,done,
+ch8-arm,ch8-arm-19,8.7,done,
+ch8-arm,ch8-arm-20,8.7,done,
+ch8-arm,ch8-arm-21,8.7,done,
+ch8-arm,ch8-arm-22,8.7,done,
+ch8-arm,ch8-arm-23,8.7,done,
+ch8-arm,ch8-arm-24,8.7,done,
+ch8-leg,ch8-leg-0,8.16,done,
+ch8-leg,ch8-leg-1,8.16,done,
+ch8-leg,ch8-leg-2,8.16,done,
+ch8-leg,ch8-leg-3,8.16,done,
+ch8-leg,ch8-leg-4,8.16,done,
+ch8-leg,ch8-leg-5,8.16,done,
+ch8-leg,ch8-leg-6,8.16,done,
+ch8-leg,ch8-leg-7,8.16,done,
+ch8-leg,ch8-leg-8,8.17,done,
+ch8-leg,ch8-leg-9,8.18,done,
+ch8-leg,ch8-leg-10,8.18,done,
+ch8-leg,ch8-leg-11,8.18,done,
+ch8-leg,ch8-leg-12,8.18,done,
+ch8-leg,ch8-leg-13,8.18,done,
+ch8-leg,ch8-leg-14,8.19,done,
+ch8-leg,ch8-leg-15,8.19,done,
+ch8-leg,ch8-leg-16,8.19,done,
+ch8-leg,ch8-leg-17,8.19,done,
+ch8-leg,ch8-leg-18,8.19,done,
+ch8-leg,ch8-leg-19,8.19,done,
+ch8-leg,ch8-leg-20,8.19,done,
+ch8-leg,ch8-leg-21,8.19,done,
+ch8-pect,ch8-pect-0,8.3,locate,no label matched the answer
+ch8-pect,ch8-pect-1,8.3,done,
+ch8-pect,ch8-pect-2,8.4,done,
+ch8-pect,ch8-pect-3,8.4,done,
+ch8-pect,ch8-pect-5,8.4,done,
+ch8-pect,ch8-pect-6,8.4,done,
+ch8-pect,ch8-pect-7,8.4,done,
+ch8-pect,ch8-pect-8,8.4,done,
+ch8-pect,ch8-pect-9,8.4,done,
+ch8-pect,ch8-pect-10,8.3,locate,no label matched the answer
+ch8-pect,ch8-pect-11,8.3,done,
+ch8-pelv,ch8-pelv-0,8.12,locate,no label matched the answer
+ch8-pelv,ch8-pelv-1,8.12,locate,no label matched the answer
+ch8-pelv,ch8-pelv-2,8.13,done,
+ch8-pelv,ch8-pelv-3,8.13,done,
+ch8-pelv,ch8-pelv-4,8.13,done,
+ch8-pelv,ch8-pelv-5,8.13,done,
+ch8-pelv,ch8-pelv-6,8.13,done,
+ch8-pelv,ch8-pelv-7,8.13,done,
+ch8-pelv,ch8-pelv-8,8.13,done,
+ch8-pelv,ch8-pelv-9,8.13,done,
+ch8-pelv,ch8-pelv-10,8.13,done,
+ch8-pelv,ch8-pelv-11,8.13,done,
+ch8-pelv,ch8-pelv-12,8.12,done,
+ch8-pelv,ch8-pelv-13,8.12,done,
+ch8-pelv,ch8-pelv-14,8.15,locate,leader line not found
+ch9-sel,ch9-sel-0,9.14,locate,no label matched the answer
+ch9-sel,ch9-sel-1,-,needs-fig,no figure
+ch9-sel,ch9-sel-2,9.15,locate,no label matched the answer
+ch9-sel,ch9-sel-3,9.16,locate,no label matched the answer
+ch9-sel,ch9-sel-4,9.16,done,
+ch9-sel,ch9-sel-5,9.17,locate,no label matched the answer
+ch9-sel,ch9-sel-6,9.18,locate,no label matched the answer
+ch9-sel,ch9-sel-7,9.19,locate,no label matched the answer
+ch9-sel,ch9-sel-8,9.19,locate,leader line not found
+ch9-sel,ch9-sel-9,9.19,done,
+ch9-sel,ch9-sel-10,9.19,locate,leader line not found
+ch9-sel,ch9-sel-11,9.19,done,
+ch9-sel,ch9-sel-12,9.19,locate,no label matched the answer
+ch9-sel,ch9-sel-13,9.20,locate,no label matched the answer
+ch9-sel,ch9-sel-14,9.21,locate,no label matched the answer
+ch9-syn,ch9-syn-0,9.8,done,
+ch9-syn,ch9-syn-1,9.8,done,
+ch9-syn,ch9-syn-2,9.8,locate,structure sits on the edge of the crop
+ch9-syn,ch9-syn-3,9.8,locate,no label matched the answer
+ch9-syn,ch9-syn-4,9.8,done,
+ch9-syn,ch9-syn-5,9.8,locate,no label matched the answer
+ch9-syn,ch9-syn-6,9.9,locate,no label matched the answer
+ch9-syn,ch9-syn-7,9.9,locate,no label matched the answer
+ch9-syn,ch9-syn-8,9.10,locate,leader line not found
+ch9-syn,ch9-syn-9,9.10,locate,leader line not found
+ch9-syn,ch9-syn-10,9.10,locate,leader line not found
+ch9-syn,ch9-syn-11,9.10,locate,leader line not found
+ch9-syn,ch9-syn-12,9.10,done,
+ch9-syn,ch9-syn-13,9.10,done,
+ch9-syn,ch9-syn-14,9.11,locate,no label matched the answer
+ch9-syn,ch9-syn-15,-,needs-fig,no figure
