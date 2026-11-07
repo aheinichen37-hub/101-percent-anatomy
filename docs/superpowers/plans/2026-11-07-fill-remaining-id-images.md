@@ -46,3 +46,7 @@ The textbook PDF is now reachable (it is the full 1,347-page book despite the "1
 - Candidates are in `tools/idimg/book-candidates.csv`. Several sit in figures the app already has (kidney Fig 25.8, teeth, soft palate); 11 figures are not in the app yet (for example the cranial nerves, Fig 13.23).
 - About 95 cards have no drawing to find: hormones, phases, diseases and other concepts (Gastrin, Polyuria, Heart block). They stay clue-only or move to concept decks.
 - Next: add the missing figures to `figs/` and `caps.json`, point each candidate card at its figure via a `fig` override, rebuild those decks, review contact sheets, run `--quick` regression, release as 3.2.
+
+## Update: v3.2 shipped (2026-11-07)
+
+Wired 76 textbook-drawing cards (9 new figures added to `figs/` and `caps.json`), hand-placed marker points in `id-overrides.json`. 13 cards are set to `skip` because the marker was unreliable at that crop (ch20-vein-6/7/8/13, ch25-neph-7, ch22-anat-20, ch13-pns-9/14, ch27-fem-3/4/6/9/10); they need a closer crop. `ch23-stom-9` has no label in any figure. Tools: `add_figures.py`, `wire_figs.py`, `wire-3.2.json`.

@@ -1044,10 +1044,10 @@
  },
  "ch11-head-13": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-14": {
   "deck": "ch11-head",
@@ -1065,59 +1065,59 @@
  },
  "ch11-head-16": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-17": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-18": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-19": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.9",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-2": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-20": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.9",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-21": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.9",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-3": {
   "deck": "ch11-head",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-head-4": {
   "deck": "ch11-head",
@@ -1324,10 +1324,10 @@
  },
  "ch11-resp-8": {
   "deck": "ch11-resp",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "11.5",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch11-resp-9": {
   "deck": "ch11-resp",
@@ -1632,10 +1632,10 @@
  },
  "ch12-cell-4": {
   "deck": "ch12-cell",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "12.26",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch12-cell-5": {
   "deck": "ch12-cell",
@@ -1653,10 +1653,10 @@
  },
  "ch12-cell-7": {
   "deck": "ch12-cell",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "12.13",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch12-cell-8": {
   "deck": "ch12-cell",
@@ -1674,10 +1674,10 @@
  },
  "ch13-cn-0": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-1": {
   "deck": "ch13-cn",
@@ -1688,17 +1688,17 @@
  },
  "ch13-cn-10": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-11": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-12": {
   "deck": "ch13-cn",
@@ -1709,59 +1709,59 @@
  },
  "ch13-cn-2": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-3": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-4": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-5": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-6": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-7": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-8": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cn-9": {
   "deck": "ch13-cn",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.23",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cns-0": {
   "deck": "ch13-cns",
@@ -1891,10 +1891,10 @@
  },
  "ch13-cns-5": {
   "deck": "ch13-cns",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.6",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cns-6": {
   "deck": "ch13-cns",
@@ -1905,24 +1905,24 @@
  },
  "ch13-cns-7": {
   "deck": "ch13-cns",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cns-8": {
   "deck": "ch13-cns",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-cns-9": {
   "deck": "ch13-cns",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "13.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch13-csf-0": {
   "deck": "ch13-csf",
@@ -2080,9 +2080,9 @@
  },
  "ch13-pns-14": {
   "deck": "ch13-pns",
-  "fig": "-",
+  "fig": "13.24",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch13-pns-15": {
@@ -2143,9 +2143,9 @@
  },
  "ch13-pns-9": {
   "deck": "ch13-pns",
-  "fig": "-",
+  "fig": "13.24",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch14-spec-0": {
@@ -2178,17 +2178,17 @@
  },
  "ch14-spec-12": {
   "deck": "ch14-spec",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "14.15",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch14-spec-13": {
   "deck": "ch14-spec",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "14.15",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch14-spec-14": {
   "deck": "ch14-spec",
@@ -2430,10 +2430,10 @@
  },
  "ch19-anat-13": {
   "deck": "ch19-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "19.4",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch19-anat-14": {
   "deck": "ch19-anat",
@@ -2479,10 +2479,10 @@
  },
  "ch19-anat-2": {
   "deck": "ch19-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "19.5",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch19-anat-20": {
   "deck": "ch19-anat",
@@ -2920,10 +2920,10 @@
  },
  "ch20-str-5": {
   "deck": "ch20-str",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "20.7",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch20-str-6": {
   "deck": "ch20-str",
@@ -2934,17 +2934,17 @@
  },
  "ch20-str-7": {
   "deck": "ch20-str",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "20.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch20-str-8": {
   "deck": "ch20-str",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "20.3",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch20-str-9": {
   "deck": "ch20-str",
@@ -2990,9 +2990,9 @@
  },
  "ch20-vein-13": {
   "deck": "ch20-vein",
-  "fig": "-",
+  "fig": "20.35",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch20-vein-14": {
@@ -3025,10 +3025,10 @@
  },
  "ch20-vein-18": {
   "deck": "ch20-vein",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "20.44",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch20-vein-2": {
   "deck": "ch20-vein",
@@ -3060,23 +3060,23 @@
  },
  "ch20-vein-6": {
   "deck": "ch20-vein",
-  "fig": "-",
+  "fig": "20.35",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch20-vein-7": {
   "deck": "ch20-vein",
-  "fig": "-",
+  "fig": "20.35",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch20-vein-8": {
   "deck": "ch20-vein",
-  "fig": "-",
+  "fig": "20.35",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch20-vein-9": {
@@ -3284,10 +3284,10 @@
  },
  "ch22-anat-19": {
   "deck": "ch22-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "22.11",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch22-anat-2": {
   "deck": "ch22-anat",
@@ -3298,17 +3298,17 @@
  },
  "ch22-anat-20": {
   "deck": "ch22-anat",
-  "fig": "-",
+  "fig": "22.11",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch22-anat-21": {
   "deck": "ch22-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "22.11",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch22-anat-22": {
   "deck": "ch22-anat",
@@ -3494,10 +3494,10 @@
  },
  "ch23-acc-8": {
   "deck": "ch23-acc",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.24",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-acc-9": {
   "deck": "ch23-acc",
@@ -3522,10 +3522,10 @@
  },
  "ch23-int-10": {
   "deck": "ch23-int",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.2",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-int-11": {
   "deck": "ch23-int",
@@ -3557,10 +3557,10 @@
  },
  "ch23-int-15": {
   "deck": "ch23-int",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.21",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-int-16": {
   "deck": "ch23-int",
@@ -3641,10 +3641,10 @@
  },
  "ch23-int-9": {
   "deck": "ch23-int",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.21",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-mouth-0": {
   "deck": "ch23-mouth",
@@ -3655,10 +3655,10 @@
  },
  "ch23-mouth-1": {
   "deck": "ch23-mouth",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.12",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-mouth-10": {
   "deck": "ch23-mouth",
@@ -3690,24 +3690,24 @@
  },
  "ch23-mouth-14": {
   "deck": "ch23-mouth",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-mouth-15": {
   "deck": "ch23-mouth",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-mouth-16": {
   "deck": "ch23-mouth",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.10",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-mouth-17": {
   "deck": "ch23-mouth",
@@ -3732,10 +3732,10 @@
  },
  "ch23-mouth-2": {
   "deck": "ch23-mouth",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.12",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-mouth-20": {
   "deck": "ch23-mouth",
@@ -3746,10 +3746,10 @@
  },
  "ch23-mouth-3": {
   "deck": "ch23-mouth",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.12",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-mouth-4": {
   "deck": "ch23-mouth",
@@ -3774,10 +3774,10 @@
  },
  "ch23-mouth-7": {
   "deck": "ch23-mouth",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.2",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-mouth-8": {
   "deck": "ch23-mouth",
@@ -3900,10 +3900,10 @@
  },
  "ch23-stom-5": {
   "deck": "ch23-stom",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.15",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-stom-6": {
   "deck": "ch23-stom",
@@ -3914,24 +3914,24 @@
  },
  "ch23-stom-7": {
   "deck": "ch23-stom",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.16",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-stom-8": {
   "deck": "ch23-stom",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "23.16",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch23-stom-9": {
   "deck": "ch23-stom",
-  "fig": "-",
+  "fig": "23.16",
   "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "reason": "no label matched the answer",
+  "status": "fail"
  },
  "ch25-anat-0": {
   "deck": "ch25-anat",
@@ -3942,17 +3942,17 @@
  },
  "ch25-anat-1": {
   "deck": "ch25-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "25.8",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch25-anat-10": {
   "deck": "ch25-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "25.8",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch25-anat-11": {
   "deck": "ch25-anat",
@@ -4047,10 +4047,10 @@
  },
  "ch25-anat-4": {
   "deck": "ch25-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "25.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch25-anat-5": {
   "deck": "ch25-anat",
@@ -4061,31 +4061,31 @@
  },
  "ch25-anat-6": {
   "deck": "ch25-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "25.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch25-anat-7": {
   "deck": "ch25-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "25.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch25-anat-8": {
   "deck": "ch25-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "25.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch25-anat-9": {
   "deck": "ch25-anat",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "25.8",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch25-neph-0": {
   "deck": "ch25-neph",
@@ -4208,9 +4208,9 @@
  },
  "ch25-neph-7": {
   "deck": "ch25-neph",
-  "fig": "-",
+  "fig": "25.13",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch25-neph-8": {
@@ -4243,9 +4243,9 @@
  },
  "ch27-fem-10": {
   "deck": "ch27-fem",
-  "fig": "-",
+  "fig": "27.14",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch27-fem-11": {
@@ -4278,10 +4278,10 @@
  },
  "ch27-fem-15": {
   "deck": "ch27-fem",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "27.10",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch27-fem-16": {
   "deck": "ch27-fem",
@@ -4313,16 +4313,16 @@
  },
  "ch27-fem-3": {
   "deck": "ch27-fem",
-  "fig": "-",
+  "fig": "27.14",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch27-fem-4": {
   "deck": "ch27-fem",
-  "fig": "-",
+  "fig": "27.14",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch27-fem-5": {
@@ -4334,9 +4334,9 @@
  },
  "ch27-fem-6": {
   "deck": "ch27-fem",
-  "fig": "-",
+  "fig": "27.14",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch27-fem-7": {
@@ -4355,9 +4355,9 @@
  },
  "ch27-fem-9": {
   "deck": "ch27-fem",
-  "fig": "-",
+  "fig": "27.14",
   "kind": null,
-  "reason": "card has no textbook figure",
+  "reason": "skipped by override",
   "status": "skip"
  },
  "ch27-male-0": {
@@ -4383,17 +4383,17 @@
  },
  "ch27-male-11": {
   "deck": "ch27-male",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "27.2",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch27-male-12": {
   "deck": "ch27-male",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "27.2",
+  "kind": "circle",
+  "reason": "",
+  "status": "ok"
  },
  "ch27-male-13": {
   "deck": "ch27-male",
@@ -4411,17 +4411,17 @@
  },
  "ch27-male-15": {
   "deck": "ch27-male",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "27.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch27-male-16": {
   "deck": "ch27-male",
-  "fig": "-",
-  "kind": null,
-  "reason": "card has no textbook figure",
-  "status": "skip"
+  "fig": "27.7",
+  "kind": "blob",
+  "reason": "",
+  "status": "ok"
  },
  "ch27-male-17": {
   "deck": "ch27-male",

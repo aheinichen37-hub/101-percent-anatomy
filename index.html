@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.1 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.2 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -195,7 +195,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.1</div>
+<div id="ver" aria-hidden="true">v3.2</div>
 
 <script>
 /* ===================== CONTENT ===================== */
@@ -748,7 +748,7 @@ Serratus anterior | | Saw-toothed muscle on the side of the rib cage. Action: de
 Sternocleidomastoid | scm | Neck muscle running from the sternum and clavicle up to behind the ear. Action: flexes, laterally flexes and extends the neck; rotates the head to the opposite side. | 11.13
 Scalenes | scalene; scalene muscles | Muscles on the side of the neck. Action: elevate ribs 1 and 2; laterally flex the neck and spine; rotate the head to the same side. | 11.14
 Serratus posterior superior | | Thin muscle of the upper back attached to the upper ribs. Action: elevates the ribs (accessory muscle of inspiration). | -
-Serratus posterior inferior | | Thin muscle of the lower back attached to the lower ribs. Action: depresses the ribs (accessory muscle of expiration). | -
+Serratus posterior inferior |  | Thin muscle of the lower back attached to the lower ribs. Action: depresses the ribs (accessory muscle of expiration). | 11.5
 Transversus thoracis | | Thin muscle on the inside of the front chest wall. Action: depresses the ribs (accessory muscle of expiration). | -
 `),
 D("ch11-back","ch11","Back Muscles","What muscle is this?","11.15",`
@@ -1403,8 +1403,8 @@ Sternocleidomastoid | | Muscle named for its attachments: sternum, clavicle and 
 D("ch11-head","ch11","Head & Neck Muscles","What muscle is this?","-",`
 Orbicularis oris |  | Circular muscle around the mouth. Action: closes and purses the lips. | 11.3
 Orbicularis oculi | | Circular muscle around the eye. Action: closes the eyelid.
-Occipitofrontalis | epicranius | Scalp muscle with front and back bellies. Action: raises the eyebrows and wrinkles the forehead.
-Buccinator | | Cheek muscle. Action: compresses the cheek, keeping food between the teeth.
+Occipitofrontalis | epicranius | Scalp muscle with front and back bellies. Action: raises the eyebrows and wrinkles the forehead. | 11.5
+Buccinator |  | Cheek muscle. Action: compresses the cheek, keeping food between the teeth. | 11.11
 Zygomaticus major | zygomaticus | Muscle from the cheekbone to the corner of the mouth. Action: draws the mouth up and back (smiling).
 Levator labii superioris | | Muscle above the upper lip. Action: elevates the upper lip.
 Depressor anguli oris | | Muscle below the corner of the mouth. Action: draws the corner of the mouth down (frowning).
@@ -1414,15 +1414,15 @@ Masseter | | Strong jaw muscle on the side of the face. Action: elevates the man
 Temporalis |  | Fan-shaped muscle on the side of the skull. Action: elevates and retracts the mandible. | 11.10
 Medial pterygoid | | Deep chewing muscle on the inner side of the jaw. Action: elevates the mandible and moves it side to side.
 Lateral pterygoid | | Deep chewing muscle. Action: protracts the mandible and moves it side to side.
-Genioglossus | | Muscle forming most of the tongue. Action: depresses and protrudes the tongue.
+Genioglossus |  | Muscle forming most of the tongue. Action: depresses and protrudes the tongue. | 11.11
 Digastric | | Two-bellied muscle under the jaw above the hyoid. Action: elevates the hyoid and depresses the mandible.
 Sternohyoid | | Strap muscle from the sternum to the hyoid. Action: depresses the hyoid.
-Superior rectus | | Eye muscle. Action: moves the eye up.
-Inferior rectus | | Eye muscle. Action: moves the eye down.
-Lateral rectus | | Eye muscle. Action: moves the eye away from the nose.
-Medial rectus | | Eye muscle. Action: moves the eye toward the nose.
-Superior oblique | | Eye muscle whose tendon passes through a pulley. Action: rotates the eye down and out.
-Inferior oblique | | Eye muscle. Action: rotates the eye up and out.
+Superior rectus |  | Eye muscle. Action: moves the eye up. | 11.9
+Inferior rectus |  | Eye muscle. Action: moves the eye down. | 11.9
+Lateral rectus |  | Eye muscle. Action: moves the eye away from the nose. | 11.9
+Medial rectus |  | Eye muscle. Action: moves the eye toward the nose. | 11.9
+Superior oblique |  | Eye muscle whose tendon passes through a pulley. Action: rotates the eye down and out. | 11.9
+Inferior oblique |  | Eye muscle. Action: rotates the eye up and out. | 11.9
 `)
 );
 
@@ -1450,10 +1450,10 @@ Neuron | neurons; nerve cell | Excitable cell that sends electrical signals. | 1
 Soma | cell body | Part of the neuron that contains the nucleus. | 12.10
 Dendrite | dendrites | Branch that receives signals and carries them toward the cell body. | 12.9
 Axon | axons | Single process that carries signals away from the cell body. | 12.13
-Axon hillock | | Tapering region where the axon leaves the cell body; where action potentials start.
+Axon hillock |  | Tapering region where the axon leaves the cell body; where action potentials start. | 12.26
 Initial segment |  | First part of the axon, just past the hillock. | 12.14
 Axon terminal | axon terminals; synaptic end bulb; terminal | End of an axon branch that releases neurotransmitter. | 12.14
-Node of Ranvier | nodes of ranvier; node | Gap in the myelin sheath along an axon.
+Node of Ranvier | nodes of ranvier; node | Gap in the myelin sheath along an axon. | 12.13
 Myelin sheath | myelin | Lipid-rich insulation wrapped around an axon. | 12.12
 Multipolar neuron | multipolar | Neuron with one axon and many dendrites; the most common type. | 12.8
 Bipolar neuron | bipolar | Neuron with one axon and one dendrite on opposite sides, as in the retina. | 12.9
@@ -1532,11 +1532,11 @@ Cerebral cortex | cortex | Thin outer layer of gray matter covering the cerebrum
 Gyrus | gyri | Ridge on the surface of the cerebrum.
 Sulcus | sulci | Groove on the surface of the cerebrum. | 13.7
 Longitudinal fissure |  | Deep groove separating the right and left hemispheres. | 13.17
-Corpus callosum | | Large band of white matter connecting the two hemispheres.
+Corpus callosum |  | Large band of white matter connecting the two hemispheres. | 13.6
 Frontal lobe |  | Lobe for motor control, planning and personality. | 13.7
-Parietal lobe | | Lobe for processing body sensations.
-Temporal lobe | | Lobe for hearing and memory.
-Occipital lobe | | Lobe for vision.
+Parietal lobe |  | Lobe for processing body sensations. | 13.7
+Temporal lobe |  | Lobe for hearing and memory. | 13.7
+Occipital lobe |  | Lobe for vision. | 13.7
 Central sulcus | | Groove separating the frontal and parietal lobes.
 Precentral gyrus | primary motor cortex | Ridge in front of the central sulcus that starts voluntary movement.
 Postcentral gyrus | primary somatosensory cortex | Ridge behind the central sulcus that receives body sensations.
@@ -1579,27 +1579,27 @@ Epineurium |  | Connective tissue around an entire nerve. | 13.22
 Perineurium |  | Connective tissue around a fascicle of axons. | 13.22
 Endoneurium |  | Connective tissue around a single axon. | 13.22
 Cervical plexus |  | Nerve network of C1-C4 that supplies the neck; includes the phrenic nerve. | 13.24
-Phrenic nerve | | Nerve from the cervical plexus that controls the diaphragm.
+Phrenic nerve |  | Nerve from the cervical plexus that controls the diaphragm. | 13.24
 Brachial plexus |  | Nerve network of C5-T1 that supplies the upper limb. | 13.24
 Lumbar plexus |  | Nerve network that supplies the front of the thigh; includes the femoral nerve. | 13.24
 Sacral plexus |  | Nerve network that supplies the back of the leg; includes the sciatic nerve. | 13.24
 Sciatic nerve |  | Largest nerve in the body, running down the back of the thigh. | 13.24
-Femoral nerve | | Nerve to the front of the thigh.
+Femoral nerve |  | Nerve to the front of the thigh. | 13.24
 Dermatome | dermatomes | Area of skin supplied by one spinal nerve.
 `),
 D("ch13-cn","ch13","Cranial Nerves","Which cranial nerve is this?","-",`
-Olfactory nerve | olfactory; cn i; cn 1 | Cranial nerve I. Sensory: smell.
+Olfactory nerve | olfactory; cn i; cn 1 | Cranial nerve I. Sensory: smell. | 13.23
 Optic nerve | optic; cn ii; cn 2 | Cranial nerve II. Sensory: vision. | 13.20
-Oculomotor nerve | oculomotor; cn iii; cn 3 | Cranial nerve III. Motor: most eye movements, pupil constriction and eyelid lifting.
-Trochlear nerve | trochlear; cn iv; cn 4 | Cranial nerve IV. Motor: the superior oblique eye muscle.
-Trigeminal nerve | trigeminal; cn v; cn 5 | Cranial nerve V. Both: sensation of the face and the chewing muscles.
-Abducens nerve | abducens; cn vi; cn 6 | Cranial nerve VI. Motor: the lateral rectus (moves the eye outward).
-Facial nerve | facial; cn vii; cn 7 | Cranial nerve VII. Both: facial expression muscles, taste, and salivary and tear glands.
-Vestibulocochlear nerve | vestibulocochlear; cn viii; cn 8 | Cranial nerve VIII. Sensory: hearing and balance.
-Glossopharyngeal nerve | glossopharyngeal; cn ix; cn 9 | Cranial nerve IX. Both: taste, swallowing and a salivary gland.
-Vagus nerve | vagus; cn x; cn 10 | Cranial nerve X. Both: wanders to the organs of the chest and abdomen; parasympathetic output.
-Accessory nerve | accessory; spinal accessory nerve; cn xi; cn 11 | Cranial nerve XI. Motor: the sternocleidomastoid and trapezius.
-Hypoglossal nerve | hypoglossal; cn xii; cn 12 | Cranial nerve XII. Motor: the tongue muscles.
+Oculomotor nerve | oculomotor; cn iii; cn 3 | Cranial nerve III. Motor: most eye movements, pupil constriction and eyelid lifting. | 13.23
+Trochlear nerve | trochlear; cn iv; cn 4 | Cranial nerve IV. Motor: the superior oblique eye muscle. | 13.23
+Trigeminal nerve | trigeminal; cn v; cn 5 | Cranial nerve V. Both: sensation of the face and the chewing muscles. | 13.23
+Abducens nerve | abducens; cn vi; cn 6 | Cranial nerve VI. Motor: the lateral rectus (moves the eye outward). | 13.23
+Facial nerve | facial; cn vii; cn 7 | Cranial nerve VII. Both: facial expression muscles, taste, and salivary and tear glands. | 13.23
+Vestibulocochlear nerve | vestibulocochlear; cn viii; cn 8 | Cranial nerve VIII. Sensory: hearing and balance. | 13.23
+Glossopharyngeal nerve | glossopharyngeal; cn ix; cn 9 | Cranial nerve IX. Both: taste, swallowing and a salivary gland. | 13.23
+Vagus nerve | vagus; cn x; cn 10 | Cranial nerve X. Both: wanders to the organs of the chest and abdomen; parasympathetic output. | 13.23
+Accessory nerve | accessory; spinal accessory nerve; cn xi; cn 11 | Cranial nerve XI. Motor: the sternocleidomastoid and trapezius. | 13.23
+Hypoglossal nerve | hypoglossal; cn xii; cn 12 | Cranial nerve XII. Motor: the tongue muscles. | 13.23
 12 | twelve | Number of pairs of cranial nerves.
 `),
 
@@ -1634,8 +1634,8 @@ Ossicles | malleus, incus and stapes; auditory ossicles | Three tiny bones of th
 Vestibule |  | Inner ear region that senses head position and linear movement. | 14.5
 Semicircular canals | semicircular canal | Three looped tubes that sense head rotation. | 14.12
 Cornea |  | Clear front part of the eye that bends incoming light. | 14.15
-Iris | | Colored muscle that changes the size of the pupil.
-Lens | | Flexible structure that focuses light on the retina.
+Iris |  | Colored muscle that changes the size of the pupil. | 14.15
+Lens |  | Flexible structure that focuses light on the retina. | 14.15
 Retina |  | Inner layer of the eye that holds the photoreceptors. | 14.24
 Rods | rod | Photoreceptors for dim light; do not detect color.
 Cones | cone | Photoreceptors for bright light and color. | 14.15
@@ -1949,7 +1949,7 @@ Transfusion reaction | hemolytic transfusion reaction | Immune attack on donated
 D("ch19-anat","ch19","Heart Anatomy","Name the structure.","-",`
 Mediastinum |  | Central chest region where the heart sits. | 19.2 | Think of it as the middle room of the chest, with the lungs as the walls on either side.
 Pericardium | pericardial sac | Sac that surrounds the heart. | 19.6 | Peri- means around and cardio means heart, so the name tells you exactly where it sits.
-Fibrous pericardium |  | Tough outer layer of the pericardial sac. | - | The tough outer bag. It is strong enough to stop the heart overfilling, which is why it does not stretch much.
+Fibrous pericardium |  | Tough outer layer of the pericardial sac. | 19.5 | The tough outer bag. It is strong enough to stop the heart overfilling, which is why it does not stretch much.
 Epicardium | visceral pericardium | Outer layer of the heart wall. | 19.5 | Epi- means upon, so this is the layer sitting directly on the muscle. It is the same sheet as the visceral pericardium.
 Myocardium |  | Thick muscle layer of the heart wall. | 19.8 | Myo- means muscle, so this is the thick middle layer that does the actual pumping.
 Endocardium |  | Inner lining of the heart chambers. | 19.5 | Endo- means within. It lines the chambers and is continuous with the lining of the blood vessels leaving the heart.
@@ -1960,7 +1960,7 @@ Left ventricle |  | Chamber with the thickest wall; pumps blood to the body. | 1
 Interventricular septum |  | Wall between the two ventricles. | 19.10 | Septum means a dividing wall, and inter-ventricular tells you which two rooms it divides.
 Tricuspid valve | right atrioventricular valve; right av valve | Valve between the right atrium and right ventricle. | 19.11 | Three cusps, and it sits on the right. A common way to keep it straight: tri before bi, right before left.
 Mitral valve | bicuspid valve; left atrioventricular valve; left av valve | Valve between the left atrium and left ventricle. | 19.13 | Two cusps, on the left. It is named for a bishop's mitre, which has the same two-flap shape.
-Pulmonary valve | pulmonary semilunar valve | Valve between the right ventricle and the pulmonary trunk. | - | Guards the way out to the lungs. Semilunar means half-moon, which is the shape of each of its three pockets.
+Pulmonary valve | pulmonary semilunar valve | Valve between the right ventricle and the pulmonary trunk. | 19.4 | Guards the way out to the lungs. Semilunar means half-moon, which is the shape of each of its three pockets.
 Aortic valve | aortic semilunar valve | Valve between the left ventricle and the aorta. | 19.13 | The last gate blood passes through on its way to the body. Its cusps fill like pockets to snap it shut.
 Chordae tendineae |  | "Heart strings" that keep the AV valves from flipping inside out. | 19.11 | Often called heart strings. They stop the valve flaps blowing inside out when the ventricle squeezes.
 Papillary muscles | papillary muscle | Muscles that pull on the chordae tendineae. | 19.11 | The little mounds that anchor the heart strings. They tighten just before the ventricle does, taking up the slack.
@@ -2028,10 +2028,10 @@ Arteriole | arterioles | Small artery that controls blood flow into capillaries.
 Capillary | capillaries | Smallest vessel, where exchange with tissues happens. | 20.5
 Venule | venules | Small vein that collects blood from capillaries. | 20.7
 Vein | veins | Vessel that carries blood back toward the heart. | 20.7
-Tunica intima | tunica interna | Innermost layer of a vessel wall, lined by endothelium.
+Tunica intima | tunica interna | Innermost layer of a vessel wall, lined by endothelium. | 20.7
 Tunica media |  | Middle layer of a vessel wall, made of smooth muscle. | 20.3
-Tunica externa | tunica adventitia | Outer connective tissue layer of a vessel wall.
-Endothelium | | Simple squamous lining of all blood vessels.
+Tunica externa | tunica adventitia | Outer connective tissue layer of a vessel wall. | 20.7
+Endothelium |  | Simple squamous lining of all blood vessels. | 20.3
 Elastic artery | elastic arteries; conducting artery | Large artery near the heart with lots of elastic fibers, like the aorta. | 20.4
 Muscular artery | muscular arteries; distributing artery | Medium artery with a thick smooth muscle layer. | 20.4
 Continuous capillary | continuous | Most common capillary type, with a complete endothelial lining. | 20.5
@@ -2109,19 +2109,19 @@ Pulmonary veins | pulmonary vein | Vessels carrying oxygenated blood from the lu
 Internal jugular vein | internal jugular | Vein draining the brain. | 20.37
 External jugular vein | external jugular | Vein draining the face and scalp. | 20.37
 Brachiocephalic vein | brachiocephalic | Vein formed by the jugular and subclavian veins. | 20.23
-Cephalic vein | cephalic | Superficial vein on the thumb side of the arm.
-Basilic vein | basilic | Superficial vein on the little-finger side of the arm.
-Median cubital vein | median cubital | Vein at the front of the elbow, used for drawing blood.
+Cephalic vein | cephalic | Superficial vein on the thumb side of the arm. | 20.35
+Basilic vein | basilic | Superficial vein on the little-finger side of the arm. | 20.35
+Median cubital vein | median cubital | Vein at the front of the elbow, used for drawing blood. | 20.35
 Azygos vein | azygos | Vein draining the chest wall into the superior vena cava. | 20.36
 Hepatic portal vein | hepatic portal; portal vein | Vein carrying nutrient-rich blood from the gut to the liver. | 20.43
 Hepatic veins | hepatic vein | Veins draining the liver into the inferior vena cava. | 20.43
 Renal vein | renal veins | Vein draining the kidney. | 20.40
-Great saphenous vein | great saphenous; saphenous vein | Longest vein in the body, on the inner leg.
+Great saphenous vein | great saphenous; saphenous vein | Longest vein in the body, on the inner leg. | 20.35
 Femoral vein | femoral | Deep vein of the thigh. | 20.33
 Ductus arteriosus |  | Fetal shunt from the pulmonary trunk to the aorta. | 20.44
 Ductus venosus |  | Fetal shunt that lets blood bypass the liver. | 20.44
 Umbilical vein |  | Fetal vessel carrying oxygenated blood from the placenta. | 20.44
-Umbilical arteries | umbilical artery | Fetal vessels carrying deoxygenated blood to the placenta.
+Umbilical arteries | umbilical artery | Fetal vessels carrying deoxygenated blood to the placenta. | 20.44
 `)
 );
 
@@ -2244,9 +2244,9 @@ Bronchiole | bronchioles | Small airway with no cartilage. | 22.10
 Terminal bronchiole | terminal bronchioles | Last airway of the conducting zone.
 Respiratory bronchiole | respiratory bronchioles | First airway of the respiratory zone.
 Alveolus | alveoli | Tiny air sac where gas exchange takes place. | 22.22
-Type I alveolar cell | type i pneumocyte; type 1 alveolar cell | Thin cell forming most of the alveolar wall.
-Type II alveolar cell | type ii pneumocyte; type 2 alveolar cell | Cell that secretes surfactant.
-Alveolar macrophage | dust cell; dust cells | Phagocyte that cleans debris from the alveoli.
+Type I alveolar cell | type i pneumocyte; type 1 alveolar cell | Thin cell forming most of the alveolar wall. | 22.11
+Type II alveolar cell | type ii pneumocyte; type 2 alveolar cell | Cell that secretes surfactant. | 22.11
+Alveolar macrophage | dust cell; dust cells | Phagocyte that cleans debris from the alveoli. | 22.11
 Surfactant | | Substance that lowers surface tension so alveoli don't collapse.
 Respiratory membrane |  | Thin barrier of alveolar and capillary walls where gases diffuse. | 22.22
 Pleura | pleurae; pleural membrane | Serous membrane around each lung. | 22.14
@@ -2331,22 +2331,22 @@ Defecation |  | Removing indigestible waste. | 23.6
 `),
 D("ch23-mouth","ch23","Mouth, Pharynx & Esophagus","Name the structure or term.","-",`
 Oral cavity | mouth; buccal cavity | Space where digestion begins. | 23.7
-Hard palate | | Bony front part of the roof of the mouth.
-Soft palate | | Muscular back part of the roof of the mouth.
-Uvula | | Hanging tissue at the back of the soft palate.
+Hard palate |  | Bony front part of the roof of the mouth. | 23.12
+Soft palate |  | Muscular back part of the roof of the mouth. | 23.12
+Uvula |  | Hanging tissue at the back of the soft palate. | 23.12
 Tongue |  | Muscular organ that moves food and holds taste buds. | 23.8
 Salivary glands | salivary gland | Glands that secrete saliva. | 23.9
 Parotid gland | parotid | Largest salivary gland, in front of the ear. | 23.9
-Submandibular gland | submandibular | Salivary gland under the jaw.
+Submandibular gland | submandibular | Salivary gland under the jaw. | 23.2
 Sublingual gland | sublingual | Salivary gland under the tongue. | 23.9
 Salivary amylase | amylase | Saliva enzyme that starts digesting starch.
 Lingual lipase | | Enzyme from the tongue that starts digesting fat.
 Bolus | | Mass of chewed food ready to swallow.
 Mastication | chewing | Breaking food apart with the teeth.
 Deglutition | swallowing | Moving food from the mouth through the pharynx into the esophagus. | 23.14
-Incisors | incisor | Front teeth for cutting.
-Canines | canine; cuspids | Pointed teeth for tearing.
-Molars | molar | Back teeth for grinding.
+Incisors | incisor | Front teeth for cutting. | 23.10
+Canines | canine; cuspids | Pointed teeth for tearing. | 23.10
+Molars | molar | Back teeth for grinding. | 23.10
 Enamel |  | Hardest substance in the body, covering the tooth crown. | 23.11
 Esophagus |  | Muscular tube carrying food to the stomach. | 23.13
 Lower esophageal sphincter | les; cardiac sphincter | Ring of muscle between the esophagus and stomach. | 23.13
@@ -2358,11 +2358,11 @@ Fundus |  | Dome-shaped top of the stomach. | 23.15
 Body | body of the stomach | Main central part of the stomach.
 Pylorus |  | Funnel-shaped region leading to the small intestine. | 23.15
 Pyloric sphincter | | Valve controlling emptying into the small intestine.
-Rugae | | Folds in the stomach lining that let it expand.
+Rugae |  | Folds in the stomach lining that let it expand. | 23.15
 Gastric pits | gastric pit | Openings in the stomach lining that lead to gastric glands. | 23.16
-Parietal cells | parietal cell | Stomach cells that secrete hydrochloric acid and intrinsic factor.
-Chief cells | chief cell | Stomach cells that secrete pepsinogen.
-Mucous neck cells | mucous cells | Stomach cells that secrete protective mucus.
+Parietal cells | parietal cell | Stomach cells that secrete hydrochloric acid and intrinsic factor. | 23.16
+Chief cells | chief cell | Stomach cells that secrete pepsinogen. | 23.16
+Mucous neck cells | mucous cells | Stomach cells that secrete protective mucus. 
 G cells | g cell | Stomach cells that secrete gastrin.
 Hydrochloric acid | hcl | Strong acid in the stomach that kills microbes and activates pepsin.
 Pepsin |  | Stomach enzyme that digests protein. | 23.16
@@ -2384,13 +2384,13 @@ Microvilli | microvillus; brush border | Tiny projections on intestinal cells th
 Intestinal glands | crypts of lieberkuhn; intestinal crypts | Glands between villi that secrete intestinal juice.
 Ileocecal valve | ileocecal sphincter | Valve between the small and large intestines.
 Cecum | | Pouch at the start of the large intestine.
-Appendix | vermiform appendix | Worm-like tube attached to the cecum.
-Ascending colon | | Colon section running up the right side.
+Appendix | vermiform appendix | Worm-like tube attached to the cecum. | 23.21
+Ascending colon |  | Colon section running up the right side. | 23.2
 Transverse colon |  | Colon section running across the abdomen. | 23.21
 Descending colon |  | Colon section running down the left side. | 23.21
 Sigmoid colon |  | S-shaped colon section before the rectum. | 23.21
 Rectum |  | Last part of the large intestine before the anal canal. | 23.21
-Anal canal | | Final passage to the outside of the body.
+Anal canal |  | Final passage to the outside of the body. | 23.21
 Haustra | haustrum | Pouches of the colon wall. | 23.23
 Teniae coli | taenia coli | Three bands of smooth muscle along the colon. | 23.23
 Gut microbiota | intestinal flora; bacterial flora | Bacteria in the large intestine that make some vitamins.
@@ -2405,7 +2405,7 @@ Kupffer cells | kupffer cell; hepatic macrophages | Phagocytes in the liver sinu
 Bile | | Fluid that emulsifies fat.
 Bile salts | bile salt | Part of bile that breaks fat into small droplets.
 Gallbladder |  | Sac that stores and concentrates bile. | 23.27
-Common bile duct | | Duct carrying bile to the duodenum.
+Common bile duct |  | Duct carrying bile to the duodenum. | 23.24
 Hepatopancreatic ampulla | ampulla of vater | Point where the bile duct and pancreatic duct meet the duodenum.
 Pancreas |  | Organ that makes digestive enzymes and blood-sugar hormones. | 23.26
 Acinar cells | acini; acinar cell | Pancreatic cells that make digestive enzymes.
@@ -2519,16 +2519,16 @@ NEWDECKS.push(
 /* ---------------- Unit 25 - Urinary System ---------------- */
 D("ch25-anat","ch25","Urinary Organs & Urine","Name the structure or term.","-",`
 Kidney | kidneys | Bean-shaped organ that filters blood and makes urine. | 25.7
-Renal capsule | | Fibrous layer surrounding each kidney.
+Renal capsule |  | Fibrous layer surrounding each kidney. | 25.8
 Renal cortex | cortex | Outer region of the kidney. | 25.8
 Renal medulla | medulla | Inner region of the kidney, made of renal pyramids. | 25.8
-Renal pyramid | renal pyramids | Cone-shaped tissue in the renal medulla.
+Renal pyramid | renal pyramids | Cone-shaped tissue in the renal medulla. | 25.8
 Renal column | renal columns | Extension of cortex between the pyramids. | 25.8
-Renal papilla | papilla | Tip of a renal pyramid where urine drains out.
-Minor calyx | minor calyces | Cup that collects urine from one papilla.
-Major calyx | major calyces | Larger cup formed by several minor calyces.
-Renal pelvis | | Funnel that collects urine before the ureter.
-Renal hilum | hilum | Notch where vessels and the ureter enter or leave the kidney.
+Renal papilla | papilla | Tip of a renal pyramid where urine drains out. | 25.8
+Minor calyx | minor calyces | Cup that collects urine from one papilla. | 25.8
+Major calyx | major calyces | Larger cup formed by several minor calyces. | 25.8
+Renal pelvis |  | Funnel that collects urine before the ureter. | 25.8
+Renal hilum | hilum | Notch where vessels and the ureter enter or leave the kidney. | 25.8
 Ureter | ureters | Tube carrying urine from a kidney to the bladder. | 25.6
 Urinary bladder | bladder | Hollow organ that stores urine. | 25.4
 Detrusor muscle | detrusor | Smooth muscle of the bladder wall. | 25.4
@@ -2549,7 +2549,7 @@ Glomerular capsule | bowmans capsule; bowman's capsule | Cup surrounding the glo
 Podocytes | podocyte | Capsule cells with foot processes that wrap the glomerular capillaries. | 25.11
 Afferent arteriole |  | Vessel that brings blood into the glomerulus. | 25.14
 Efferent arteriole |  | Vessel that carries blood out of the glomerulus. | 25.10
-Proximal convoluted tubule | pct | Tubule section that reabsorbs most water and nutrients.
+Proximal convoluted tubule | pct | Tubule section that reabsorbs most water and nutrients. | 25.13
 Nephron loop | loop of henle | U-shaped tubule section that dips into the medulla. | 25.17
 Descending limb | descending loop | Part of the loop permeable to water but not salt.
 Ascending limb | ascending loop | Part of the loop that pumps salt out but is not permeable to water.
@@ -2672,31 +2672,31 @@ Ductus deferens | vas deferens | Duct carrying sperm from the epididymis toward 
 Spermatic cord |  | Bundle with the ductus deferens, vessels and nerves. | 27.2
 Seminal vesicles | seminal vesicle | Glands that add fructose-rich fluid to semen. | 27.2
 Prostate gland | prostate | Gland around the urethra that adds a milky fluid to semen. | 27.2
-Bulbourethral glands | bulbourethral gland; cowpers glands; cowper's glands | Glands that release a clear mucus before ejaculation.
-Ejaculatory duct | ejaculatory ducts | Duct formed by the ductus deferens and seminal vesicle duct.
+Bulbourethral glands | bulbourethral gland; cowpers glands; cowper's glands | Glands that release a clear mucus before ejaculation. | 27.2
+Ejaculatory duct | ejaculatory ducts | Duct formed by the ductus deferens and seminal vesicle duct. | 27.2
 Semen |  | Sperm plus the fluids of the accessory glands. | 27.2
 Penis |  | External male organ containing the urethra. | 27.7
-Corpus cavernosum | corpora cavernosa | Paired erectile tissue columns of the penis.
-Corpus spongiosum | | Erectile tissue around the urethra.
+Corpus cavernosum | corpora cavernosa | Paired erectile tissue columns of the penis. | 27.7
+Corpus spongiosum |  | Erectile tissue around the urethra. | 27.7
 Vasectomy |  | Surgery that cuts the ductus deferens. | 27.2
 `),
 D("ch27-fem","ch27","Female Reproductive Anatomy","Name the structure or term.","-",`
 Ovaries | ovary | Female gonads that make eggs, estrogen and progesterone. | 27.14
 Ovarian follicle | follicle; follicles | Egg surrounded by supporting cells. | 27.12
 Uterine tubes | uterine tube; fallopian tubes; oviducts | Tubes carrying the egg from the ovary to the uterus. | 27.14
-Fimbriae | fimbria | Finger-like ends of the uterine tube that sweep the egg in.
-Ampulla | | Wide part of the uterine tube where fertilization usually happens.
+Fimbriae | fimbria | Finger-like ends of the uterine tube that sweep the egg in. | 27.14
+Ampulla |  | Wide part of the uterine tube where fertilization usually happens. | 27.14
 Uterus | womb | Muscular organ where a fetus develops. | 27.14
-Fundus | | Dome-shaped top of the uterus.
+Fundus |  | Dome-shaped top of the uterus. | 27.14
 Cervix |  | Narrow lower part of the uterus that opens into the vagina. | 27.14
 Endometrium |  | Inner lining of the uterus that sheds in menstruation. | 27.15
-Myometrium | | Thick smooth muscle layer of the uterus.
-Perimetrium | | Outer serous layer of the uterus.
+Myometrium |  | Thick smooth muscle layer of the uterus. | 27.14
+Perimetrium |  | Outer serous layer of the uterus. | 27.14
 Vagina |  | Muscular canal from the cervix to the outside. | 27.14
 Vulva | external genitalia | External female genitals. | 27.10
 Labia majora |  | Outer folds of the vulva. | 27.10
 Labia minora |  | Inner folds of the vulva. | 27.10
-Clitoris | | Erectile organ of the vulva.
+Clitoris |  | Erectile organ of the vulva. | 27.10
 Mammary glands | mammary gland; breasts | Glands that make milk. | 27.17
 Lactiferous ducts | lactiferous duct | Ducts that carry milk to the nipple. | 27.17
 Ectopic pregnancy | | Embryo implants outside the uterus, usually in a uterine tube.
@@ -2824,7 +2824,7 @@ Down syndrome | trisomy 21 | Extra copy of chromosome 21.
 /* ===================== UNITS (v2.0: unit number = textbook chapter number) ===================== */
 const SOON=n=>({soon:n});
 /* v2.1: OpenStax figures available as files next to this page (figs/<number>.jpg) */
-const FIGS=new Set(["1.12", "1.13", "1.14", "1.15", "1.16", "1.17", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9", "2.10", "2.11", "2.12", "2.13", "2.14", "2.15", "2.16", "2.17", "2.18", "2.19", "2.20", "2.21", "2.22", "2.23", "2.24", "2.25", "2.26", "2.27", "2.28", "2.29", "2.30", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.19", "3.22", "3.24", "3.25", "3.26", "3.27", "3.28", "3.29", "3.31", "3.34", "3.35", "3.36", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "4.10", "4.11", "4.12", "4.13", "4.14", "4.15", "4.16", "4.17", "4.18", "4.19", "4.20", "4.22", "5.2", "5.3", "5.5", "5.6", "5.7", "5.8", "5.11", "5.12", "5.13", "5.14", "5.15", "5.16", "5.18", "5.19", "5.20", "5.21", "5.22", "6.5", "6.6", "6.7", "6.8", "6.9", "6.10", "6.11", "6.12", "6.13", "6.15", "6.16", "6.17", "6.18", "6.19", "6.20", "6.21", "6.22", "6.23", "6.24", "7.2", "7.3", "7.4", "7.5", "7.7", "7.8", "7.9", "7.10", "7.12", "7.13", "7.14", "7.15", "7.16", "7.17", "7.18", "7.19", "7.20", "7.21", "7.23", "7.24", "7.25", "7.26", "7.28", "7.29", "7.32", "8.3", "8.4", "8.5", "8.6", "8.7", "8.8", "8.12", "8.13", "8.15", "8.16", "8.17", "8.18", "8.19", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11", "9.12", "9.13", "9.14", "9.15", "9.16", "9.17", "9.18", "9.19", "9.20", "9.21", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8", "10.9", "10.10", "10.11", "10.12", "10.13", "10.14", "10.15", "10.16", "10.17", "10.19", "10.20", "10.21", "10.22", "10.23", "10.24", "10.25", "11.2", "11.3", "11.4", "11.10", "11.13", "11.14", "11.15", "11.16", "11.17", "11.18", "11.19", "11.22", "11.23", "11.24", "11.25", "11.26", "11.27", "11.29", "11.30", "11.31", "11.32", "11.33", "12.2", "12.3", "12.4", "12.5", "12.6", "12.8", "12.9", "12.10", "12.11", "12.12", "12.13", "12.14", "12.16", "12.18", "12.19", "12.23", "12.24", "12.25", "12.26", "12.27", "12.28", "13.2", "13.3", "13.5", "13.6", "13.7", "13.9", "13.11", "13.12", "13.13", "13.15", "13.16", "13.17", "13.18", "13.19", "13.20", "13.22", "13.24", "14.2", "14.3", "14.4", "14.5", "14.6", "14.7", "14.9", "14.12", "14.15", "14.19", "14.22", "14.23", "14.24", "14.25", "14.27", "14.28", "15.2", "15.3", "15.4", "15.6", "15.7", "15.8", "15.9", "15.11", "15.12", "15.13", "15.14", "15.15", "16.1", "16.2", "16.3", "16.6", "16.7", "16.8", "17.1", "17.2", "17.3", "17.4", "17.5", "17.7", "17.8", "17.9", "17.10", "17.12", "17.14", "17.15", "17.16", "17.17", "17.18", "18.1", "18.2", "18.4", "18.5", "18.6", "18.7", "18.8", "18.9", "18.10", "18.11", "18.12", "18.14", "18.15", "18.16", "19.2", "19.4", "19.5", "19.6", "19.8", "19.9", "19.10", "19.11", "19.13", "19.15", "19.16", "19.18", "19.19", "19.20", "19.23", "19.24", "19.25", "19.26", "19.27", "19.28", "19.30", "19.31", "19.32", "19.34", "20.2", "20.3", "20.4", "20.5", "20.6", "20.7", "20.8", "20.10", "20.11", "20.12", "20.13", "20.15", "20.16", "20.19", "20.23", "20.25", "20.26", "20.28", "20.30", "20.31", "20.33", "20.34", "20.36", "20.37", "20.40", "20.41", "20.43", "20.44", "21.1", "21.3", "21.4", "21.5", "21.7", "21.8", "21.9", "21.10", "21.11", "21.13", "21.15", "21.17", "21.19", "21.20", "21.21", "21.23", "21.24", "21.25", "21.27", "21.28", "21.29", "22.2", "22.4", "22.6", "22.7", "22.8", "22.9", "22.10", "22.12", "22.14", "22.15", "22.16", "22.17", "22.18", "22.21", "22.22", "22.23", "22.25", "22.26", "22.28", "23.3", "23.4", "23.5", "23.6", "23.7", "23.8", "23.9", "23.11", "23.13", "23.14", "23.15", "23.16", "23.18", "23.19", "23.20", "23.21", "23.23", "23.24", "23.25", "23.26", "23.27", "23.28", "23.29", "23.32", "23.33", "24.1", "24.2", "24.4", "24.5", "24.6", "24.7", "24.8", "24.10", "24.14", "24.15", "24.16", "24.17", "24.18", "24.20", "24.21", "24.22", "24.23", "25.3", "25.4", "25.5", "25.6", "25.7", "25.8", "25.10", "25.11", "25.13", "25.14", "25.15", "25.16", "25.17", "25.20", "25.23", "26.1", "26.3", "26.5", "26.6", "26.7", "26.9", "26.10", "26.11", "26.13", "26.16", "26.17", "26.18", "27.1", "27.2", "27.3", "27.4", "27.5", "27.6", "27.7", "27.8", "27.10", "27.11", "27.12", "27.14", "27.15", "27.17", "27.18", "28.1", "28.2", "28.4", "28.6", "28.7", "28.8", "28.10", "28.11", "28.12", "28.13", "28.18", "28.20", "28.21", "28.24", "28.25", "28.26", "28.27", "28.28"]);
+const FIGS=new Set(["1.12", "1.13", "1.14", "1.15", "1.16", "1.17", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9", "2.10", "2.11", "2.12", "2.13", "2.14", "2.15", "2.16", "2.17", "2.18", "2.19", "2.20", "2.21", "2.22", "2.23", "2.24", "2.25", "2.26", "2.27", "2.28", "2.29", "2.30", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.19", "3.22", "3.24", "3.25", "3.26", "3.27", "3.28", "3.29", "3.31", "3.34", "3.35", "3.36", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "4.10", "4.11", "4.12", "4.13", "4.14", "4.15", "4.16", "4.17", "4.18", "4.19", "4.20", "4.22", "5.2", "5.3", "5.5", "5.6", "5.7", "5.8", "5.11", "5.12", "5.13", "5.14", "5.15", "5.16", "5.18", "5.19", "5.20", "5.21", "5.22", "6.5", "6.6", "6.7", "6.8", "6.9", "6.10", "6.11", "6.12", "6.13", "6.15", "6.16", "6.17", "6.18", "6.19", "6.20", "6.21", "6.22", "6.23", "6.24", "7.2", "7.3", "7.4", "7.5", "7.7", "7.8", "7.9", "7.10", "7.12", "7.13", "7.14", "7.15", "7.16", "7.17", "7.18", "7.19", "7.20", "7.21", "7.23", "7.24", "7.25", "7.26", "7.28", "7.29", "7.32", "8.3", "8.4", "8.5", "8.6", "8.7", "8.8", "8.12", "8.13", "8.15", "8.16", "8.17", "8.18", "8.19", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11", "9.12", "9.13", "9.14", "9.15", "9.16", "9.17", "9.18", "9.19", "9.20", "9.21", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8", "10.9", "10.10", "10.11", "10.12", "10.13", "10.14", "10.15", "10.16", "10.17", "10.19", "10.20", "10.21", "10.22", "10.23", "10.24", "10.25", "11.2", "11.3", "11.4", "11.10", "11.13", "11.14", "11.15", "11.16", "11.17", "11.18", "11.19", "11.22", "11.23", "11.24", "11.25", "11.26", "11.27", "11.29", "11.30", "11.31", "11.32", "11.33", "12.2", "12.3", "12.4", "12.5", "12.6", "12.8", "12.9", "12.10", "12.11", "12.12", "12.13", "12.14", "12.16", "12.18", "12.19", "12.23", "12.24", "12.25", "12.26", "12.27", "12.28", "13.2", "13.3", "13.5", "13.6", "13.7", "13.9", "13.11", "13.12", "13.13", "13.15", "13.16", "13.17", "13.18", "13.19", "13.20", "13.22", "13.24", "14.2", "14.3", "14.4", "14.5", "14.6", "14.7", "14.9", "14.12", "14.15", "14.19", "14.22", "14.23", "14.24", "14.25", "14.27", "14.28", "15.2", "15.3", "15.4", "15.6", "15.7", "15.8", "15.9", "15.11", "15.12", "15.13", "15.14", "15.15", "16.1", "16.2", "16.3", "16.6", "16.7", "16.8", "17.1", "17.2", "17.3", "17.4", "17.5", "17.7", "17.8", "17.9", "17.10", "17.12", "17.14", "17.15", "17.16", "17.17", "17.18", "18.1", "18.2", "18.4", "18.5", "18.6", "18.7", "18.8", "18.9", "18.10", "18.11", "18.12", "18.14", "18.15", "18.16", "19.2", "19.4", "19.5", "19.6", "19.8", "19.9", "19.10", "19.11", "19.13", "19.15", "19.16", "19.18", "19.19", "19.20", "19.23", "19.24", "19.25", "19.26", "19.27", "19.28", "19.30", "19.31", "19.32", "19.34", "20.2", "20.3", "20.4", "20.5", "20.6", "20.7", "20.8", "20.10", "20.11", "20.12", "20.13", "20.15", "20.16", "20.19", "20.23", "20.25", "20.26", "20.28", "20.30", "20.31", "20.33", "20.34", "20.36", "20.37", "20.40", "20.41", "20.43", "20.44", "21.1", "21.3", "21.4", "21.5", "21.7", "21.8", "21.9", "21.10", "21.11", "21.13", "21.15", "21.17", "21.19", "21.20", "21.21", "21.23", "21.24", "21.25", "21.27", "21.28", "21.29", "22.2", "22.4", "22.6", "22.7", "22.8", "22.9", "22.10", "22.12", "22.14", "22.15", "22.16", "22.17", "22.18", "22.21", "22.22", "22.23", "22.25", "22.26", "22.28", "23.3", "23.4", "23.5", "23.6", "23.7", "23.8", "23.9", "23.11", "23.13", "23.14", "23.15", "23.16", "23.18", "23.19", "23.20", "23.21", "23.23", "23.24", "23.25", "23.26", "23.27", "23.28", "23.29", "23.32", "23.33", "24.1", "24.2", "24.4", "24.5", "24.6", "24.7", "24.8", "24.10", "24.14", "24.15", "24.16", "24.17", "24.18", "24.20", "24.21", "24.22", "24.23", "25.3", "25.4", "25.5", "25.6", "25.7", "25.8", "25.10", "25.11", "25.13", "25.14", "25.15", "25.16", "25.17", "25.20", "25.23", "26.1", "26.3", "26.5", "26.6", "26.7", "26.9", "26.10", "26.11", "26.13", "26.16", "26.17", "26.18", "27.1", "27.2", "27.3", "27.4", "27.5", "27.6", "27.7", "27.8", "27.10", "27.11", "27.12", "27.14", "27.15", "27.17", "27.18", "28.1", "28.2", "28.4", "28.6", "28.7", "28.8", "28.10", "28.11", "28.12", "28.13", "28.18", "28.20", "28.21", "28.24", "28.25", "28.26", "28.27", "28.28", "11.5", "11.9", "11.11", "13.23", "20.35", "22.11", "23.2", "23.10", "23.12"]);
 const UNITS=[
  {id:"ch1",name:"Unit 1 - Anatomical Terminology",decks:["ch1-reg","ch1-dir","ch1-pl","ch1-cav","ch1-abd","ch1-ser"]},
  {id:"ch2",name:"Unit 2 - Chemistry",decks:["ch2-atom","ch2-bond","ch2-rxn","ch2-inorg","ch2-org"]},
@@ -2865,7 +2865,7 @@ NEWDECKS.forEach(d=>{DECKS[d.id]=d;});
    v2.4 rule that offered the images choice on any deck where 60% of cards had a figure. */
 const IDDECKS=new Set(["ch1-reg","ch1-pl","ch1-cav","ch1-abd","ch1-ser","ch4-epi","ch4-ct","ch5-lay","ch5-str","ch5-acc","ch6-str","ch6-cell","ch7-skull","ch7-vert","ch7-thor","ch8-pect","ch8-arm","ch8-pelv","ch8-leg","ch9-syn","ch9-sel","ch10-str","ch11-head","ch11-resp","ch11-back","ch11-abd","ch11-sh","ch11-arm","ch11-hand","ch11-hip","ch11-thigh","ch11-leg","ch12-cell","ch13-cns","ch13-csf","ch13-pns","ch13-cn","ch14-spec","ch18-wbc","ch19-anat","ch19-cond","ch20-str","ch20-art","ch20-vein","ch21-lym","ch22-anat","ch23-mouth","ch23-stom","ch23-int","ch23-acc","ch25-anat","ch25-neph","ch27-male","ch27-fem"]);
 /* Card IDs the image build produced all three files for. Rewritten by tools/idimg/build.py. */
-const IDIMG=new Set(["ch1-cav-1","ch1-cav-10","ch1-cav-11","ch1-cav-2","ch1-cav-5","ch1-cav-6","ch1-cav-7","ch1-cav-8","ch1-cav-9","ch1-pl-3","ch1-pl-4","ch1-pl-5","ch10-str-1","ch10-str-19","ch10-str-2","ch10-str-20","ch10-str-22","ch10-str-6","ch10-str-9","ch11-abd-0","ch11-abd-1","ch11-abd-2","ch11-abd-3","ch11-abd-4","ch11-arm-0","ch11-arm-1","ch11-arm-2","ch11-arm-3","ch11-arm-4","ch11-arm-5","ch11-arm-6","ch11-arm-7","ch11-back-0","ch11-back-1","ch11-back-2","ch11-back-4","ch11-back-5","ch11-back-6","ch11-back-7","ch11-back-8","ch11-hand-0","ch11-hand-1","ch11-hand-10","ch11-hand-11","ch11-hand-2","ch11-hand-3","ch11-hand-4","ch11-hand-5","ch11-hand-6","ch11-hand-7","ch11-hand-8","ch11-hand-9","ch11-head-0","ch11-head-10","ch11-head-11","ch11-head-12","ch11-head-14","ch11-head-15","ch11-head-9","ch11-hip-0","ch11-hip-2","ch11-hip-4","ch11-hip-5","ch11-hip-6","ch11-hip-7","ch11-leg-0","ch11-leg-1","ch11-leg-2","ch11-leg-3","ch11-leg-4","ch11-leg-5","ch11-leg-6","ch11-resp-0","ch11-resp-1","ch11-resp-2","ch11-resp-3","ch11-resp-4","ch11-resp-5","ch11-resp-6","ch11-sh-0","ch11-sh-1","ch11-sh-10","ch11-sh-11","ch11-sh-12","ch11-sh-13","ch11-sh-2","ch11-sh-3","ch11-sh-4","ch11-sh-5","ch11-sh-6","ch11-sh-7","ch11-thigh-0","ch11-thigh-1","ch11-thigh-10","ch11-thigh-11","ch11-thigh-12","ch11-thigh-13","ch11-thigh-2","ch11-thigh-3","ch11-thigh-6","ch11-thigh-7","ch11-thigh-8","ch11-thigh-9","ch12-cell-16","ch12-cell-17","ch13-cns-14","ch13-cns-15","ch13-cns-16","ch13-cns-18","ch13-cns-19","ch13-cns-4","ch13-cns-6","ch13-csf-1","ch13-csf-12","ch13-csf-2","ch13-csf-3","ch13-csf-4","ch13-csf-7","ch13-csf-8","ch13-pns-10","ch13-pns-12","ch13-pns-13","ch13-pns-6","ch13-pns-8","ch14-spec-1","ch14-spec-11","ch14-spec-5","ch14-spec-7","ch14-spec-9","ch19-anat-0","ch19-anat-12","ch19-anat-14","ch19-anat-15","ch19-anat-16","ch19-anat-17","ch19-anat-20","ch19-anat-3","ch19-anat-5","ch19-anat-6","ch19-anat-7","ch19-cond-7","ch20-art-11","ch20-art-12","ch20-art-13","ch20-art-14","ch20-art-9","ch20-str-18","ch20-vein-10","ch20-vein-15","ch20-vein-16","ch20-vein-17","ch20-vein-3","ch20-vein-4","ch20-vein-9","ch21-lym-13","ch21-lym-3","ch21-lym-7","ch22-anat-10","ch22-anat-12","ch22-anat-18","ch22-anat-2","ch22-anat-24","ch22-anat-3","ch22-anat-9","ch23-int-0","ch23-int-1","ch23-int-11","ch23-int-12","ch23-int-13","ch23-int-3","ch23-mouth-17","ch23-mouth-19","ch23-mouth-8","ch23-stom-0","ch23-stom-1","ch23-stom-3","ch23-stom-6","ch25-anat-0","ch25-anat-13","ch25-anat-2","ch25-anat-3","ch25-anat-5","ch27-fem-11","ch27-fem-13","ch27-fem-14","ch27-fem-17","ch27-fem-7","ch27-male-10","ch27-male-4","ch27-male-9","ch4-ct-14","ch4-ct-16","ch4-ct-2","ch4-ct-3","ch4-ct-6","ch4-ct-7","ch4-ct-8","ch4-epi-6","ch4-epi-9","ch5-acc-1","ch5-acc-16","ch5-acc-3","ch5-acc-4","ch5-acc-5","ch5-acc-6","ch5-acc-7","ch5-acc-8","ch5-lay-2","ch5-lay-3","ch5-lay-4","ch5-str-0","ch5-str-1","ch5-str-2","ch5-str-3","ch5-str-4","ch5-str-5","ch6-cell-6","ch6-cell-7","ch6-cell-8","ch6-str-0","ch6-str-1","ch6-str-12","ch6-str-15","ch6-str-3","ch6-str-5","ch6-str-8","ch6-str-9","ch7-skull-10","ch7-skull-11","ch7-skull-12","ch7-skull-13","ch7-skull-14","ch7-skull-15","ch7-skull-17","ch7-skull-18","ch7-skull-19","ch7-skull-2","ch7-skull-20","ch7-skull-21","ch7-skull-22","ch7-skull-23","ch7-skull-24","ch7-skull-25","ch7-skull-26","ch7-skull-27","ch7-skull-28","ch7-skull-29","ch7-skull-3","ch7-skull-30","ch7-skull-31","ch7-skull-33","ch7-skull-34","ch7-skull-5","ch7-skull-6","ch7-skull-7","ch7-skull-8","ch7-skull-9","ch7-thor-1","ch7-thor-10","ch7-thor-2","ch7-thor-3","ch7-thor-4","ch7-thor-5","ch7-thor-6","ch7-vert-0","ch7-vert-1","ch7-vert-10","ch7-vert-11","ch7-vert-12","ch7-vert-13","ch7-vert-14","ch7-vert-15","ch7-vert-16","ch7-vert-17","ch7-vert-18","ch7-vert-19","ch7-vert-2","ch7-vert-20","ch7-vert-23","ch7-vert-24","ch7-vert-25","ch7-vert-3","ch7-vert-4","ch7-vert-5","ch7-vert-6","ch7-vert-7","ch7-vert-8","ch7-vert-9","ch8-arm-0","ch8-arm-1","ch8-arm-10","ch8-arm-11","ch8-arm-12","ch8-arm-13","ch8-arm-14","ch8-arm-15","ch8-arm-16","ch8-arm-17","ch8-arm-18","ch8-arm-19","ch8-arm-2","ch8-arm-20","ch8-arm-21","ch8-arm-22","ch8-arm-23","ch8-arm-24","ch8-arm-3","ch8-arm-4","ch8-arm-5","ch8-arm-6","ch8-arm-7","ch8-arm-8","ch8-arm-9","ch8-leg-0","ch8-leg-1","ch8-leg-10","ch8-leg-11","ch8-leg-12","ch8-leg-13","ch8-leg-14","ch8-leg-15","ch8-leg-16","ch8-leg-17","ch8-leg-18","ch8-leg-19","ch8-leg-2","ch8-leg-20","ch8-leg-21","ch8-leg-3","ch8-leg-4","ch8-leg-5","ch8-leg-6","ch8-leg-7","ch8-leg-8","ch8-leg-9","ch8-pect-1","ch8-pect-11","ch8-pect-2","ch8-pect-3","ch8-pect-5","ch8-pect-6","ch8-pect-7","ch8-pect-8","ch8-pect-9","ch8-pelv-10","ch8-pelv-11","ch8-pelv-12","ch8-pelv-13","ch8-pelv-2","ch8-pelv-3","ch8-pelv-4","ch8-pelv-5","ch8-pelv-6","ch8-pelv-7","ch8-pelv-8","ch8-pelv-9","ch9-sel-11","ch9-sel-4","ch9-sel-9","ch9-syn-0","ch9-syn-1","ch9-syn-12","ch9-syn-13","ch9-syn-4"]);
+const IDIMG=new Set(["ch1-cav-1","ch1-cav-10","ch1-cav-11","ch1-cav-2","ch1-cav-5","ch1-cav-6","ch1-cav-7","ch1-cav-8","ch1-cav-9","ch1-pl-3","ch1-pl-4","ch1-pl-5","ch10-str-1","ch10-str-19","ch10-str-2","ch10-str-20","ch10-str-22","ch10-str-6","ch10-str-9","ch11-abd-0","ch11-abd-1","ch11-abd-2","ch11-abd-3","ch11-abd-4","ch11-arm-0","ch11-arm-1","ch11-arm-2","ch11-arm-3","ch11-arm-4","ch11-arm-5","ch11-arm-6","ch11-arm-7","ch11-back-0","ch11-back-1","ch11-back-2","ch11-back-4","ch11-back-5","ch11-back-6","ch11-back-7","ch11-back-8","ch11-hand-0","ch11-hand-1","ch11-hand-10","ch11-hand-11","ch11-hand-2","ch11-hand-3","ch11-hand-4","ch11-hand-5","ch11-hand-6","ch11-hand-7","ch11-hand-8","ch11-hand-9","ch11-head-0","ch11-head-10","ch11-head-11","ch11-head-12","ch11-head-13","ch11-head-14","ch11-head-15","ch11-head-16","ch11-head-17","ch11-head-18","ch11-head-19","ch11-head-2","ch11-head-20","ch11-head-21","ch11-head-3","ch11-head-9","ch11-hip-0","ch11-hip-2","ch11-hip-4","ch11-hip-5","ch11-hip-6","ch11-hip-7","ch11-leg-0","ch11-leg-1","ch11-leg-2","ch11-leg-3","ch11-leg-4","ch11-leg-5","ch11-leg-6","ch11-resp-0","ch11-resp-1","ch11-resp-2","ch11-resp-3","ch11-resp-4","ch11-resp-5","ch11-resp-6","ch11-resp-8","ch11-sh-0","ch11-sh-1","ch11-sh-10","ch11-sh-11","ch11-sh-12","ch11-sh-13","ch11-sh-2","ch11-sh-3","ch11-sh-4","ch11-sh-5","ch11-sh-6","ch11-sh-7","ch11-thigh-0","ch11-thigh-1","ch11-thigh-10","ch11-thigh-11","ch11-thigh-12","ch11-thigh-13","ch11-thigh-2","ch11-thigh-3","ch11-thigh-6","ch11-thigh-7","ch11-thigh-8","ch11-thigh-9","ch12-cell-16","ch12-cell-17","ch12-cell-4","ch12-cell-7","ch13-cn-0","ch13-cn-10","ch13-cn-11","ch13-cn-2","ch13-cn-3","ch13-cn-4","ch13-cn-5","ch13-cn-6","ch13-cn-7","ch13-cn-8","ch13-cn-9","ch13-cns-14","ch13-cns-15","ch13-cns-16","ch13-cns-18","ch13-cns-19","ch13-cns-4","ch13-cns-5","ch13-cns-6","ch13-cns-7","ch13-cns-8","ch13-cns-9","ch13-csf-1","ch13-csf-12","ch13-csf-2","ch13-csf-3","ch13-csf-4","ch13-csf-7","ch13-csf-8","ch13-pns-10","ch13-pns-12","ch13-pns-13","ch13-pns-6","ch13-pns-8","ch14-spec-1","ch14-spec-11","ch14-spec-12","ch14-spec-13","ch14-spec-5","ch14-spec-7","ch14-spec-9","ch19-anat-0","ch19-anat-12","ch19-anat-13","ch19-anat-14","ch19-anat-15","ch19-anat-16","ch19-anat-17","ch19-anat-2","ch19-anat-20","ch19-anat-3","ch19-anat-5","ch19-anat-6","ch19-anat-7","ch19-cond-7","ch20-art-11","ch20-art-12","ch20-art-13","ch20-art-14","ch20-art-9","ch20-str-18","ch20-str-5","ch20-str-7","ch20-str-8","ch20-vein-10","ch20-vein-15","ch20-vein-16","ch20-vein-17","ch20-vein-18","ch20-vein-3","ch20-vein-4","ch20-vein-9","ch21-lym-13","ch21-lym-3","ch21-lym-7","ch22-anat-10","ch22-anat-12","ch22-anat-18","ch22-anat-19","ch22-anat-2","ch22-anat-21","ch22-anat-24","ch22-anat-3","ch22-anat-9","ch23-acc-8","ch23-int-0","ch23-int-1","ch23-int-10","ch23-int-11","ch23-int-12","ch23-int-13","ch23-int-15","ch23-int-3","ch23-int-9","ch23-mouth-1","ch23-mouth-14","ch23-mouth-15","ch23-mouth-16","ch23-mouth-17","ch23-mouth-19","ch23-mouth-2","ch23-mouth-3","ch23-mouth-7","ch23-mouth-8","ch23-stom-0","ch23-stom-1","ch23-stom-3","ch23-stom-5","ch23-stom-6","ch23-stom-7","ch23-stom-8","ch25-anat-0","ch25-anat-1","ch25-anat-10","ch25-anat-13","ch25-anat-2","ch25-anat-3","ch25-anat-4","ch25-anat-5","ch25-anat-6","ch25-anat-7","ch25-anat-8","ch25-anat-9","ch27-fem-11","ch27-fem-13","ch27-fem-14","ch27-fem-15","ch27-fem-17","ch27-fem-7","ch27-male-10","ch27-male-11","ch27-male-12","ch27-male-15","ch27-male-16","ch27-male-4","ch27-male-9","ch4-ct-14","ch4-ct-16","ch4-ct-2","ch4-ct-3","ch4-ct-6","ch4-ct-7","ch4-ct-8","ch4-epi-6","ch4-epi-9","ch5-acc-1","ch5-acc-16","ch5-acc-3","ch5-acc-4","ch5-acc-5","ch5-acc-6","ch5-acc-7","ch5-acc-8","ch5-lay-2","ch5-lay-3","ch5-lay-4","ch5-str-0","ch5-str-1","ch5-str-2","ch5-str-3","ch5-str-4","ch5-str-5","ch6-cell-6","ch6-cell-7","ch6-cell-8","ch6-str-0","ch6-str-1","ch6-str-12","ch6-str-15","ch6-str-3","ch6-str-5","ch6-str-8","ch6-str-9","ch7-skull-10","ch7-skull-11","ch7-skull-12","ch7-skull-13","ch7-skull-14","ch7-skull-15","ch7-skull-17","ch7-skull-18","ch7-skull-19","ch7-skull-2","ch7-skull-20","ch7-skull-21","ch7-skull-22","ch7-skull-23","ch7-skull-24","ch7-skull-25","ch7-skull-26","ch7-skull-27","ch7-skull-28","ch7-skull-29","ch7-skull-3","ch7-skull-30","ch7-skull-31","ch7-skull-33","ch7-skull-34","ch7-skull-5","ch7-skull-6","ch7-skull-7","ch7-skull-8","ch7-skull-9","ch7-thor-1","ch7-thor-10","ch7-thor-2","ch7-thor-3","ch7-thor-4","ch7-thor-5","ch7-thor-6","ch7-vert-0","ch7-vert-1","ch7-vert-10","ch7-vert-11","ch7-vert-12","ch7-vert-13","ch7-vert-14","ch7-vert-15","ch7-vert-16","ch7-vert-17","ch7-vert-18","ch7-vert-19","ch7-vert-2","ch7-vert-20","ch7-vert-23","ch7-vert-24","ch7-vert-25","ch7-vert-3","ch7-vert-4","ch7-vert-5","ch7-vert-6","ch7-vert-7","ch7-vert-8","ch7-vert-9","ch8-arm-0","ch8-arm-1","ch8-arm-10","ch8-arm-11","ch8-arm-12","ch8-arm-13","ch8-arm-14","ch8-arm-15","ch8-arm-16","ch8-arm-17","ch8-arm-18","ch8-arm-19","ch8-arm-2","ch8-arm-20","ch8-arm-21","ch8-arm-22","ch8-arm-23","ch8-arm-24","ch8-arm-3","ch8-arm-4","ch8-arm-5","ch8-arm-6","ch8-arm-7","ch8-arm-8","ch8-arm-9","ch8-leg-0","ch8-leg-1","ch8-leg-10","ch8-leg-11","ch8-leg-12","ch8-leg-13","ch8-leg-14","ch8-leg-15","ch8-leg-16","ch8-leg-17","ch8-leg-18","ch8-leg-19","ch8-leg-2","ch8-leg-20","ch8-leg-21","ch8-leg-3","ch8-leg-4","ch8-leg-5","ch8-leg-6","ch8-leg-7","ch8-leg-8","ch8-leg-9","ch8-pect-1","ch8-pect-11","ch8-pect-2","ch8-pect-3","ch8-pect-5","ch8-pect-6","ch8-pect-7","ch8-pect-8","ch8-pect-9","ch8-pelv-10","ch8-pelv-11","ch8-pelv-12","ch8-pelv-13","ch8-pelv-2","ch8-pelv-3","ch8-pelv-4","ch8-pelv-5","ch8-pelv-6","ch8-pelv-7","ch8-pelv-8","ch8-pelv-9","ch9-sel-11","ch9-sel-4","ch9-sel-9","ch9-syn-0","ch9-syn-1","ch9-syn-12","ch9-syn-13","ch9-syn-4"]);
 NEWDECKS.forEach(d=>{d.ident=IDDECKS.has(d.id);});
 /* A card only has pictures if the build made them; otherwise it shows the clue alone. */
 function idFiles(item){
@@ -3069,7 +3069,7 @@ function render(){
 const soonTile=(name,ico)=>`<div class="tile soon" aria-disabled="true">${ico}<h3>${esc(name)}</h3><div class="meta"><span class="badge">Coming soon</span></div></div>`;
 function lobby(){
   app.innerHTML=`<div class="top"><div class="brand">101<b>%</b> Anatomy</div></div>${statLine(statsFor(()=>true))}
-  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 3.1</p>`;
+  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 3.2</p>`;
   app.querySelectorAll("[data-unit]").forEach(b=>b.onclick=()=>{view={page:"unit",unit:b.dataset.unit};render();scrollTo(0,0);});
 }
 /* Two dots in a deck tile's corner: what kind of deck it is, and whether it has

@@ -929,5 +929,526 @@
    465,
    298
   ]
+ },
+ "ch11-head-2": {
+  "fig": "11.5",
+  "point": [
+   428,
+   55
+  ]
+ },
+ "ch11-resp-8": {
+  "fig": "11.5",
+  "point": [
+   380,
+   1320
+  ],
+  "kind": "circle"
+ },
+ "ch11-head-16": {
+  "fig": "11.9",
+  "point": [
+   965,
+   72
+  ]
+ },
+ "ch11-head-17": {
+  "fig": "11.9",
+  "point": [
+   975,
+   470
+  ]
+ },
+ "ch11-head-18": {
+  "fig": "11.9",
+  "point": [
+   672,
+   235
+  ]
+ },
+ "ch11-head-19": {
+  "fig": "11.9",
+  "point": [
+   1118,
+   285
+  ]
+ },
+ "ch11-head-20": {
+  "fig": "11.9",
+  "point": [
+   772,
+   80
+  ],
+  "kind": "circle"
+ },
+ "ch11-head-21": {
+  "fig": "11.9",
+  "point": [
+   795,
+   478
+  ],
+  "kind": "circle"
+ },
+ "ch11-head-3": {
+  "fig": "11.11",
+  "point": [
+   1010,
+   302
+  ]
+ },
+ "ch11-head-13": {
+  "fig": "11.11",
+  "point": [
+   237,
+   352
+  ]
+ },
+ "ch12-cell-4": {
+  "fig": "12.26",
+  "point": [
+   432,
+   135
+  ],
+  "kind": "circle"
+ },
+ "ch12-cell-7": {
+  "fig": "12.13",
+  "point": [
+   1203,
+   170
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-0": {
+  "fig": "13.23",
+  "point": [
+   510,
+   120
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-2": {
+  "fig": "13.23",
+  "point": [
+   518,
+   342
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-3": {
+  "fig": "13.23",
+  "point": [
+   494,
+   350
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-4": {
+  "fig": "13.23",
+  "point": [
+   608,
+   408
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-5": {
+  "fig": "13.23",
+  "point": [
+   517,
+   447
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-6": {
+  "fig": "13.23",
+  "point": [
+   603,
+   461
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-7": {
+  "fig": "13.23",
+  "point": [
+   476,
+   474
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-8": {
+  "fig": "13.23",
+  "point": [
+   617,
+   509
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-9": {
+  "fig": "13.23",
+  "point": [
+   621,
+   535
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-10": {
+  "fig": "13.23",
+  "point": [
+   487,
+   594
+  ],
+  "kind": "circle"
+ },
+ "ch13-cn-11": {
+  "fig": "13.23",
+  "point": [
+   495,
+   528
+  ],
+  "kind": "circle"
+ },
+ "ch13-cns-5": {
+  "fig": "13.6",
+  "point": [
+   335,
+   242
+  ],
+  "kind": "circle"
+ },
+ "ch13-cns-7": {
+  "fig": "13.7",
+  "point": [
+   485,
+   210
+  ]
+ },
+ "ch13-cns-8": {
+  "fig": "13.7",
+  "point": [
+   407,
+   413
+  ]
+ },
+ "ch13-cns-9": {
+  "fig": "13.7",
+  "point": [
+   577,
+   373
+  ]
+ },
+ "ch13-pns-9": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch13-pns-14": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch14-spec-12": {
+  "fig": "14.15",
+  "point": [
+   775,
+   350
+  ],
+  "kind": "circle"
+ },
+ "ch14-spec-13": {
+  "fig": "14.15",
+  "point": [
+   742,
+   332
+  ]
+ },
+ "ch19-anat-13": {
+  "fig": "19.4",
+  "point": [
+   805,
+   242
+  ],
+  "kind": "circle"
+ },
+ "ch19-anat-2": {
+  "fig": "19.5",
+  "point": [
+   762,
+   445
+  ]
+ },
+ "ch20-str-5": {
+  "fig": "20.7",
+  "point": [
+   385,
+   141
+  ],
+  "kind": "circle"
+ },
+ "ch20-str-7": {
+  "fig": "20.7",
+  "point": [
+   385,
+   70
+  ]
+ },
+ "ch20-str-8": {
+  "fig": "20.3",
+  "point": [
+   180,
+   468
+  ],
+  "kind": "circle"
+ },
+ "ch20-vein-6": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch20-vein-7": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch20-vein-8": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch20-vein-13": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch22-anat-19": {
+  "fig": "22.11",
+  "point": [
+   268,
+   532
+  ],
+  "kind": "circle"
+ },
+ "ch22-anat-20": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch22-anat-21": {
+  "fig": "22.11",
+  "point": [
+   102,
+   500
+  ]
+ },
+ "ch23-acc-8": {
+  "fig": "23.24",
+  "point": [
+   452,
+   695
+  ],
+  "kind": "circle"
+ },
+ "ch23-int-10": {
+  "fig": "23.2",
+  "point": [
+   382,
+   1018
+  ],
+  "kind": "circle"
+ },
+ "ch23-int-15": {
+  "fig": "23.21",
+  "point": [
+   400,
+   520
+  ]
+ },
+ "ch23-int-9": {
+  "fig": "23.21",
+  "point": [
+   320,
+   408
+  ],
+  "kind": "circle"
+ },
+ "ch23-mouth-1": {
+  "fig": "23.12",
+  "point": [
+   335,
+   172
+  ],
+  "kind": "circle"
+ },
+ "ch23-mouth-2": {
+  "fig": "23.12",
+  "point": [
+   452,
+   162
+  ],
+  "kind": "circle"
+ },
+ "ch23-mouth-3": {
+  "fig": "23.12",
+  "point": [
+   490,
+   204
+  ],
+  "kind": "circle"
+ },
+ "ch23-mouth-7": {
+  "fig": "23.2",
+  "point": [
+   520,
+   340
+  ]
+ },
+ "ch23-mouth-14": {
+  "fig": "23.10",
+  "point": [
+   270,
+   78
+  ]
+ },
+ "ch23-mouth-15": {
+  "fig": "23.10",
+  "point": [
+   372,
+   103
+  ]
+ },
+ "ch23-mouth-16": {
+  "fig": "23.10",
+  "point": [
+   432,
+   247
+  ]
+ },
+ "ch23-stom-5": {
+  "fig": "23.15",
+  "point": [
+   573,
+   543
+  ],
+  "kind": "circle"
+ },
+ "ch23-stom-7": {
+  "fig": "23.16",
+  "point": [
+   948,
+   106
+  ]
+ },
+ "ch23-stom-8": {
+  "fig": "23.16",
+  "point": [
+   942,
+   297
+  ],
+  "kind": "circle"
+ },
+ "ch25-anat-1": {
+  "fig": "25.8",
+  "point": [
+   632,
+   508
+  ],
+  "kind": "circle"
+ },
+ "ch25-anat-10": {
+  "fig": "25.8",
+  "point": [
+   545,
+   330
+  ],
+  "kind": "circle"
+ },
+ "ch25-anat-4": {
+  "fig": "25.8",
+  "point": [
+   790,
+   343
+  ]
+ },
+ "ch25-anat-6": {
+  "fig": "25.8",
+  "point": [
+   667,
+   371
+  ]
+ },
+ "ch25-anat-7": {
+  "fig": "25.8",
+  "point": [
+   690,
+   184
+  ]
+ },
+ "ch25-anat-8": {
+  "fig": "25.8",
+  "point": [
+   680,
+   232
+  ]
+ },
+ "ch25-anat-9": {
+  "fig": "25.8",
+  "point": [
+   655,
+   272
+  ]
+ },
+ "ch25-neph-7": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch27-fem-3": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch27-fem-4": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch27-fem-6": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch27-fem-9": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch27-fem-10": {
+  "skip": true,
+  "note": "hand point unreliable at this crop; needs closer review"
+ },
+ "ch27-fem-15": {
+  "fig": "27.10",
+  "point": [
+   965,
+   176
+  ],
+  "kind": "circle"
+ },
+ "ch27-male-11": {
+  "fig": "27.2",
+  "point": [
+   676,
+   1004
+  ],
+  "kind": "circle"
+ },
+ "ch27-male-12": {
+  "fig": "27.2",
+  "point": [
+   695,
+   905
+  ],
+  "kind": "circle"
+ },
+ "ch27-male-15": {
+  "fig": "27.7",
+  "point": [
+   930,
+   300
+  ]
+ },
+ "ch27-male-16": {
+  "fig": "27.7",
+  "point": [
+   1000,
+   462
+  ]
  }
 }
