@@ -42,7 +42,13 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Fix later, once the app is settled**: the forearm-extensor spots (Extensor digitorum, Digiti minimi, Carpi ulnaris, pollicis longus/brevis) sit a few pixels apart, so check each one; Orbicularis oris is a tiny muscle under a large blob; Semitendinosus and Semimembranosus leaders end close together.
 - **Bony landmarks (Units 7–8)**: 74 now have hand-placed pictures (v3.0). Still without a picture: Cranium, Facial bones, Hyoid bone, Temporal bone, Coracoid process (spots looked wrong; need a drawing that shows them), plus the group cards. Diagrams wanted: ribs and rib classification, thoracic cage, pelvic girdle and female pelvis, primary/secondary spinal curves, paranasal sinuses as a group, sternoclavicular joint. Fix later: Phalanges spot sits on the thumb, Linea aspera and Coracoid need better views.
 
+### Regression test (brainstorm 2026-11-07)
+- **Run the test on Andrew's gaming PC** through the Claude desktop app link (more cores means more useful tabs; `--tabs auto` already scales). Needs Python and Playwright installed there and a connected folder. Only worth it if the cloud run (about 40 s full) ever gets slow. *(2026-11-07)*
+- **Per-card timing log** (a `--timing` flag) in case a deck ever turns slow, for example from heavy pictures. *(2026-11-07)*
+- **Mirror the test into the claude.ai project as `claude/101-anatomy-regression-test-v2.0.py`** once there's room (the project is over its size limit; the old v1 copy there is out of date). *(2026-11-07)*
+
 ## Done
+- Regression test 2.0: parallel tabs, `--quick` / `--full` / `--units` / `--changed`, seeded runs; full check about 40 s, quick about 6 s (2026-11-07)
 - Hand-fixed pictures for 74 bone cards (skull, vertebrae, thorax, arm, pectoral, pelvis, leg); Adobe connector tried and not useful here (v3.0, 2026-11-06)
 - Hand-fixed pictures for 59 Unit 11 muscle cards from Head & Neck down; the `fig` override lets a card borrow a better drawing and a hand-placed `point` skips the automatic quality checks (v2.9, 2026-11-06)- Decks for all 28 units (v2.3, 2026-11-05)
 - Textbook figures on 1,545 cards + Images on/off choice (v2.4, 2026-11-05)
