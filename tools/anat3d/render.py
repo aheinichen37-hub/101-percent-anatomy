@@ -12,6 +12,11 @@ import os, re
 import cv2
 import numpy as np
 
+# House palette (Andrew, 2026-11-07): highlight blue, other muscles salmon, bone cream.
+HIGHLIGHT = (0, 195, 255)   # #00c3ff
+MUSCLE = (240, 170, 170)    # #f0aaaa
+BONE = (230, 226, 212)
+
 VIEWS = {  # (azimuth deg about the vertical axis, elevation deg)
     "front": (0, 0), "back": (180, 0), "left": (90, 0), "right": (-90, 0),
     "front-left": (35, 8), "front-right": (-35, 8), "top": (0, 85), "below": (0, -85)}
