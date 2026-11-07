@@ -4,7 +4,7 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.3
+Current version: 3.4
 
 ## Identification decks
 
@@ -43,3 +43,8 @@ it never deletes a round you already have.
 
 If the browser ever refuses to store the save (private browsing, a full phone), a red bar
 appears at the top of the app instead of failing silently, and it links to the backup sheet.
+
+## Credits
+
+- Textbook figures: OpenStax *Anatomy & Physiology 2e*, CC BY 4.0, labels removed.
+- Muscle and bone pictures: rendered from BodyParts3D, (c) The Database Center for Life Science, licensed under CC BY-SA 2.1 Japan (http://lifesciencedb.jp/bp3d/). Mitsuhashi N, et al. BodyParts3D: 3D structure database for anatomical concepts. Nucleic Acids Res. 2009;37:D782-5. https://doi.org/10.1093/nar/gkn613. The models were re-rendered and recolored for this app (tools/anat3d); those pictures are shared under CC BY-SA.

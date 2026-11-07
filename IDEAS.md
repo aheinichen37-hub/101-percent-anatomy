@@ -10,6 +10,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **SAM (MobileSAM ONNX) for structure outlines**: try it against the hand-placed points to auto-outline structures; Andrew would download the ~40 MB model to his Claude folder. *(2026-11-07)*
 - **Gray's Anatomy plates for gaps** (face muscles, Transversus thoracis, Serratus posterior superior): download via the built-in browser, add a credits page. *(2026-11-07)*
 - **Re-do the 13 skipped cards** (leg/arm veins, uterus parts, phrenic/femoral nerves) with closer crops. *(2026-11-07)*
+- **3D renders, next**: fill the gaps (ethmoid, lacrimal, palatine, iliocostalis, eye muscles, genioglossus, landmarks like foramina) with better views or cut-away renders; maybe organs and vessels from BodyParts3D; speed up huge frames. *(2026-11-07)*
 - **Match decks to guided notes**: Units 2, 7–9 and 12–28 are written from the OpenStax textbook; adjust each unit to Andrew's guided notes when he has them. *(2026-11-05)*
 - **Fix figure mismatches**: Andrew flags any card whose figure looks wrong in `101-anatomy-v2.4-figure-list.csv`. *(2026-11-05)*
 - **Pictures for Types of Body Movements** (`ch9-mov`): show the unlabeled movement drawing before answering (no highlight needed). Left out of v2.5. *(2026-11-05)*
