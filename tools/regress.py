@@ -1,4 +1,4 @@
-"""101% Anatomy regression playtest, v2.0. Run before EVERY release.
+"""101% Anatomy regression playtest, v2.1.0. Run before EVERY release.
 
 Usage: python3 tools/regress.py index.html [mode] [--tabs N|auto] [--seed N]
 
@@ -18,7 +18,7 @@ What it checks, on a small touch phone screen, for every deck it plays (and ever
   - identification decks: the after-answer picture shows when the card has one, the tip shows exactly
     when the card was missed and has a tip, and every 4th card advances with a left swipe instead of Next
 
-How it stays fast (v2.0):
+How it stays fast (v2.0; v2.1.0 clicks through the new "Type it" step):
   - several browser tabs (--tabs) pull decks from one shared queue, each tab with its own fake save
   - each card is answered, checked and advanced in ONE call into the page; a real touch/typing path
     (Playwright taps) still runs on the first, middle and last card of every round
@@ -29,7 +29,7 @@ Every deck's random answers come from --seed (printed in the result line), so a 
 import argparse, asyncio, functools, hashlib, http.server, json, os, random, sys, threading, time
 from playwright.async_api import async_playwright
 
-ap = argparse.ArgumentParser(description="101% Anatomy regression playtest v2.0")
+ap = argparse.ArgumentParser(description="101% Anatomy regression playtest v2.1.0")
 ap.add_argument("page", nargs="?", default="index.html")
 mg = ap.add_mutually_exclusive_group()
 mg.add_argument("--quick", action="store_true")
@@ -96,7 +96,7 @@ const swipe=async(o,P)=>{const before=round.i,el=q("#app");
   el.dispatchEvent(new TouchEvent("touchend",{bubbles:true,touches:[],changedTouches:[t(200,410)]}));
   await tick();if(!(o.last||round.i===before+1))P.push("swipe did not advance card "+(o.i+1));};
 const open=(deck,mode)=>{view={page:"unit",unit:DECKS[deck].unit};render();
-  const tile=q('[data-deck="'+deck+'"]');if(!tile)return{err:"deck tile missing"};tile.click();
+  const tile=q('[data-deck="'+deck+'"]');if(!tile)return{err:"deck tile missing"};tile.click();{const h=q("#how-type");if(h)h.click();}
   if(mode){const b=q(mode);if(!b)return{err:"mode button "+mode+" missing"};b.click();}
   return{n:round.qs.length,ident:!!DECKS[deck].ident};};
 const card=async o=>{const P=[];const acc=round.qs[round.i].st.accept[0];const kind=kindOf(o.r,acc);

@@ -15,6 +15,7 @@ Errors (exit 1):
     size, whose highlight is empty, covers more than 45% of the picture, or leaves the answer image
     identical to the question image
   - a card's textbook figure file does not load
+  - (v1.1.0) a multiple-choice card does not get 4 distinct choices with exactly one right, or offers a wrong choice that is also right
   - typing the right answer on the first card is not marked correct, or "zzzz" twice is not marked wrong
 Warnings (shown; errors only with --strict):
   - two cards in one deck accept the same answer (ambiguous)
@@ -23,7 +24,7 @@ Warnings (shown; errors only with --strict):
 import argparse, asyncio, functools, http.server, json, os, sys, threading
 from playwright.async_api import async_playwright
 
-ap = argparse.ArgumentParser(description="101% Anatomy correctness test v1.0")
+ap = argparse.ArgumentParser(description="101% Anatomy correctness test v1.1.0")
 ap.add_argument("page", nargs="?", default="index.html")
 ap.add_argument("--tabs", type=int, default=4)
 ap.add_argument("--decks", help="comma-separated deck ids")
@@ -95,20 +96,32 @@ for(const st of items){
     }
   }
 }
+/* multiple choice: every card must get 4 distinct choices with exactly one right, and no wrong
+   choice that could also be right, over several draws */
+for(const st of items){
+  for(let k=0;k<6;k++){
+    const ch=pickChoices(deckId,st);
+    if(ch.length!==4){E.push(st.id+": multiple choice built "+ch.length+" choices, not 4");break;}
+    if(ch.filter(c=>c.right).length!==1||!ch.find(c=>c.right&&c.id===st.id)){E.push(st.id+": multiple choice does not have exactly one right choice");break;}
+    if(new Set(ch.map(c=>norm(c.name))).size!==4){E.push(st.id+": multiple choice has two choices with the same words");break;}
+    const bad=ch.find(c=>!c.right&&(st.accept.some(a=>norm(a)===norm(c.name))||(st.also||[]).includes(c.id)));
+    if(bad){E.push(st.id+": multiple choice offers '"+bad.name+"', which is also right");break;}
+  }
+}
 return{E,W,n:items.length};}'''
 
 # Real typing path on one card per deck.
 UI = r'''async ([deckId,mode])=>{
 const tick=()=>new Promise(r=>setTimeout(r,30));const q=s=>document.querySelector(s);
 view={page:"unit",unit:DECKS[deckId].unit};render();
-const tile=q('[data-deck="'+deckId+'"]');if(!tile)return["deck tile missing"];tile.click();
+const tile=q('[data-deck="'+deckId+'"]');if(!tile)return["deck tile missing"];tile.click();{const h=q("#how-type");if(h)h.click();}
 if(mode){const b=q(mode);if(!b)return["mode button "+mode+" missing"];b.click();}
 const P=[];const put=v=>{const a=q("#ans");if(!a||a.disabled){P.push("#ans not typeable");return false;}a.value=v;a.dispatchEvent(new Event("input",{bubbles:true}));return true;};
 const go=()=>{const b=q("#go");if(b)b.click();};
 if(typeof round==="undefined"||!round||!round.qs){return["round did not start"];}
 const st=round.qs[round.i].st;
 if(put(st.name)){go();await tick();if(!q(".fb.ok"))P.push(st.id+": typing the right answer '"+st.name+"' was not marked correct");}
-view={page:"unit",unit:DECKS[deckId].unit};render();q('[data-deck="'+deckId+'"]').click();if(mode)q(mode).click();
+view={page:"unit",unit:DECKS[deckId].unit};render();q('[data-deck="'+deckId+'"]').click();{const h=q("#how-type");if(h)h.click();}if(mode)q(mode).click();
 if(put("zzzz")){go();await tick();put("zzzz");go();await tick();
   if(!q(".fb.bad"))P.push("typing a wrong answer twice was not marked wrong");
   else if(!(q(".fb.bad").textContent||"").includes(round.qs[round.i].st.name))P.push("after two misses the right answer is not shown");}
@@ -176,7 +189,7 @@ async def main():
         print("warn", w)
     if len(warns) > 25:
         print(f"... and {len(warns) - 25} more warnings")
-    print(f"RESULT: {'FAIL' if bad else 'PASS'} | correctness v1.0 | {stats['decks']} decks, {stats['cards']} cards | "
+    print(f"RESULT: {'FAIL' if bad else 'PASS'} | correctness v1.1.0 | {stats['decks']} decks, {stats['cards']} cards | "
           f"{len(fails)} errors, {len(warns)} warnings | {ARGS.tabs} tabs | {secs}s")
     return 1 if bad else 0
 

@@ -26,11 +26,13 @@ SWIPE = """([x0,y0,x1,y1]) => {
 def test_ident_asks_mode_and_concept_does_not(page):
     page.evaluate("view={page:'unit',unit:DECKS['ch11-abd'].unit};render()")
     page.click('[data-deck="ch11-abd"]')
+    page.click("#how-type")
     assert page.locator("#img-on").count() == 1
     page.evaluate("$('#modalSlot').innerHTML=''")
 
     page.evaluate("view={page:'unit',unit:DECKS['ch12-ap'].unit};render()")
     page.click('[data-deck="ch12-ap"]')
+    page.click("#how-type")
     assert page.locator("#img-on").count() == 0
     assert page.evaluate("!!round") is True
 

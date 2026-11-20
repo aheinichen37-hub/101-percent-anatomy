@@ -111,6 +111,23 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 .res .btnrow{justify-content:center;width:100%}
 .res .btnrow .btn{flex:1 1 140px;padding:16px}
 
+/* v3.5.0: multiple choice study rounds and the readiness bar */
+.choices{display:grid;gap:10px;margin:16px 0 6px}
+.choice{display:flex;align-items:center;gap:12px;text-align:left;width:100%;min-height:54px;padding:12px 16px;border-radius:12px;border:1px solid var(--line2);background:var(--panel2);color:var(--fg);font-weight:600;font-size:17px;line-height:1.25}
+.choice .ck{flex:none;width:26px;height:26px;border-radius:7px;border:1px solid var(--line2);display:grid;place-items:center;font:500 13px var(--mono);color:var(--muted)}
+.choice .ct{flex:1;min-width:0}
+.choice .mark{flex:none;font-weight:700;font-size:20px}
+.choice.right{border-color:var(--green);background:rgba(63,195,114,.16)}
+.choice.right .mark{color:var(--green)}
+.choice.wrong{border-color:var(--red);background:rgba(239,79,85,.16)}
+.choice.wrong .mark{color:var(--red)}
+.choice.dim{opacity:.5}
+.choice[aria-disabled="true"]{pointer-events:none}
+.rbar{height:8px;border-radius:99px;background:#26262b;overflow:hidden}
+.rbar i{display:block;height:100%;background:#c4c4cb;border-radius:99px}
+.tile .ready{display:grid;gap:5px;font-size:12px;color:var(--muted)}
+.res .rbar{margin:4px 0 2px}
+
 /* modal */
 .scrim{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.65);display:grid;place-items:center;padding:20px}
 .modal{background:var(--panel2);border:1px solid var(--line2);border-radius:16px;padding:22px;max-width:360px;width:100%;display:grid;gap:12px;
@@ -195,7 +212,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.4</div>
+<div id="ver" aria-hidden="true">v3.5.0</div>
 
 <script>
 /* ===================== CONTENT ===================== */
@@ -2971,8 +2988,8 @@ function classify(raw,deckId){
 /* Saved shape on disk: {v, rounds, best, savedAt}. DATA in memory stays {rounds, best}.
    When the shape changes: bump SCHEMA and add a step to MIGRATE. Never drop an old save.
    Every read and write goes through STORE, so a cloud account can replace it later. */
-const LS="anat101.v1", LS_BAK="anat101.v1.backup", SCHEMA=2;
-let DATA={rounds:[],best:{}};
+const LS="anat101.v1", LS_BAK="anat101.v1.backup", SCHEMA=3;
+let DATA={rounds:[],best:{},mc:{}};
 let saveState={ok:true,err:"",recovered:false,savedAt:null};
 
 const STORE={
@@ -2982,11 +2999,12 @@ const STORE={
 };
 
 /* v1 -> v2: Cells moved from Unit 1 to Unit 3, so old rounds are re-filed (never mutates frozen db objects) */
-const refileU1=d=>({rounds:(d.rounds||[]).map(r=>r&&r.unit==="u1"?Object.assign({},r,{unit:"ch3"}):r),best:Object.assign({},d.best||{})});
-const MIGRATE={1:refileU1};
+const refileU1=d=>({rounds:(d.rounds||[]).map(r=>r&&r.unit==="u1"?Object.assign({},r,{unit:"ch3"}):r),best:Object.assign({},d.best||{}),mc:JSON.parse(JSON.stringify(d.mc||{}))});
+/* v2 -> v3: multiple-choice streaks (mc) were added; an older save simply has none yet */
+const MIGRATE={1:refileU1,2:d=>Object.assign({mc:{}},d)};
 const migrate=d=>refileU1(d);                      // the db path still re-files old rounds
 function upgrade(raw){
-  let v=Number(raw&&raw.v)||1, d={rounds:raw.rounds||[],best:raw.best||{}};
+  let v=Number(raw&&raw.v)||1, d={rounds:raw.rounds||[],best:raw.best||{},mc:raw.mc||{}};
   while(v<SCHEMA){ if(MIGRATE[v]) d=MIGRATE[v](d); v++; }
   return d;
 }
@@ -3004,7 +3022,7 @@ function loadLocal(){
   else if((Number(raw.v)||1)<SCHEMA) saveLocal();  // write the upgraded save back once
 }
 function saveLocal(){
-  const body=JSON.stringify({v:SCHEMA,rounds:DATA.rounds,best:DATA.best,savedAt:Date.now()});
+  const body=JSON.stringify({v:SCHEMA,rounds:DATA.rounds,best:DATA.best,mc:DATA.mc||{},savedAt:Date.now()});
   try{
     const prev=STORE.get(LS);
     STORE.set(LS,body);
@@ -3036,7 +3054,7 @@ async function initRemote(){
     if(!user||!db) return; const id=await user.id(); if(!id) return;
     const ref=db.collection("data/users/"+id).doc("stats");
     const snap=await ref.get(); remote={ref};
-    if(snap.exists){const d=snap.data();if(d&&Array.isArray(d.rounds)&&d.rounds.length>=DATA.rounds.length){DATA=migrate(JSON.parse(JSON.stringify({rounds:d.rounds,best:d.best||{}})));saveLocal();if(view.page!=="play")render();}}
+    if(snap.exists){const d=snap.data();if(d&&Array.isArray(d.rounds)&&d.rounds.length>=DATA.rounds.length){DATA=migrate(JSON.parse(JSON.stringify({rounds:d.rounds,best:d.best||{},mc:(d.mc&&Object.keys(d.mc).length)?d.mc:DATA.mc})));saveLocal();if(view.page!=="play")render();}}
     else if(DATA.rounds.length){await ref.set(DATA);}
   }catch(e){}
 }
@@ -3097,17 +3115,140 @@ function unitPage(uid){
   app.innerHTML=`<div class="top"><div><div class="crumb">101% Anatomy</div><div class="brand">${esc(u.name)}</div></div></div>${statLine(statsFor(r=>r.unit===uid))}
   <h2 class="sect">Decks</h2>
   <div class="legend"><span><i class="k-id"></i>Identification</span><span><i class="k-fn"></i>What it does</span><span><i class="k-term"></i>Term</span><span><i class="p-yes"></i>Picture first</span><span><i class="p-after"></i>Figure after</span><span><i class="p-no"></i>No picture</span></div>
-  <div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckDots(d)}${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div><span class="play">Play</span></button>`}).join("")}</div>`;
-  app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>(DECKS[b.dataset.deck].fn||DECKS[b.dataset.deck].ident)?chooseMode(b.dataset.deck):startRound(b.dataset.deck));
+  <div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckDots(d)}${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div>${readyBlock(id)}<span class="play">Play</span></button>`}).join("")}</div>`;
+  app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>chooseHow(b.dataset.deck));
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function chooseMode(deckId){
+function chooseMode(deckId,method){
   $("#modalSlot").innerHTML=`<div class="scrim"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mh"><h3 id="mh">${esc(DECKS[deckId].name)}</h3>${DECKS[deckId].fn?`<p>Read what each structure does and name it.</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>Description plus the picture</small></button><button class="btn" id="img-off">Images off<small>Description only</small></button>`:DECKS[deckId].ident?`<p>Name the structure from the picture, the way a lab practical asks it.</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>See the structure before you answer</small></button><button class="btn" id="img-off">Images off<small>Clue only</small></button>`:`<p>Show the textbook figure after each answer?</p><div class="modes"><button class="btn primary" id="img-on">Images on<small>See the figure once you answer</small></button><button class="btn" id="img-off">Images off<small>Clues only, faster rounds</small></button>`}<button class="btn" id="mode-x" style="text-align:center">Cancel</button></div></div></div>`;
   const close=()=>{$("#modalSlot").innerHTML="";};
-  $("#img-on").onclick=()=>{close();startRound(deckId,true);};
-  $("#img-off").onclick=()=>{close();startRound(deckId,false);};
+  const launch=im=>{close();method==="mc"?startMC(deckId,im):startRound(deckId,im);};
+  $("#img-on").onclick=()=>launch(true);
+  $("#img-off").onclick=()=>launch(false);
   $("#mode-x").onclick=close; $("#img-on").focus();
 }
+/* ===================== MULTIPLE CHOICE (study method, v3.5.0) =====================
+   Layout: where the card has a picture to look at before answering (identification and
+   picture-first decks) the picture sits above the choices and its answer version takes the
+   same slot, so the green/red choice stays where your thumb was. Otherwise the figure that
+   follows an answer goes below the choices.
+   A study aid that sits beside typed rounds, never inside them. Four choices: the right
+   answer plus three other answers from the same deck. A card is "ready" after
+   READY_AT right answers in a row; a miss sends its streak back to zero. Streaks live in
+   DATA.mc[deckId][cardId]. Study rounds never touch DATA.rounds or DATA.best, so high
+   scores, the stats line and (later) stars and mastery checks stay typed-only. */
+const READY_AT=2;
+const streakOf=(deckId,cardId)=>((DATA.mc&&DATA.mc[deckId])||{})[cardId]||0;
+function setStreak(deckId,cardId,n){
+  if(!DATA.mc) DATA.mc={};
+  const m=DATA.mc[deckId]||(DATA.mc[deckId]={});
+  if(n>0) m[cardId]=n; else delete m[cardId];
+}
+function readiness(deckId){
+  const its=itemsFor(deckId),total=its.length;
+  const ready=its.filter(st=>streakOf(deckId,st.id)>=READY_AT).length;
+  return {ready,total,pct:total?Math.round(ready/total*100):0};
+}
+const rbar=(pct,label)=>`<div class="rbar" role="img" aria-label="${esc(label)}"><i style="width:${pct}%"></i></div>`;
+function readyBlock(id){
+  const r=readiness(id);
+  return `<div class="ready">${rbar(r.pct,`${r.ready} of ${r.total} cards ready`)}<span>Ready <b>${r.pct}%</b> · ${r.ready} of ${r.total}</span></div>`;
+}
+/* Could these two answers both be right? Then one must not be offered as a wrong choice:
+   same words, one inside the other ("Atrium" / "Left atrium"), an accepted alternate of the
+   other, or a pair the deck marks as the same thing. */
+function clash(a,b){
+  const na=norm(a.name),nb=norm(b.name);
+  if(!na||!nb||na===nb) return true;
+  if(na.length>=4&&nb.length>=4&&(na.includes(nb)||nb.includes(na))) return true;
+  const acc=x=>(x.accept||[]).map(norm);
+  if(acc(a).includes(nb)||acc(b).includes(na)) return true;
+  if((a.also||[]).includes(b.id)||(b.also||[]).includes(a.id)) return true;
+  return false;
+}
+function pickChoices(deckId,st){
+  const wrong=[],seen=new Set([norm(st.name)]);
+  const take=list=>{
+    for(const c of shuffle(list.slice())){
+      if(wrong.length>=3) return;
+      if(c===st||seen.has(norm(c.name))||clash(st,c)) continue;
+      seen.add(norm(c.name)); wrong.push(c);
+    }
+  };
+  take(itemsFor(deckId));                                   /* same deck first */
+  const unit=DECKS[deckId].unit,others=Object.keys(DECKS).filter(k=>k!==deckId);
+  if(wrong.length<3) take(others.filter(k=>DECKS[k].unit===unit).flatMap(itemsFor));   /* small deck: same unit */
+  if(wrong.length<3) take(others.flatMap(itemsFor));                                    /* last resort: anywhere */
+  return shuffle([st].concat(wrong)).map(c=>({id:c.id,name:c.name,right:c===st}));
+}
+function chooseHow(deckId){
+  const d=DECKS[deckId],r=readiness(deckId),withPics=!!(d.fn||d.ident);
+  $("#modalSlot").innerHTML=`<div class="scrim"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mh"><h3 id="mh">${esc(d.name)}</h3><p>How do you want to play this deck?</p><div class="modes"><button class="btn primary" id="how-type">Type it<small>The real test. Counts toward your high score</small></button><button class="btn" id="how-mc">Multiple choice<small>Study mode · ${r.ready} of ${r.total} cards ready</small></button><button class="btn" id="how-x" style="text-align:center">Cancel</button></div></div></div>`;
+  const close=()=>{$("#modalSlot").innerHTML="";};
+  $("#how-type").onclick=()=>{close();withPics?chooseMode(deckId,"type"):startRound(deckId);};
+  $("#how-mc").onclick=()=>{close();withPics?chooseMode(deckId,"mc"):startMC(deckId,true);};
+  $("#how-x").onclick=close; $("#how-type").focus();
+}
+function startMC(deckId,images=true){
+  const qs=shuffle(itemsFor(deckId).slice()).map(st=>({st,view:st.views?st.views[Math.floor(Math.random()*st.views.length)]:null,choices:pickChoices(deckId,st),picked:null}));
+  round={method:"mc",deck:deckId,images,qs,i:0,right:0,missed:0,readyBefore:readiness(deckId).ready,state:"ask",fb:"",lastMissed:false};
+  view={page:"play"};render();scrollTo(0,0);
+}
+function mcChoices(q){
+  const done=round.state==="done";
+  return `<div class="choices" role="group" aria-label="Answer choices">`+q.choices.map((c,k)=>{
+    let cls="choice",mark="";
+    if(done){
+      if(c.right){cls+=" right";mark=`<span class="mark" aria-label="Correct">✓</span>`;}
+      else if(q.picked===k){cls+=" wrong";mark=`<span class="mark" aria-label="Wrong">✕</span>`;}
+      else cls+=" dim";
+    }
+    return `<button type="button" class="${cls}" data-choice="${k}"${done?' aria-disabled="true" tabindex="-1"':""}><span class="ck">${k+1}</span><span class="ct">${esc(c.name)}</span>${mark}</button>`;
+  }).join("")+`</div>`;
+}
+function pickChoice(k){
+  if(!round||round.method!=="mc"||round.state!=="ask") return;
+  const q=round.qs[round.i],c=q.choices[k]; if(!c) return;
+  q.picked=k;
+  if(c.right){
+    const n=streakOf(round.deck,q.st.id)+1;
+    setStreak(round.deck,q.st.id,n);
+    round.right++;round.lastMissed=false;
+    const note=n>=READY_AT?"Ready. This card is locked in.":`${READY_AT-n} more in a row and it's ready.`;
+    setFb(`<div class="fb ok"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="var(--green)"/><path d="m7 13.5 4 4 8-9" stroke="#111" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Correct <small>${note}</small></div></div>`,"done");
+  }else{
+    setStreak(round.deck,q.st.id,0);
+    round.missed++;round.lastMissed=true;
+    setFb(`<div class="fb bad">✕ The answer is ${esc(q.st.name)}<small>Its streak starts over.</small></div>`,"done");
+  }
+  saveLocal();
+}
+function finishMC(){
+  const total=round.qs.length,r=readiness(round.deck);
+  round.result={right:round.right,total,ready:r.ready,readyBefore:round.readyBefore,pct:r.pct,cards:r.total};
+  view={page:"results"};
+  try{render();}catch(e){console.error(e);}
+  scrollTo(0,0);
+  setTimeout(()=>{try{save();}catch(e){}},0);
+}
+function mcResultsPage(){
+  const R=round.result,gain=R.ready-R.readyBefore;
+  app.innerHTML=`<div class="top"><div><div class="crumb">${esc(DECKS[round.deck].name)}</div><div class="brand">Study round complete</div></div></div>
+  <div class="res"><div class="stats"><div class="stat"><div class="v c-green">${R.right}/${R.total}</div><div class="k">Right this round</div></div><div class="stat"><div class="v">${R.pct}%</div><div class="k">Deck ready</div></div></div>
+  ${rbar(R.pct,`${R.ready} of ${R.cards} cards ready`)}
+  <div class="breakdown">${R.ready} of ${R.cards} cards ready${gain?` (${gain>0?"+":""}${gain} this round)`:""}</div>
+  <p class="note">A card is ready after ${READY_AT} right in a row. Study rounds don't change your high score. Typed rounds do.</p>
+  <div class="btnrow"><button class="btn primary" id="again">Study again</button><button class="btn" id="totype">Type it</button><button class="btn" id="tolobby">Lobby</button></div></div>`;
+  $("#again").onclick=()=>startMC(round.deck,round.images);
+  $("#totype").onclick=()=>startRound(round.deck,round.images);
+  $("#tolobby").onclick=()=>{view={page:"lobby"};render();};
+}
+document.addEventListener("keydown",e=>{
+  if(e.ctrlKey||e.metaKey||e.altKey) return;
+  if(!round||round.method!=="mc"||view.page!=="play"||round.state!=="ask") return;
+  if($("#modalSlot").innerHTML.trim()) return;
+  if(/^[1-4]$/.test(e.key)) pickChoice(Number(e.key)-1);
+});
 function startRound(deckId,images=true){
   const qs=shuffle(itemsFor(deckId).slice()).map(st=>({st,view:st.views?st.views[Math.floor(Math.random()*st.views.length)]:null}));
   round={deck:deckId,images,qs,i:0,tries:0,credit:0,first:0,second:0,missed:0,state:"ask",fb:"",lastMissed:false};
@@ -3143,26 +3284,28 @@ function playPage(){
   tag=!showImg?"Images off":v.tag?v.tag:v.close?"Close-up":"Whole cell";
   desc=fnDeck?`<p class="desc">${esc(q.st.fn)}</p>`:"";
   }
-  app.innerHTML=`<div class="top"><div><div class="crumb">${esc(DECKS[round.deck].name)}</div><div class="brand">Round in play</div></div></div>
+  app.innerHTML=`<div class="top"><div><div class="crumb">${esc(DECKS[round.deck].name)}</div><div class="brand">${round.method==="mc"?"Study round":"Round in play"}</div></div></div>
   <div class="qhead"><span class="qnum">Question ${round.i+1} / ${n}</span><span class="qnum">${tag}</span></div>
   <div class="bar"><i style="width:${(round.i+(round.state==="done"?1:0))/n*100}%"></i></div>
   <h1 class="prompt">${prompt}</h1>
-  ${desc}${art}${hint}
+  ${round.method==="mc"?((dk.ident||!dk.items)?desc+art+hint+mcChoices(q):desc+hint+mcChoices(q)+art):desc+art+hint}
   <div class="feedback" id="fb"></div><div class="spacer"></div>`;
   const locked=round.state!=="ask";
   const last=round.i===round.qs.length-1;
   let bar;
   if(round.state==="done") bar=`<div class="answer"><div class="barrow"><button type="button" class="bbtn" id="next">${last?"See results":"Next"}<svg width="20" height="16" viewBox="0 0 20 16"><path d="M2 8h15m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>`;
+  else if(round.method==="mc") bar="";
   else if(round.state==="suggest") bar=`<div class="answer"><div class="barrow"><button type="button" class="bbtn sec" id="sug-no">No, retype</button><button type="button" class="bbtn" id="sug-yes">Yes, submit</button></div></div>`;
   else bar=`<div class="answer"><form id="af" autocomplete="off"><button type="button" id="idk" class="idk" aria-label="I don't know" ${locked?"disabled":""}>I don't<br>know</button><input id="ans" type="text" placeholder="${locked?"":"Type your answer"}" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send" ${locked?"disabled":""} aria-label="Your answer"><button type="submit" id="go" aria-label="Submit answer" ${locked?"disabled":""}><svg width="26" height="22" viewBox="0 0 26 22"><path d="M22 2v9a3 3 0 0 1-3 3H5m0 0 5-5m-5 5 5 5" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></div>`;
   if(round.fb) bar=bar.replace('<div class="answer">','<div class="answer"><div class="barfb" role="status">'+round.fb+'</div>');
   $("#answerSlot").innerHTML=bar;
   const fz=$("#figzoom")||$("#aimg"); if(fz){fz.onclick=()=>{const s=fz.getAttribute("data-zoom")||fz.querySelector("img").getAttribute("src");$("#modalSlot").innerHTML=`<div class="zoom" role="dialog" aria-modal="true" aria-label="Figure"><img src="${s}" alt=""></div><button class="zoomx" id="zoomx" aria-label="Close">✕</button>`;$("#zoomx").onclick=()=>{$("#modalSlot").innerHTML="";};$("#zoomx").focus();};}
+  app.querySelectorAll("[data-choice]").forEach(b=>b.onclick=()=>pickChoice(Number(b.dataset.choice)));
   const af=$("#af"); if(af){af.onsubmit=e=>{e.preventDefault();submit($("#ans").value);};$("#idk").onclick=giveUp;}
 
   const nx=$("#next"); if(nx){nx.onclick=()=>{try{next();}catch(e){console.error(e);if(round.i>=round.qs.length-1)finish();}};nx.focus();}
   const yes=$("#sug-yes"); if(yes){yes.onclick=()=>{const v=round.pending;round.pending=null;round.fb="";grade(v);};$("#sug-no").onclick=()=>{round.pending=null;round.fb="";round.state="ask";playPage();$("#ans").focus();};yes.focus();}
-  if(!locked){const inp=$("#ans");if(round.keep)inp.value=round.keep;round.keep="";if(matchMedia("(pointer:fine)").matches)inp.focus();}
+  if(!locked){const inp=$("#ans");if(inp){if(round.keep)inp.value=round.keep;round.keep="";if(matchMedia("(pointer:fine)").matches)inp.focus();}}
 }
 function setFb(html,state){round.fb=html;round.state=state;playPage();}
 function submit(raw){
@@ -3196,13 +3339,14 @@ function next(){
   playPage();scrollTo(0,0);
 }
 function finish(){
+  if(round.method==="mc") return finishMC();
   const total=round.qs.length,pct=Math.round(round.credit/total*100);
   let prev=null,isHigh=true;
   try{
     prev=DATA.best[round.deck]??null; isHigh=prev==null||pct>prev;
     const rounds=DATA.rounds.concat([{deck:round.deck,unit:DECKS[round.deck].unit,credit:round.credit,total,pct,ts:Date.now()}]);
     const best=Object.assign({},DATA.best); if(isHigh)best[round.deck]=pct;
-    DATA={rounds,best};
+    DATA=Object.assign({},DATA,{rounds,best});
   }catch(e){console.error("record failed",e);}
   round.result={pct,prev,isHigh,total,best:Math.max(pct,prev??0)};
   view={page:"results"};
@@ -3228,6 +3372,7 @@ function gaugeSVG(p){
   <text x="${cx}" y="${cy+80}" fill="${col}" font-size="40" font-weight="600" font-family="IBM Plex Mono,monospace" text-anchor="middle">${p}%</text></svg>`;
 }
 function resultsPage(){
+  if(round.method==="mc") return mcResultsPage();
   const R=round.result,p=R.pct;
   app.innerHTML=`<div class="top"><div><div class="crumb">${esc(DECKS[round.deck].name)}</div><div class="brand">Round complete</div></div></div>
   <div class="res">${gaugeSVG(p)}${R.isHigh&&R.prev!=null?`<div class="newhs">New high score</div>`:""}
@@ -3259,7 +3404,7 @@ const isIOS=()=>/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platfo
 let installPrompt=null;
 window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installPrompt=e;});
 
-const exportText=()=>JSON.stringify({app:"101% Anatomy",v:SCHEMA,exported:new Date().toISOString(),rounds:DATA.rounds,best:DATA.best});
+const exportText=()=>JSON.stringify({app:"101% Anatomy",v:SCHEMA,exported:new Date().toISOString(),rounds:DATA.rounds,best:DATA.best,mc:DATA.mc||{}});
 /* Import adds rounds the current save doesn't have; it never deletes any. */
 function mergeSave(raw){
   const inc=upgrade(raw), rounds=DATA.rounds.slice(), seen=new Set(rounds.map(r=>r&&r.deck+"|"+r.ts));
@@ -3268,7 +3413,11 @@ function mergeSave(raw){
   rounds.sort((a,b)=>(a.ts||0)-(b.ts||0));
   const best=Object.assign({},DATA.best);
   Object.keys(inc.best||{}).forEach(k=>{if(best[k]==null||inc.best[k]>best[k])best[k]=inc.best[k];});
-  DATA={rounds,best};
+  /* streaks: keep the higher one for every card, never lower anything */
+  const mc=JSON.parse(JSON.stringify(DATA.mc||{}));
+  Object.keys(inc.mc||{}).forEach(dk=>Object.keys(inc.mc[dk]||{}).forEach(ck=>{
+    const n=Number(inc.mc[dk][ck])||0; if(n>((mc[dk]||{})[ck]||0)){(mc[dk]||(mc[dk]={}))[ck]=n;}}));
+  DATA={rounds,best,mc};
   return added;
 }
 const ago=t=>{if(!t)return "never";const m=Math.round((Date.now()-t)/60000);
