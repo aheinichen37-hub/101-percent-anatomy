@@ -28,7 +28,9 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Unit mastery check**: 50 randomly selected questions from the unit. Gold at 95% or higher (lose no more than 2.5 points), mastery at 100%. Unlocks once every deck in the unit has 2 stars. Best score is saved. *(2026-11-06)*
 - **Unit header tiers in the lobby**: the unit's header changes with achievement. Gold = 95%+ on the mastery check, Diamond = 100% mastery, Ruby = 100% mastery plus 3 stars on every deck (full completion). *(2026-11-06)*
 - **Build order decided**: 1) safe save + installable app (next release), 2) deck stars and unit mastery checks, then the rest. *(2026-11-06)*
-- **Daily Review**: re-drills the cards you've missed. *(2026-11-06)*
+- **Daily Review**: re-drills the cards you've missed. Could draw on the multiple-choice readiness data (cards not yet "ready"). *(2026-11-06, updated 2026-11-20)*
+- **Weak cards only round**: a round built only from cards that aren't "ready" yet in multiple choice (fewer than 2 right in a row). *(2026-11-20)*
+- **Multiple choice as a study method (v3.2.0, agreed, not built)**: 4 choices per card, the right answer plus 3 other answers from the same deck (filter out look-alike or alias answers; fall back to same-unit answers for tiny decks). A card is "ready" after 2 right in a row; a miss resets it. Fills a per-deck readiness bar and the deck's stars light grey; typed answers stay the real test for stars, high scores and the unit mastery check. One try per card. *(2026-11-20)*
 - **Speed Round**: timed random testing. Code later. *(2026-11-06)*
 - **Boss Fights**: the mastery check as a boss, possibly themed on each unit's pathologies (osteoporosis for bones, brain cancer for the nervous system, etc.). *(2026-11-06)*
 - **Cumulative boss every few units** that mixes earlier material. *(2026-11-06)*
