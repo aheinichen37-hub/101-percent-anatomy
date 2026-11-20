@@ -3,6 +3,7 @@
 Side ideas Andrew mentions while we work on something else. Claude adds new ones as they come up and checks this list before starting new work. Move an item to **Done** when it ships, or to **Dropped** if Andrew decides against it.
 
 ## Open
+- **⭐ VERY IMPORTANT, DO NOT FORGET: the NEXT BUILD after multiple choice (v3.5.0) is the DECK STARS** (typed runs earn stars; the grey star fill from multiple-choice readiness lands with them). Andrew said this in capitals on 2026-11-20. Start there once multiple choice ships, before any other idea on this list. *(2026-11-20)*
 - **Swipe to next card** after answering (Next button stays for laptop). Building into the image-design samples to try on a phone. *(2026-11-05)*
 - **Tips on missed cards**: short memory tricks, fun facts or "how to tell it apart" notes, shown only when you miss. Andrew reviews each unit's tips before they go live. *(2026-11-05)*
 - **Pulsing highlight on structures**: light-blue fill over the whole structure, pulsing about 10–80% opacity, Visible Body style. Part of the pre-answer image design. *(2026-11-05)*
@@ -30,7 +31,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Build order decided**: 1) safe save + installable app (next release), 2) deck stars and unit mastery checks, then the rest. *(2026-11-06)*
 - **Daily Review**: re-drills the cards you've missed. Could draw on the multiple-choice readiness data (cards not yet "ready"). *(2026-11-06, updated 2026-11-20)*
 - **Weak cards only round**: a round built only from cards that aren't "ready" yet in multiple choice (fewer than 2 right in a row). *(2026-11-20)*
-- **Multiple choice as a study method (v3.2.0, agreed, not built)**: 4 choices per card, the right answer plus 3 other answers from the same deck (filter out look-alike or alias answers; fall back to same-unit answers for tiny decks). A card is "ready" after 2 right in a row; a miss resets it. Fills a per-deck readiness bar and the deck's stars light grey; typed answers stay the real test for stars, high scores and the unit mastery check. One try per card. *(2026-11-20)*
+- **Multiple choice as a study method (v3.5.0, building 2026-11-20; the app was already at v3.4)**: after answering, the choice turns green if right or red if wrong, then a Next button like typed answers. Ready cards stay in every round. 4 choices per card, the right answer plus 3 other answers from the same deck (filter out look-alike or alias answers; fall back to same-unit answers for tiny decks). A card is "ready" after 2 right in a row; a miss resets it. Fills a per-deck readiness bar and the deck's stars light grey; typed answers stay the real test for stars, high scores and the unit mastery check. One try per card. *(2026-11-20)*
 - **Speed Round**: timed random testing. Code later. *(2026-11-06)*
 - **Boss Fights**: the mastery check as a boss, possibly themed on each unit's pathologies (osteoporosis for bones, brain cancer for the nervous system, etc.). *(2026-11-06)*
 - **Cumulative boss every few units** that mixes earlier material. *(2026-11-06)*
