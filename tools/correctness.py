@@ -16,6 +16,7 @@ Errors (exit 1):
     identical to the question image
   - a card's textbook figure file does not load
   - (v1.1.0) a multiple-choice card does not get 4 distinct choices with exactly one right, or offers a wrong choice that is also right
+  - (v1.2.0) a multiple-choice card mixes numbers with words, or numbers with different units
   - typing the right answer on the first card is not marked correct, or "zzzz" twice is not marked wrong
 Warnings (shown; errors only with --strict):
   - two cards in one deck accept the same answer (ambiguous)
@@ -24,7 +25,7 @@ Warnings (shown; errors only with --strict):
 import argparse, asyncio, functools, http.server, json, os, sys, threading
 from playwright.async_api import async_playwright
 
-ap = argparse.ArgumentParser(description="101% Anatomy correctness test v1.1.0")
+ap = argparse.ArgumentParser(description="101% Anatomy correctness test v1.2.0")
 ap.add_argument("page", nargs="?", default="index.html")
 ap.add_argument("--tabs", type=int, default=4)
 ap.add_argument("--decks", help="comma-separated deck ids")
@@ -106,6 +107,9 @@ for(const st of items){
     if(new Set(ch.map(c=>norm(c.name))).size!==4){E.push(st.id+": multiple choice has two choices with the same words");break;}
     const bad=ch.find(c=>!c.right&&(st.accept.some(a=>norm(a)===norm(c.name))||(st.also||[]).includes(c.id)));
     if(bad){E.push(st.id+": multiple choice offers '"+bad.name+"', which is also right");break;}
+    const kinds=ch.map(c=>!!parseNum(c.name));
+    if(kinds.some(k=>k!==kinds[0])){E.push(st.id+": multiple choice mixes numbers and words ("+ch.map(c=>c.name).join(" / ")+")");break;}
+    if(kinds[0]){const sn=parseNum(st.name);if(ch.some(c=>!sameNumShape(sn,parseNum(c.name)))){E.push(st.id+": multiple choice mixes units ("+ch.map(c=>c.name).join(" / ")+")");break;}}
   }
 }
 return{E,W,n:items.length};}'''
@@ -189,7 +193,7 @@ async def main():
         print("warn", w)
     if len(warns) > 25:
         print(f"... and {len(warns) - 25} more warnings")
-    print(f"RESULT: {'FAIL' if bad else 'PASS'} | correctness v1.1.0 | {stats['decks']} decks, {stats['cards']} cards | "
+    print(f"RESULT: {'FAIL' if bad else 'PASS'} | correctness v1.2.0 | {stats['decks']} decks, {stats['cards']} cards | "
           f"{len(fails)} errors, {len(warns)} warnings | {ARGS.tabs} tabs | {secs}s")
     return 1 if bad else 0
 

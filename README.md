@@ -4,7 +4,7 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.5.0
+Current version: 3.5.1
 
 ## Multiple choice study mode (3.5.0)
 
@@ -13,6 +13,7 @@ checks) or **Multiple choice** (a study method). A multiple-choice card shows fo
 right answer plus three other answers from the same deck (small decks borrow from the same unit).
 Tap one and it turns green if right or red if wrong, then Next. A card is **ready** after two right
 answers in a row; a miss sends it back to zero. Each deck tile shows a light-grey readiness bar.
+Number answers (46, 206, 120 days, -70 mV, a pH range) get other numbers as wrong choices, never names.
 Study rounds never change high scores or the stats line. Streaks are saved in the browser with the
 rest of your progress (save format 3; older saves load fine).
 

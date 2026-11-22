@@ -212,7 +212,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.5.0</div>
+<div id="ver" aria-hidden="true">v3.5.1</div>
 
 <script>
 /* ===================== CONTENT ===================== */
@@ -3160,25 +3160,62 @@ function readyBlock(id){
 function clash(a,b){
   const na=norm(a.name),nb=norm(b.name);
   if(!na||!nb||na===nb) return true;
-  if(na.length>=4&&nb.length>=4&&(na.includes(nb)||nb.includes(na))) return true;
+  if(na.length>=4&&nb.length>=4&&!(parseNum(a.name)&&parseNum(b.name))&&(na.includes(nb)||nb.includes(na))) return true;
   const acc=x=>(x.accept||[]).map(norm);
   if(acc(a).includes(nb)||acc(b).includes(na)) return true;
   if((a.also||[]).includes(b.id)||(b.also||[]).includes(a.id)) return true;
   return false;
 }
+/* v3.5.1: number answers (46, 206, 120 days, -70 mV, 7.35 to 7.45) get other NUMBERS as the wrong
+   choices, so the kind of answer never gives it away. Wrong numbers are the deck's other numeric
+   answers first (same unit), then made-up near misses: neighbours for small counts, round steps
+   for round values, half and double, shifted ranges. Text answers never get a number. */
+function parseNum(name){
+  const t=String(name).trim();
+  let m=/^(\d+(?:\.\d+)?)(\s*(?:to|-|–)\s*)(\d+(?:\.\d+)?)(.*)$/.exec(t);
+  if(m) return {range:true,a:+m[1],b:+m[3],sep:m[2],dec:Math.max((m[1].split(".")[1]||"").length,(m[3].split(".")[1]||"").length),unit:m[4].trim()};
+  m=/^(-?)(\d+(?:\.\d+)?)(\s*)([A-Za-z%°\/ ]*)$/.exec(t);
+  if(m) return {range:false,neg:m[1]==="-",v:+m[2],dec:(m[2].split(".")[1]||"").length,gap:m[3],unit:m[4].trim()};
+  return null;
+}
+const fmtN=(x,dec)=>dec?x.toFixed(dec):String(Math.round(x));
+function nearNumbers(n){           /* made-up wrong answers for a parsed number, as strings */
+  const out=new Set();
+  if(n.range){
+    const w=+(n.b-n.a).toFixed(n.dec+1)||Math.pow(10,-n.dec);
+    [-3,-2,-1,1,2,3].forEach(k=>{
+      const a=+(n.a+k*w).toFixed(n.dec+1),b=+(n.b+k*w).toFixed(n.dec+1);
+      if(a>0) out.add(fmtN(a,n.dec)+n.sep+fmtN(b,n.dec)+(n.unit?" "+n.unit:""));});
+    return [...out];
+  }
+  const v=n.v,add=x=>{x=n.dec?+x.toFixed(n.dec):Math.round(x);if(x>0&&x!==v) out.add((n.neg?"-":"")+fmtN(x,n.dec)+n.gap+n.unit);};
+  if(n.dec){const u=Math.pow(10,-n.dec);[1,2,3,5,10].forEach(k=>{add(v+k*u);add(v-k*u);});}
+  else if(v<=15){[1,2,3,4,5,6].forEach(k=>{add(v+k);add(v-k);});}
+  else if(v<=60){[2,3,4,6,8,10,12].forEach(k=>{add(v+k);add(v-k);});}
+  else if(v%10===0){const st=v>=200?(v%50===0?50:20):10;[1,2,3,4].forEach(k=>{add(v+k*st);add(v-k*st);});}
+  else{[.03,.06,.1,.15,.2,.3].forEach(p=>{const k=Math.max(2,Math.round(v*p));add(v+k);add(v-k);});}
+  if(!n.dec&&v>=16){ if(v%2===0) add(v/2); add(v*2); }
+  return [...out];
+}
+const sameNumShape=(x,y)=>x&&y&&x.range===y.range&&x.unit.toLowerCase()===y.unit.toLowerCase();
 function pickChoices(deckId,st){
-  const wrong=[],seen=new Set([norm(st.name)]);
-  const take=list=>{
+  const wrong=[],seen=new Set([norm(st.name)]),sn=parseNum(st.name),wantNum=!!sn;
+  const accepted=new Set((st.accept||[]).map(norm));
+  const take=(list,sameKind)=>{
     for(const c of shuffle(list.slice())){
       if(wrong.length>=3) return;
-      if(c===st||seen.has(norm(c.name))||clash(st,c)) continue;
+      const cn=parseNum(c.name);
+      if(sameKind&&(wantNum?!sameNumShape(sn,cn):!!cn)) continue;
+      if(c===st||seen.has(norm(c.name))||accepted.has(norm(c.name))||clash(st,c)) continue;
       seen.add(norm(c.name)); wrong.push(c);
     }
   };
-  take(itemsFor(deckId));                                   /* same deck first */
+  take(itemsFor(deckId),true);                                   /* same deck first, same kind of answer */
+  if(wantNum&&wrong.length<3) take(nearNumbers(sn).map(name=>({id:"num:"+name,name})),true);   /* made-up near misses */
   const unit=DECKS[deckId].unit,others=Object.keys(DECKS).filter(k=>k!==deckId);
-  if(wrong.length<3) take(others.filter(k=>DECKS[k].unit===unit).flatMap(itemsFor));   /* small deck: same unit */
-  if(wrong.length<3) take(others.flatMap(itemsFor));                                    /* last resort: anywhere */
+  if(wrong.length<3) take(others.filter(k=>DECKS[k].unit===unit).flatMap(itemsFor),true);   /* small deck: same unit */
+  if(wrong.length<3) take(others.flatMap(itemsFor),true);                                    /* then anywhere */
+  if(wrong.length<3) take(others.flatMap(itemsFor).concat(itemsFor(deckId)),false);          /* last resort: any kind */
   return shuffle([st].concat(wrong)).map(c=>({id:c.id,name:c.name,right:c===st}));
 }
 function chooseHow(deckId){

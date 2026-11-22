@@ -114,3 +114,37 @@ def test_wrong_choices_never_also_right(page):
       }
       return out.slice(0,10);}""")
     assert bad == []
+
+
+def test_number_answers_get_number_choices(page):
+    bad = page.evaluate("""() => {
+      const out=[];
+      for (const id of Object.keys(DECKS)) for (const st of itemsFor(id)) {
+        const sn=parseNum(st.name);
+        for (let k=0;k<5;k++) {
+          const ch=pickChoices(id,st).map(c=>c.name);
+          const nums=ch.map(n=>!!parseNum(n));
+          if (nums.some(x=>x!==!!sn)) out.push(st.id+': '+ch.join(' / '));
+        }
+      }
+      return out.slice(0,10);}""")
+    assert bad == []
+
+
+def test_the_ribs_card_gets_numbers(page):
+    names = page.evaluate(
+        "()=>pickChoices('ch7-thor',itemsFor('ch7-thor').find(s=>s.id==='ch7-thor-11')).map(c=>c.name)")
+    assert "12" in names and len(set(names)) == 4
+    assert all(n.isdigit() for n in names)
+
+
+def test_units_and_ranges_keep_their_shape(page):
+    rbc = page.evaluate(
+        "()=>pickChoices('ch18-rbc',itemsFor('ch18-rbc').find(s=>s.id==='ch18-rbc-11')).map(c=>c.name)")
+    assert all(n.endswith(" days") for n in rbc)
+    ph = page.evaluate(
+        "()=>pickChoices('ch26-ab',itemsFor('ch26-ab').find(s=>s.id==='ch26-ab-1')).map(c=>c.name)")
+    assert all(" to " in n for n in ph)
+    mv = page.evaluate(
+        "()=>pickChoices('ch12-ap',itemsFor('ch12-ap').find(s=>s.id==='ch12-ap-1')).map(c=>c.name)")
+    assert all(n.startswith("-") and n.endswith(" mV") for n in mv)
