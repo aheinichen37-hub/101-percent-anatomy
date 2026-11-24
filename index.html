@@ -221,7 +221,7 @@ const NEWDECKS=[];
 function D(id,unit,name,q,fig,text){
   const items=text.trim().split("\n").map((ln,i)=>{const p=ln.split("|").map(s=>s.trim());
     const alts=p[1]?p[1].split(";").map(s=>s.trim()).filter(Boolean):[];
-    return {id:id+"-"+i,name:p[0],accept:[p[0].toLowerCase()].concat(alts),clue:p[2],fig:p[3]||fig,tip:(p[4]||"").trim()||undefined};});
+    return {id:id+"-"+i,name:p[0],accept:[p[0].toLowerCase()].concat(alts),clue:p[2],fig:p[3]||fig,tip:(p[4]||"").trim()||undefined,group:(p[5]||"").trim()||undefined};});
   return {id,unit,name,q,fig,items};
 }
 /* ===== v2.0 deck content, part 1: Units 1, 3, 4 =====
@@ -3198,24 +3198,94 @@ function nearNumbers(n){           /* made-up wrong answers for a parsed number,
   return [...out];
 }
 const sameNumShape=(x,y)=>x&&y&&x.range===y.range&&x.unit.toLowerCase()===y.unit.toLowerCase();
+/* v3.6.0: answer families. A card's group is the thing its wrong choices should come from, so a
+   humerus landmark is not the only humerus answer among radius and carpal ones. Order: hand fix
+   (GROUP_OVERRIDES or a 6th field on the card line) > whole bone ("bones") > a bone named in the card's
+   own name > a last word shared by 3+ cards in the deck (suture, process) > the first bone named in the
+   clue > none. Cards with no group behave exactly as before. tools/groups.py reports and fixes these.
+   For a new course, swap GROUP_HOSTS and the overrides. */
+const GROUP_HOSTS={humerus:["humerus","humeral"],ulna:["ulna","ulnar"],radius:["radius","radial"],carpal:["carpal","carpals"],
+  metacarpal:["metacarpal","metacarpals"],phalanx:["phalanx","phalanges"],scapula:["scapula","scapular"],clavicle:["clavicle","clavicular"],
+  sternum:["sternum","sternal"],rib:["rib","ribs"],vertebra:["vertebra","vertebrae","vertebral"],sacrum:["sacrum","sacral"],coccyx:["coccyx"],
+  pelvis:["pelvis","pelvic"],ilium:["ilium","iliac"],ischium:["ischium","ischial"],pubis:["pubis","pubic"],femur:["femur","femoral"],
+  patella:["patella","patellar"],tibia:["tibia","tibial"],fibula:["fibula","fibular"],tarsal:["tarsal","tarsals"],metatarsal:["metatarsal","metatarsals"],
+  talus:["talus"],calcaneus:["calcaneus","calcaneal"],frontal:["frontal"],parietal:["parietal"],temporal:["temporal"],occipital:["occipital"],
+  sphenoid:["sphenoid"],ethmoid:["ethmoid"],maxilla:["maxilla","maxillae","maxillary"],mandible:["mandible","mandibular"],
+  zygomatic:["zygomatic"],nasal:["nasal"],lacrimal:["lacrimal"],palatine:["palatine"],vomer:["vomer"],hyoid:["hyoid"]};
+const GROUP_OVERRIDES=/*GO*/{}/*END GO*/;
+const _hostRe=(()=>{const m={};for(const k in GROUP_HOSTS)for(const w of GROUP_HOSTS[k]) m[w]=k;
+  return {map:m,re:new RegExp("\\b("+Object.keys(m).join("|")+")\\b","i")};})();
+const _words=t=>(t||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(Boolean);
+const _lastWord=n=>_words(n).pop()||"";
+const _groupCache={};
+function _hostIn(text){const m=_hostRe.re.exec((text||"").replace(/\([^)]*\)/g," "));return m?_hostRe.map[m[1].toLowerCase()]:null;}
+function _isWhole(name){const w=_words(name);if(w.length&&/^bones?$/.test(w[w.length-1])) w.pop();
+  return w.length===1&&!!_hostRe.map[w[0]];}
+function deckGroups(deckId){
+  if(_groupCache[deckId]) return _groupCache[deckId];
+  const items=itemsFor(deckId)||[],last={},out={};
+  for(const it of items){const w=_lastWord(it.name);last[w]=(last[w]||0)+1;}
+  for(const it of items){
+    const ov=GROUP_OVERRIDES[deckId+"|"+it.name]||it.group;
+    let g=ov||null;
+    if(!g&&_isWhole(it.name)) g="bones";
+    if(!g) g=_hostIn(it.name);
+    if(!g){const w=_lastWord(it.name);if(w.length>=4&&last[w]>=3&&!_hostRe.map[w]) g=w;}
+    if(!g) g=_hostIn(it.clue);
+    out[it.id]=g||null;
+  }
+  return _groupCache[deckId]=out;
+}
+const groupOf=(deckId,it)=>(deckGroups(deckId)||{})[it.id]||null;
+/* Words the question and the right answer share that no other answer in the deck has: the clue echoes the
+   answer. We try to give the wrong choices that word too; the scanner lists what is left. */
+function echoWords(deckId,it){
+  const items=itemsFor(deckId)||[],cw=new Set(_words(it.clue).filter(w=>w.length>=5));
+  return _words(it.name).filter(w=>w.length>=5&&cw.has(w)&&!items.some(o=>o!==it&&_words(o.name).includes(w)));
+}
+function groupReport(){
+  const decks=Object.keys(DECKS).map(id=>{
+    const items=itemsFor(id)||[],g=deckGroups(id),size={};
+    items.forEach(it=>{if(g[it.id]) size[g[it.id]]=(size[g[it.id]]||0)+1;});
+    const grouped=items.filter(it=>g[it.id]);
+    return {id,name:DECKS[id].name,cards:items.length,
+      ungrouped:items.filter(it=>!g[it.id]).map(it=>it.name),
+      small:Object.keys(size).filter(k=>size[k]<4).map(k=>({group:k,n:size[k]})),
+      echo:items.map(it=>({name:it.name,words:echoWords(id,it)})).filter(e=>e.words.length),
+      sameGroupShare:grouped.length?grouped.filter(it=>size[g[it.id]]>=4).length/grouped.length:null,
+      groups:size};
+  });
+  return {decks};
+}
 function pickChoices(deckId,st){
   const wrong=[],seen=new Set([norm(st.name)]),sn=parseNum(st.name),wantNum=!!sn;
   const accepted=new Set((st.accept||[]).map(norm));
-  const take=(list,sameKind)=>{
+  const take=(list,sameKind,max=3)=>{
     for(const c of shuffle(list.slice())){
-      if(wrong.length>=3) return;
+      if(wrong.length>=max) return;
       const cn=parseNum(c.name);
       if(sameKind&&(wantNum?!sameNumShape(sn,cn):!!cn)) continue;
       if(c===st||seen.has(norm(c.name))||accepted.has(norm(c.name))||clash(st,c)) continue;
       seen.add(norm(c.name)); wrong.push(c);
     }
   };
-  take(itemsFor(deckId),true);                                   /* same deck first, same kind of answer */
+  const deckItems=itemsFor(deckId),g=groupOf(deckId,st);
+  if(g){                                                          /* v3.6.0: same family first */
+    const sibs=deckItems.filter(c=>c!==st&&groupOf(deckId,c)===g);
+    const echo=echoWords(deckId,st);
+    if(echo.length) take(sibs.filter(c=>echo.some(w=>_words(c.name).includes(w))),true,1);   /* don't let one answer echo the question */
+    if(sibs.length>=5&&Math.random()<0.25){                       /* now and then, one neighbouring family */
+      take(sibs,true,2);
+      take(deckItems.filter(c=>{const k=groupOf(deckId,c);return k&&k!==g&&(k!=="bones")===(g!=="bones");}),true,3);
+    }
+    take(sibs,true);
+  }
+  take(deckItems,true);                                           /* same deck, same kind of answer */
   if(wantNum&&wrong.length<3) take(nearNumbers(sn).map(name=>({id:"num:"+name,name})),true);   /* made-up near misses */
   const unit=DECKS[deckId].unit,others=Object.keys(DECKS).filter(k=>k!==deckId);
   if(wrong.length<3) take(others.filter(k=>DECKS[k].unit===unit).flatMap(itemsFor),true);   /* small deck: same unit */
   if(wrong.length<3) take(others.flatMap(itemsFor),true);                                    /* then anywhere */
-  if(wrong.length<3) take(others.flatMap(itemsFor).concat(itemsFor(deckId)),false);          /* last resort: any kind */
+  if(wrong.length<3) take(others.flatMap(itemsFor).concat(deckItems),false);                 /* last resort: any kind */
   return shuffle([st].concat(wrong)).map(c=>({id:c.id,name:c.name,right:c===st}));
 }
 function chooseHow(deckId){
