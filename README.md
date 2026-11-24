@@ -4,7 +4,7 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.5.1
+Current version: 3.6.0
 
 ## Multiple choice study mode (3.5.0)
 
@@ -16,6 +16,15 @@ answers in a row; a miss sends it back to zero. Each deck tile shows a light-gre
 Number answers (46, 206, 120 days, -70 mV, a pH range) get other numbers as wrong choices, never names.
 Study rounds never change high scores or the stats line. Streaks are saved in the browser with the
 rest of your progress (save format 3; older saves load fine).
+
+### Wrong choices come from the same family (3.6.0)
+
+Each card has an answer *group* (a bone such as humerus, a family such as suture, or "bones" for whole
+bones). A landmark on the humerus gets other humerus landmarks as wrong choices, never a carpal bone;
+a whole bone gets other whole bones. Now and then one choice comes from a neighbouring family. Cards
+and decks without a group behave as before. `python3 tools/groups.py` lists weak questions and
+decks that still need groups; fixes go in `tools/groups-overrides.json`, then `--apply`.
+For another course, swap `GROUP_HOSTS` in `index.html` and start a fresh overrides file.
 
 ## Identification decks
 

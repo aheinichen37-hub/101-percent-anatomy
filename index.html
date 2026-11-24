@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.4 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.6.0 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -212,7 +212,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.5.1</div>
+<div id="ver" aria-hidden="true">v3.6.0</div>
 
 <script>
 /* ===================== CONTENT ===================== */
@@ -3212,7 +3212,7 @@ const GROUP_HOSTS={humerus:["humerus","humeral"],ulna:["ulna","ulnar"],radius:["
   talus:["talus"],calcaneus:["calcaneus","calcaneal"],frontal:["frontal"],parietal:["parietal"],temporal:["temporal"],occipital:["occipital"],
   sphenoid:["sphenoid"],ethmoid:["ethmoid"],maxilla:["maxilla","maxillae","maxillary"],mandible:["mandible","mandibular"],
   zygomatic:["zygomatic"],nasal:["nasal"],lacrimal:["lacrimal"],palatine:["palatine"],vomer:["vomer"],hyoid:["hyoid"]};
-const GROUP_OVERRIDES=/*GO*/{}/*END GO*/;
+const GROUP_OVERRIDES=/*GO*/{"ch7-skull|Cranium": "bones", "ch7-skull|External acoustic meatus": "temporal", "ch7-skull|Facial bones": "bones", "ch7-skull|Inferior nasal concha": "bones", "ch7-skull|Nasal septum": "-", "ch7-skull|Zygomatic arch": "temporal", "ch7-thor|12": "-", "ch7-thor|Jugular notch": "sternum", "ch7-thor|Sternum": "sternum", "ch7-thor|Thoracic cage": "bones", "ch7-vert|Anulus fibrosus": "disc", "ch7-vert|Cervical vertebrae": "bones", "ch7-vert|Intervertebral disc": "disc", "ch7-vert|Kyphosis": "curves", "ch7-vert|Lamina": "vertebra", "ch7-vert|Lordosis": "curves", "ch7-vert|Lumbar vertebrae": "bones", "ch7-vert|Nucleus pulposus": "disc", "ch7-vert|Pedicle": "vertebra", "ch7-vert|Primary curves": "curves", "ch7-vert|Scoliosis": "curves", "ch7-vert|Secondary curves": "curves", "ch7-vert|Thoracic vertebrae": "bones", "ch7-vert|Vertebral column": "bones", "ch7-vert|Vertebral foramen": "foramen", "ch8-arm|Interosseous membrane": "-", "ch8-leg|Q-angle": "-", "ch8-pect|Acromioclavicular joint": "joint", "ch8-pect|Pectoral girdle": "bones", "ch8-pect|Sternoclavicular joint": "joint", "ch8-pelv|Acetabulum": "-", "ch8-pelv|Female pelvis": "-", "ch8-pelv|Hip bone": "bones", "ch8-pelv|Pelvic girdle": "bones"}/*END GO*/;
 const _hostRe=(()=>{const m={};for(const k in GROUP_HOSTS)for(const w of GROUP_HOSTS[k]) m[w]=k;
   return {map:m,re:new RegExp("\\b("+Object.keys(m).join("|")+")\\b","i")};})();
 const _words=t=>(t||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(Boolean);
@@ -3223,17 +3223,20 @@ function _isWhole(name){const w=_words(name);if(w.length&&/^bones?$/.test(w[w.le
   return w.length===1&&!!_hostRe.map[w[0]];}
 function deckGroups(deckId){
   if(_groupCache[deckId]) return _groupCache[deckId];
-  const items=itemsFor(deckId)||[],last={},out={};
+  const items=itemsFor(deckId)||[],last={},out={},bony=/bone/i.test(DECKS[deckId].q||"");   /* bone names only group bone decks */
   for(const it of items){const w=_lastWord(it.name);last[w]=(last[w]||0)+1;}
   for(const it of items){
     const ov=GROUP_OVERRIDES[deckId+"|"+it.name]||it.group;
+    if(ov==="-"){out[it.id]=null;continue;}                        /* "-" in the overrides = leave this card ungrouped */
     let g=ov||null;
-    if(!g&&_isWhole(it.name)) g="bones";
-    if(!g) g=_hostIn(it.name);
+    if(!g&&bony&&_isWhole(it.name)) g="bones";
+    if(!g&&bony) g=_hostIn(it.name);
     if(!g){const w=_lastWord(it.name);if(w.length>=4&&last[w]>=3&&!_hostRe.map[w]) g=w;}
-    if(!g) g=_hostIn(it.clue);
+    if(!g&&bony) g=_hostIn(it.clue);
     out[it.id]=g||null;
   }
+  const n={};Object.values(out).forEach(g=>{if(g) n[g]=(n[g]||0)+1;});
+  for(const k in out) if(out[k]&&n[out[k]]<2) out[k]=null;       /* a group of one has no family to draw from */
   return _groupCache[deckId]=out;
 }
 const groupOf=(deckId,it)=>(deckGroups(deckId)||{})[it.id]||null;

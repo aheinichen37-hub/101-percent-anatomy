@@ -3,6 +3,7 @@
 Side ideas Andrew mentions while we work on something else. Claude adds new ones as they come up and checks this list before starting new work. Move an item to **Done** when it ships, or to **Dropped** if Andrew decides against it.
 
 ## Open
+- **Groups for non-skeletal decks (2026-11-24).** Only the bone decks have hand-fixed groups so far (3.6.0). Decks that mix families (heart anatomy, respiratory, CNS, nephron) could get overrides; run `python3 tools/groups.py --all` to see which. Andrew also noted the Deltoid tuberosity clue gives it away; the scanner lists such echoes.
 - **⭐ VERY IMPORTANT, DO NOT FORGET: the NEXT BUILD after multiple choice (v3.5.0) is the DECK STARS** (typed runs earn stars; the grey star fill from multiple-choice readiness lands with them). Andrew said this in capitals on 2026-11-20. Start there once multiple choice ships, before any other idea on this list. *(2026-11-20)*
 - **Swipe to next card** after answering (Next button stays for laptop). Building into the image-design samples to try on a phone. *(2026-11-05)*
 - **Tips on missed cards**: short memory tricks, fun facts or "how to tell it apart" notes, shown only when you miss. Andrew reviews each unit's tips before they go live. *(2026-11-05)*
