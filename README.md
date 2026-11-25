@@ -4,7 +4,16 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.6.0
+Current version: 3.7.0
+
+## Deck stars (3.7.0)
+
+Every typed deck earns up to three stars from its best typed run: **50%** is 1 star, **80%** is 2,
+and **3 stars needs a perfect run**, every card right on the first try (a second try is half a
+point, so it costs the third star; a "did you mean" spelling correction costs nothing). Stars
+show on each deck tile and the results page announces a new one. They are worked out from your
+saved rounds, so they never go down and need no new save format; multiple choice never earns stars.
+Two stars on every deck in a unit will unlock that unit's mastery check (not built yet).
 
 ## Multiple choice study mode (3.5.0)
 

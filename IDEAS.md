@@ -4,7 +4,6 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 
 ## Open
 - **Groups for non-skeletal decks (2026-11-24).** Only the bone decks have hand-fixed groups so far (3.6.0). Decks that mix families (heart anatomy, respiratory, CNS, nephron) could get overrides; run `python3 tools/groups.py --all` to see which. Andrew also noted the Deltoid tuberosity clue gives it away; the scanner lists such echoes.
-- **⭐ VERY IMPORTANT, DO NOT FORGET: the NEXT BUILD after multiple choice (v3.5.0) is the DECK STARS** (typed runs earn stars; the grey star fill from multiple-choice readiness lands with them). Andrew said this in capitals on 2026-11-20. Start there once multiple choice ships, before any other idea on this list. *(2026-11-20)*
 - **Swipe to next card** after answering (Next button stays for laptop). Building into the image-design samples to try on a phone. *(2026-11-05)*
 - **Tips on missed cards**: short memory tricks, fun facts or "how to tell it apart" notes, shown only when you miss. Andrew reviews each unit's tips before they go live. *(2026-11-05)*
 - **Pulsing highlight on structures**: light-blue fill over the whole structure, pulsing about 10–80% opacity, Visible Body style. Part of the pre-answer image design. *(2026-11-05)*
@@ -26,13 +25,12 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 
 ### Game-ification (brainstorm 2026-11-06; the save is built, the rest is not)
 - **Accounts / cloud login (future, for public use)**: sign-in plus cloud save (Firebase or Supabase). Build the save layer with a swappable storage adapter so local storage can become cloud storage later. *(2026-11-06)*
-- **Deck stars**: 3 perfect runs = 3 stars. Typo ("did you mean") answers get full credit. Up to 5 second tries per run, each worth half a point. *(2026-11-06)*
-- **Unit mastery check**: 50 randomly selected questions from the unit. Gold at 95% or higher (lose no more than 2.5 points), mastery at 100%. Unlocks once every deck in the unit has 2 stars. Best score is saved. *(2026-11-06)*
+- **Unit mastery check**: 50 randomly selected questions from the unit. Gold at 95% or higher (lose no more than 2.5 points), mastery at 100%. Unlocks once every deck in the unit has 2 or more stars (stars shipped in 3.7.0). Best score is saved. *(2026-11-06)*
 - **Unit header tiers in the lobby**: the unit's header changes with achievement. Gold = 95%+ on the mastery check, Diamond = 100% mastery, Ruby = 100% mastery plus 3 stars on every deck (full completion). *(2026-11-06)*
 - **Build order decided**: 1) safe save + installable app (next release), 2) deck stars and unit mastery checks, then the rest. *(2026-11-06)*
 - **Daily Review**: re-drills the cards you've missed. Could draw on the multiple-choice readiness data (cards not yet "ready"). *(2026-11-06, updated 2026-11-20)*
 - **Weak cards only round**: a round built only from cards that aren't "ready" yet in multiple choice (fewer than 2 right in a row). *(2026-11-20)*
-- **Multiple choice as a study method (v3.5.0, building 2026-11-20; the app was already at v3.4)**: after answering, the choice turns green if right or red if wrong, then a Next button like typed answers. Ready cards stay in every round. 4 choices per card, the right answer plus 3 other answers from the same deck (filter out look-alike or alias answers; fall back to same-unit answers for tiny decks). A card is "ready" after 2 right in a row; a miss resets it. Fills a per-deck readiness bar and the deck's stars light grey; typed answers stay the real test for stars, high scores and the unit mastery check. One try per card. *(2026-11-20)*
+- **Multiple choice as a study method (v3.5.0, building 2026-11-20; the app was already at v3.4)**: after answering, the choice turns green if right or red if wrong, then a Next button like typed answers. Ready cards stay in every round. 4 choices per card, the right answer plus 3 other answers from the same deck (filter out look-alike or alias answers; fall back to same-unit answers for tiny decks). A card is "ready" after 2 right in a row; a miss resets it. Fills a per-deck readiness bar; typed answers stay the real test for stars, high scores and the unit mastery check. One try per card. *(2026-11-20)*
 - **Speed Round**: timed random testing. Code later. *(2026-11-06)*
 - **Boss Fights**: the mastery check as a boss, possibly themed on each unit's pathologies (osteoporosis for bones, brain cancer for the nervous system, etc.). *(2026-11-06)*
 - **Cumulative boss every few units** that mixes earlier material. *(2026-11-06)*
@@ -57,6 +55,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Mirror the test into the claude.ai project as `claude/101-anatomy-regression-test-v2.0.py`** once there's room (the project is over its size limit; the old v1 copy there is out of date). *(2026-11-07)*
 
 ## Done
+- Deck stars (3.7.0, 2026-11-25): 50% = 1 star, 80% = 2, a perfect first-try run = 3; best typed run counts and never goes down; shown on deck tiles and the results page; no grey stars (the readiness bar covers study progress). Replaces the 2026-11-06 "3 perfect runs" idea.
 - Regression test 2.0: parallel tabs, `--quick` / `--full` / `--units` / `--changed`, seeded runs; full check about 40 s, quick about 6 s (2026-11-07)
 - Hand-fixed pictures for 74 bone cards (skull, vertebrae, thorax, arm, pectoral, pelvis, leg); Adobe connector tried and not useful here (v3.0, 2026-11-06)
 - Hand-fixed pictures for 59 Unit 11 muscle cards from Head & Neck down; the `fig` override lets a card borrow a better drawing and a hand-placed `point` skips the automatic quality checks (v2.9, 2026-11-06)- Decks for all 28 units (v2.3, 2026-11-05)

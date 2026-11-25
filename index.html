@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.6.0 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.7.0 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -127,6 +127,14 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 .rbar i{display:block;height:100%;background:#c4c4cb;border-radius:99px}
 .tile .ready{display:grid;gap:5px;font-size:12px;color:var(--muted)}
 .res .rbar{margin:4px 0 2px}
+/* v3.7.0: deck stars */
+.stars{display:inline-flex;gap:2px;font-size:15px;line-height:1;letter-spacing:0}
+.stars i{font-style:normal;color:#3a3a40}
+.stars i.on{color:var(--yellow,#f2c744)}
+.tile .stars{margin:2px 0 4px}
+.starsline{display:flex;align-items:center;justify-content:center;gap:10px;margin:6px 0 2px}
+.starsline .stars{font-size:26px;gap:4px}
+.starsline .earned{font-size:13px;font-weight:600;color:var(--yellow,#f2c744)}
 
 /* modal */
 .scrim{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.65);display:grid;place-items:center;padding:20px}
@@ -212,7 +220,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.6.0</div>
+<div id="ver" aria-hidden="true">v3.7.0</div>
 
 <script>
 /* ===================== CONTENT ===================== */
@@ -3068,6 +3076,25 @@ const app=$("#app");
 let view={page:"lobby"}; let round=null;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
+/* v3.7.0: deck stars. A deck's stars come from its best typed run and never go down:
+   50% = 1 star, 80% = 2 stars, 3 stars only when every card was right on the first try
+   (a second try is worth half a point, so credit equals total only for a clean run).
+   Integer-style comparisons on the exact credit, never the rounded percent, so 79.6% stays at 1 star.
+   Multiple choice never writes to DATA.rounds, so it cannot earn stars. */
+function starTier(credit,total){
+  credit=Number(credit)||0;total=Number(total)||0;
+  if(total<=0) return 0;
+  if(credit>=total) return 3;
+  if(credit*10>=8*total) return 2;
+  if(credit*2>=total) return 1;
+  return 0;
+}
+function starsFor(deckId){
+  let best=0;
+  for(const r of DATA.rounds){ if(r&&r.deck===deckId){const t=starTier(r.credit,r.total);if(t>best)best=t;} }
+  return best;
+}
+const starRow=n=>`<span class="stars" role="img" aria-label="${n} of 3 stars">${[1,2,3].map(i=>`<i class="${i<=n?"on":""}">★</i>`).join("")}</span>`;
 function statLine(st){
   return `<div class="stats"><div class="stat"><div class="v ${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</div><div class="k">Avg correct</div></div>
   <div class="stat"><div class="v c-green">${st.rounds}</div><div class="k">Rounds completed</div></div></div>`;
@@ -3115,7 +3142,7 @@ function unitPage(uid){
   app.innerHTML=`<div class="top"><div><div class="crumb">101% Anatomy</div><div class="brand">${esc(u.name)}</div></div></div>${statLine(statsFor(r=>r.unit===uid))}
   <h2 class="sect">Decks</h2>
   <div class="legend"><span><i class="k-id"></i>Identification</span><span><i class="k-fn"></i>What it does</span><span><i class="k-term"></i>Term</span><span><i class="p-yes"></i>Picture first</span><span><i class="p-after"></i>Figure after</span><span><i class="p-no"></i>No picture</span></div>
-  <div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckDots(d)}${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div>${readyBlock(id)}<span class="play">Play</span></button>`}).join("")}</div>`;
+  <div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckDots(d)}${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div>${starRow(starsFor(id))}${readyBlock(id)}<span class="play">Play</span></button>`}).join("")}</div>`;
   app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>chooseHow(b.dataset.deck));
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
@@ -3452,13 +3479,14 @@ function finish(){
   if(round.method==="mc") return finishMC();
   const total=round.qs.length,pct=Math.round(round.credit/total*100);
   let prev=null,isHigh=true;
+  const starsBefore=starsFor(round.deck);
   try{
     prev=DATA.best[round.deck]??null; isHigh=prev==null||pct>prev;
     const rounds=DATA.rounds.concat([{deck:round.deck,unit:DECKS[round.deck].unit,credit:round.credit,total,pct,ts:Date.now()}]);
     const best=Object.assign({},DATA.best); if(isHigh)best[round.deck]=pct;
     DATA=Object.assign({},DATA,{rounds,best});
   }catch(e){console.error("record failed",e);}
-  round.result={pct,prev,isHigh,total,best:Math.max(pct,prev??0)};
+  round.result={pct,prev,isHigh,total,best:Math.max(pct,prev??0),stars:starsFor(round.deck),starsBefore};
   view={page:"results"};
   try{render();}catch(e){console.error(e);}
   scrollTo(0,0);
@@ -3486,6 +3514,7 @@ function resultsPage(){
   const R=round.result,p=R.pct;
   app.innerHTML=`<div class="top"><div><div class="crumb">${esc(DECKS[round.deck].name)}</div><div class="brand">Round complete</div></div></div>
   <div class="res">${gaugeSVG(p)}${R.isHigh&&R.prev!=null?`<div class="newhs">New high score</div>`:""}
+  <div id="starsline" class="starsline">${starRow(R.stars)}${R.stars>R.starsBefore?`<span class="earned">${R.stars-R.starsBefore>1?"New stars earned":"New star earned"}</span>`:""}</div>
   <div class="breakdown">${round.first} first try · ${round.second} on retry (half credit) · ${round.missed} missed</div>
   <div class="stats"><div class="stat"><div class="v c-green">${p}%</div><div class="k">Right</div></div><div class="stat"><div class="v c-red">${100-p}%</div><div class="k">Wrong</div></div>
   <div class="stat"><div class="v ${pctClass(p)}">${p}%</div><div class="k">Current score</div></div><div class="stat"><div class="v c-yellow">${R.best}%</div><div class="k">High score</div></div></div>
