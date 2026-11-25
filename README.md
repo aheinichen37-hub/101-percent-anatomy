@@ -4,7 +4,17 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.7.0
+Current version: 3.8.0
+
+## Unit mastery check (3.8.0)
+
+Every unit page has a **Mastery check**. It unlocks once every deck in the unit has 2 or more stars,
+then asks 50 random cards pooled from all the unit's decks (a unit with fewer uses them all), typed
+and scored like a normal round: first try 1 point, second try half, miss 0. **Gold** is 95% or more,
+**Diamond** is a perfect 100%, and **Ruby** is a perfect check plus 3 stars on every deck. Retake any
+time; your best score counts and a worse retake never lowers it. The tier shows on the unit page and
+the lobby tile. Checks are saved as rounds of kind "check", so the save format is unchanged and the
+deck stats and stars ignore them.
 
 ## Deck stars (3.7.0)
 

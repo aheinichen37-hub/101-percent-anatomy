@@ -26,8 +26,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 ### Game-ification (brainstorm 2026-11-06; the save is built, the rest is not)
 - **Accounts / cloud login (future, for public use)**: sign-in plus cloud save (Firebase or Supabase). Build the save layer with a swappable storage adapter so local storage can become cloud storage later. *(2026-11-06)*
 - **Unit mastery check**: 50 randomly selected questions from the unit. Gold at 95% or higher (lose no more than 2.5 points), mastery at 100%. Unlocks once every deck in the unit has 2 or more stars (stars shipped in 3.7.0). Best score is saved. *(2026-11-06)*
-- **Mastery check settled so far (2026-11-25)**: stays 50 randomly selected questions from the unit (no scaling, no themed split for now; Andrew floated per-unit sizing and themed checks like a bone identification master vs a bony landmarks master, then chose to keep 50). Units with fewer than 50 cards (15 and 16 have 37) use every card. Scored like a typed run: first try 1 point, second try half, miss 0; gold at 95% or higher (47.5 of 50), mastery at 100% (all first try). Still open: typed vs multiple choice (assumed typed), retakes and whether a worse retake lowers the saved best, pictures on identification cards.
-- **Unit header tiers in the lobby**: the unit's header changes with achievement. Gold = 95%+ on the mastery check, Diamond = 100% mastery, Ruby = 100% mastery plus 3 stars on every deck (full completion). *(2026-11-06)*
+- **Unit header tiers in the lobby, the fancy version**: 3.8.0 shows Gold / Diamond / Ruby as a small badge on the unit page and lobby tile; the idea of the whole unit header changing look with the tier is still open. *(2026-11-06)*
 - **Build order decided**: 1) safe save + installable app (next release), 2) deck stars and unit mastery checks, then the rest. *(2026-11-06)*
 - **Daily Review**: re-drills the cards you've missed. Could draw on the multiple-choice readiness data (cards not yet "ready"). *(2026-11-06, updated 2026-11-20)*
 - **Weak cards only round**: a round built only from cards that aren't "ready" yet in multiple choice (fewer than 2 right in a row). *(2026-11-20)*
@@ -56,6 +55,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Mirror the test into the claude.ai project as `claude/101-anatomy-regression-test-v2.0.py`** once there's room (the project is over its size limit; the old v1 copy there is out of date). *(2026-11-07)*
 
 ## Done
+- Unit mastery check (3.8.0, 2026-11-25): 50 random typed cards from the unit (all of them for units with fewer, like 15 and 16), unlocked at 2+ stars on every deck; first try 1, second try half, miss 0; Gold 95%+, Diamond 100%, Ruby = 100% plus 3 stars on every deck; retake any time, best counts. Andrew considered scaling the size per unit or themed checks per unit (bone identification master vs landmarks master) and chose a flat 50 for now.
 - Deck stars (3.7.0, 2026-11-25): 50% = 1 star, 80% = 2, a perfect first-try run = 3; best typed run counts and never goes down; shown on deck tiles and the results page; no grey stars (the readiness bar covers study progress). Replaces the 2026-11-06 "3 perfect runs" idea.
 - Regression test 2.0: parallel tabs, `--quick` / `--full` / `--units` / `--changed`, seeded runs; full check about 40 s, quick about 6 s (2026-11-07)
 - Hand-fixed pictures for 74 bone cards (skull, vertebrae, thorax, arm, pectoral, pelvis, leg); Adobe connector tried and not useful here (v3.0, 2026-11-06)

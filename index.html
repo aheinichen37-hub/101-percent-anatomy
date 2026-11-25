@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.7.0 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.8.0 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -134,6 +134,15 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 .tile .stars{margin:2px 0 4px}
 .starsline{display:flex;align-items:center;justify-content:center;gap:10px;margin:6px 0 2px}
 .starsline .stars{font-size:26px;gap:4px}
+.check{display:grid;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.check p{margin:0;font-size:14px;color:var(--muted)}
+.check.locked .btn{opacity:.5}
+.chkbest{font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.tier{display:inline-block;font:600 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;border-radius:99px;padding:4px 8px}
+.tier-gold{background:rgba(243,195,68,.18);color:var(--yellow)}
+.tier-diamond{background:rgba(110,200,255,.18);color:#7ccfff}
+.tier-ruby{background:rgba(239,79,85,.2);color:#ff7d83}
+.tile .tier{justify-self:start;margin:2px 0}
 .starsline .earned{font-size:13px;font-weight:600;color:var(--yellow,#f2c744)}
 
 /* modal */
@@ -220,7 +229,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.7.0</div>
+<div id="ver" aria-hidden="true">v3.8.0</div>
 
 <script>
 /* ===================== CONTENT ===================== */
@@ -3067,7 +3076,7 @@ async function initRemote(){
   }catch(e){}
 }
 async function save(){saveLocal();keepStorage();if(remote){try{await remote.ref.set(DATA);}catch(e){}}}
-function statsFor(filter){const rs=DATA.rounds.filter(filter);const q=rs.reduce((a,r)=>a+r.total,0),c=rs.reduce((a,r)=>a+r.credit,0);return {rounds:rs.length,pct:q?Math.round(c/q*100):null};}
+function statsFor(filter){const rs=DATA.rounds.filter(r=>r&&r.kind!=="check"&&filter(r));const q=rs.reduce((a,r)=>a+r.total,0),c=rs.reduce((a,r)=>a+r.credit,0);return {rounds:rs.length,pct:q?Math.round(c/q*100):null};}
 const pctClass=p=>p==null?"c-none":p<=33?"c-red":p<=66?"c-yellow":"c-green";
 
 /* ===================== UI ===================== */
@@ -3095,6 +3104,65 @@ function starsFor(deckId){
   return best;
 }
 const starRow=n=>`<span class="stars" role="img" aria-label="${n} of 3 stars">${[1,2,3].map(i=>`<i class="${i<=n?"on":""}">★</i>`).join("")}</span>`;
+/* v3.8.0: unit mastery check. 50 random cards pooled from every deck in the unit (a unit with fewer
+   uses them all), typed like a normal round and scored the same way: first try 1 point, second try
+   half, miss 0. It unlocks once every deck in the unit has 2 or more stars. Results are saved as
+   rounds with kind "check" (deck "check:<unit>"), so backup, restore and the save format are unchanged
+   and the deck stats and stars ignore them. Gold = 95% or more, Diamond = a perfect 100%, Ruby = a
+   perfect check plus 3 stars on every deck. Retake any time; the best score is the one that counts. */
+const CHECK_SIZE=50;
+const unitDecks=uid=>UNITS.find(u=>u.id===uid).decks.filter(x=>typeof x==="string");
+function checkUnlock(uid){const ds=unitDecks(uid),have=ds.filter(d=>starsFor(d)>=2).length;return {have,total:ds.length,open:ds.length>0&&have===ds.length};}
+function checkBest(uid){let b=null;for(const r of DATA.rounds){if(r&&r.kind==="check"&&r.unit===uid&&r.total>0&&(!b||r.credit/r.total>b.credit/b.total))b=r;}return b;}
+function checkGrade(credit,total){credit=Number(credit)||0;total=Number(total)||0;if(total<=0)return "none";if(credit>=total)return "perfect";if(credit*20>=19*total)return "gold";return "none";}
+function unitTier(uid){
+  const b=checkBest(uid); if(!b) return "";
+  const g=checkGrade(b.credit,b.total);
+  if(g==="perfect") return unitDecks(uid).every(d=>starsFor(d)===3)?"ruby":"diamond";
+  return g==="gold"?"gold":"";
+}
+const TIER_NAME={gold:"Gold",diamond:"Diamond",ruby:"Ruby"};
+const tierBadge=uid=>{const t=unitTier(uid);return t?`<span class="tier tier-${t}">${TIER_NAME[t]}</span>`:"";};
+function checkBlock(uid){
+  const k=checkUnlock(uid),b=checkBest(uid),n=Math.min(CHECK_SIZE,unitDecks(uid).reduce((a,d)=>a+itemsFor(d).length,0));
+  const best=b?`<div class="chkbest">Best <b>${Math.round(b.credit/b.total*100)}%</b> ${tierBadge(uid)}</div>`:"";
+  return `<h2 class="sect">Mastery check</h2><div class="check ${k.open?"open":"locked"}" id="checkblock">
+    <p>${k.open?`${n} random questions from every deck in this unit, typed. Gold at 95% or more, Diamond at a perfect 100%.`:`Locked. Earn 2 or more stars on every deck first: <b>${k.have} of ${k.total}</b> decks there so far.`}</p>${best}
+    <button type="button" class="btn ${k.open?"primary":""}" id="startcheck" ${k.open?"":'disabled aria-disabled="true"'}>${k.open?(b?"Retake the check":"Start the check"):"Locked"}</button></div>`;
+}
+function startCheck(uid){
+  if(!checkUnlock(uid).open) return;
+  const pool=[];
+  unitDecks(uid).forEach(id=>itemsFor(id).forEach(st=>pool.push({st,deck:id,view:st.views?st.views[Math.floor(Math.random()*st.views.length)]:null})));
+  const qs=shuffle(pool).slice(0,CHECK_SIZE);
+  round={method:"check",unit:uid,deck:null,images:true,qs,i:0,tries:0,credit:0,first:0,second:0,missed:0,state:"ask",fb:"",lastMissed:false};
+  view={page:"play"};render();scrollTo(0,0);
+}
+const roundUnit=()=>round.method==="check"?round.unit:DECKS[round.deck].unit;
+const roundName=()=>round.method==="check"?UNITS.find(u=>u.id===round.unit).name:DECKS[round.deck].name;
+function finishCheck(){
+  const total=round.qs.length,pct=Math.round(round.credit/total*100),prev=checkBest(round.unit);
+  try{DATA=Object.assign({},DATA,{rounds:DATA.rounds.concat([{kind:"check",deck:"check:"+round.unit,unit:round.unit,credit:round.credit,total,pct,ts:Date.now()}])});}catch(e){console.error("record failed",e);}
+  const b=checkBest(round.unit);
+  round.result={pct,total,grade:checkGrade(round.credit,total),best:Math.round(b.credit/b.total*100),prevTier:prev?unitTier(round.unit):"",tier:unitTier(round.unit)};
+  view={page:"results"};
+  try{render();}catch(e){console.error(e);}
+  scrollTo(0,0);
+  setTimeout(()=>{try{save();}catch(e){}},0);
+}
+function checkResultsPage(){
+  const R=round.result,p=R.pct,t=R.tier;
+  const verdict=R.grade==="perfect"?"Perfect. Every card right on the first try.":R.grade==="gold"?"Gold. Within reach of a perfect 100%.":"Not gold yet. 95% or more earns it.";
+  app.innerHTML=`<div class="top"><div><div class="crumb">${esc(roundName())}</div><div class="brand">Mastery check complete</div></div></div>
+  <div class="res">${gaugeSVG(p)}<div class="starsline">${t?tierBadge(round.unit):""}</div>
+  <div class="breakdown">${esc(verdict)}</div>
+  <div class="breakdown">${round.first} first try · ${round.second} on retry (half credit) · ${round.missed} missed</div>
+  <div class="stats"><div class="stat"><div class="v ${pctClass(p)}">${p}%</div><div class="k">This check</div></div><div class="stat"><div class="v c-yellow">${R.best}%</div><div class="k">Best</div></div></div>
+  <div class="btnrow"><button class="btn primary" id="again">Retake the check</button><button class="btn" id="tolobby">Back to the unit</button></div></div>`;
+  $("#again").onclick=()=>startCheck(round.unit);
+  $("#tolobby").onclick=()=>{view={page:"unit",unit:round.unit};render();};
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{const f=$("#gfill");if(f)f.style.strokeDashoffset=f.getAttribute("stroke-dasharray")*(1-p/100);const nd=$("#needle");if(nd)nd.setAttribute("transform",`rotate(${-135+270*p/100} 120 120)`);}));
+}
 function statLine(st){
   return `<div class="stats"><div class="stat"><div class="v ${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</div><div class="k">Avg correct</div></div>
   <div class="stat"><div class="v c-green">${st.rounds}</div><div class="k">Rounds completed</div></div></div>`;
@@ -3114,7 +3182,7 @@ function render(){
 const soonTile=(name,ico)=>`<div class="tile soon" aria-disabled="true">${ico}<h3>${esc(name)}</h3><div class="meta"><span class="badge">Coming soon</span></div></div>`;
 function lobby(){
   app.innerHTML=`<div class="top"><div class="brand">101<b>%</b> Anatomy</div></div>${statLine(statsFor(()=>true))}
-  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3><div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Muscle and bone pictures are rendered from BodyParts3D, &copy; The Database Center for Life Science, licensed under <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" target="_blank" rel="noopener">CC BY-SA 2.1 Japan</a> (Mitsuhashi et al., 2009, <i>Nucleic Acids Research</i> 37:D782), recolored and re-rendered for this app; those pictures are shared under the same license. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 3.4</p>`;
+  <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3>${tierBadge(u.id)}<div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Muscle and bone pictures are rendered from BodyParts3D, &copy; The Database Center for Life Science, licensed under <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" target="_blank" rel="noopener">CC BY-SA 2.1 Japan</a> (Mitsuhashi et al., 2009, <i>Nucleic Acids Research</i> 37:D782), recolored and re-rendered for this app; those pictures are shared under the same license. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 3.4</p>`;
   app.querySelectorAll("[data-unit]").forEach(b=>b.onclick=()=>{view={page:"unit",unit:b.dataset.unit};render();scrollTo(0,0);});
 }
 /* Two dots in a deck tile's corner: what kind of deck it is, and whether it has
@@ -3140,10 +3208,12 @@ function deckDots(d){
 function unitPage(uid){
   const u=UNITS.find(x=>x.id===uid);
   app.innerHTML=`<div class="top"><div><div class="crumb">101% Anatomy</div><div class="brand">${esc(u.name)}</div></div></div>${statLine(statsFor(r=>r.unit===uid))}
+  ${checkBlock(uid)}
   <h2 class="sect">Decks</h2>
   <div class="legend"><span><i class="k-id"></i>Identification</span><span><i class="k-fn"></i>What it does</span><span><i class="k-term"></i>Term</span><span><i class="p-yes"></i>Picture first</span><span><i class="p-after"></i>Figure after</span><span><i class="p-no"></i>No picture</span></div>
   <div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckDots(d)}${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div>${starRow(starsFor(id))}${readyBlock(id)}<span class="play">Play</span></button>`}).join("")}</div>`;
   app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>chooseHow(b.dataset.deck));
+  const sc=$("#startcheck"); if(sc&&!sc.disabled) sc.onclick=()=>startCheck(uid);
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function chooseMode(deckId,method){
@@ -3393,7 +3463,7 @@ function startRound(deckId,images=true){
 }
 function playPage(){
   const q=round.qs[round.i],n=round.qs.length;
-  const v=q.view,dk=DECKS[round.deck];
+  const v=q.view,dk=DECKS[q.deck||round.deck];
   const fnDeck=!!dk.fn, showImg=!fnDeck||round.images;
   let prompt,art,hint,tag,desc;
   if(dk.items){
@@ -3421,7 +3491,7 @@ function playPage(){
   tag=!showImg?"Images off":v.tag?v.tag:v.close?"Close-up":"Whole cell";
   desc=fnDeck?`<p class="desc">${esc(q.st.fn)}</p>`:"";
   }
-  app.innerHTML=`<div class="top"><div><div class="crumb">${esc(DECKS[round.deck].name)}</div><div class="brand">${round.method==="mc"?"Study round":"Round in play"}</div></div></div>
+  app.innerHTML=`<div class="top"><div><div class="crumb">${esc(roundName())}</div><div class="brand">${round.method==="mc"?"Study round":round.method==="check"?"Mastery check":"Round in play"}</div></div></div>
   <div class="qhead"><span class="qnum">Question ${round.i+1} / ${n}</span><span class="qnum">${tag}</span></div>
   <div class="bar"><i style="width:${(round.i+(round.state==="done"?1:0))/n*100}%"></i></div>
   <h1 class="prompt">${prompt}</h1>
@@ -3446,7 +3516,7 @@ function playPage(){
 }
 function setFb(html,state){round.fb=html;round.state=state;playPage();}
 function submit(raw){
-  const c=classify(raw,round.deck);
+  const c=classify(raw,round.qs[round.i].deck||round.deck);
   if(c.kind==="empty") return;
   if(c.kind==="nudge"){round.keep=raw;return setFb(`<div class="fb warn">${esc(c.msg)}<small>Free retry. This doesn't count as a try.</small></div>`,"ask");}
   if(c.kind==="suggest"){round.pending=c.v;return setFb(`<div class="fb warn">Did you mean “${esc(c.v.label)}”?</div>`,"suggest");}
@@ -3477,6 +3547,7 @@ function next(){
 }
 function finish(){
   if(round.method==="mc") return finishMC();
+  if(round.method==="check") return finishCheck();
   const total=round.qs.length,pct=Math.round(round.credit/total*100);
   let prev=null,isHigh=true;
   const starsBefore=starsFor(round.deck);
@@ -3511,6 +3582,7 @@ function gaugeSVG(p){
 }
 function resultsPage(){
   if(round.method==="mc") return mcResultsPage();
+  if(round.method==="check") return checkResultsPage();
   const R=round.result,p=R.pct;
   app.innerHTML=`<div class="top"><div><div class="crumb">${esc(DECKS[round.deck].name)}</div><div class="brand">Round complete</div></div></div>
   <div class="res">${gaugeSVG(p)}${R.isHigh&&R.prev!=null?`<div class="newhs">New high score</div>`:""}
@@ -3657,7 +3729,7 @@ function go(dest){
   closeMenu();
   const doIt=()=>{if(dest==="home")view={page:"lobby"};else{
       if(view.page==="unit")view={page:"lobby"};
-      else if(view.page==="play"||view.page==="results")view={page:"unit",unit:DECKS[round.deck].unit};}
+      else if(view.page==="play"||view.page==="results")view={page:"unit",unit:roundUnit()};}
     render();scrollTo(0,0);};
   if(view.page==="play") return confirmLeave(doIt);
   doIt();
