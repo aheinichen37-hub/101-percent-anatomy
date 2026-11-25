@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.8.1 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.8.2 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -229,7 +229,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.8.1</div>
+<div id="ver" aria-hidden="true">v3.8.2</div>
 
 <script>
 /* ===================== CONTENT ===================== */
@@ -2996,8 +2996,11 @@ function classify(raw,deckId){
   const hit=VOCAB.find(v=>v.n===n); if(hit) return {kind:"answer",id:hit.id,n:hit.n};
   if(legacy&&["er","endoplasmicreticulum","reticulum","endoplasmic"].includes(n)) return {kind:"nudge",msg:"Be specific: rough ER or smooth ER?"};
   if(legacy&&["golgi","golgis","golgiapparatis"].includes(n)) return {kind:"nudge",msg:"Use the full name for this one."};
+  /* v3.8.2: numbers are facts, not spelling. A candidate whose digits differ from what was typed is never
+     suggested ("13" is not a slip for 12), so a wrong number is graded as a normal wrong try. */
+  const digits=s=>(s.match(/\d+/g)||[]).join(","),dn=digits(n);
   let best=null,bd=99,tie=false;
-  VOCAB.forEach(v=>{const d=lev(n,v.n);if(d<bd){bd=d;best=v;tie=false}else if(d===bd&&best&&v.id!==best.id)tie=true;});
+  VOCAB.forEach(v=>{if(digits(v.n)!==dn)return;const d=lev(n,v.n);if(d<bd){bd=d;best=v;tie=false}else if(d===bd&&best&&v.id!==best.id)tie=true;});
   const lim=n.length<=5?1:n.length<=10?2:3;
   if(best&&bd<=lim&&!tie) return {kind:"suggest",v:best};
   if(best&&bd<=lim&&tie) return {kind:"nudge",msg:"Check your spelling. That's close to more than one answer."};
@@ -3448,10 +3451,10 @@ function mcResultsPage(){
   ${rbar(R.pct,`${R.ready} of ${R.cards} cards ready`)}
   <div class="breakdown">${R.ready} of ${R.cards} cards ready${gain?` (${gain>0?"+":""}${gain} this round)`:""}</div>
   <p class="note">A card is ready after ${READY_AT} right in a row. Study rounds don't change your high score. Typed rounds do.</p>
-  <div class="btnrow"><button class="btn primary" id="again">Study again</button><button class="btn" id="totype">Type it</button><button class="btn" id="tolobby">Lobby</button></div></div>`;
+  <div class="btnrow"><button class="btn primary" id="again">Study again</button><button class="btn" id="totype">Type it</button><button class="btn" id="tolobby">Back to the unit</button></div></div>`;
   $("#again").onclick=()=>startMC(round.deck,round.images);
   $("#totype").onclick=()=>startRound(round.deck,round.images);
-  $("#tolobby").onclick=()=>{view={page:"lobby"};render();};
+  $("#tolobby").onclick=()=>{view={page:"unit",unit:DECKS[round.deck].unit};render();scrollTo(0,0);};  // v3.8.2
 }
 document.addEventListener("keydown",e=>{
   if(e.ctrlKey||e.metaKey||e.altKey) return;
@@ -3593,9 +3596,9 @@ function resultsPage(){
   <div class="breakdown">${round.first} first try · ${round.second} on retry (half credit) · ${round.missed} missed</div>
   <div class="stats"><div class="stat"><div class="v c-green">${p}%</div><div class="k">Right</div></div><div class="stat"><div class="v c-red">${100-p}%</div><div class="k">Wrong</div></div>
   <div class="stat"><div class="v ${pctClass(p)}">${p}%</div><div class="k">Current score</div></div><div class="stat"><div class="v c-yellow">${R.best}%</div><div class="k">High score</div></div></div>
-  <div class="btnrow"><button class="btn primary" id="again">Play again</button><button class="btn" id="tolobby">Lobby</button></div></div>`;
+  <div class="btnrow"><button class="btn primary" id="again">Play again</button><button class="btn" id="tolobby">Back to the unit</button></div></div>`;
   $("#again").onclick=()=>startRound(round.deck,round.images);
-  $("#tolobby").onclick=()=>{view={page:"lobby"};render();};
+  $("#tolobby").onclick=()=>{view={page:"unit",unit:DECKS[round.deck].unit};render();scrollTo(0,0);};  // v3.8.2
   requestAnimationFrame(()=>requestAnimationFrame(()=>{const f=$("#gfill");if(f)f.style.strokeDashoffset=f.getAttribute("stroke-dasharray")*(1-p/100);const nd=$("#needle");if(nd)nd.setAttribute("transform",`rotate(${-135+270*p/100} 120 120)`);}));
 }
 

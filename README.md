@@ -4,7 +4,15 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.8.1
+Current version: 3.8.2
+
+## Small fixes (3.8.2)
+
+- After a deck, the results screen's **Back to the unit** button returns to that deck's unit page
+  (the skull deck goes back to Axial Skeleton), like the mastery check already did.
+- **A wrong number is just wrong.** "Did you mean" never offers an answer whose number differs from
+  the one you typed, so typing 13 for the 12 pairs of ribs counts as a wrong try instead of being
+  corrected. Spelling help still works around a right number ("G1 phse" → G1 phase).
 
 ## Locked card IDs (3.8.1)
 
