@@ -52,6 +52,9 @@ def apply(html, tips):
 
         card_id = f"{deck}-{idx}"
         idx += 1
+        if line.strip().startswith("~"):   # 3.8.1: a retired card keeps its number but gets no tip
+            out.append(line)
+            continue
         tip = tips.get(card_id)
         if tip is None:
             out.append(line)

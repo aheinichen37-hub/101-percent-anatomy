@@ -3,6 +3,19 @@
 Side ideas Andrew mentions while we work on something else. Claude adds new ones as they come up and checks this list before starting new work. Move an item to **Done** when it ships, or to **Dropped** if Andrew decides against it.
 
 ## Open
+
+### Next four releases (roadmap v1.1.0, brainstorm 2026-11-25)
+- **Spaced review via FSRS** (3.9.0): per-card memory using FSRS v6 (`ts-fsrs`, MIT, vendored inline), plus a Weak Cards round. *(2026-11-25)*
+- **Today session** (3.10.0): one button mixing due reviews, weak cards and a little new material; "all caught up" empty state with Study ahead. *(2026-11-25)*
+- **Streak with freeze days** (3.10.0, Claude's proposal, not yet confirmed): forgiving streak, local dates, freezes banked automatically. *(2026-11-25)*
+- **Unit Readiness warm-up inside Today** (3.10.0): offered when a unit's check is unlocked but not taken. *(2026-11-25)*
+- **Path with body silhouette and unit trails** (4.0.0): Path / Library / Weak tabs; the body fills in as units are mastered; each unit opens a trail of its decks with the mastery check as the boss node; mockups approved before code. *(2026-11-25)*
+- **Specimens with rusty fading** (4.1.0): a body part is mastered when all its parts are; dims slowly if not reviewed, never vanishes, one Polish round fixes it. *(2026-11-25)*
+- **"I guessed" flag** on answers (Claude's proposal, not yet confirmed). *(2026-11-25)*
+- **Confusable-pairs drill** (radius vs ulna and similar; Claude's proposal, not yet confirmed). *(2026-11-25)*
+- **Exam-date pacing mode** (Claude's proposal, not yet confirmed). *(2026-11-25)*
+- **Repeated answers inside a deck (2026-11-25)**: 17 cards share an answer with another card in the same deck (e.g. "Superior" twice in Directional Terms, different clues). `groups-overrides.json` keys on deck + answer, so an override there hits both. Harmless today; worth a look if a fix ever targets one of them.
+- **Card memory per deck, for 3.9.0 (2026-11-25)**: Organelles and Organelle Functions share one card list (same IDs, asked two ways), so card memory should be keyed by deck + card, the way the ready streaks already are.
 - **Groups for non-skeletal decks (2026-11-24).** Only the bone decks have hand-fixed groups so far (3.6.0). Decks that mix families (heart anatomy, respiratory, CNS, nephron) could get overrides; run `python3 tools/groups.py --all` to see which. Andrew also noted the Deltoid tuberosity clue gives it away; the scanner lists such echoes.
 - **Swipe to next card** after answering (Next button stays for laptop). Building into the image-design samples to try on a phone. *(2026-11-05)*
 - **Tips on missed cards**: short memory tricks, fun facts or "how to tell it apart" notes, shown only when you miss. Andrew reviews each unit's tips before they go live. *(2026-11-05)*
@@ -55,6 +68,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Mirror the test into the claude.ai project as `claude/101-anatomy-regression-test-v2.0.py`** once there's room (the project is over its size limit; the old v1 copy there is out of date). *(2026-11-07)*
 
 ## Done
+- Locked card IDs (3.8.1, 2026-11-25): every current card ID is recorded in `tools/card-ids.json` and `test_card_ids.py` fails if one disappears or moves; new cards go at the end of a deck, a retired card's line starts with `~` and keeps its slot; `tools/card_ids.py --update` after a real answer fix. Found at Gate 0: most IDs were line positions.
 - Unit mastery check (3.8.0, 2026-11-25): 50 random typed cards from the unit (all of them for units with fewer, like 15 and 16), unlocked at 2+ stars on every deck; first try 1, second try half, miss 0; Gold 95%+, Diamond 100%, Ruby = 100% plus 3 stars on every deck; retake any time, best counts. Andrew considered scaling the size per unit or themed checks per unit (bone identification master vs landmarks master) and chose a flat 50 for now.
 - Deck stars (3.7.0, 2026-11-25): 50% = 1 star, 80% = 2, a perfect first-try run = 3; best typed run counts and never goes down; shown on deck tiles and the results page; no grey stars (the readiness bar covers study progress). Replaces the 2026-11-06 "3 perfect runs" idea.
 - Regression test 2.0: parallel tabs, `--quick` / `--full` / `--units` / `--changed`, seeded runs; full check about 40 s, quick about 6 s (2026-11-07)

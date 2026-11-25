@@ -4,7 +4,16 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.8.0
+Current version: 3.8.1
+
+## Locked card IDs (3.8.1)
+
+Your progress remembers cards by ID, and most IDs are a card's line number in its deck, so a moved
+line would hand one card's progress to another. 3.8.1 locks every ID in `tools/card-ids.json` and
+`tools/tests/test_card_ids.py` fails if one moves. When editing decks: **add new cards at the end**,
+**retire a card by starting its line with `~`** (its slot keeps its number), and after a real answer
+fix or a new card run `python3 tools/card_ids.py --update` and read the summary it prints. Nothing
+changes on screen.
 
 ## Unit mastery check (3.8.0)
 

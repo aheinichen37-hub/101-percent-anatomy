@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.8.0 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.8.1 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -229,16 +229,19 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.8.0</div>
+<div id="ver" aria-hidden="true">v3.8.1</div>
 
 <script>
 /* ===================== CONTENT ===================== */
 /* Term decks (v2.0). Each card: answer, other accepted answers, clue, OpenStax figure for the image slot. */
 const NEWDECKS=[];
+/* v3.8.1: a card's ID is its line number in the deck and is locked (tools/card-ids.json, test_card_ids.py),
+   because saved progress, tips and picture overrides key on it. Add new cards at the end; retire a card by
+   starting its line with "~", which keeps its slot so the cards after it keep their numbers. */
 function D(id,unit,name,q,fig,text){
-  const items=text.trim().split("\n").map((ln,i)=>{const p=ln.split("|").map(s=>s.trim());
+  const items=text.trim().split("\n").map((ln,i)=>{if(ln.trim().startsWith("~"))return null;const p=ln.split("|").map(s=>s.trim());
     const alts=p[1]?p[1].split(";").map(s=>s.trim()).filter(Boolean):[];
-    return {id:id+"-"+i,name:p[0],accept:[p[0].toLowerCase()].concat(alts),clue:p[2],fig:p[3]||fig,tip:(p[4]||"").trim()||undefined,group:(p[5]||"").trim()||undefined};});
+    return {id:id+"-"+i,name:p[0],accept:[p[0].toLowerCase()].concat(alts),clue:p[2],fig:p[3]||fig,tip:(p[4]||"").trim()||undefined,group:(p[5]||"").trim()||undefined};}).filter(Boolean);
   return {id,unit,name,q,fig,items};
 }
 /* ===== v2.0 deck content, part 1: Units 1, 3, 4 =====

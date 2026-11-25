@@ -20,7 +20,9 @@ for deck, cards in by_deck.items():
     lines = m.group(1).split("\n")
     live = [i for i, l in enumerate(lines) if l.strip()]
     for idx, fig in cards.items():
-        li = live[idx]; parts = [p.strip() for p in lines[li].split("|")]
+        li = live[idx]
+        if lines[li].strip().startswith("~"): skipped += 1; print("retired card, left alone:", deck, idx); continue  # 3.8.1
+        parts = [p.strip() for p in lines[li].split("|")]
         want = names.get(f"{deck}-{idx}")
         if want and parts[0] != want: raise SystemExit(f"{deck}-{idx}: expected {want!r}, found {parts[0]!r}")
         while len(parts) < 4: parts.append("")
