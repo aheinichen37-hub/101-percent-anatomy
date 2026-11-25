@@ -4,7 +4,18 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.8.2
+Current version: 3.8.3
+
+## Picture fix pass (3.8.3)
+
+Every textbook picture shown before you answer (291 of them; the 162 3D renders were already
+right) was checked by eye. 162 were fixed: labels that gave away the answer or another card's
+answer are covered (Dens, Coccyx, Pterion, the eye-muscle arrows), and spots that sat on a leader
+line's end are moved onto the structure (Squamous suture, Anulus fibrosus, the body cavities,
+the heart valves, the skin layers and more). Fixes live in `tools/id-fixes.json` and are applied
+by `python3 tools/idimg/patch_pics.py`, which rebuilds each picture from the 3.8.2 original, so it
+can be re-run safely. `python3 tools/idimg/scan_pics.py` lists pictures that still show text or
+put the spot on the picture's edge.
 
 ## Small fixes (3.8.2)
 

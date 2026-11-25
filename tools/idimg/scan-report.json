@@ -1,0 +1,878 @@
+{
+ "ch1-pl-4": {
+  "answer": "Transverse plane",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     568,
+     310
+    ],
+    "share": 0.62
+   }
+  ]
+ },
+ "ch1-pl-5": {
+  "answer": "Transverse plane",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     568,
+     310
+    ],
+    "share": 0.62
+   }
+  ]
+ },
+ "ch11-head-20": {
+  "answer": "Superior oblique",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     144,
+     69
+    ],
+    "share": 0.56
+   }
+  ]
+ },
+ "ch12-cell-4": {
+  "answer": "Axon hillock",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     432,
+     124
+    ],
+    "share": 0.84
+   }
+  ]
+ },
+ "ch13-cns-19": {
+  "answer": "Cerebellum",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     448,
+     61
+    ],
+    "share": 0.71
+   }
+  ]
+ },
+ "ch13-csf-3": {
+  "answer": "Pia mater",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     200,
+     330
+    ],
+    "share": 0.71
+   }
+  ]
+ },
+ "ch13-pns-8": {
+  "answer": "Cervical plexus",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     200,
+     150
+    ],
+    "share": 0.83
+   }
+  ]
+ },
+ "ch14-spec-5": {
+  "answer": "Cochlea",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "salsa",
+    "box": [
+     149,
+     142,
+     174,
+     148
+    ]
+   }
+  ]
+ },
+ "ch20-art-12": {
+  "answer": "Thoracic aorta",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "Yooy",
+    "box": [
+     228,
+     178,
+     310,
+     206
+    ]
+   }
+  ]
+ },
+ "ch20-art-13": {
+  "answer": "Abdominal aorta",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "Yooy",
+    "box": [
+     228,
+     178,
+     310,
+     206
+    ]
+   }
+  ]
+ },
+ "ch20-art-14": {
+  "answer": "Celiac trunk",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "Yooy",
+    "box": [
+     228,
+     178,
+     310,
+     206
+    ]
+   }
+  ]
+ },
+ "ch20-vein-3": {
+  "answer": "Internal jugular vein",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     368,
+     598
+    ],
+    "share": 0.63
+   }
+  ]
+ },
+ "ch23-int-3": {
+  "answer": "Circular folds",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "MANAR",
+    "box": [
+     952,
+     127,
+     990,
+     138
+    ]
+   },
+   {
+    "kind": "paper",
+    "at": [
+     240,
+     150
+    ],
+    "share": 0.8
+   }
+  ]
+ },
+ "ch23-mouth-14": {
+  "answer": "Incisors",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "SARS",
+    "box": [
+     114,
+     19,
+     377,
+     105
+    ]
+   },
+   {
+    "kind": "paper",
+    "at": [
+     261,
+     34
+    ],
+    "share": 0.61
+   }
+  ]
+ },
+ "ch23-mouth-15": {
+  "answer": "Canines",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "SARS",
+    "box": [
+     114,
+     19,
+     377,
+     105
+    ]
+   },
+   {
+    "kind": "paper",
+    "at": [
+     363,
+     57
+    ],
+    "share": 0.65
+   }
+  ]
+ },
+ "ch23-mouth-16": {
+  "answer": "Molars",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "SARS",
+    "box": [
+     114,
+     19,
+     377,
+     105
+    ]
+   },
+   {
+    "kind": "paper",
+    "at": [
+     433,
+     280
+    ],
+    "share": 0.6
+   }
+  ]
+ },
+ "ch25-anat-13": {
+  "answer": "Detrusor muscle",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "Rilo",
+    "box": [
+     270,
+     484,
+     307,
+     496
+    ]
+   },
+   {
+    "kind": "label",
+    "text": "gore",
+    "box": [
+     531,
+     482,
+     567,
+     493
+    ]
+   }
+  ]
+ },
+ "ch27-male-4": {
+  "answer": "Sertoli cells",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     92,
+     657
+    ],
+    "share": 0.56
+   }
+  ]
+ },
+ "ch4-ct-14": {
+  "answer": "Hyaline cartilage",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     200,
+     200
+    ],
+    "share": 0.67
+   }
+  ]
+ },
+ "ch4-ct-16": {
+  "answer": "Elastic cartilage",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     400,
+     986
+    ],
+    "share": 0.59
+   }
+  ]
+ },
+ "ch4-ct-3": {
+  "answer": "Adipocyte",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     238,
+     176
+    ],
+    "share": 0.56
+   }
+  ]
+ },
+ "ch6-str-15": {
+  "answer": "Foramen",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     136,
+     138
+    ],
+    "share": 0.57
+   }
+  ]
+ },
+ "ch7-skull-21": {
+  "answer": "Styloid process",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     235,
+     355
+    ],
+    "share": 0.58
+   }
+  ]
+ },
+ "ch7-skull-23": {
+  "answer": "Sella turcica",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     425,
+     372
+    ],
+    "share": 0.61
+   }
+  ]
+ },
+ "ch7-skull-24": {
+  "answer": "Crista galli",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     244,
+     99
+    ],
+    "share": 0.77
+   }
+  ]
+ },
+ "ch7-skull-34": {
+  "answer": "Alveolar process",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     341,
+     453
+    ],
+    "share": 0.82
+   }
+  ]
+ },
+ "ch7-vert-13": {
+  "answer": "Transverse process",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     245,
+     80
+    ],
+    "share": 0.56
+   }
+  ]
+ },
+ "ch7-vert-5": {
+  "answer": "Coccyx",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     192,
+     419
+    ],
+    "share": 0.6
+   }
+  ]
+ },
+ "ch8-arm-1": {
+  "answer": "Head of the humerus",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     226,
+     226
+    ],
+    "share": 0.65
+   }
+  ]
+ },
+ "ch8-arm-12": {
+  "answer": "Olecranon",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     50,
+     40
+    ],
+    "share": 0.77
+   }
+  ]
+ },
+ "ch8-arm-13": {
+  "answer": "Coronoid process",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     141,
+     120
+    ],
+    "share": 0.56
+   }
+  ]
+ },
+ "ch8-arm-14": {
+  "answer": "Trochlear notch",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     158,
+     46
+    ],
+    "share": 0.68
+   }
+  ]
+ },
+ "ch8-arm-17": {
+  "answer": "Radial styloid process",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     91,
+     773
+    ],
+    "share": 0.63
+   }
+  ]
+ },
+ "ch8-arm-18": {
+  "answer": "Interosseous membrane",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     124,
+     400
+    ],
+    "share": 0.65
+   }
+  ]
+ },
+ "ch8-arm-2": {
+  "answer": "Greater tubercle",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     226,
+     226
+    ],
+    "share": 0.72
+   }
+  ]
+ },
+ "ch8-arm-3": {
+  "answer": "Lesser tubercle",
+  "faults": [
+   {
+    "kind": "label",
+    "text": "alten",
+    "box": [
+     65,
+     49,
+     87,
+     53
+    ]
+   },
+   {
+    "kind": "paper",
+    "at": [
+     265,
+     255
+    ],
+    "share": 0.65
+   }
+  ]
+ },
+ "ch8-arm-4": {
+  "answer": "Deltoid tuberosity",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     226,
+     226
+    ],
+    "share": 0.8
+   }
+  ]
+ },
+ "ch8-arm-5": {
+  "answer": "Medial epicondyle",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     118,
+     248
+    ],
+    "share": 0.59
+   }
+  ]
+ },
+ "ch8-arm-6": {
+  "answer": "Lateral epicondyle",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     290,
+     226
+    ],
+    "share": 0.72
+   }
+  ]
+ },
+ "ch8-arm-7": {
+  "answer": "Trochlea",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     91,
+     256
+    ],
+    "share": 0.58
+   }
+  ]
+ },
+ "ch8-arm-8": {
+  "answer": "Capitulum",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     38,
+     244
+    ],
+    "share": 0.56
+   }
+  ]
+ },
+ "ch8-arm-9": {
+  "answer": "Olecranon fossa",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     232,
+     235
+    ],
+    "share": 0.7
+   }
+  ]
+ },
+ "ch8-leg-1": {
+  "answer": "Head of the femur",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     225,
+     450
+    ],
+    "share": 0.71
+   }
+  ]
+ },
+ "ch8-leg-11": {
+  "answer": "Tibial tuberosity",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     245,
+     370
+    ],
+    "share": 0.7
+   }
+  ]
+ },
+ "ch8-leg-12": {
+  "answer": "Medial malleolus",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     198,
+     1029
+    ],
+    "share": 0.79
+   }
+  ]
+ },
+ "ch8-leg-13": {
+  "answer": "Lateral malleolus",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     173,
+     769
+    ],
+    "share": 0.75
+   }
+  ]
+ },
+ "ch8-leg-2": {
+  "answer": "Neck of the femur",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     200,
+     498
+    ],
+    "share": 0.74
+   }
+  ]
+ },
+ "ch8-leg-3": {
+  "answer": "Greater trochanter",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     136,
+     477
+    ],
+    "share": 0.79
+   }
+  ]
+ },
+ "ch8-leg-4": {
+  "answer": "Lesser trochanter",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     71,
+     62
+    ],
+    "share": 0.71
+   }
+  ]
+ },
+ "ch8-leg-5": {
+  "answer": "Linea aspera",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     172,
+     420
+    ],
+    "share": 0.68
+   }
+  ]
+ },
+ "ch8-leg-8": {
+  "answer": "Q-angle",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     208,
+     465
+    ],
+    "share": 0.81
+   }
+  ]
+ },
+ "ch8-pect-3": {
+  "answer": "Acromion",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     298,
+     85
+    ],
+    "share": 0.68
+   }
+  ]
+ },
+ "ch8-pect-5": {
+  "answer": "Glenoid cavity",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     107,
+     117
+    ],
+    "share": 0.58
+   }
+  ]
+ },
+ "ch8-pect-6": {
+  "answer": "Spine of the scapula",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     139,
+     130
+    ],
+    "share": 0.66
+   }
+  ]
+ },
+ "ch8-pect-7": {
+  "answer": "Supraspinous fossa",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     101,
+     81
+    ],
+    "share": 0.8
+   }
+  ]
+ },
+ "ch8-pect-8": {
+  "answer": "Infraspinous fossa",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     140,
+     181
+    ],
+    "share": 0.83
+   }
+  ]
+ },
+ "ch8-pect-9": {
+  "answer": "Subscapular fossa",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     257,
+     261
+    ],
+    "share": 0.93
+   }
+  ]
+ },
+ "ch8-pelv-10": {
+  "answer": "Obturator foramen",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     128,
+     423
+    ],
+    "share": 0.56
+   }
+  ]
+ },
+ "ch8-pelv-11": {
+  "answer": "Greater sciatic notch",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     320,
+     255
+    ],
+    "share": 0.66
+   }
+  ]
+ },
+ "ch8-pelv-12": {
+  "answer": "Pubic symphysis",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     230,
+     343
+    ],
+    "share": 0.62
+   }
+  ]
+ },
+ "ch9-syn-12": {
+  "answer": "Plane joint",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     227,
+     529
+    ],
+    "share": 0.76
+   }
+  ]
+ },
+ "ch9-syn-13": {
+  "answer": "Ball-and-socket joint",
+  "faults": [
+   {
+    "kind": "paper",
+    "at": [
+     370,
+     648
+    ],
+    "share": 0.65
+   }
+  ]
+ }
+}
