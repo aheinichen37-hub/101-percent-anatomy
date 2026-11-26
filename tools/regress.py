@@ -1,4 +1,4 @@
-"""101% Anatomy regression playtest, v2.1.0. Run before EVERY release.
+"""101% Anatomy regression playtest, v2.2.0. Run before EVERY release.
 
 Usage: python3 tools/regress.py index.html [mode] [--tabs N|auto] [--seed N]
 
@@ -24,12 +24,15 @@ How it stays fast (v2.0; v2.1.0 clicks through the new "Type it" step):
     (Playwright taps) still runs on the first, middle and last card of every round
   - it waits for the page to be ready instead of sleeping a fixed time
   - the frozen-save check replays three decks instead of the whole app
+  - v2.2.0 (3.9.0): every mode ends with a Weak Cards pass on the saved stats from the first pass:
+    card memory must have been saved, the lobby's Weak cards button tapped for real, the round
+    played to its results, and no round added to the saved rounds (weak rounds never count)
 Every deck's random answers come from --seed (printed in the result line), so a failure can be replayed.
 """
 import argparse, asyncio, functools, hashlib, http.server, json, os, random, sys, threading, time
 from playwright.async_api import async_playwright
 
-ap = argparse.ArgumentParser(description="101% Anatomy regression playtest v2.1.0")
+ap = argparse.ArgumentParser(description="101% Anatomy regression playtest v2.2.0")
 ap.add_argument("page", nargs="?", default="index.html")
 mg = ap.add_mutually_exclusive_group()
 mg.add_argument("--quick", action="store_true")
@@ -279,6 +282,46 @@ def fingerprint(d):
     return hashlib.sha1("|".join(parts).encode()).hexdigest()[:12]
 
 
+async def weak_pass(browser, doc):
+    """3.9.0: play a Weak Cards round from the lobby on the saved stats of the first pass."""
+    check(isinstance(doc.get("cardMem"), dict) and len(doc["cardMem"]) > 0,
+          "weak pass: the first pass saved no card memory")
+    ctx = await browser.new_context(viewport={"width": 390, "height": 664}, has_touch=True, is_mobile=True)
+    await ctx.add_init_script(MOCK.replace("__STORE__", json.dumps({"doc": doc})))
+    pg = await ctx.new_page()
+    pg.set_default_timeout(5000)
+    pg.on("pageerror", lambda e: errs.append(str(e)))
+    cards = 0
+    try:
+        await pg.goto(URL)
+        await pg.wait_for_function("typeof DECKS!=='undefined'&&typeof remote!=='undefined'&&remote!==null")
+        await pg.evaluate(HELPERS)
+        before = await pg.evaluate("DATA.rounds.length")
+        weak = await pg.evaluate("view={page:'lobby'};render();weakAll(Date.now()).length")
+        if not weak:
+            check(False, "weak pass: no weak cards after a full first pass of misses and retries")
+            return 0
+        P = []
+        await tap(pg, "#weak-go", P)
+        for p in P:
+            check(False, f"weak pass: {p}")
+        n = await pg.evaluate("round&&round.method==='weak'?round.qs.length:0")
+        check(n == min(weak, 20), f"weak pass: round has {n} cards, expected {min(weak, 20)}")
+        rng = random.Random(f"{SEED}|weak")
+        for i in range(n):
+            P = await pg.evaluate("o=>__t.card(o)", {"r": rng.random(), "last": i == n - 1, "ident": False, "swipe": False, "i": i})
+            cards += 1
+            for p in P:
+                check(False, f"weak pass card {i + 1}: {p}")
+        check(await pg.evaluate("view.page") == "results", "weak pass did not reach results")
+        check(await pg.evaluate("DATA.rounds.length") == before, "weak pass: a weak round was added to the saved rounds")
+    except Exception as e:
+        check(False, f"weak pass crashed/stuck: {str(e).splitlines()[0][:120]}")
+    finally:
+        await ctx.close()
+    return cards
+
+
 async def main():
     t0 = time.perf_counter()
     async with async_playwright() as p:
@@ -343,6 +386,8 @@ async def main():
             cards += fr[2]
         else:
             check(False, "no tab saved anything, so the frozen-save pass could not run")
+        if seed_doc:
+            cards += await weak_pass(b, seed_doc)
         check(not errs, f"page errors: {errs}")
         await b.close()
 

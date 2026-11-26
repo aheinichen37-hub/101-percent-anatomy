@@ -4,7 +4,22 @@ A trivia-style study game for Anatomy & Physiology (OpenStax A&P 2e, EXSC 2061).
 
 **Play it:** https://aheinichen37-hub.github.io/101-percent-anatomy/
 
-Current version: 3.8.3
+Current version: 3.9.0
+
+## Card memory and Weak cards (3.9.0)
+
+Every typed answer (deck rounds, mastery checks, Weak rounds) and every multiple-choice miss
+now updates that card's memory with FSRS-6, the open-source scheduler Anki uses: right first try
+counts as Good, second try as Hard, a miss or "I don't know" as Again. Spacing is in whole days
+(a right answer comes back in 3, then 14, then 57 days, capped at 120; a miss the next day).
+Memory is saved per deck and card in `cardMem` (save schema 4); the save as it was before 3.9.0
+is kept once in `anat101.v1.pre-v4`. Card memory never feeds high scores, stars, stats or checks.
+
+**Weak cards** (lobby and each unit page) plays up to 20 cards you last missed or got on the
+second try, weakest first, typed, mixed across decks. Weak rounds are never saved as rounds.
+
+The scheduler is ts-fsrs 6.0.1 (MIT) with srs-kit (BSD-3-Clause), built to one inline script by
+`tools/fsrs/build.mjs` (pinned commit, licences kept in the page).
 
 ## Picture fix pass (3.8.3)
 

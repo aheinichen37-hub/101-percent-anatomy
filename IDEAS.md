@@ -5,7 +5,6 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 ## Open
 
 ### Next four releases (roadmap v1.1.0, brainstorm 2026-11-25)
-- **Spaced review via FSRS** (3.9.0): per-card memory using FSRS v6 (`ts-fsrs`, MIT, vendored inline), plus a Weak Cards round. *(2026-11-25)*
 - **Today session** (3.10.0): one button mixing due reviews, weak cards and a little new material; "all caught up" empty state with Study ahead. *(2026-11-25)*
 - **Streak with freeze days** (3.10.0, Claude's proposal, not yet confirmed): forgiving streak, local dates, freezes banked automatically. *(2026-11-25)*
 - **Unit Readiness warm-up inside Today** (3.10.0): offered when a unit's check is unlocked but not taken. *(2026-11-25)*
@@ -16,7 +15,6 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Exam-date pacing mode** (Claude's proposal, not yet confirmed). *(2026-11-25)*
 - **3D renders for landmarks, with the spot on the model (2026-11-25)**: Andrew's idea from playing the skull and vertebral decks. Today the BodyParts3D renders (162 cards) only cover whole bones and muscles; landmarks (zygomatic arch, dens, sutures, processes) kept textbook crops. Render the parent bone(s) from the best view and put the blue spot, or a highlight, on the landmark's real place on the model. Needs the BodyParts3D data folder again.
 - **Repeated answers inside a deck (2026-11-25)**: 17 cards share an answer with another card in the same deck (e.g. "Superior" twice in Directional Terms, different clues). `groups-overrides.json` keys on deck + answer, so an override there hits both. Harmless today; worth a look if a fix ever targets one of them.
-- **Card memory per deck, for 3.9.0 (2026-11-25)**: Organelles and Organelle Functions share one card list (same IDs, asked two ways), so card memory should be keyed by deck + card, the way the ready streaks already are.
 - **Groups for non-skeletal decks (2026-11-24).** Only the bone decks have hand-fixed groups so far (3.6.0). Decks that mix families (heart anatomy, respiratory, CNS, nephron) could get overrides; run `python3 tools/groups.py --all` to see which. Andrew also noted the Deltoid tuberosity clue gives it away; the scanner lists such echoes.
 - **Swipe to next card** after answering (Next button stays for laptop). Building into the image-design samples to try on a phone. *(2026-11-05)*
 - **Tips on missed cards**: short memory tricks, fun facts or "how to tell it apart" notes, shown only when you miss. Andrew reviews each unit's tips before they go live. *(2026-11-05)*
@@ -43,7 +41,6 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Unit header tiers in the lobby, the fancy version**: 3.8.0 shows Gold / Diamond / Ruby as a small badge on the unit page and lobby tile; the idea of the whole unit header changing look with the tier is still open. *(2026-11-06)*
 - **Build order decided**: 1) safe save + installable app (next release), 2) deck stars and unit mastery checks, then the rest. *(2026-11-06)*
 - **Daily Review**: re-drills the cards you've missed. Could draw on the multiple-choice readiness data (cards not yet "ready"). *(2026-11-06, updated 2026-11-20)*
-- **Weak cards only round**: a round built only from cards that aren't "ready" yet in multiple choice (fewer than 2 right in a row). *(2026-11-20)*
 - **Multiple choice as a study method (v3.5.0, building 2026-11-20; the app was already at v3.4)**: after answering, the choice turns green if right or red if wrong, then a Next button like typed answers. Ready cards stay in every round. 4 choices per card, the right answer plus 3 other answers from the same deck (filter out look-alike or alias answers; fall back to same-unit answers for tiny decks). A card is "ready" after 2 right in a row; a miss resets it. Fills a per-deck readiness bar; typed answers stay the real test for stars, high scores and the unit mastery check. One try per card. *(2026-11-20)*
 - **Speed Round**: timed random testing. Code later. *(2026-11-06)*
 - **Boss Fights**: the mastery check as a boss, possibly themed on each unit's pathologies (osteoporosis for bones, brain cancer for the nervous system, etc.). *(2026-11-06)*
@@ -69,6 +66,7 @@ Side ideas Andrew mentions while we work on something else. Claude adds new ones
 - **Mirror the test into the claude.ai project as `claude/101-anatomy-regression-test-v2.0.py`** once there's room (the project is over its size limit; the old v1 copy there is out of date). *(2026-11-07)*
 
 ## Done
+- Card memory and Weak cards (3.9.0, 2026-11-26): FSRS-6 (Andrew's pick over the library's new FSRS-7 default), whole days, 90% retention, 120-day cap; typed answers grade Good/Hard/Again, multiple-choice misses count as Again and right picks change nothing; memory keyed by deck + card; save schema 4 with a frozen pre-upgrade copy; Weak cards round (up to 20, weakest first) on the lobby and each unit page, never saved as a round. Covers the parked "Weak cards only round" (2026-11-20) with card memory instead of multiple-choice readiness.
 - Picture fix pass (3.8.3, 2026-11-25): all 291 textbook pictures checked by eye; 162 fixed (leftover labels covered, spots moved onto the structure), via `tools/id-fixes.json` and `tools/idimg/patch_pics.py`; `tools/idimg/scan_pics.py` added as a check. Left for a look on the phone: Lower esophageal sphincter (the figure doesn't show it), Lesser trochanter (outside the crop), Hair medulla/cortex/cuticle (the drawing only marks the hair), Acetabulum, Lateral epicondyle, Glenoid cavity, Subscapular fossa, Labia majora/minora (spots left as built).
 - Small fixes (3.8.2, 2026-11-25): deck results screens get "Back to the unit" in place of Lobby; "Did you mean" never offers an answer with a different number (13 for 12 rib pairs is now just a wrong try). Andrew also reported capitals being corrected; not reproducible (case is already ignored), dropped at his call.
 - Locked card IDs (3.8.1, 2026-11-25): every current card ID is recorded in `tools/card-ids.json` and `test_card_ids.py` fails if one disappears or moves; new cards go at the end of a deck, a retired card's line starts with `~` and keeps its slot; `tools/card_ids.py --update` after a real answer fix. Found at Gate 0: most IDs were line positions.

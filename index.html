@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.8.3 */
+/* Layout: one-column app, sticky stat line on top, answer bar pinned to the bottom during play. Version 3.9.0 */
 :root{
   --bg:#111113; --panel:#1a1a1d; --panel2:#222226; --line:#2f2f34; --line2:#45454c;
   --fg:#ececee; --muted:#8e8e95; --dim:#5d5d64;
@@ -229,8 +229,67 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-off
 </div>
 <div id="answerSlot"></div>
 <div id="modalSlot"></div>
-<div id="ver" aria-hidden="true">v3.8.3</div>
+<div id="ver" aria-hidden="true">v3.9.0</div>
 
+<script id="fsrs-vendor">
+/* FSRS-6 scheduler built from ts-fsrs 828447d (tools/fsrs/build.mjs).
+
+ts-fsrs:
+MIT License
+
+Copyright (c) 2026 Open Spaced Repetition
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+srs-kit:
+BSD 3-Clause License
+
+Copyright (c) 2026, Open Spaced Repetition contributors
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+var FSRS=(()=>{var ne=Object.defineProperty;var ut=Object.getOwnPropertyDescriptor;var mt=Object.getOwnPropertyNames;var pt=Object.prototype.hasOwnProperty;var ht=(e,n,t)=>n in e?ne(e,n,{enumerable:!0,configurable:!0,writable:!0,value:t}):e[n]=t;var h=(e,n,t)=>()=>{if(t)throw t[0];try{return e&&(n=e(e=0)),n}catch(r){throw t=[r],r}};var ft=(e,n)=>{for(var t in n)ne(e,t,{get:n[t],enumerable:!0})},yt=(e,n,t,r)=>{if(n&&typeof n=="object"||typeof n=="function")for(let a of mt(n))!pt.call(e,a)&&a!==t&&ne(e,a,{get:()=>n[a],enumerable:!(r=ut(n,a))||r.enumerable});return e};var St=e=>yt(ne({},"__esModule",{value:!0}),e);var C=(e,n,t)=>ht(e,typeof n!="symbol"?n+"":n,t);var l,i=h(()=>{l={}});var Je=h(()=>{"use strict";i()});function S(e){return!!e&&!Array.isArray(e)&&typeof e=="object"}function P(e){return Number.isFinite(e)}function be(e){return typeof e=="function"}function en(e,n,t){let r=e;if(n in e){let a=Object.getOwnPropertyDescriptor(e,n);if(a&&"value"in a&&a.writable){r[n]=t;return}}else{let a=Object.getPrototypeOf(e);if(a===Object.prototype||a===null){r[n]=t;return}}Object.defineProperty(e,n,{value:t,writable:!0,enumerable:!0,configurable:!0})}function B(e,n){let t=n;for(let r in t)Object.hasOwn(t,r)&&en(e,r,t[r])}function j(e,...n){for(let t of n){if(t==null)continue;let r=Object(t);B(e,r);for(let a of Object.getOwnPropertySymbols(r)){let o=Object.getOwnPropertyDescriptor(r,a);o!=null&&o.enumerable&&en(e,a,r[a])}}return e}var Qe,te=h(()=>{"use strict";i();Qe=Object.freeze(Object.create(null))});function gt(e){return"then"in e&&typeof e.then=="function"}function F(e,n){let t=e["~standard"].validate(n);if(gt(t))throw Promise.resolve(t).catch(r=>{console.error("Async Standard Schema validation rejected",r)}),new TypeError("Async Standard Schema validation is not supported");return t}var Ee=h(()=>{"use strict";i()});function p(e){return{"~standard":{version:1,vendor:"@open-spaced-repetition/srs-kit",validate:e},parse(n){let t=e(n);if(t.issues)throw new re(t.issues);return t.value},safeParse(n){let t=e(n);return t.issues?{success:!1,issues:t.issues}:{success:!0,data:t.value}}}}function R(e,n){let t=F(e,n);if(t.issues)throw new re(t.issues);return t.value}var re,ae=h(()=>{"use strict";i();Ee();re=class e extends Error{constructor(t){var r;super(t.map(a=>a.message).join(`
+`));C(this,"issues");this.name="SRSSchemaError",this.issues=t,(r=Error==null?void 0:Error.captureStackTrace)==null||r.call(Error,this,e)}}});function xt(e){return e instanceof Date&&e.getTime()!==0&&Number.isFinite(e.getTime())}var mr,pr,X,V,oe,Z,ie=h(()=>{"use strict";i();te();ae();mr=p(e=>!S(e)||Object.keys(e).length>0?{issues:[{message:"Expected empty object"}]}:{value:{}}),pr=p(e=>P(e)?{value:e}:{issues:[{message:"Expected finite number"}]});X=p(e=>xt(e)?{value:e}:{issues:[{message:"Expected valid Date"}]}),V=p(e=>P(e)&&e>0&&e<1?{value:e}:{issues:[{message:"desiredRetention must be finite and in (0, 1)"}]}),oe=p(e=>P(e)&&e>=0?{value:e}:{issues:[{message:"elapsedDays must be finite and non-negative"}]}),Z=p(e=>P(e)&&e>=0?{value:e}:{issues:[{message:"scheduledDays must be finite and non-negative"}]})});var G,Re=h(()=>{"use strict";i();te();ae();G=p(e=>{if(!S(e))return{issues:[{message:"Expected fractional days config"}]};let n=e.fractionalDays===void 0?!1:e.fractionalDays;return typeof n!="boolean"?{issues:[{message:"Expected fractionalDays to be a boolean"}]}:{value:{fractionalDays:n}}})});var nn=h(()=>{"use strict";i()});function tn(e,n){return{map(t){return Array.from(this,r=>t(r))},[Symbol.iterator](){let t=0,r={next(){return t>=e.length?{value:void 0,done:!0}:{value:n(e[t++]),done:!1}},[Symbol.iterator](){return r}};return r}}}var rn=h(()=>{"use strict";i()});function de(e,n,t){if(e.length===0){t(n);return}let r=-1,a=o=>{if(o<=r)throw new Error("Middleware next() called multiple times");if(r=o,o>=e.length){t(n);return}let d=e[o];if(!d){a(o+1);return}d(n,()=>a(o+1))};a(0)}var an=h(()=>{"use strict";i()});var on=h(()=>{"use strict";i()});var z=h(()=>{"use strict";i();ie();Re();nn();rn();an();on();te();ae()});function wt(e){return p(e)}function Ct(e){return typeof e=="function"?wt(e):e}function Me(e){var n;return{schema:{time:e.schema.time,...e.schema.config?{config:e.schema.config}:{},...e.schema.card?{card:e.schema.card}:{},...e.schema.revlog?{revlog:e.schema.revlog}:{}},normalize:Ct(e.normalize),defaultValue:(n=e.defaultValue)!=null?n:{},create:e.create}}var Ie=h(()=>{"use strict";i();z()});var dn=h(()=>{"use strict";i()});var sn=h(()=>{"use strict";i();Je();Ie();dn()});var ln=h(()=>{"use strict";i()});var cn=h(()=>{"use strict";i()});var m,Xr,K,bt,H,q=h(()=>{"use strict";i();z();m=Object.freeze({Manual:0,Again:1,Hard:2,Good:3,Easy:4}),Xr=Object.freeze([m.Manual,m.Again,m.Hard,m.Good,m.Easy]),K=Object.freeze([m.Again,m.Hard,m.Good,m.Easy]),bt=p(e=>e===m.Manual||e===m.Again||e===m.Hard||e===m.Good||e===m.Easy?{value:e}:{issues:[{message:"Expected rating"}]}),H=p(e=>e===m.Again||e===m.Hard||e===m.Good||e===m.Easy?{value:e}:{issues:[{message:"Expected grade"}]})});var g,Qr,De,U=h(()=>{"use strict";i();z();g=Object.freeze({New:0,Learning:1,Review:2,Relearning:3}),Qr=Object.freeze([g.New,g.Learning,g.Review,g.Relearning]),De=p(e=>e===g.New||e===g.Learning||e===g.Review||e===g.Relearning?{value:e}:{issues:[{message:"Expected state"}]})});var Te,Oe,un=h(()=>{"use strict";i();z();Te=p(e=>{if(!S(e))return{issues:[{message:"Expected stats config object"}]};let{clearStatsOnForget:n}=e;return n===void 0?{value:{clearStatsOnForget:!0}}:typeof n!="boolean"?{issues:[{message:"Expected boolean clearStatsOnForget"}]}:{value:{clearStatsOnForget:n}}}),Oe=p(e=>{if(!S(e))return{issues:[{message:"Expected stats object"}]};let{reps:n,lapses:t}=e;return typeof n!="number"||!Number.isSafeInteger(n)||n<0?{issues:[{message:"Expected non-negative integer reps"}]}:typeof t!="number"||!Number.isSafeInteger(t)||t<0?{issues:[{message:"Expected non-negative integer lapses"}]}:{value:{reps:n,lapses:t}}})});var se,mn=h(()=>{"use strict";i();q();U();un();se={name:Symbol("srs-kit.stats"),schema:{config:Te,card:Oe},defaultValue:{card(e){if(e.operation==="forget"&&e.config.clearStatsOnForget===!1){let n=e.input;return{reps:n.reps,lapses:n.lapses}}return{reps:0,lapses:0}}},handlers:{review(e,n){n();let t=e.input.card,r=t.state,a=t.lapses,o=e.input.grade===m.Again&&r===g.Review;e.result.card.reps=t.reps+1,e.result.card.lapses=o?a+1:a},rollback(e,n){n();let t=e.input.card,r=e.input.revlog,a=r.rating===m.Again&&r.state===g.Review;e.result.card.reps=Math.max(0,t.reps-1),e.result.card.lapses=Math.max(0,t.lapses-(a?1:0))}}}});var pn=h(()=>{"use strict";i();mn()});var hn=h(()=>{"use strict";i();ln();cn();pn()});var fn=h(()=>{"use strict";i()});var yn=h(()=>{"use strict";i()});var Sn=h(()=>{"use strict";i();fn();yn()});var vn,Ma,Fe=h(()=>{"use strict";i();z();vn=Object.freeze(["new","learning","review"]),Ma=p(e=>e==="new"||e==="learning"||e==="review"?{value:e}:{issues:[{message:"Expected schedule status"}]})});var gn=h(()=>{"use strict";i();q();U();Fe()});function le(e,n){return e[n]}function Ae(e,n,t){return Object.defineProperty(e,n,{value:t,writable:!1,enumerable:!1,configurable:!1}),e}var ke=h(()=>{i()});function xn(e){let{model:n,chrono:t,middlewares:r}=e,a=n.schema.config,o=t.schema,d=o.config,s=o.card,c=o.revlog,u=[],f=[],x=[],y=[];for(let w of r){let v=w.schema;v&&(v.config&&u.push(v.config),v.cardInitInput&&f.push(v.cardInitInput),v.card&&x.push(v.card),v.revlog&&y.push(v.revlog))}let M=p(w=>{var I;if(typeof w!="string")return{issues:[{message:"Expected scheduleStatus string"}]};let v=vn.includes(w);for(let b of r){if(v)break;v=((I=b.scheduleStatus)==null?void 0:I.includes(w))===!0}return v?{value:w}:{issues:[{message:"Expected known scheduleStatus"}]}}),D=(w,v)=>{let I=F(M,w.scheduleStatus);if(I.issues)return I;let b=F(De,w.state);if(b.issues)return b;if(!(v!=null&&v.rating))return{value:{state:b.value,scheduleStatus:I.value}};let E=F(H,w.rating);return E.issues?E:{value:{state:b.value,scheduleStatus:I.value,rating:E.value}}},L=p(w=>{if(!S(w))return{issues:[{message:"Expected scheduler config object"}]};let v=F(a,w);if(v.issues)return v;let I={};if(B(I,v.value),d){let b=F(d,w);if(b.issues)return b;B(I,b.value)}for(let b of u){let E=F(b,w);if(E.issues)return E;B(I,E.value)}return{value:Ae(I,je,v.value)}}),ee=p(w=>{var k;if(!S(w))return{issues:[{message:"Expected card init input object"}]};let{now:v,...I}=w,b,E;for(let Y of f){let Ce=F(Y,I);if(Ce.issues)return Ce;let qe=Ce.value;if(b===void 0){b=qe;continue}E!=null||(E={...b}),B(E,qe)}return{value:{input:(k=E!=null?E:b)!=null?k:{},now:v}}}),lt=p(w=>{if(!S(w))return{issues:[{message:"Expected card object"}]};let v=F(n.schema.memoryState,w);if(v.issues)return v;let I=v.value,b={...I};if(s){let k=F(s,w);if(k.issues)return k;j(b,k.value)}let E=D(w);if(E.issues)return E;b.state=E.value.state,b.scheduleStatus=E.value.scheduleStatus;for(let k of x){let Y=F(k,w);if(Y.issues)return Y;j(b,Y.value)}return{value:Ae(b,ce,I)}}),ct=p(w=>{if(!S(w))return{issues:[{message:"Expected revlog object"}]};let v=F(n.schema.memoryState,w);if(v.issues)return v;let I=v.value;if(c){let E=F(c,w);if(E.issues)return E;j(I,E.value)}let b=D(w,{rating:!0});if(b.issues)return b;I.scheduleStatus=b.value.scheduleStatus,I.rating=b.value.rating,I.state=b.value.state;for(let E of y){let k=F(E,w);if(k.issues)return k;j(I,k.value)}return{value:I}});return{config:L,cardInitInput:ee,card:lt,revlog:ct,scheduleStatus:M}}var je,ce,ze=h(()=>{"use strict";i();q();U();Fe();ke();z();Ee();je=Symbol("parsedModelConfig"),ce=Symbol("parsedCardMemoryState")});var Et,Rt,Ne,ue,wn=h(()=>{"use strict";i();q();U();ze();ke();z();Et=.9,Rt={freezeCard:!1},Ne=class{constructor(n){C(this,"input",n)}get card(){return this.input.card}set card(n){throw new Error("Review input card cannot be changed")}get grade(){return this.input.grade}set grade(n){throw new Error("Review input grade cannot be changed")}get now(){return this.input.now}set now(n){throw new Error("Review input now cannot be changed")}},ue=class{constructor(n){C(this,"config");C(this,"model");C(this,"chrono");C(this,"schedulerDefinition");C(this,"defaultValue");C(this,"schema");C(this,"nextIntervalHandlers");C(this,"reviewHandlers");C(this,"reviewIntervalHandlers");C(this,"rollbackHandlers");C(this,"createNewCard",n=>{let{now:t,input:r}=R(this.schema.cardInitInput,n===void 0?{}:n);return this.defaultValue.newCard({operation:"newCard",config:this.config,input:r},this.parseNow(t))});C(this,"newCard",this.createNewCard);C(this,"forward",n=>{let{history:t}=n;if(t.length===0)return[];let r=new Array(t.length),a=n.initialCard==null?this.createNewCard({now:t[0].reviewTime}):n.initialCard,o=R(this.schema.card,a);for(let d=0;d<t.length;d++){let s=t[d],c=s.reviewTime,u=this.prepareParsedReview(o,c,Rt),f=this.parseReviewResult(this.runReview(u,s.rating,c));r[d]=f,o=f.card}return r});C(this,"forget",n=>{let t=R(this.schema.card,n.card),r=this.parseNow(n.now);return this.defaultValue.newCard({operation:"forget",config:this.config,input:t},r)});C(this,"nextInterval",(n,t,r)=>{let a=R(H,r.grade),o=R(oe,r.elapsedDays),d=R(V,t),s=Object.freeze(R(this.schema.card,r.card)),c=le(s,ce);if(!c)throw new Error("Parsed scheduler card is missing model memory state");let u=R(this.schedulerDefinition.model.schema.memoryState,n),f=this.createCandidate(c,o,void 0,[a,u],d),x={instance:this,config:this.config,input:Object.freeze({card:s,grade:a,desiredRetention:d}),elapsedDays:o,scheduledDays:void 0,candidate:f};return de(this.nextIntervalHandlers,x,y=>{var D;let M=y.candidate.step(y.input.grade);(D=y.scheduledDays)!=null||(y.scheduledDays=y.candidate.nextInterval(M,R(V,y.candidate.desiredRetention[y.input.grade])))}),R(Z,x.scheduledDays)});C(this,"review",n=>{let{card:t,grade:r}=n,a=R(H,r),o=this.parseNow(n.now),d=this.prepareReview(t,o);return this.parseReviewResult(this.runReview(d,a,o))});C(this,"preview",n=>{let t=n.card,r=this.parseNow(n.now),a=this.prepareReview(t,r);return tn(K,o=>{let{card:d,revlog:s}=this.parseReviewResult(this.runReview(a,o,r));return{grade:o,card:d,revlog:s}})});C(this,"rollback",n=>{let{card:t,revlog:r}=n,a=R(this.schema.revlog,r),o=R(this.schema.card,t),d={instance:this,config:this.config,input:{card:Object.freeze(o),revlog:Object.freeze(a)},result:{card:{}}};return de(this.rollbackHandlers,d,s=>this.finalizeRollback(s)),this.applyRollbackChronoDefaults(d.result,a),R(this.schema.card,d.result.card)});let{model:t,chrono:r,schema:a,defaultValue:o,middlewares:d=[]}=n;this.schedulerDefinition=Object.freeze({model:t,chrono:r}),this.schema=a,this.defaultValue=o;let s=R(a.config,n.config);this.config=s,this.model=t.create({config:le(s,je),bypass:!0}),this.chrono=Reflect.apply(r.create,r,[{config:s}]),this.nextIntervalHandlers=d.map(c=>{var u;return(u=c.handlers)==null?void 0:u.nextInterval}),this.reviewHandlers=d.map(c=>{var u;return(u=c.handlers)==null?void 0:u.review}),this.reviewIntervalHandlers=this.reviewHandlers.flatMap((c,u)=>[c,this.nextIntervalHandlers[u]]),this.rollbackHandlers=d.map(c=>{var u;return(u=c.handlers)==null?void 0:u.rollback})}get definition(){return this.schedulerDefinition}prepareReview(n,t){let r=R(this.schema.card,n);return this.prepareParsedReview(r,t)}prepareParsedReview(n,t,{freezeCard:r=!0}={}){var f;let a=le(n,ce);if(!a)throw new Error("Parsed scheduler card is missing model memory state");let o=r?Object.freeze(n):n,d=R(this.schedulerDefinition.chrono.normalize,{card:o,time:t}),s=o.state===g.New?0:this.chrono.difference((f=d.previous)!=null?f:d.current,t),c=oe.parse(s),u=this.model.forgettingCurve(a,c);return{card:o,time:d,elapsedDays:c,memoryState:a,retrievability:u,candidate:this.createCandidate(a,c,u)}}createCandidate(n,t,r,a,o=Et){let d=new Map(a?[a]:void 0),s=new Map,c=y=>{let M=d.get(y);return M===void 0&&(r!=null||(r=this.model.forgettingCurve(n,t)),M=this.model.step({memoryState:n,rating:y,elapsedDays:t,retrievability:r}),d.set(y,M)),s.set(M,y),M},u=y=>s.get(y),f=new Map,x=(y,M)=>{let D=f.get(y);if(D){let ee=D.get(M);if(ee!==void 0)return ee}else D=new Map,f.set(y,D);let L=this.model.nextInterval(y,M);return D.set(M,L),L};return{desiredRetention:{[m.Again]:o,[m.Hard]:o,[m.Good]:o,[m.Easy]:o},step:c,findGrade:u,nextInterval:x}}runReview(n,t,r){let a={instance:this,config:this.config,input:new Ne({card:n.card,grade:t,now:r}),elapsedDays:n.elapsedDays,retrievability:n.retrievability,scheduledDays:void 0,candidate:n.candidate,result:{card:{},revlog:{}}};return de(this.reviewIntervalHandlers,a,o=>{var s;let d=o.candidate.step(o.input.grade);(s=o.scheduledDays)!=null||(o.scheduledDays=o.candidate.nextInterval(d,R(V,o.candidate.desiredRetention[o.input.grade]))),this.finalizeReview(n,o,d)}),this.applyReviewChronoDefaults(n,a),a.result}parseReviewResult(n){return{card:R(this.schema.card,n.card),revlog:R(this.schema.revlog,n.revlog)}}finalizeReview(n,t,r){let{memoryState:a}=n,{grade:o}=t.input,d=t.result;return j(d.card,r,{state:g.Review,scheduleStatus:"review"}),j(d.revlog,a,{rating:o,state:n.card.state,scheduleStatus:n.card.scheduleStatus}),d}finalizeRollback(n){let t=n.result,r=n.input.revlog;return j(t.card,R(this.schedulerDefinition.model.schema.memoryState,r)),t.card.state=r.state,t.card.scheduleStatus=r.scheduleStatus,t.card}applyReviewChronoDefaults(n,t){var c,u;let{result:r,scheduledDays:a,input:{now:o}}=t;if(a===void 0)throw new Error("Expected scheduledDays after review middleware");let d=(c=this.schedulerDefinition.chrono.defaultValue)==null?void 0:c.card;d&&j(r.card,d({config:this.config,time:this.chrono.add(o,a),previous:o}));let s=(u=this.schedulerDefinition.chrono.defaultValue)==null?void 0:u.revlog;s&&j(r.revlog,s({config:this.config,time:n.time.current,previous:{previous:n.time.previous,current:o}}))}applyRollbackChronoDefaults(n,t){var s,c;if(!this.schedulerDefinition.chrono.schema.card)return;let a=R(this.schedulerDefinition.chrono.normalize,{revlog:t}),o=t.state===g.New,d=(c=(s=this.schedulerDefinition.chrono.defaultValue)==null?void 0:s.card)==null?void 0:c.call(s,{config:this.config,previous:o?null:a.previous,time:a.current});d&&j(n.card,d)}parseNow(n){return n===void 0?this.chrono.now():R(this.schedulerDefinition.chrono.schema.time,n)}}});function Mt(e){return be(e)?e:void 0}function Cn(e){var d;let{model:n,chrono:t,middlewares:r}=e,a=Mt((d=t.defaultValue)==null?void 0:d.card),o=r.map(s=>{var c;return(c=s.defaultValue)==null?void 0:c.card}).filter(be);return{newCard(s,c){let{config:u}=s,f=Object.assign(Object.create(Qe),n.defaultValue.memoryState({config:u}));f.state=g.New,f.scheduleStatus="new",a&&Object.assign(f,a({config:u,time:c,previous:null}));for(let x of o)Object.assign(f,x(s));return Object.setPrototypeOf(f,Object.prototype)}}}var bn=h(()=>{"use strict";i();U();z()});function Dt(e){if(!e)return It;let n=new Array(e.length),t=e.length;for(let r=e;r;r=r.parent)n[--t]=r.middleware;return n}function me(e){let{model:n,chrono:t}=e;function r(a){let o,d,s,c=!1,u=()=>(o!=null||(o=Dt(a)),o),f={name:n.name,modelDef:n,chronoDef:t,get defaultValue(){return d!=null||(d=Cn({model:n,chrono:t,middlewares:u()})),d},get schema(){return s!=null||(s=xn({model:n,chrono:t,middlewares:u()})),s},create(x){return c||(s=f.schema,d=f.defaultValue,c=!0),new ue({model:n,chrono:t,schema:s,defaultValue:d,middlewares:o,config:x.config})},use(...x){var D;if(x.length===0)return f;let y=a,M=(D=a==null?void 0:a.length)!=null?D:0;for(let L of x)y={parent:y,middleware:L,length:++M};return r(y)}};return f}return r()}var It,En=h(()=>{"use strict";i();wn();bn();ze();It=[]});var Rn=h(()=>{"use strict";i();En()});var T=h(()=>{i();sn();hn();Sn();gn();Rn();z()});var Be,O,fe=h(()=>{"use strict";i();Be=class e extends Error{constructor(n="FSRS Error"){var t;super(n),this.name="FSRSError",(t=Error.captureStackTrace)==null||t.call(Error,this,e)}},O=class e extends Be{constructor(n){var t;super(n),this.name="FSRSValidationError",(t=Error.captureStackTrace)==null||t.call(Error,this,e)}}});function A(e,n,t){return Math.min(Math.max(e,n),t)}function N(e,n){if((l==null?void 0:l.TS_FSRS_DISABLE_ROUNDING)===!0)return e;let t=10**n;return Math.round(e*t)/t}var ve=h(()=>{"use strict";i()});var $t,ge,Jn=h(()=>{"use strict";i();T();fe();ve();$t=e=>{let n=typeof e=="number"?-e:-e[20],t=Math.exp(Math.pow(n,-1)*Math.log(.9))-1;return{decay:n,factor:N(t,8)}},ge=class{constructor(n,t,r){C(this,"weights",n);C(this,"enableShortTerm",t);C(this,"bounds",r);C(this,"decayWeight",Number.NaN);C(this,"decay",0);C(this,"factor",0);C(this,"forgetting_curve");if(!Array.isArray(n)||n.length!==21)throw new O(`FSRS6Algorithm requires exactly 21 weights, but received ${n==null?void 0:n.length}`);this.forgetting_curve=(a,o)=>{let{decay:d,factor:s}=this.getDecayFactor();return N(Math.pow(1+s*a/o,d),8)}}getDecayFactor(){let n=this.weights[20];if(n!==this.decayWeight){let{decay:t,factor:r}=$t(n);this.decayWeight=n,this.decay=t,this.factor=r}return{decay:this.decay,factor:this.factor}}init_stability(n){return A(this.weights[n-1],this.bounds.sMin,this.bounds.sMax)}init_difficulty(n){let t=this.weights,r=t[4]-Math.exp((n-1)*t[5])+1;return N(r,8)}next_interval(n,t){if(!Number.isFinite(t)||t<=0||t>1)throw new O("Desired retention rate should be in the range (0,1]");let{decay:r,factor:a}=this.getDecayFactor();return Math.max(Math.round(n/a*(Math.pow(t,1/r)-1)),1)}linear_damping(n,t){return N(n*(10-t)/9,8)}next_difficulty(n,t){let r=-this.weights[6]*(t-3),a=n+this.linear_damping(r,n);return A(this.mean_reversion(this.init_difficulty(m.Easy),a),1,10)}mean_reversion(n,t){let r=this.weights;return N(r[7]*n+(1-r[7])*t,8)}next_recall_stability(n,t,r,a){let o=this.weights,d=m.Hard===a?o[15]:1,s=m.Easy===a?o[16]:1;return N(A(t*(1+Math.exp(o[8])*(11-n)*Math.pow(t,-o[9])*(Math.exp((1-r)*o[10])-1)*d*s),this.bounds.sMin,this.bounds.sMax),8)}next_forget_stability(n,t,r){let a=this.weights;return N(A(a[11]*Math.pow(n,-a[12])*(Math.pow(t+1,a[13])-1)*Math.exp((1-r)*a[14]),this.bounds.sMin,this.bounds.sMax),8)}next_short_term_stability(n,t){let r=this.weights,a=Math.pow(n,-r[19])*Math.exp(r[17]*(t-3+r[18])),o=t>=m.Hard?Math.max(a,1):a;return N(A(n*o,this.bounds.sMin,this.bounds.sMax),8)}next_state(n,t,r,a){let{difficulty:o,stability:d}=n!=null?n:{difficulty:0,stability:0};if(t<0)throw new O(`Invalid delta_t "${t}"`);if(r<0||r>4)throw new O(`Invalid grade "${r}"`);if(r===m.Manual)return{difficulty:o,stability:d};let s=r;if(o===0&&d===0)return{difficulty:A(this.init_difficulty(s),1,10),stability:this.init_stability(s)};if(o<1||d<this.bounds.sMin)throw new O(`Invalid memory state { difficulty: ${o}, stability: ${d} }`);let c=this.weights;a=typeof a=="number"?a:this.forgetting_curve(t,d);let u;if(t===0&&this.enableShortTerm)u=this.next_short_term_stability(d,s);else if(r===1){let x=this.next_forget_stability(o,d,a),[y,M]=[0,0];this.enableShortTerm&&(y=c[17],M=c[18]);let D=d/Math.exp(y*M);u=A(N(D,8),this.bounds.sMin,x)}else u=this.next_recall_stability(o,d,a,s);return{difficulty:this.next_difficulty(o,s),stability:u}}}});var _,Ue,Qn,$e=h(()=>{"use strict";i();_=Object.freeze({sMin:.001,sMax:36500,dMin:1,dMax:10}),Ue=Object.freeze([.212,1.2931,2.3065,8.2956,6.4133,.8334,3.0194,.001,1.8722,.1666,.796,1.4835,.0614,.2629,1.6483,.6014,1.8729,.5425,.0912,.0658,.1542]),Qn=(e,n=!0)=>[[_.sMin,100],[_.sMin,100],[_.sMin,100],[_.sMin,100],[_.dMin,_.dMax],[.001,4],[.001,4],[.001,.75],[0,4.5],[0,.8],[.001,3.5],[.001,5],[.001,.25],[.001,.9],[0,4],[0,1],[1,6],[0,e],[0,e],[n?.01:0,.8],[.1,.8]]});function et(e){return typeof e=="object"&&e!==null}function nt(e){if(!Array.isArray(e))return!1;for(let n of e)if(typeof n!="number"||!Number.isFinite(n))return!1;return!0}var We=h(()=>{"use strict";i()});var tt,rt=h(()=>{"use strict";i();T();We();tt=p(e=>et(e)&&P(e.stability)&&P(e.difficulty)?{value:{stability:e.stability,difficulty:e.difficulty}}:{issues:[{message:"Expected FSRS memory state"}]})});var at=h(()=>{i();rt()});var Yt,xe,Ye,Q,we,Xe=h(()=>{"use strict";i();T();fe();ve();We();$e();Yt=p(e=>typeof e=="number"&&e>=.1&&e<=.8?{value:e}:{issues:[{message:"Expected decay between 0.1 and 0.8"}]}),xe=(e,n=0,t=!0)=>{let r=Qn(2,t).slice(0,e.length);if(Math.max(0,n)>1&&e.length>=19){let a=A(e[11]||0,r[11][0],r[11][1]),o=A(e[13]||0,r[13][0],r[13][1]),d=A(e[14]||0,r[14][0],r[14][1]),s=-(Math.log(a)+Math.log(Math.pow(2,o)-1)+d*.3)/n,c=A(N(Math.sqrt(Math.max(s,0)),8),.01,2);r[17]=[r[17][0],c],r[18]=[r[18][0],c]}return r.map(([a,o],d)=>A(e[d]||0,a,o))},Ye=(e,n=0,t=!0)=>{let r=xe(Array.from(e),n,t);if(!(e.length===Ue.length&&r.every((o,d)=>o===e[d])))throw new O("Expected FSRS6 weights within model bounds.");return e},Q=e=>{if(!Array.isArray(e)||e.length===0)return[...Ue];switch(e.length){case 21:return Array.from(e);case 19:return Array.from(e).concat([0,.5]);case 17:{let n=Array.from(e);return n[4]=+(n[5]*2+n[4]).toFixed(8),n[5]=+(Math.log(n[5]*3+1)/3).toFixed(8),n[6]=+(n[6]+.5).toFixed(8),n.concat([0,0,0,.5])}default:throw new O(`Invalid parameters length "${e.length}", expected 17, 19 or 21.`)}},we=p(e=>S(e)&&nt(e.weights)&&typeof e.enableShortTerm=="boolean"&&typeof e.numRelearningSteps=="number"&&Number.isSafeInteger(e.numRelearningSteps)&&e.numRelearningSteps>=0?{value:{weights:e.weights,enableShortTerm:e.enableShortTerm,numRelearningSteps:e.numRelearningSteps}}:{issues:[{message:"Expected FSRS6 config"}]})});var it,Ze,dt=h(()=>{"use strict";i();T();at();Jn();$e();Xe();it=e=>{let n=_,t=new ge(e.weights,e.enableShortTerm,_),r=({memoryState:s,rating:c,elapsedDays:u,retrievability:f})=>t.next_state(s,u,c,f);return{config:e,bounds:n,algorithm:t,step:r,nextInterval:(s,c)=>t.next_interval(s.stability,c),forgettingCurve:(s,c)=>t.forgetting_curve(c,s.stability),forward:({history:s,initialState:c})=>{let u=[],f=c||null;for(let x of s)f=r({memoryState:f,rating:x.rating,elapsedDays:x.deltaT}),u.push(f);return u}}},Ze={name:"fsrs-6",schema:{config:we,memoryState:tt},defaultValue:{memoryState(){return{stability:0,difficulty:0}}},create({config:e,migrate:n=!0,clip:t=!0,check:r=!0,bypass:a=!1}){if(a)return it(e);let o=n?Q(e.weights):e.weights;t&&Array.isArray(o)&&(o=xe(o,e.numRelearningSteps,e.enableShortTerm)),r&&Ye(o,e.numRelearningSteps,e.enableShortTerm);let d=we.parse({weights:o,enableShortTerm:e.enableShortTerm,numRelearningSteps:e.numRelearningSteps});return it(Object.freeze(d))}}});var st=h(()=>{i();dt();Xe()});var Jt={};ft(Jt,{Rating:()=>m,State:()=>g,createFSRS6:()=>qt});i();T();i();i();Ie();ie();Re();z();i();ie();z();var pe=864e5;function Pe(e){return X.safeParse(e).success}function J(){return{issues:[{message:"Expected valid Date fields"}]}}var he=p(e=>{if(!S(e)||!("dueAt"in e))return J();let{dueAt:n,lastReviewAt:t}=e;return!Pe(n)||t!=null&&!Pe(t)?J():{value:{dueAt:n,lastReviewAt:t!==void 0?t:null}}}),Ve=p(e=>{if(!S(e)||!("reviewTime"in e))return J();let n=he["~standard"].validate(e);if(n.issues)return n;let{reviewTime:t}=e;if(!Pe(t))return J();let r=n.value;return r.reviewTime=t,{value:r}});var Tt={elapsed:kt,calendar:jt},Ke=Me({schema:{config:G,card:he,revlog:Ve,time:X},normalize(e){if(!S(e))return{issues:[{message:"Expected valid Date fields"}]};if("card"in e){let t=he["~standard"].validate(e.card);if(t.issues)return t;let r=X["~standard"].validate(e.time);return r.issues?r:{value:{previous:t.value.lastReviewAt,current:t.value.dueAt}}}let n=Ve["~standard"].validate(e.revlog);return n.issues?n:{value:{previous:n.value.lastReviewAt,current:n.value.dueAt}}},defaultValue:{card({previous:e,time:n}){return{dueAt:n,lastReviewAt:e!=null?e:null}},revlog({time:e,previous:n}){var t,r;return{dueAt:e,lastReviewAt:(t=n==null?void 0:n.previous)!=null?t:null,reviewTime:(r=n==null?void 0:n.current)!=null?r:e}}},create({config:e}){let n=e.fractionalDays?"elapsed":"calendar",t=Tt[n];return{now:Ot,compare:Ft,difference:t,add:At}}}),Ot=()=>new Date,Ft=(e,n)=>{let t=e.getTime(),r=n.getTime();return t<r?-1:t>r?1:0},At=(e,n)=>new Date(e.getTime()+n*pe);function kt(e,n){return(n.getTime()-e.getTime())/pe}function jt(e,n){let t=Date.UTC(e.getUTCFullYear(),e.getUTCMonth(),e.getUTCDate()),r=Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate());return Math.floor((r-t)/pe)}i();T();i();T();var Mn=p(e=>{if(!S(e))return{issues:[{message:"Expected desiredRetention in (0, 1)"}]};let n=e.desiredRetention,t={};if(typeof n=="number"){let r=V.safeParse(n);if(!r.success)return{issues:[{message:"Expected desiredRetention in (0, 1)"}]};for(let a of K)t[a]=r.data}else{if(!S(n))return{issues:[{message:"Expected desiredRetention in (0, 1)"}]};for(let r of K){let a=V.safeParse(n[r]);if(!a.success)return{issues:[{message:"Expected desiredRetention in (0, 1)"}]};t[r]=a.data}}return{value:{desiredRetention:t}}});var In=Symbol("ts-fsrs.desired-retention.injected"),Dn={name:Symbol("ts-fsrs.desired-retention"),schema:{config:Mn},handlers:{nextInterval(e,n){let t=e.candidate;if(e.input.desiredRetention===void 0&&!t[In]){for(let r of K)t.desiredRetention[r]=e.config.desiredRetention[r];t[In]=!0}n()}}};i();T();i();function Tn(){let e=globalThis.crypto;if(typeof(e==null?void 0:e.randomUUID)=="function")return e.randomUUID();let n=new Uint8Array(16);if(typeof(e==null?void 0:e.getRandomValues)=="function")e.getRandomValues(n);else for(let r=0;r<n.length;r+=1)n[r]=Math.floor(Math.random()*256);n[6]=n[6]&15|64,n[8]=n[8]&63|128;let t=Array.from(n,r=>r.toString(16).padStart(2,"0")).join("");return`${t.slice(0,8)}-${t.slice(8,12)}-${t.slice(12,16)}-${t.slice(16,20)}-${t.slice(20)}`}i();var _e=Object.freeze([{start:2.5,end:7,factor:.15},{start:7,end:20,factor:.1},{start:20,end:Number.POSITIVE_INFINITY,factor:.05}]);function On(e,n,t,r=_e){let a=1;for(let c of r)a+=c.factor*Math.max(Math.min(e,c.end)-c.start,0);let o=Math.min(e,t),d=Math.max(2,Math.round(o-a)),s=Math.min(Math.round(o+a),t);return o>n&&(d=Math.max(d,n+1)),d=Math.min(d,s),{minInterval:d,maxInterval:s}}function zt(e){let n=2166136261;for(let t=0;t<e.length;t+=1)n^=e.charCodeAt(t),n=Math.imul(n,16777619);return n>>>0}function Nt(e){let n=e>>>0;return()=>{let t=n+=1831565813;return t=Math.imul(t^t>>>15,t|1),t^=t+Math.imul(t^t>>>7,t|61),((t^t>>>14)>>>0)/4294967296}}var Fn=e=>Nt(zt(e));i();T();function Le(e){if(typeof e=="string"&&e.length>0||typeof e=="number"&&Number.isFinite(e))return e}var An=p(e=>{if(!S(e))return{issues:[{message:"Expected fuzzing config object"}]};let{enableFuzz:n,maximumInterval:t}=e;if(typeof n!="boolean")return{issues:[{message:"Expected enableFuzz boolean"}]};if(typeof t!="number"||!Number.isSafeInteger(t)||t<=0)return{issues:[{message:"Expected positive integer maximumInterval"}]};let r=G["~standard"].validate(e);return r.issues?r:{value:{enableFuzz:n,maximumInterval:t,fractionalDays:r.value.fractionalDays}}}),kn=p(e=>{if(!S(e))return{issues:[{message:"Expected fuzzing card init input object"}]};if(e.cardId===void 0)return{value:{}};let n=Le(e.cardId);return n===void 0?{issues:[{message:"Expected new card cardId"}]}:{value:{cardId:n}}}),jn=p(e=>{if(!S(e))return{issues:[{message:"Expected card cardId"}]};let n=Le(e.cardId);if(n===void 0)return{issues:[{message:"Expected card cardId"}]};let{reps:t}=e;return typeof t!="number"||!Number.isSafeInteger(t)||t<0?{issues:[{message:"Expected non-negative integer reps"}]}:{value:{cardId:n,reps:t}}}),zn=p(e=>{if(!S(e))return{issues:[{message:"Expected revlog cardId"}]};let n=Le(e.cardId);return n===void 0?{issues:[{message:"Expected revlog cardId"}]}:{value:{cardId:n}}});var Nn=Symbol("ts-fsrs.fuzzing.decorator");function Pt(e={}){let{fuzzingRange:n=_e,rng:t=Fn}=e;function r(a,o){if(!a.config.enableFuzz)return;let d=a.candidate;if(d[Nn])return;d[Nn]=!0;let s=d.nextInterval,c=`${a.input.card.cardId}${o}`,u;d.nextInterval=(f,x)=>{let y=s(f,x);if(y<2.5)return a.config.fractionalDays?y:Math.round(y);let{minInterval:M,maxInterval:D}=On(y,a.elapsedDays,a.config.maximumInterval,n);return u!=null||(u=t(c)()),Math.floor(u*(D-M+1)+M)}}return{name:Symbol("ts-fsrs.fuzzing"),schema:{config:An,cardInitInput:kn,card:jn,revlog:zn},defaultValue:{card(a){var o;return a.operation==="forget"?{cardId:a.input.cardId,reps:a.config.clearStatsOnForget===!1?a.input.reps:0}:{cardId:(o=a.input.cardId)!=null?o:Tn(),reps:0}}},handlers:{nextInterval(a,o){r(a,a.input.card.reps+1),a.config.enableFuzz&&(a.scheduledDays=void 0),o()},review(a,o){var c,u;let d=a.input.card,s=d.reps+1;r(a,s),o(),a.result.card.cardId=d.cardId,(u=(c=a.result.card).reps)!=null||(c.reps=s),a.result.revlog.cardId=d.cardId},rollback(a,o){var d,s;o(),a.result.card.cardId=a.input.revlog.cardId,(s=(d=a.result.card).reps)!=null||(d.reps=Math.max(0,a.input.card.reps-1))}}}}var Pn=Pt();i();T();i();T();fe();var Vt=/^(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/,W=e=>{if(typeof e!="string"||e.length<2)throw new O(`Invalid step value: ${e}`);let n=e.slice(-1),t=e.slice(0,-1);if(!Vt.test(t))throw new O(`Invalid step value: ${e}`);let r=Number(t);if(!Number.isFinite(r))throw new O(`Invalid step value: ${e}`);let a;switch(n){case"m":a=r;break;case"h":a=r*60;break;case"d":a=r*1440;break;default:throw new O(`Invalid step unit: ${e}, expected m/h/d`)}if(!Number.isFinite(a)||!Number.isFinite(a*60))throw new O(`Invalid step value: ${e}`);return a},Vn=(e,n,t)=>{let r=n===g.Relearning||n===g.Review?e.relearningSteps:e.learningSteps,a=r.length;if(a===0||t>=a)return{};let o=r[Math.max(0,t)];if(n===g.Review)return{[m.Again]:{scheduledMinutes:W(o),nextStep:0}};let d=W(r[0]),s=a>1?W(r[1]):void 0,c=s===void 0?d*1.5:(d+s)/2,u={[m.Again]:{scheduledMinutes:d,nextStep:0},[m.Hard]:{scheduledMinutes:c,nextStep:t}},f=r[t+1];if(f){let x=t===0&&s!==void 0?s:W(f);x>0&&(u[m.Good]={scheduledMinutes:x,nextStep:t+1})}return u};i();T();var _n=Object.freeze(["1m","10m"]),Ln=Object.freeze(["10m"]),Kt=1;function _t(e){if(typeof e!="string")return!1;try{let n=W(e);return Number.isFinite(n*9e4)}catch{return!1}}function Kn(e){if(!Array.isArray(e)||Object.getOwnPropertyNames(e).length-1<e.length)return!1;for(let n=0;n<e.length;n++)if(!Object.hasOwn(e,n)||!_t(e[n]))return!1;return!0}var Bn=p(e=>{if(!S(e))return{issues:[{message:"Expected learning steps config object"}]};let{enableShortTerm:n,learningSteps:t,relearningSteps:r}=e;if(typeof n!="boolean")return{issues:[{message:"Expected enableShortTerm boolean"}]};if(!Kn(t))return{issues:[{message:"Expected valid learningSteps array"}]};if(!Kn(r))return{issues:[{message:"Expected valid relearningSteps array"}]};let{graduatingInterval:a=Kt,allowModelOverride:o=!1}=e;return!P(a)||a<=0?{issues:[{message:"Expected positive graduatingInterval days"}]}:typeof o!="boolean"?{issues:[{message:"Expected allowModelOverride boolean"}]}:{value:{enableShortTerm:n,learningSteps:t,relearningSteps:r,graduatingInterval:a,allowModelOverride:o}}}),Ge=p(e=>{if(!S(e))return{issues:[{message:"Expected learning step fields object"}]};let{learningStep:n}=e;return n===void 0?{value:{learningStep:0}}:typeof n!="number"||!Number.isSafeInteger(n)||n<0?{issues:[{message:"Expected non-negative integer learningStep"}]}:{value:{learningStep:n}}});var Lt=1440,Gn=60,Hn=Symbol("ts-fsrs.learning-steps.resolved"),Un={name:Symbol("ts-fsrs.learning-steps"),schema:{config:Bn,card:Ge,revlog:Ge},defaultValue:{card(){return{learningStep:0}}},handlers:{nextInterval:Bt,review(e,n){let t=e.config.enableShortTerm?$n(e):void 0;n();let{card:r,grade:a}=e.input,{graduatingInterval:o}=e.config,d=e.scheduledDays,s=(t==null?void 0:t.stepIntervals[a])!==void 0?t.steps[a]:void 0;e.result.revlog.learningStep=r.learningStep,e.result.card.learningStep=0,(a===m.Again&&(t==null?void 0:t.overridesStep[a])===!0||d!==void 0&&d<o)&&(e.result.card.state=Ht(r.state),e.result.card.scheduleStatus="learning",s&&(e.result.card.learningStep=Math.max(0,s.nextStep)))},rollback(e,n){n(),e.result.card.learningStep=e.input.revlog.learningStep}}};function Bt(e,n){if(!e.config.enableShortTerm){n();return}let t=$n(e);n();let{grade:r}=e.input,a=t.stepIntervals[r];return a!==void 0&&!t.overridesStep[r]&&(e.scheduledDays=a),t}function $n(e){let n=e.candidate,t=n[Hn];if(t)return t;let{card:r}=e.input,{config:a}=e,o=r.state===g.Relearning||r.state===g.Review?a.relearningSteps:a.learningSteps,d=Vn(a,r.state,r.learningStep),s={};for(let f of K){let x=d[f];if(!x)continue;let y=Math.round(Math.max(0,x.scheduledMinutes)*Gn)/Gn;y>0&&(s[f]=y/Lt)}let c={steps:d,hasSteps:o.length>0,stepIntervals:s,overridesStep:{}};n[Hn]=c;let u=n.nextInterval;return n.nextInterval=(f,x)=>{let y=n.findGrade(f);if(y===void 0)return u(f,x);let M=Gt(c,y,a,()=>u(f,x)),D=c.stepIntervals[y];return c.overridesStep[y]=D!==void 0&&M!==D,M},c}function Gt(e,n,{allowModelOverride:t,graduatingInterval:r},a){let o=e.stepIntervals[n];return n===m.Again?o===void 0?a():t?Math.max(o,Math.min(a(),r)):o:o===void 0?e.hasSteps?Math.max(a(),r):a():t?Math.max(o,a()):o}function Ht(e){return e===g.New?g.Learning:e===g.Review?g.Relearning:e}i();T();i();T();var Ut=36500,ye=p(e=>{if(!S(e))return{issues:[{message:"Expected monotonic interval config"}]};let n=e.maximumInterval===void 0?Ut:e.maximumInterval;return typeof n!="number"||!Number.isSafeInteger(n)||n<=0?{issues:[{message:"Expected positive integer maximumInterval"}]}:{value:{maximumInterval:n}}});var Wn={name:Symbol("ts-fsrs.maximum-interval"),schema:{config:ye},handlers:{nextInterval(e,n){n(),e.scheduledDays!==void 0&&(e.scheduledDays=Math.min(e.scheduledDays,e.config.maximumInterval))}}};i();T();i();var Yn=86400,Se=e=>Math.round(e*Yn);function Xn(e,n){let t,r=e[0];for(let a=0;a<e.length;a++){let o=e[a];if(o>=1)t=Math.min(t===void 0?o:Math.max(o,t+1),n);else if(t===void 0&&a>0){let d=Math.max(o,r);r=r>0&&Se(o)>=Se(e[a-1])&&Se(d)===Se(r)?r+1/Yn:d}}return t!=null?t:r}var Zn={name:Symbol("ts-fsrs.monotonic-interval"),schema:{config:ye},handlers:{nextInterval(e,n){let{grade:t}=e.input,r=d=>e.candidate.nextInterval(e.candidate.step(d),R(V,e.candidate.desiredRetention[d])),a=(...d)=>Xn(d,e.config.maximumInterval);n();let o=e.scheduledDays;switch(t){case m.Again:e.scheduledDays=a(o);break;case m.Hard:e.scheduledDays=a(r(m.Again),o);break;case m.Good:e.scheduledDays=a(r(m.Again),r(m.Hard),o);break;case m.Easy:e.scheduledDays=a(r(m.Again),r(m.Hard),r(m.Good),o);break}}}};i();T();i();T();var He=p(e=>{if(!S(e))return{issues:[{message:"Expected object with scheduledDays"}]};let n=Z.safeParse(e.scheduledDays);return n.success?{value:{scheduledDays:n.data}}:n});var qn={name:Symbol("ts-fsrs.scheduled-days"),schema:{config:G,card:He,revlog:He},defaultValue:{card(){return{scheduledDays:0}}},handlers:{review(e,n){var a;let t=e.input.card.scheduledDays;n();let r=Math.max(0,(a=e.scheduledDays)!=null?a:0);e.result.card.scheduledDays=e.config.fractionalDays?r:Math.floor(r),e.result.revlog.scheduledDays=t},rollback(e,n){n(),e.result.card.scheduledDays=e.input.revlog.scheduledDays}}};st();i();T();i();i();ve();var Zt=me({model:Ze,chrono:Ke}).use(Dn,Pn,se,qn,Un,Wn,Zn);function qt(e={}){var r,a,o,d;let n=(r=e.enableShortTerm)!=null?r:!0,t=Array.from(Ln);return Zt.create({config:{fractionalDays:!1,weights:Q(void 0,t.length,n),enableShortTerm:n,numRelearningSteps:t.length,desiredRetention:(a=e.desiredRetention)!=null?a:.9,learningSteps:Array.from(_n),relearningSteps:t,allowModelOverride:!1,enableFuzz:(o=e.enableFuzz)!=null?o:!1,maximumInterval:(d=e.maximumInterval)!=null?d:36500}})}return St(Jt);})();
+</script><!-- /fsrs-vendor -->
 <script>
 /* ===================== CONTENT ===================== */
 /* Term decks (v2.0). Each card: answer, other accepted answers, clue, OpenStax figure for the image slot. */
@@ -3008,12 +3067,15 @@ function classify(raw,deckId){
 }
 
 /* ===================== STORAGE ===================== */
-/* Saved shape on disk: {v, rounds, best, savedAt}. DATA in memory stays {rounds, best}.
+/* Saved shape on disk: {v, rounds, best, mc, cardMem, savedAt}. DATA in memory: {rounds, best, mc, cardMem}.
    When the shape changes: bump SCHEMA and add a step to MIGRATE. Never drop an old save.
    Every read and write goes through STORE, so a cloud account can replace it later. */
-const LS="anat101.v1", LS_BAK="anat101.v1.backup", SCHEMA=3;
-let DATA={rounds:[],best:{},mc:{}};
-let saveState={ok:true,err:"",recovered:false,savedAt:null};
+const LS="anat101.v1", LS_BAK="anat101.v1.backup", SCHEMA=4;
+/* v3.9.0: the save as it was before card memory, written once at the upgrade and never
+   overwritten. Remove in a later release once 3.9.0 saves are known good. */
+const LS_PRE4="anat101.v1.pre-v4";
+let DATA={rounds:[],best:{},mc:{},cardMem:{}};
+let saveState={ok:true,err:"",recovered:false,savedAt:null,memReset:false};
 
 const STORE={
   get(k){try{return localStorage.getItem(k);}catch(e){return null;}},
@@ -3022,13 +3084,31 @@ const STORE={
 };
 
 /* v1 -> v2: Cells moved from Unit 1 to Unit 3, so old rounds are re-filed (never mutates frozen db objects) */
-const refileU1=d=>({rounds:(d.rounds||[]).map(r=>r&&r.unit==="u1"?Object.assign({},r,{unit:"ch3"}):r),best:Object.assign({},d.best||{}),mc:JSON.parse(JSON.stringify(d.mc||{}))});
+const refileU1=d=>({rounds:(d.rounds||[]).map(r=>r&&r.unit==="u1"?Object.assign({},r,{unit:"ch3"}):r),best:Object.assign({},d.best||{}),mc:JSON.parse(JSON.stringify(d.mc||{})),cardMem:cleanMem(d.cardMem)});
+/* Card memory is rebuilt from play, so anything unreadable in it is dropped rather than
+   trusted; rounds, best scores and streaks are never touched by this. */
+function cleanMem(m){
+  if(!m||typeof m!=="object"||Array.isArray(m)) return m==null?{}:(saveState.memReset=true,{});
+  const out={};
+  for(const k of Object.keys(m)){const e=m[k];
+    if(e&&typeof e==="object"&&k.includes("|")&&[e.s,e.d,e.due].every(Number.isFinite)) out[k]=e; else saveState.memReset=true;}
+  return out;
+}
+/* Merge two card-memory maps: for each card keep the more recent review. */
+function mergeMem(a,b){
+  const out=Object.assign({},cleanMem(a));
+  const bb=cleanMem(b);
+  for(const k of Object.keys(bb)) if(!out[k]||(bb[k].last||0)>(out[k].last||0)) out[k]=bb[k];
+  return out;
+}
 /* v2 -> v3: multiple-choice streaks (mc) were added; an older save simply has none yet */
-const MIGRATE={1:refileU1,2:d=>Object.assign({mc:{}},d)};
+/* v3 -> v4 (3.9.0): card memory (cardMem) was added; an older save starts with none */
+const MIGRATE={1:refileU1,2:d=>Object.assign({mc:{}},d),3:d=>Object.assign({},d,{cardMem:{}})};
 const migrate=d=>refileU1(d);                      // the db path still re-files old rounds
 function upgrade(raw){
-  let v=Number(raw&&raw.v)||1, d={rounds:raw.rounds||[],best:raw.best||{},mc:raw.mc||{}};
+  let v=Number(raw&&raw.v)||1, d={rounds:raw.rounds||[],best:raw.best||{},mc:raw.mc||{},cardMem:raw.cardMem};
   while(v<SCHEMA){ if(MIGRATE[v]) d=MIGRATE[v](d); v++; }
+  d.cardMem=cleanMem(d.cardMem);
   return d;
 }
 const isSave=o=>!!o&&typeof o==="object"&&Array.isArray(o.rounds);
@@ -3036,16 +3116,17 @@ const parseSave=s=>{try{const o=JSON.parse(s);return isSave(o)?o:null;}catch(e){
 
 /* Load the save; fall back to the rolling backup if the main one is gone or unreadable. */
 function loadLocal(){
-  let raw=parseSave(STORE.get(LS)), from="save";
-  if(!raw){raw=parseSave(STORE.get(LS_BAK));from="backup";}
+  let text=STORE.get(LS), raw=parseSave(text), from="save";
+  if(!raw){text=STORE.get(LS_BAK);raw=parseSave(text);from="backup";}
   if(!raw) return;
+  if((Number(raw.v)||1)<4&&!STORE.get(LS_PRE4)){try{STORE.set(LS_PRE4,text);}catch(e){}}
   DATA=upgrade(raw);
   saveState.savedAt=raw.savedAt||null;
   if(from==="backup"){saveState.recovered=true;saveLocal();}
-  else if((Number(raw.v)||1)<SCHEMA) saveLocal();  // write the upgraded save back once
+  else if((Number(raw.v)||1)<SCHEMA||saveState.memReset) saveLocal();  // write the upgraded save back once
 }
 function saveLocal(){
-  const body=JSON.stringify({v:SCHEMA,rounds:DATA.rounds,best:DATA.best,mc:DATA.mc||{},savedAt:Date.now()});
+  const body=JSON.stringify({v:SCHEMA,rounds:DATA.rounds,best:DATA.best,mc:DATA.mc||{},cardMem:DATA.cardMem||{},savedAt:Date.now()});
   try{
     const prev=STORE.get(LS);
     STORE.set(LS,body);
@@ -3077,11 +3158,64 @@ async function initRemote(){
     if(!user||!db) return; const id=await user.id(); if(!id) return;
     const ref=db.collection("data/users/"+id).doc("stats");
     const snap=await ref.get(); remote={ref};
-    if(snap.exists){const d=snap.data();if(d&&Array.isArray(d.rounds)&&d.rounds.length>=DATA.rounds.length){DATA=migrate(JSON.parse(JSON.stringify({rounds:d.rounds,best:d.best||{},mc:(d.mc&&Object.keys(d.mc).length)?d.mc:DATA.mc})));saveLocal();if(view.page!=="play")render();}}
-    else if(DATA.rounds.length){await ref.set(DATA);}
+    if(snap.exists){const d=snap.data();if(d&&Array.isArray(d.rounds)&&d.rounds.length>=DATA.rounds.length){DATA=migrate(JSON.parse(JSON.stringify({rounds:d.rounds,best:d.best||{},mc:(d.mc&&Object.keys(d.mc).length)?d.mc:DATA.mc,cardMem:mergeMem(DATA.cardMem,d.cardMem)})));saveLocal();if(view.page!=="play")render();}}
+    else if(DATA.rounds.length){await ref.set(remotePayload());}
   }catch(e){}
 }
-async function save(){saveLocal();keepStorage();if(remote){try{await remote.ref.set(DATA);}catch(e){}}}
+const remotePayload=()=>({rounds:DATA.rounds,best:DATA.best,mc:DATA.mc||{},cardMem:DATA.cardMem||{}});
+async function save(){saveLocal();keepStorage();if(remote){try{await remote.ref.set(remotePayload());}catch(e){}}}
+/* ===================== CARD MEMORY (3.9.0) =====================
+   Every typed answer (deck rounds, mastery checks, Weak rounds) and every multiple-choice
+   miss updates that card's memory with FSRS-6 (vendored above, tools/fsrs/). Whole days only:
+   no minute-long learning steps, which don't fit a game played in rounds. Memory is keyed by
+   deck and card, like the ready streaks, because some decks share a card list. It never
+   feeds stars, best scores, stats or checks: those still come from saved rounds only. */
+const DAY_MS=864e5;
+const MEM_CFG={desiredRetention:0.9,maximumInterval:120,enableShortTerm:false,enableFuzz:false};
+const MEM_GRADE={again:1,hard:2,good:3};   /* FSRS ratings; Easy (4) is never used */
+let SCHED=null;
+const sched=()=>SCHED||(SCHED=FSRS.createFSRS6(MEM_CFG));
+const memKey=(deck,id)=>deck+"|"+id;
+const memOf=(deck,id)=>(DATA.cardMem||{})[memKey(deck,id)]||null;
+function memCard(m,now){
+  const c=sched().newCard({now:new Date(now)});
+  if(!m) return c;
+  return Object.assign(c,{stability:m.s,difficulty:m.d,state:m.st,scheduleStatus:m.ss,dueAt:new Date(m.due),
+    lastReviewAt:m.last?new Date(m.last):null,reps:m.reps||0,lapses:m.lapses||0,scheduledDays:m.sd||0,learningStep:m.ls||0});
+}
+function recordGrade(deck,id,g,now=Date.now()){
+  try{
+    if(!DATA.cardMem) DATA.cardMem={};
+    const k=memKey(deck,id);
+    const c=sched().review({card:memCard(DATA.cardMem[k],now),grade:MEM_GRADE[g],now:new Date(now)}).card;
+    DATA.cardMem[k]={s:+c.stability,d:+c.difficulty,st:c.state,ss:c.scheduleStatus,due:+c.dueAt,last:+c.lastReviewAt,
+      reps:c.reps,lapses:c.lapses,sd:c.scheduledDays,ls:c.learningStep,g:g[0]};
+  }catch(e){console.error("card memory",e);}
+}
+/* The chance of recalling the card now (0 to 1), from its stability and the days since it was seen. */
+function retrievability(m,now=Date.now()){
+  if(!m||!m.last) return 0;
+  try{return sched().model.forgettingCurve({stability:m.s,difficulty:m.d},Math.max(0,(now-m.last)/DAY_MS));}catch(e){return 0;}
+}
+/* An answer in play: record it against the card's own deck and keep it even if the round is abandoned. */
+function memAnswer(q,g){recordGrade(q.deck||round.deck,q.st.id,g);saveLocal();}
+
+/* Weak cards: last answer a miss (Again) or a second try (Hard), least likely to be
+   recalled first, then hardest. Capped at WEAK_CAP per round. */
+const WEAK_CAP=20;
+function weakAll(now=Date.now(),unit=null){
+  const out=[], mem=DATA.cardMem||{};
+  for(const k of Object.keys(mem)){
+    const m=mem[k]; if(!m||(m.g!=="a"&&m.g!=="h")) continue;
+    const i=k.indexOf("|"), deck=k.slice(0,i), id=k.slice(i+1), D=DECKS[deck];
+    if(!D||(unit&&D.unit!==unit)) continue;
+    const st=itemsFor(deck).find(x=>x.id===id); if(!st) continue;
+    out.push({deck,st,r:retrievability(m,now),d:m.d});
+  }
+  return out.sort((a,b)=>a.r-b.r||b.d-a.d);
+}
+const weakCards=(now=Date.now(),unit=null)=>weakAll(now,unit).slice(0,WEAK_CAP);
+
 function statsFor(filter){const rs=DATA.rounds.filter(r=>r&&r.kind!=="check"&&filter(r));const q=rs.reduce((a,r)=>a+r.total,0),c=rs.reduce((a,r)=>a+r.credit,0);return {rounds:rs.length,pct:q?Math.round(c/q*100):null};}
 const pctClass=p=>p==null?"c-none":p<=33?"c-red":p<=66?"c-yellow":"c-green";
 
@@ -3144,8 +3278,49 @@ function startCheck(uid){
   round={method:"check",unit:uid,deck:null,images:true,qs,i:0,tries:0,credit:0,first:0,second:0,missed:0,state:"ask",fb:"",lastMissed:false};
   view={page:"play"};render();scrollTo(0,0);
 }
-const roundUnit=()=>round.method==="check"?round.unit:DECKS[round.deck].unit;
-const roundName=()=>round.method==="check"?UNITS.find(u=>u.id===round.unit).name:DECKS[round.deck].name;
+const roundUnit=()=>round.method==="check"||round.method==="weak"?round.unit:DECKS[round.deck].unit;
+const roundName=()=>round.method==="check"?UNITS.find(u=>u.id===round.unit).name
+  :round.method==="weak"?DECKS[round.qs[Math.min(round.i,round.qs.length-1)].deck].name:DECKS[round.deck].name;
+
+/* ===================== WEAK CARDS (3.9.0) =====================
+   A typed round of the cards you last missed or got on a second try, from any deck (or
+   one unit's decks), weakest first. Like the mastery check it mixes decks; unlike every
+   other round it is never written to DATA.rounds, so best scores, stars, stats and checks
+   cannot see it. Its answers update card memory like any typed answer. */
+function weakBlock(uid){
+  const n=weakAll(Date.now(),uid||null).length;
+  if(uid&&!n) return "";
+  const head=`<h2 class="sect">Weak cards</h2>`;
+  if(!n) return `${head}<div class="check locked" id="weak"><p>No weak cards yet. Cards you miss or get on the second try show up here.</p></div>`;
+  const take=Math.min(n,WEAK_CAP);
+  return `${head}<div class="check open" id="weak"><p>${n===1?"1 card":n+" cards"} you missed or got on the second try${uid?" in this unit":""}. A round takes the weakest ${take===1?"one":take}, typed.</p>
+    <button type="button" class="btn primary" id="weak-go">Weak cards · ${n}</button></div>`;
+}
+function startWeak(uid=null){
+  const ws=weakCards(Date.now(),uid); if(!ws.length) return;
+  const qs=ws.map(w=>({st:w.st,deck:w.deck,view:w.st.views?w.st.views[Math.floor(Math.random()*w.st.views.length)]:null}));
+  round={method:"weak",unit:uid,deck:null,images:true,qs,i:0,tries:0,credit:0,first:0,second:0,missed:0,state:"ask",fb:"",lastMissed:false,
+    weakBefore:weakAll(Date.now(),uid).length};
+  view={page:"play"};render();scrollTo(0,0);
+}
+function finishWeak(){
+  round.result={total:round.qs.length,weakAfter:weakAll(Date.now(),round.unit).length};
+  view={page:"results"};
+  try{render();}catch(e){console.error(e);}
+  scrollTo(0,0);
+  setTimeout(()=>{try{save();}catch(e){}},0);
+}
+function weakResultsPage(){
+  const R=round.result,fixed=Math.max(0,round.weakBefore-R.weakAfter);
+  app.innerHTML=`<div class="top"><div><div class="crumb">${round.unit?esc(UNITS.find(u=>u.id===round.unit).name):"101% Anatomy"}</div><div class="brand">Weak cards done</div></div></div>
+  <div class="res"><div class="stats"><div class="stat"><div class="v c-green">${round.first}/${R.total}</div><div class="k">Right first try</div></div><div class="stat"><div class="v">${R.weakAfter}</div><div class="k">Still weak</div></div></div>
+  <div class="breakdown">${round.first} first try · ${round.second} on second try · ${round.missed} missed</div>
+  <div class="breakdown">${fixed?`${fixed===1?"1 card is":fixed+" cards are"} no longer weak.`:"Cards you get right first try stop being weak."}</div>
+  <p class="note">Weak rounds don't change your high scores, stars or mastery checks. They help each card come back at the right time.</p>
+  <div class="btnrow"><button class="btn primary" id="again"${R.weakAfter?"":" disabled"}>Weak cards again</button><button class="btn" id="tolobby">${round.unit?"Back to the unit":"Back to the lobby"}</button></div></div>`;
+  $("#again").onclick=()=>startWeak(round.unit);
+  $("#tolobby").onclick=()=>{view=round.unit?{page:"unit",unit:round.unit}:{page:"lobby"};render();scrollTo(0,0);};
+}
 function finishCheck(){
   const total=round.qs.length,pct=Math.round(round.credit/total*100),prev=checkBest(round.unit);
   try{DATA=Object.assign({},DATA,{rounds:DATA.rounds.concat([{kind:"check",deck:"check:"+round.unit,unit:round.unit,credit:round.credit,total,pct,ts:Date.now()}])});}catch(e){console.error("record failed",e);}
@@ -3188,8 +3363,10 @@ function render(){
 const soonTile=(name,ico)=>`<div class="tile soon" aria-disabled="true">${ico}<h3>${esc(name)}</h3><div class="meta"><span class="badge">Coming soon</span></div></div>`;
 function lobby(){
   app.innerHTML=`<div class="top"><div class="brand">101<b>%</b> Anatomy</div></div>${statLine(statsFor(()=>true))}
+  ${weakBlock(null)}
   <h2 class="sect">Units</h2><div class="grid">${UNITS.map(u=>{if(u.soon)return soonTile(u.name,folderIco);const st=statsFor(r=>r.unit===u.id),k=u.decks.filter(x=>typeof x==="string").length,s=u.decks.length-k;return `<button class="tile" data-unit="${u.id}">${folderIco}<h3>${esc(u.name)}</h3>${tierBadge(u.id)}<div class="meta"><span><b>${k}</b> deck${k>1?"s":""}</span>${s?`<span><b>${s}</b> coming soon</span>`:""}<span>Avg <b class="${pctClass(st.pct)}">${st.pct==null?"—":st.pct+"%"}</b></span></div></button>`}).join("")}</div><p class="credit">Images adapted from OpenStax <i>Anatomy &amp; Physiology 2e</i> (CC BY 4.0), labels removed. Muscle and bone pictures are rendered from BodyParts3D, &copy; The Database Center for Life Science, licensed under <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" target="_blank" rel="noopener">CC BY-SA 2.1 Japan</a> (Mitsuhashi et al., 2009, <i>Nucleic Acids Research</i> 37:D782), recolored and re-rendered for this app; those pictures are shared under the same license. Figures appear after you answer each card; tap one to enlarge it. Some cards have no figure on purpose. Version 3.4</p>`;
   app.querySelectorAll("[data-unit]").forEach(b=>b.onclick=()=>{view={page:"unit",unit:b.dataset.unit};render();scrollTo(0,0);});
+  const wg=$("#weak-go"); if(wg) wg.onclick=()=>startWeak(null);
 }
 /* Two dots in a deck tile's corner: what kind of deck it is, and whether it has
    pictures to answer from. Which decks actually have pictures varies a lot, so being
@@ -3214,12 +3391,13 @@ function deckDots(d){
 function unitPage(uid){
   const u=UNITS.find(x=>x.id===uid);
   app.innerHTML=`<div class="top"><div><div class="crumb">101% Anatomy</div><div class="brand">${esc(u.name)}</div></div></div>${statLine(statsFor(r=>r.unit===uid))}
-  ${checkBlock(uid)}
+  ${checkBlock(uid)}${weakBlock(uid)}
   <h2 class="sect">Decks</h2>
   <div class="legend"><span><i class="k-id"></i>Identification</span><span><i class="k-fn"></i>What it does</span><span><i class="k-term"></i>Term</span><span><i class="p-yes"></i>Picture first</span><span><i class="p-after"></i>Figure after</span><span><i class="p-no"></i>No picture</span></div>
   <div class="grid">${u.decks.map(id=>{if(typeof id!=="string")return soonTile(id.soon,deckIco);const d=DECKS[id];const hs=DATA.best[id];return `<button class="tile" data-deck="${id}">${deckDots(d)}${deckIco}<h3>${esc(d.name)}</h3><div class="meta"><span><b>${itemsFor(id).length}</b> questions</span><span>High score <b class="${pctClass(hs??null)}">${hs==null?"—":hs+"%"}</b></span></div>${starRow(starsFor(id))}${readyBlock(id)}<span class="play">Play</span></button>`}).join("")}</div>`;
   app.querySelectorAll("[data-deck]").forEach(b=>b.onclick=()=>chooseHow(b.dataset.deck));
   const sc=$("#startcheck"); if(sc&&!sc.disabled) sc.onclick=()=>startCheck(uid);
+  const wg=$("#weak-go"); if(wg) wg.onclick=()=>startWeak(uid);
 }
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function chooseMode(deckId,method){
@@ -3431,6 +3609,7 @@ function pickChoice(k){
     setFb(`<div class="fb ok"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="var(--green)"/><path d="m7 13.5 4 4 8-9" stroke="#111" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Correct <small>${note}</small></div></div>`,"done");
   }else{
     setStreak(round.deck,q.st.id,0);
+    recordGrade(round.deck,q.st.id,"again");   /* 3.9.0: a multiple-choice miss marks the card weak; a right pick changes no memory */
     round.missed++;round.lastMissed=true;
     setFb(`<div class="fb bad">✕ The answer is ${esc(q.st.name)}<small>Its streak starts over.</small></div>`,"done");
   }
@@ -3497,7 +3676,7 @@ function playPage(){
   tag=!showImg?"Images off":v.tag?v.tag:v.close?"Close-up":"Whole cell";
   desc=fnDeck?`<p class="desc">${esc(q.st.fn)}</p>`:"";
   }
-  app.innerHTML=`<div class="top"><div><div class="crumb">${esc(roundName())}</div><div class="brand">${round.method==="mc"?"Study round":round.method==="check"?"Mastery check":"Round in play"}</div></div></div>
+  app.innerHTML=`<div class="top"><div><div class="crumb">${esc(roundName())}</div><div class="brand">${round.method==="mc"?"Study round":round.method==="check"?"Mastery check":round.method==="weak"?"Weak cards":"Round in play"}</div></div></div>
   <div class="qhead"><span class="qnum">Question ${round.i+1} / ${n}</span><span class="qnum">${tag}</span></div>
   <div class="bar"><i style="width:${(round.i+(round.state==="done"?1:0))/n*100}%"></i></div>
   <h1 class="prompt">${prompt}</h1>
@@ -3534,16 +3713,19 @@ function grade(v){
   const q=round.qs[round.i];
   if(v&&(v.id===q.st.id||(q.st.also||[]).includes(v.id)||q.st.accept.some(a=>norm(a)===v.n))){
     if(round.tries===0){round.credit+=1;round.first++;}else{round.credit+=0.5;round.second++;}
+    memAnswer(q,round.tries===0?"good":"hard");
     round.lastMissed=false;
     return setFb(`<div class="fb ok"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="var(--green)"/><path d="m7 13.5 4 4 8-9" stroke="#111" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Correct${round.tries?" <small>On the retry: half credit.</small>":""}</div></div>`,"done");
   }
   round.tries++;
   if(round.tries<2) return setFb(`<div class="fb bad">✕ Not quite<small>One more try.</small></div>`,"ask");
   round.missed++;round.lastMissed=true;
+  memAnswer(q,"again");
   setFb(`<div class="fb bad">✕ The answer is ${esc(q.st.name)}</div>`,"done");
 }
 function giveUp(){
   const q=round.qs[round.i];round.missed++;round.keep="";round.lastMissed=true;
+  memAnswer(q,"again");
   setFb(`<div class="fb bad">The answer is ${esc(q.st.name)}<small>Counted as missed.</small></div>`,"done");
 }
 function next(){
@@ -3554,6 +3736,7 @@ function next(){
 function finish(){
   if(round.method==="mc") return finishMC();
   if(round.method==="check") return finishCheck();
+  if(round.method==="weak") return finishWeak();
   const total=round.qs.length,pct=Math.round(round.credit/total*100);
   let prev=null,isHigh=true;
   const starsBefore=starsFor(round.deck);
@@ -3589,6 +3772,7 @@ function gaugeSVG(p){
 function resultsPage(){
   if(round.method==="mc") return mcResultsPage();
   if(round.method==="check") return checkResultsPage();
+  if(round.method==="weak") return weakResultsPage();
   const R=round.result,p=R.pct;
   app.innerHTML=`<div class="top"><div><div class="crumb">${esc(DECKS[round.deck].name)}</div><div class="brand">Round complete</div></div></div>
   <div class="res">${gaugeSVG(p)}${R.isHigh&&R.prev!=null?`<div class="newhs">New high score</div>`:""}
@@ -3607,13 +3791,15 @@ function resultsPage(){
 function h(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
 function saveBanner(){
   const el=document.getElementById("savebar"); if(!el) return;
-  if(saveState.ok&&!saveState.recovered){el.hidden=true;el.innerHTML="";return;}
-  el.innerHTML=saveState.ok
+  if(saveState.ok&&!saveState.recovered&&!saveState.memReset){el.hidden=true;el.innerHTML="";return;}
+  el.innerHTML=saveState.ok&&!saveState.recovered
+    ? `<div><b>Card memory restarted</b><p>Part of the record of which cards you know couldn't be read, so it starts over. Your scores, stars and streaks are fine.</p></div><button id="savebar-x">OK</button>`
+    : saveState.ok
     ? `<div><b>Restored from backup</b><p>The main save couldn't be read, so your last good save was put back. Check that your scores look right.</p></div><button id="savebar-x">OK</button>`
     : `<div><b>Progress isn't saving</b><p>This browser refused to store your save (${h(saveState.err)}). Private browsing and a full phone both do that. Back up your progress now so you don't lose it.</p></div><button id="savebar-x">Back up</button>`;
   el.hidden=false;
   const b=document.getElementById("savebar-x");
-  if(b)b.onclick=()=>{ if(saveState.ok){saveState.recovered=false;saveBanner();} else backupSheet(); };
+  if(b)b.onclick=()=>{ if(saveState.ok){saveState.recovered=false;saveState.memReset=false;saveBanner();} else backupSheet(); };
 }
 
 const standalone=()=>!!(window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true;
@@ -3621,7 +3807,7 @@ const isIOS=()=>/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platfo
 let installPrompt=null;
 window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installPrompt=e;});
 
-const exportText=()=>JSON.stringify({app:"101% Anatomy",v:SCHEMA,exported:new Date().toISOString(),rounds:DATA.rounds,best:DATA.best,mc:DATA.mc||{}});
+const exportText=()=>JSON.stringify({app:"101% Anatomy",v:SCHEMA,exported:new Date().toISOString(),rounds:DATA.rounds,best:DATA.best,mc:DATA.mc||{},cardMem:DATA.cardMem||{}});
 /* Import adds rounds the current save doesn't have; it never deletes any. */
 function mergeSave(raw){
   const inc=upgrade(raw), rounds=DATA.rounds.slice(), seen=new Set(rounds.map(r=>r&&r.deck+"|"+r.ts));
@@ -3634,7 +3820,7 @@ function mergeSave(raw){
   const mc=JSON.parse(JSON.stringify(DATA.mc||{}));
   Object.keys(inc.mc||{}).forEach(dk=>Object.keys(inc.mc[dk]||{}).forEach(ck=>{
     const n=Number(inc.mc[dk][ck])||0; if(n>((mc[dk]||{})[ck]||0)){(mc[dk]||(mc[dk]={}))[ck]=n;}}));
-  DATA={rounds,best,mc};
+  DATA={rounds,best,mc,cardMem:mergeMem(DATA.cardMem,inc.cardMem)};   // newer review of each card wins
   return added;
 }
 const ago=t=>{if(!t)return "never";const m=Math.round((Date.now()-t)/60000);
@@ -3735,7 +3921,7 @@ function go(dest){
   closeMenu();
   const doIt=()=>{if(dest==="home")view={page:"lobby"};else{
       if(view.page==="unit")view={page:"lobby"};
-      else if(view.page==="play"||view.page==="results")view={page:"unit",unit:roundUnit()};}
+      else if(view.page==="play"||view.page==="results"){const u=roundUnit();view=u?{page:"unit",unit:u}:{page:"lobby"};}}
     render();scrollTo(0,0);};
   if(view.page==="play") return confirmLeave(doIt);
   doIt();
